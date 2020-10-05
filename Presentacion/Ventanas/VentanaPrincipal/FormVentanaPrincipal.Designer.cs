@@ -29,15 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentanaPrincipal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnCerrarFormActivo = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblSimulador = new System.Windows.Forms.Label();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
+            this.lblLinkAcercaDe = new System.Windows.Forms.LinkLabel();
             this.pnlFlecha = new System.Windows.Forms.Panel();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnMicro = new System.Windows.Forms.Button();
+            this.btnVivienda = new System.Windows.Forms.Button();
+            this.btnConsumo = new System.Windows.Forms.Button();
+            this.btnComercial = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerFecha = new System.Windows.Forms.Timer(this.components);
@@ -46,20 +56,11 @@
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragLogo = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuTransitionForm = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.btnCalculadora = new System.Windows.Forms.Button();
-            this.btnMicro = new System.Windows.Forms.Button();
-            this.btnVivienda = new System.Windows.Forms.Button();
-            this.btnConsumo = new System.Windows.Forms.Button();
-            this.btnComercial = new System.Windows.Forms.Button();
-            this.btnCerrarFormActivo = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.lblLinkAcercaDe = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlSuperior.SuspendLayout();
             this.pnlCentro.SuspendLayout();
-            this.pnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.pnlIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -76,9 +77,58 @@
             this.pnlSuperior.Size = new System.Drawing.Size(1018, 52);
             this.pnlSuperior.TabIndex = 0;
             // 
+            // btnCerrarFormActivo
+            // 
+            this.btnCerrarFormActivo.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFormActivo.BackgroundImage = global::Presentacion.Properties.Resources.LogoPrograma2;
+            this.btnCerrarFormActivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransitionForm.SetDecoration(this.btnCerrarFormActivo, BunifuAnimatorNS.DecorationType.None);
+            this.btnCerrarFormActivo.FlatAppearance.BorderSize = 0;
+            this.btnCerrarFormActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarFormActivo.Location = new System.Drawing.Point(1, 1);
+            this.btnCerrarFormActivo.Name = "btnCerrarFormActivo";
+            this.btnCerrarFormActivo.Size = new System.Drawing.Size(43, 35);
+            this.btnCerrarFormActivo.TabIndex = 13;
+            this.btnCerrarFormActivo.UseVisualStyleBackColor = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimizar;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransitionForm.SetDecoration(this.btnMinimizar, BunifuAnimatorNS.DecorationType.None);
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(971, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 22);
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransitionForm.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(994, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
+            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
             // pnlCentro
             // 
             this.pnlCentro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlCentro.Controls.Add(this.label1);
             this.pnlCentro.Controls.Add(this.lblHora);
             this.pnlCentro.Controls.Add(this.lblFecha);
             this.pnlCentro.Controls.Add(this.lblSimulador);
@@ -127,6 +177,17 @@
             this.lblSimulador.TabIndex = 9;
             this.lblSimulador.Text = "Simulador de créditos\r\n";
             // 
+            // ptbLogo
+            // 
+            this.ptbLogo.BackgroundImage = global::Presentacion.Properties.Resources.logo;
+            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTransitionForm.SetDecoration(this.ptbLogo, BunifuAnimatorNS.DecorationType.None);
+            this.ptbLogo.Location = new System.Drawing.Point(337, 137);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(200, 200);
+            this.ptbLogo.TabIndex = 1;
+            this.ptbLogo.TabStop = false;
+            // 
             // pnlIzquierdo
             // 
             this.pnlIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
@@ -145,6 +206,19 @@
             this.pnlIzquierdo.Size = new System.Drawing.Size(140, 496);
             this.pnlIzquierdo.TabIndex = 3;
             // 
+            // lblLinkAcercaDe
+            // 
+            this.lblLinkAcercaDe.ActiveLinkColor = System.Drawing.Color.Teal;
+            this.lblLinkAcercaDe.AutoSize = true;
+            this.bunifuTransitionForm.SetDecoration(this.lblLinkAcercaDe, BunifuAnimatorNS.DecorationType.None);
+            this.lblLinkAcercaDe.LinkColor = System.Drawing.Color.Cyan;
+            this.lblLinkAcercaDe.Location = new System.Drawing.Point(27, 480);
+            this.lblLinkAcercaDe.Name = "lblLinkAcercaDe";
+            this.lblLinkAcercaDe.Size = new System.Drawing.Size(68, 13);
+            this.lblLinkAcercaDe.TabIndex = 20;
+            this.lblLinkAcercaDe.TabStop = true;
+            this.lblLinkAcercaDe.Text = "Acerca de ...";
+            // 
             // pnlFlecha
             // 
             this.pnlFlecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -155,87 +229,6 @@
             this.pnlFlecha.Size = new System.Drawing.Size(4, 25);
             this.pnlFlecha.TabIndex = 18;
             this.pnlFlecha.Visible = false;
-            // 
-            // lblNombre
-            // 
-            this.bunifuTransitionForm.SetDecoration(this.lblNombre, BunifuAnimatorNS.DecorationType.None);
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(3, 3);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(137, 32);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // elipseForm
-            // 
-            this.elipseForm.ElipseRadius = 9;
-            this.elipseForm.TargetControl = this;
-            // 
-            // timerFecha
-            // 
-            this.timerFecha.Enabled = true;
-            // 
-            // timerForm
-            // 
-            this.timerForm.Enabled = true;
-            this.timerForm.Interval = 10;
-            // 
-            // dragPnlSuperior
-            // 
-            this.dragPnlSuperior.Fixed = true;
-            this.dragPnlSuperior.Horizontal = true;
-            this.dragPnlSuperior.TargetControl = this.pnlSuperior;
-            this.dragPnlSuperior.Vertical = true;
-            // 
-            // dragForm
-            // 
-            this.dragForm.Fixed = true;
-            this.dragForm.Horizontal = true;
-            this.dragForm.TargetControl = this.pnlCentro;
-            this.dragForm.Vertical = true;
-            // 
-            // dragLogo
-            // 
-            this.dragLogo.Fixed = true;
-            this.dragLogo.Horizontal = true;
-            this.dragLogo.TargetControl = this.ptbLogo;
-            this.dragLogo.Vertical = true;
-            // 
-            // bunifuTransitionForm
-            // 
-            this.bunifuTransitionForm.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
-            this.bunifuTransitionForm.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 1F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransitionForm.DefaultAnimation = animation2;
-            this.bunifuTransitionForm.Interval = 20;
-            this.bunifuTransitionForm.TimeStep = 0.01F;
-            // 
-            // ptbLogo
-            // 
-            this.ptbLogo.BackgroundImage = global::Presentacion.Properties.Resources.logo;
-            this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTransitionForm.SetDecoration(this.ptbLogo, BunifuAnimatorNS.DecorationType.None);
-            this.ptbLogo.Location = new System.Drawing.Point(337, 137);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(200, 200);
-            this.ptbLogo.TabIndex = 1;
-            this.ptbLogo.TabStop = false;
             // 
             // btnCalculadora
             // 
@@ -298,7 +291,7 @@
             this.btnConsumo.ForeColor = System.Drawing.Color.White;
             this.btnConsumo.Image = global::Presentacion.Properties.Resources.consumo__1_;
             this.btnConsumo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsumo.Location = new System.Drawing.Point(0, 236);
+            this.btnConsumo.Location = new System.Drawing.Point(0, 204);
             this.btnConsumo.Name = "btnConsumo";
             this.btnConsumo.Size = new System.Drawing.Size(140, 30);
             this.btnConsumo.TabIndex = 14;
@@ -315,7 +308,7 @@
             this.btnComercial.ForeColor = System.Drawing.Color.White;
             this.btnComercial.Image = global::Presentacion.Properties.Resources.empresa__2_;
             this.btnComercial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComercial.Location = new System.Drawing.Point(0, 204);
+            this.btnComercial.Location = new System.Drawing.Point(0, 236);
             this.btnComercial.Name = "btnComercial";
             this.btnComercial.Size = new System.Drawing.Size(140, 30);
             this.btnComercial.TabIndex = 13;
@@ -323,65 +316,88 @@
             this.btnComercial.UseVisualStyleBackColor = true;
             this.btnComercial.Click += new System.EventHandler(this.btnComercial_Click);
             // 
-            // btnCerrarFormActivo
+            // lblNombre
             // 
-            this.btnCerrarFormActivo.BackgroundImage = global::Presentacion.Properties.Resources.LogoPrograma2;
-            this.btnCerrarFormActivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTransitionForm.SetDecoration(this.btnCerrarFormActivo, BunifuAnimatorNS.DecorationType.None);
-            this.btnCerrarFormActivo.FlatAppearance.BorderSize = 0;
-            this.btnCerrarFormActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarFormActivo.Location = new System.Drawing.Point(1, 1);
-            this.btnCerrarFormActivo.Name = "btnCerrarFormActivo";
-            this.btnCerrarFormActivo.Size = new System.Drawing.Size(43, 35);
-            this.btnCerrarFormActivo.TabIndex = 13;
-            this.btnCerrarFormActivo.UseVisualStyleBackColor = true;
+            this.bunifuTransitionForm.SetDecoration(this.lblNombre, BunifuAnimatorNS.DecorationType.None);
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(3, 3);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(137, 32);
+            this.lblNombre.TabIndex = 12;
+            this.lblNombre.Text = "Nombre";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnMinimizar
+            // elipseForm
             // 
-            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimizar;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTransitionForm.SetDecoration(this.btnMinimizar, BunifuAnimatorNS.DecorationType.None);
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(971, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(22, 22);
-            this.btnMinimizar.TabIndex = 4;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.elipseForm.ElipseRadius = 9;
+            this.elipseForm.TargetControl = this;
             // 
-            // btnCerrar
+            // timerFecha
             // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTransitionForm.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(994, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
-            this.btnCerrar.TabIndex = 3;
-            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.timerFecha.Enabled = true;
             // 
-            // lblLinkAcercaDe
+            // timerForm
             // 
-            this.lblLinkAcercaDe.ActiveLinkColor = System.Drawing.Color.Teal;
-            this.lblLinkAcercaDe.AutoSize = true;
-            this.bunifuTransitionForm.SetDecoration(this.lblLinkAcercaDe, BunifuAnimatorNS.DecorationType.None);
-            this.lblLinkAcercaDe.LinkColor = System.Drawing.Color.Cyan;
-            this.lblLinkAcercaDe.Location = new System.Drawing.Point(27, 480);
-            this.lblLinkAcercaDe.Name = "lblLinkAcercaDe";
-            this.lblLinkAcercaDe.Size = new System.Drawing.Size(68, 13);
-            this.lblLinkAcercaDe.TabIndex = 20;
-            this.lblLinkAcercaDe.TabStop = true;
-            this.lblLinkAcercaDe.Text = "Acerca de ...";
+            this.timerForm.Enabled = true;
+            this.timerForm.Interval = 10;
+            // 
+            // dragPnlSuperior
+            // 
+            this.dragPnlSuperior.Fixed = true;
+            this.dragPnlSuperior.Horizontal = true;
+            this.dragPnlSuperior.TargetControl = this.pnlSuperior;
+            this.dragPnlSuperior.Vertical = true;
+            // 
+            // dragForm
+            // 
+            this.dragForm.Fixed = true;
+            this.dragForm.Horizontal = true;
+            this.dragForm.TargetControl = this.pnlCentro;
+            this.dragForm.Vertical = true;
+            // 
+            // dragLogo
+            // 
+            this.dragLogo.Fixed = true;
+            this.dragLogo.Horizontal = true;
+            this.dragLogo.TargetControl = this.ptbLogo;
+            this.dragLogo.Vertical = true;
+            // 
+            // bunifuTransitionForm
+            // 
+            this.bunifuTransitionForm.AnimationType = BunifuAnimatorNS.AnimationType.Leaf;
+            this.bunifuTransitionForm.Cursor = null;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 1F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransitionForm.DefaultAnimation = animation3;
+            this.bunifuTransitionForm.Interval = 20;
+            this.bunifuTransitionForm.TimeStep = 0.01F;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransitionForm.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.label1.Location = new System.Drawing.Point(152, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Análisis de créditos";
             // 
             // FormVentanaPrincipal
             // 
@@ -400,9 +416,9 @@
             this.pnlSuperior.ResumeLayout(false);
             this.pnlCentro.ResumeLayout(false);
             this.pnlCentro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pnlIzquierdo.ResumeLayout(false);
             this.pnlIzquierdo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,5 +449,6 @@
         public System.Windows.Forms.PictureBox ptbLogo;
         public System.Windows.Forms.Panel pnlSuperior;
         public System.Windows.Forms.LinkLabel lblLinkAcercaDe;
+        public System.Windows.Forms.Label label1;
     }
 }

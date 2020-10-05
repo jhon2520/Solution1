@@ -272,5 +272,17 @@
   <ItemGroup>
     <None Include="Resources\panelTitulosAzulMicro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagramLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebookLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitterLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_buttonLogo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

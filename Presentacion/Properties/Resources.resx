@@ -139,6 +139,9 @@
   <data name="vivienda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vivienda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="instagramLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\instagramLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="consumo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consumo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,11 +154,17 @@
   <data name="panelTitulosMorado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panelTitulosMorado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="twitterLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitterLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flechaIndicadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flechaIndicadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="facebookLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facebookLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diseñoFondoVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diseñoFondoVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +180,9 @@
   </data>
   <data name="calculadora (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculadora (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panelTitulosAzulMicro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panelTitulosAzulMicro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pnlRedondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pnlRedondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +217,7 @@
   <data name="LogoPrograma1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoPrograma1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panelTitulosAzulMicro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panelTitulosAzulMicro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="play_buttonLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_buttonLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

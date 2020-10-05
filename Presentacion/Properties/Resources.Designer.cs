@@ -193,6 +193,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap facebookLogo {
+            get {
+                object obj = ResourceManager.GetObject("facebookLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Flecha {
             get {
                 object obj = ResourceManager.GetObject("Flecha", resourceCulture);
@@ -206,6 +216,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap flechaIndicadora {
             get {
                 object obj = ResourceManager.GetObject("flechaIndicadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instagramLogo {
+            get {
+                object obj = ResourceManager.GetObject("instagramLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +343,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_buttonLogo {
+            get {
+                object obj = ResourceManager.GetObject("play_buttonLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pnlRedondo {
             get {
                 object obj = ResourceManager.GetObject("pnlRedondo", resourceCulture);
@@ -346,6 +376,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap pregunta1 {
             get {
                 object obj = ResourceManager.GetObject("pregunta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap twitterLogo {
+            get {
+                object obj = ResourceManager.GetObject("twitterLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -90,7 +90,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnMicro.Name)
             {
-                BotonesCambioDeForm(91, 155, 213, this.formVentanaPrincipal.btnMicro, new FormMicro());
+                BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormMicro());
             }
         }
         private void CerrarFormActivo(object sender, EventArgs args)
