@@ -39,6 +39,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.btnVivienda.Click += new EventHandler(Flecha);
             this.formVentanaPrincipal.btnMicro.Click += new EventHandler(Flecha);
             this.formVentanaPrincipal.btnCerrarFormActivo.Click += new EventHandler(CerrarFormActivo);
+            this.formVentanaPrincipal.lblLinkAcercaDe.Click += new EventHandler(AbrirPáginaSENA);
         }
         private void TimerFechaHora(object sender, EventArgs args)
         {
@@ -147,6 +148,11 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                 DialogResult dialogResult = formConfirmacion.ShowDialog();
                 if (dialogResult == DialogResult.OK) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
             }
+        }
+
+        private void AbrirPáginaSENA(object sender, EventArgs args)
+        {
+            System.Diagnostics.Process.Start("www.sena.edu.co/es-co/Paginas/default.aspx");
         }
     }
 }

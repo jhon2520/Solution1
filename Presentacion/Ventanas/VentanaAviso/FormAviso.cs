@@ -18,5 +18,6 @@ namespace Presentacion.Ventanas.VentanaAviso
             lblMensaje.Text = mensaje;
             ControladorFormAviso controladorFormAviso = new ControladorFormAviso(this);
         }
+
     }
 }

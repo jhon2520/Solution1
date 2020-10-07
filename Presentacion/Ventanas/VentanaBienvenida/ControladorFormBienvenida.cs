@@ -67,7 +67,7 @@ namespace Presentacion.Ventanas.VentanaBienvenida
             if(this.formBienvenida.tbxNombre.Text != "Ingrese su nombre" && this.formBienvenida.tbxNombre.Text != string.Empty)
             { 
                 Cache.Nombre = this.formBienvenida.tbxNombre.Text;
-                formAviso = new FormAviso("Bienvenido, " + Cache.Nombre + ".");
+                formAviso = new FormAviso("Bienvenido, " + Cache.Nombre + " al sistema de análisis de crédito SENA");
                 this.formBienvenida.Hide();
                 formAviso.ShowDialog();
                 formVentanaPrincipal = new FormVentanaPrincipal();
@@ -75,7 +75,7 @@ namespace Presentacion.Ventanas.VentanaBienvenida
             }
             else
             {
-                formError = new FormError("Ingrese su nombre para ingresar al simulador.");
+                formError = new FormError("Ingrese su nombre si desea ingresar al simulador.");
                 formError.ShowDialog();
             }
         }
