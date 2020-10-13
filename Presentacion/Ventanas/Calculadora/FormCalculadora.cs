@@ -14,8 +14,16 @@ namespace Presentacion.Ventanas.Calculadora
     {
         public FormCalculadora()
         {
-            InitializeComponent();
-            ControladorFormCalculadora controladorFormCalculadora = new ControladorFormCalculadora(this);
+            
+            try
+            {
+                InitializeComponent();
+                ControladorFormCalculadora controladorFormCalculadora = new ControladorFormCalculadora(this);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
         }
     }
 }

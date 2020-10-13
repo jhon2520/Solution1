@@ -135,7 +135,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             VisibilidadObjetos(false);
             codigoComun.AbrirFormHijo(formHijo, this.formVentanaPrincipal.pnlCentro);
             this.formVentanaPrincipal.pnlFlecha.Visible = true;
-            this.formVentanaPrincipal.bunifuTransitionForm.Show(this.formVentanaPrincipal.pnlCentro);
+            ////////this.formVentanaPrincipal.bunifuTransitionForm.Show(this.formVentanaPrincipal.pnlCentro);
         }
 
         private void BotonesCambioDeForm(int R, int G, int B, Button buttonFormHijo, Form formHijo)

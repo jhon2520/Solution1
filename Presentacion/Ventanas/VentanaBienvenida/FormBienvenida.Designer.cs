@@ -30,15 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBienvenida));
-            this.elipseFormBienvenida = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dragFormBienvenida = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.ptbDiseno = new System.Windows.Forms.PictureBox();
             this.pnlSuperiorFormBienvenida = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.ptbDiseno = new System.Windows.Forms.PictureBox();
             this.pnlCentroFormBienvenida = new System.Windows.Forms.Panel();
-            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -52,14 +48,9 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.elipseBtnIngresar = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerForm = new System.Windows.Forms.Timer(this.components);
-            this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.dragLogo = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.dragLblTitulo = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.pnlSuperiorFormBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbDiseno)).BeginInit();
+            this.pnlSuperiorFormBienvenida.SuspendLayout();
             this.pnlCentroFormBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,17 +59,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // elipseFormBienvenida
+            // ptbDiseno
             // 
-            this.elipseFormBienvenida.ElipseRadius = 6;
-            this.elipseFormBienvenida.TargetControl = this;
-            // 
-            // dragFormBienvenida
-            // 
-            this.dragFormBienvenida.Fixed = true;
-            this.dragFormBienvenida.Horizontal = true;
-            this.dragFormBienvenida.TargetControl = this.ptbDiseno;
-            this.dragFormBienvenida.Vertical = true;
+            this.ptbDiseno.BackgroundImage = global::Presentacion.Properties.Resources.diseñoFondo;
+            this.ptbDiseno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptbDiseno.Location = new System.Drawing.Point(-6, -142);
+            this.ptbDiseno.Name = "ptbDiseno";
+            this.ptbDiseno.Size = new System.Drawing.Size(570, 202);
+            this.ptbDiseno.TabIndex = 1;
+            this.ptbDiseno.TabStop = false;
             // 
             // pnlSuperiorFormBienvenida
             // 
@@ -124,21 +113,9 @@
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
-            // ptbDiseno
-            // 
-            this.ptbDiseno.BackgroundImage = global::Presentacion.Properties.Resources.diseñoFondo;
-            this.ptbDiseno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptbDiseno.Location = new System.Drawing.Point(-6, -142);
-            this.ptbDiseno.Name = "ptbDiseno";
-            this.ptbDiseno.Size = new System.Drawing.Size(570, 202);
-            this.ptbDiseno.TabIndex = 1;
-            this.ptbDiseno.TabStop = false;
-            // 
             // pnlCentroFormBienvenida
             // 
             this.pnlCentroFormBienvenida.BackColor = System.Drawing.Color.White;
-            this.pnlCentroFormBienvenida.Controls.Add(this.bunifuSeparator4);
-            this.pnlCentroFormBienvenida.Controls.Add(this.bunifuSeparator3);
             this.pnlCentroFormBienvenida.Controls.Add(this.label3);
             this.pnlCentroFormBienvenida.Controls.Add(this.label2);
             this.pnlCentroFormBienvenida.Controls.Add(this.pictureBox4);
@@ -158,39 +135,15 @@
             this.pnlCentroFormBienvenida.Size = new System.Drawing.Size(541, 270);
             this.pnlCentroFormBienvenida.TabIndex = 1;
             // 
-            // bunifuSeparator4
-            // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(374, 235);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(155, 35);
-            this.bunifuSeparator4.TabIndex = 19;
-            this.bunifuSeparator4.Transparency = 255;
-            this.bunifuSeparator4.Vertical = false;
-            // 
-            // bunifuSeparator3
-            // 
-            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(9, 246);
-            this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Size = new System.Drawing.Size(149, 12);
-            this.bunifuSeparator3.TabIndex = 18;
-            this.bunifuSeparator3.Transparency = 255;
-            this.bunifuSeparator3.Vertical = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(264, 242);
+            this.label3.Location = new System.Drawing.Point(269, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 15);
+            this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "www.sena.edu.co";
             // 
@@ -198,11 +151,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label2.Location = new System.Drawing.Point(164, 242);
+            this.label2.Location = new System.Drawing.Point(163, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 15);
+            this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "@SENAcomunica";
             // 
@@ -251,7 +204,7 @@
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
             this.btnIngresar.Location = new System.Drawing.Point(207, 171);
             this.btnIngresar.Name = "btnIngresar";
@@ -264,7 +217,7 @@
             // 
             this.tbxNombre.BackColor = System.Drawing.Color.White;
             this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
             this.tbxNombre.Location = new System.Drawing.Point(151, 130);
             this.tbxNombre.Multiline = true;
@@ -295,11 +248,11 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
             this.lblHora.Location = new System.Drawing.Point(489, 19);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(49, 15);
+            this.lblHora.Size = new System.Drawing.Size(49, 13);
             this.lblHora.TabIndex = 3;
             this.lblHora.Text = "00:00:00";
             this.lblHora.Visible = false;
@@ -307,11 +260,11 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
             this.lblFecha.Location = new System.Drawing.Point(475, 3);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 16);
+            this.lblFecha.Size = new System.Drawing.Size(65, 13);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "00/00/0000";
             this.lblFecha.Visible = false;
@@ -320,41 +273,10 @@
             // 
             this.timerFechaHora.Enabled = true;
             // 
-            // elipseBtnIngresar
-            // 
-            this.elipseBtnIngresar.ElipseRadius = 10;
-            this.elipseBtnIngresar.TargetControl = this.btnIngresar;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // timerForm
             // 
             this.timerForm.Enabled = true;
             this.timerForm.Interval = 10;
-            // 
-            // dragForm
-            // 
-            this.dragForm.Fixed = true;
-            this.dragForm.Horizontal = true;
-            this.dragForm.TargetControl = this.pnlCentroFormBienvenida;
-            this.dragForm.Vertical = true;
-            // 
-            // dragLogo
-            // 
-            this.dragLogo.Fixed = true;
-            this.dragLogo.Horizontal = true;
-            this.dragLogo.TargetControl = this.ptbLogo;
-            this.dragLogo.Vertical = true;
-            // 
-            // dragLblTitulo
-            // 
-            this.dragLblTitulo.Fixed = true;
-            this.dragLblTitulo.Horizontal = true;
-            this.dragLblTitulo.TargetControl = null;
-            this.dragLblTitulo.Vertical = true;
             // 
             // FormBienvenida
             // 
@@ -370,8 +292,8 @@
             this.Name = "FormBienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBienvenida";
-            this.pnlSuperiorFormBienvenida.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbDiseno)).EndInit();
+            this.pnlSuperiorFormBienvenida.ResumeLayout(false);
             this.pnlCentroFormBienvenida.ResumeLayout(false);
             this.pnlCentroFormBienvenida.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -384,9 +306,6 @@
         }
 
         #endregion
-
-        public Bunifu.Framework.UI.BunifuElipse elipseFormBienvenida;
-        public Bunifu.Framework.UI.BunifuDragControl dragFormBienvenida;
         private System.Windows.Forms.Panel pnlSuperiorFormBienvenida;
         private System.Windows.Forms.Panel pnlCentroFormBienvenida;
         private System.Windows.Forms.PictureBox ptbLogo;
@@ -396,22 +315,15 @@
         public System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnIngresar;
-        private Bunifu.Framework.UI.BunifuElipse elipseBtnIngresar;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public System.Windows.Forms.Button btnCerrar;
         public System.Windows.Forms.Button btnMinimizar;
         public System.Windows.Forms.TextBox tbxNombre;
         public System.Windows.Forms.Timer timerForm;
-        private Bunifu.Framework.UI.BunifuDragControl dragForm;
-        private Bunifu.Framework.UI.BunifuDragControl dragLogo;
-        private Bunifu.Framework.UI.BunifuDragControl dragLblTitulo;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
     }
 }
