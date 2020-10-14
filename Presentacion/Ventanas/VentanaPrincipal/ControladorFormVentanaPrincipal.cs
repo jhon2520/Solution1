@@ -10,6 +10,7 @@ using Presentacion.FormsCarteras.Comercial;
 using Presentacion.FormsCarteras.Consumo;
 using Presentacion.FormsCarteras.Micro;
 using Presentacion.FormsCarteras.Vivienda;
+using Presentacion.Ventanas.AcercaDe;
 using Presentacion.Ventanas.VentanaAviso;
 using Presentacion.Ventanas.VentanaConfirmacion;
 using Presentacion.Ventanas.VentanaError;
@@ -24,6 +25,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         private FormConfirmacion formConfirmacion;
         private FormAviso formAviso;
         private FormError formError;
+        private FormAcercaDE formAcerca = new FormAcercaDE();
 
         public ControladorFormVentanaPrincipal(FormVentanaPrincipal formVentanaPrincipal)
         {
@@ -39,7 +41,12 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.btnVivienda.Click += new EventHandler(Flecha);
             this.formVentanaPrincipal.btnMicro.Click += new EventHandler(Flecha);
             this.formVentanaPrincipal.btnCerrarFormActivo.Click += new EventHandler(CerrarFormActivo);
-            this.formVentanaPrincipal.lblLinkAcercaDe.Click += new EventHandler(AbrirPáginaSENA);
+            this.formVentanaPrincipal.btnInstagram.Click += new EventHandler(AbrirWeb);
+            this.formVentanaPrincipal.btnFacebook.Click += new EventHandler(AbrirWeb);
+            this.formVentanaPrincipal.btnTwitter.Click += new EventHandler(AbrirWeb);
+            this.formVentanaPrincipal.btnYoutube.Click += new EventHandler(AbrirWeb);
+            this.formVentanaPrincipal.btnPagina.Click += new EventHandler(AbrirWeb);
+            this.formVentanaPrincipal.lblLinkAcercaDe.Click += new EventHandler(LlamarFormAcercaDE);
         }
         private void TimerFechaHora(object sender, EventArgs args)
         {
@@ -135,7 +142,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             VisibilidadObjetos(false);
             codigoComun.AbrirFormHijo(formHijo, this.formVentanaPrincipal.pnlCentro);
             this.formVentanaPrincipal.pnlFlecha.Visible = true;
-            ////////this.formVentanaPrincipal.bunifuTransitionForm.Show(this.formVentanaPrincipal.pnlCentro);
+            this.formVentanaPrincipal.bunifuTransitionForm.Show(this.formVentanaPrincipal.pnlCentro);
         }
 
         private void BotonesCambioDeForm(int R, int G, int B, Button buttonFormHijo, Form formHijo)
@@ -150,9 +157,35 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             }
         }
 
-        private void AbrirPáginaSENA(object sender, EventArgs args)
+        private void AbrirWeb(object sender, EventArgs args)
         {
-            System.Diagnostics.Process.Start("www.sena.edu.co/es-co/Paginas/default.aspx");
+            if (((Button)sender).Name == this.formVentanaPrincipal.btnInstagram.Name)
+            {
+                codigoComun.AbrirWebs("www.instagram.com/senacomunica/");
+            }
+            else if (((Button)sender).Name == this.formVentanaPrincipal.btnFacebook.Name)
+            {
+                codigoComun.AbrirWebs("www.facebook.com/SENA/");
+            }
+            else if (((Button)sender).Name == this.formVentanaPrincipal.btnTwitter.Name)
+            {
+                codigoComun.AbrirWebs("www.twitter.com/senacha2?lang=es");
+            }
+            else if (((Button)sender).Name == this.formVentanaPrincipal.btnYoutube.Name)
+            {
+                codigoComun.AbrirWebs("www.youtube.com/user/SENATV");
+            }
+            else if (((Button)sender).Name == this.formVentanaPrincipal.btnPagina.Name)
+            {
+                codigoComun.AbrirWebs("www.sena.edu.co/es-co/Paginas/default.aspx");
+            }
         }
+
+        private void LlamarFormAcercaDE(object sender, EventArgs args)
+        {
+            formAcerca.ShowDialog();
+        }
+
+  
     }
 }

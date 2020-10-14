@@ -33,11 +33,14 @@
             this.btnListo = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerForm = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.elipseBtnListo = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,12 +48,11 @@
             // 
             // lblMensaje
             // 
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lblMensaje.Location = new System.Drawing.Point(16, 44);
-            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(12, 36);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(497, 96);
+            this.lblMensaje.Size = new System.Drawing.Size(373, 78);
             this.lblMensaje.TabIndex = 19;
             this.lblMensaje.Text = "Mensaje";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,24 +62,23 @@
             this.btnListo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(93)))), ((int)(((byte)(78)))));
             this.btnListo.FlatAppearance.BorderSize = 0;
             this.btnListo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListo.ForeColor = System.Drawing.Color.White;
-            this.btnListo.Location = new System.Drawing.Point(189, 150);
-            this.btnListo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListo.Location = new System.Drawing.Point(142, 122);
             this.btnListo.Name = "btnListo";
-            this.btnListo.Size = new System.Drawing.Size(151, 32);
+            this.btnListo.Size = new System.Drawing.Size(113, 26);
             this.btnListo.TabIndex = 20;
             this.btnListo.Text = "Listo";
             this.btnListo.UseVisualStyleBackColor = false;
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(221, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(166, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(87, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(65, 25);
             this.lblTitulo.TabIndex = 21;
             this.lblTitulo.Text = "ERROR";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,32 +91,9 @@
             this.pnlTitulo.Controls.Add(this.pictureBox2);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(529, 41);
+            this.pnlTitulo.Size = new System.Drawing.Size(397, 33);
             this.pnlTitulo.TabIndex = 23;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.cerrarVentana;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(499, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Presentacion.Properties.Resources.diseñoFondoRojo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-13, -117);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(587, 172);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
             // 
             // timerForm
             // 
@@ -126,12 +104,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(261, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(196, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 17);
+            this.label3.Size = new System.Drawing.Size(104, 15);
             this.label3.TabIndex = 25;
             this.label3.Text = "www.sena.edu.co";
             // 
@@ -139,28 +116,63 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label2.Location = new System.Drawing.Point(128, 201);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(92, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 17);
+            this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.TabIndex = 24;
             this.label2.Text = "@SENAcomunica";
             // 
+            // dragForm
+            // 
+            this.dragForm.Fixed = true;
+            this.dragForm.Horizontal = true;
+            this.dragForm.TargetControl = this.pictureBox2;
+            this.dragForm.Vertical = true;
+            // 
+            // elipseBtnListo
+            // 
+            this.elipseBtnListo.ElipseRadius = 7;
+            this.elipseBtnListo.TargetControl = this.btnListo;
+            // 
+            // elipseForm
+            // 
+            this.elipseForm.ElipseRadius = 7;
+            this.elipseForm.TargetControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.cerrarVentana;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(149, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Presentacion.Properties.Resources.diseñoFondoRojo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(-10, -95);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(440, 140);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormError
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(529, 233);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(397, 189);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnListo);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormError";
@@ -183,5 +195,8 @@
         public System.Windows.Forms.Button btnListo;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuDragControl dragForm;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnListo;
+        private Bunifu.Framework.UI.BunifuElipse elipseForm;
     }
 }

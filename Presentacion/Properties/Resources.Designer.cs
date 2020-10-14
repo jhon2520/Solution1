@@ -123,6 +123,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap csharp_01 {
+            get {
+                object obj = ResourceManager.GetObject("csharp-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diseñoFondo {
             get {
                 object obj = ResourceManager.GetObject("diseñoFondo", resourceCulture);
@@ -406,6 +416,26 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap vivienda__1_ {
             get {
                 object obj = ResourceManager.GetObject("vivienda (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap website_24px {
+            get {
+                object obj = ResourceManager.GetObject("website_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap website_48px {
+            get {
+                object obj = ResourceManager.GetObject("website_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

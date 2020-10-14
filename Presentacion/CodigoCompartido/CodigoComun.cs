@@ -140,6 +140,11 @@ namespace Presentacion.CodigoCompartido
                 e.Handled = true;
             }
         }
+
+        public void AbrirWebs(string pagina)
+        {
+            System.Diagnostics.Process.Start(pagina);
+        }
   
     }
 }

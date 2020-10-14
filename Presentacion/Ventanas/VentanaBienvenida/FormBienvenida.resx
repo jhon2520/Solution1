@@ -137,6 +137,12 @@
   <metadata name="timerForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 12</value>
   </metadata>
+  <metadata name="dragForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>259, 12</value>
+  </metadata>
+  <metadata name="elipseForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>364, 12</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAPsAAAEAIACICwQAFgAAACgAAAAAAQAA9gEAAAEAIAAAAAAAAOwDAAAAAAAAAAAAAAAAAAAA
@@ -4560,4 +4566,7 @@
         //////////////////////////////////////////////////8=
 </value>
   </data>
+  <metadata name="elipseBtn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>475, 12</value>
+  </metadata>
 </root>
