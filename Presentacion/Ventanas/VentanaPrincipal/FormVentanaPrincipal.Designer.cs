@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentanaPrincipal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.pnlCentro = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSimulador = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuTransitionForm = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnPagina = new System.Windows.Forms.Button();
             this.btnYoutube = new System.Windows.Forms.Button();
             this.btnTwitter = new System.Windows.Forms.Button();
@@ -105,6 +105,24 @@
             this.pnlCentro.Name = "pnlCentro";
             this.pnlCentro.Size = new System.Drawing.Size(878, 496);
             this.pnlCentro.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuTransitionForm.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
+            this.panel1.Location = new System.Drawing.Point(575, 470);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 1);
+            this.panel1.TabIndex = 29;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.bunifuTransitionForm.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Location = new System.Drawing.Point(16, 470);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(284, 1);
+            this.panel2.TabIndex = 28;
             // 
             // label3
             // 
@@ -194,7 +212,7 @@
             this.bunifuTransitionForm.SetDecoration(this.lblLinkAcercaDe, BunifuAnimatorNS.DecorationType.None);
             this.lblLinkAcercaDe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkAcercaDe.LinkColor = System.Drawing.Color.Cyan;
-            this.lblLinkAcercaDe.Location = new System.Drawing.Point(27, 480);
+            this.lblLinkAcercaDe.Location = new System.Drawing.Point(27, 475);
             this.lblLinkAcercaDe.Name = "lblLinkAcercaDe";
             this.lblLinkAcercaDe.Size = new System.Drawing.Size(77, 16);
             this.lblLinkAcercaDe.TabIndex = 20;
@@ -265,24 +283,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransitionForm.DefaultAnimation = animation1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.bunifuTransitionForm.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(16, 470);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(284, 1);
-            this.panel2.TabIndex = 28;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.bunifuTransitionForm.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(575, 470);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 1);
-            this.panel1.TabIndex = 29;
             // 
             // btnPagina
             // 

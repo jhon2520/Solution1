@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion.FormsCarteras.Consumo
+namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
 {
-    public partial class FormConsumo : Form
+    public partial class FormVariablesAnalisis : Form
     {
-        public FormConsumo()
+        public FormVariablesAnalisis()
         {
             InitializeComponent();
-            ControladorFormConsumo controladorFormConsumo = new ControladorFormConsumo(this);
         }
     }
 }

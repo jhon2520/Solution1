@@ -66,6 +66,13 @@
     <Compile Include="FormsCarteras\Consumo\FormConsumo.Designer.cs">
       <DependentUpon>FormConsumo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsCarteras\Consumo\VarialblesAnalisis\ControladorFormVariablesAnalisis.cs" />
+    <Compile Include="FormsCarteras\Consumo\VarialblesAnalisis\FormVariablesAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsCarteras\Consumo\VarialblesAnalisis\FormVariablesAnalisis.Designer.cs">
+      <DependentUpon>FormVariablesAnalisis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsCarteras\Micro\ControladorFormMicro.cs" />
     <Compile Include="FormsCarteras\Micro\FormMicro.cs">
       <SubType>Form</SubType>
@@ -136,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCarteras\Consumo\FormConsumo.resx">
       <DependentUpon>FormConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsCarteras\Consumo\VarialblesAnalisis\FormVariablesAnalisis.resx">
+      <DependentUpon>FormVariablesAnalisis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsCarteras\Micro\FormMicro.resx">
       <DependentUpon>FormMicro.cs</DependentUpon>
