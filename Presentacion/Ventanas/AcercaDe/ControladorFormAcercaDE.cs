@@ -10,7 +10,6 @@ namespace Presentacion.Ventanas.AcercaDe
     class ControladorFormAcercaDE
     {
         private FormAcercaDE formAcercaDe;
-        private CodigoComun codigoComun = new CodigoComun();
 
 
         public ControladorFormAcercaDE(FormAcercaDE formAcercaDE)
@@ -21,7 +20,7 @@ namespace Presentacion.Ventanas.AcercaDe
 
         private void CerrarForm(object sender, EventArgs args)
         {
-            codigoComun.BtnCerrar(this.formAcercaDe);
+            CodigoComun.BtnCerrar(this.formAcercaDe);
         }
     }
 }

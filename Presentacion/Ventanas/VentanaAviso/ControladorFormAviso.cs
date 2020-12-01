@@ -12,7 +12,6 @@ namespace Presentacion.Ventanas.VentanaAviso
     public class ControladorFormAviso
     {
         public FormAviso formAviso;
-        public CodigoComun codigoComun = new CodigoComun();
 
         public ControladorFormAviso(FormAviso formAviso)
         {
@@ -20,15 +19,25 @@ namespace Presentacion.Ventanas.VentanaAviso
             this.formAviso.Opacity = 0.0;
             this.formAviso.timerForm.Tick += new EventHandler(EfectoLogin);
             this.formAviso.btnListo.Click += new EventHandler(Cerrar);
+            this.formAviso.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formAviso.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
         }
 
         public void EfectoLogin(object sender, EventArgs args)
         {
-            codigoComun.Timer(this.formAviso, this.formAviso.timerForm);
+            CodigoComun.Timer(this.formAviso, this.formAviso.timerForm);
         }
         public void Cerrar(object sender, EventArgs args)
         {
-            codigoComun.BtnCerrar(this.formAviso);
+            CodigoComun.BtnCerrar(this.formAviso);
+        }
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formAviso.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formAviso.Opacity = 1;
         }
 
     }

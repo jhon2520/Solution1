@@ -15,7 +15,6 @@ namespace Presentacion.Ventanas.Calculadora
     class ControladorFormCalculadora
     {
         private FormCalculadora formCalculadora;
-        private CodigoComun codigoComun = new CodigoComun();
         private FormConfirmacion formConfirmacion;
         private FormError formError;
         public ControladorFormCalculadora(FormCalculadora formCalculadora)
@@ -52,11 +51,11 @@ namespace Presentacion.Ventanas.Calculadora
             {
                 if (this.formCalculadora.rbtTasaNominal1.Checked == true)
                 {
-                    valorTasa = (codigoComun.NominalAEfectiva(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
+                    valorTasa = (CodigoComun.NominalAEfectiva(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
                 }
                 else if (this.formCalculadora.rbtTasaEfectiva1.Checked == true)
                 {
-                    valorTasa = (codigoComun.EfectivaANominal(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
+                    valorTasa = (CodigoComun.EfectivaANominal(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
                 }
                 else
                 {
@@ -75,7 +74,7 @@ namespace Presentacion.Ventanas.Calculadora
 
         private void EfectoLogin(object sender, EventArgs args)
         {
-            codigoComun.Timer(this.formCalculadora, this.formCalculadora.timerForm);
+            CodigoComun.Timer(this.formCalculadora, this.formCalculadora.timerForm);
         }
 
         private void CerrarForm(object sender, EventArgs args)
@@ -85,13 +84,13 @@ namespace Presentacion.Ventanas.Calculadora
 
             if (resultado == DialogResult.OK)
             {
-                codigoComun.BtnCerrar(this.formCalculadora);
+                CodigoComun.BtnCerrar(this.formCalculadora);
             }
 
         }
         private void MinimizarForm(object sender, EventArgs args)
         {
-            codigoComun.BtnMinimizar(this.formCalculadora);
+            CodigoComun.BtnMinimizar(this.formCalculadora);
         }
     }
 }

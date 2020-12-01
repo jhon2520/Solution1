@@ -11,7 +11,6 @@ namespace Presentacion.Ventanas.VentanaConfirmacion
     class ControladorFormConfirmacion
     {
         private FormConfirmacion formConfirmacion;
-        private CodigoComun codigoComun= new CodigoComun();
 
         public ControladorFormConfirmacion(FormConfirmacion formConfirmacion)
         {
@@ -20,6 +19,8 @@ namespace Presentacion.Ventanas.VentanaConfirmacion
             this.formConfirmacion.btnListo.Click += new EventHandler(BtnConfirmar);
             this.formConfirmacion.btnNo.Click += new EventHandler(BtnNegar);
             this.formConfirmacion.timerForm.Tick += new EventHandler(EfectoLogin);
+            this.formConfirmacion.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formConfirmacion.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
         }
 
         private void BtnConfirmar(object sender, EventArgs args)
@@ -33,7 +34,15 @@ namespace Presentacion.Ventanas.VentanaConfirmacion
 
         private void EfectoLogin(object sender, EventArgs args)
         {
-            codigoComun.Timer(this.formConfirmacion, this.formConfirmacion.timerForm);
+            CodigoComun.Timer(this.formConfirmacion, this.formConfirmacion.timerForm);
+        }
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formConfirmacion.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formConfirmacion.Opacity = 1;
         }
     }
 }

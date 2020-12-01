@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnListo = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,12 +40,9 @@
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnListo = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlSuperior.SuspendLayout();
-            this.pnlCentro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlCentro.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMensaje
@@ -73,28 +70,24 @@
             this.btnListo.Text = "Listo";
             this.btnListo.UseVisualStyleBackColor = false;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(155, 2);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(87, 25);
-            this.lblTitulo.TabIndex = 17;
-            this.lblTitulo.Text = "CORRECTO";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlSuperior
             // 
             this.pnlSuperior.Controls.Add(this.pictureBox1);
-            this.pnlSuperior.Controls.Add(this.lblTitulo);
-            this.pnlSuperior.Controls.Add(this.pictureBox2);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(397, 33);
             this.pnlSuperior.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.ok;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlCentro
             // 
@@ -142,7 +135,7 @@
             // 
             this.dragForm.Fixed = true;
             this.dragForm.Horizontal = true;
-            this.dragForm.TargetControl = this.pictureBox2;
+            this.dragForm.TargetControl = this.pnlSuperior;
             this.dragForm.Vertical = true;
             // 
             // elipseForm
@@ -154,26 +147,6 @@
             // 
             this.elipseBtnListo.ElipseRadius = 7;
             this.elipseBtnListo.TargetControl = this.btnListo;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.ok;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Presentacion.Properties.Resources.diseñoFondoAzul;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-3, -107);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(455, 155);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
             // 
             // FormAviso
             // 
@@ -188,21 +161,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAviso";
             this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCentro.ResumeLayout(false);
             this.pnlCentro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label lblTitulo;
         public System.Windows.Forms.Label lblMensaje;
-        private System.Windows.Forms.Panel pnlSuperior;
         private System.Windows.Forms.Panel pnlCentro;
-        private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Timer timerForm;
         public System.Windows.Forms.Button btnListo;
         public System.Windows.Forms.Label label3;
@@ -210,5 +179,6 @@
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuElipse elipseForm;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnListo;
+        public System.Windows.Forms.Panel pnlSuperior;
     }
 }

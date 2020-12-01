@@ -53,25 +53,33 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.tbxMonto = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.pnlCambioDeColor = new System.Windows.Forms.Panel();
+            this.lblSimulador = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblCedula = new System.Windows.Forms.Label();
             this.tbxCedula = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.btnAnalisis = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblSimulador = new System.Windows.Forms.Label();
+            this.pnlExportar = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.trancisionFormAnalisis = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.ttFormConsumo = new System.Windows.Forms.ToolTip(this.components);
+            this.elipsePnlSuperior = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseDgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnPlanCuotas = new System.Windows.Forms.Button();
+            this.btnExportarPDF = new System.Windows.Forms.Button();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnAnalisis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPagoComercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            this.pnlCambioDeColor.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlExportar.SuspendLayout();
             this.pnlCentro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +113,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.dgvPlanPagoComercial, BunifuAnimatorNS.DecorationType.None);
             this.dgvPlanPagoComercial.EnableHeadersVisualStyles = false;
             this.dgvPlanPagoComercial.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPlanPagoComercial.Location = new System.Drawing.Point(18, 129);
+            this.dgvPlanPagoComercial.Location = new System.Drawing.Point(39, 139);
             this.dgvPlanPagoComercial.Name = "dgvPlanPagoComercial";
             this.dgvPlanPagoComercial.ReadOnly = true;
             this.dgvPlanPagoComercial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -178,7 +186,7 @@
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel15, BunifuAnimatorNS.DecorationType.None);
             this.panel15.Location = new System.Drawing.Point(314, 84);
             this.panel15.Name = "panel15";
@@ -206,10 +214,9 @@
             this.tbxCuota.Enabled = false;
             this.tbxCuota.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCuota.ForeColor = System.Drawing.Color.Gray;
-            this.tbxCuota.Location = new System.Drawing.Point(316, 63);
-            this.tbxCuota.Multiline = true;
+            this.tbxCuota.Location = new System.Drawing.Point(316, 67);
             this.tbxCuota.Name = "tbxCuota";
-            this.tbxCuota.Size = new System.Drawing.Size(136, 20);
+            this.tbxCuota.Size = new System.Drawing.Size(136, 15);
             this.tbxCuota.TabIndex = 30;
             this.tbxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -228,7 +235,7 @@
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel14, BunifuAnimatorNS.DecorationType.None);
             this.panel14.Location = new System.Drawing.Point(624, 53);
             this.panel14.Name = "panel14";
@@ -269,7 +276,7 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel13, BunifuAnimatorNS.DecorationType.None);
             this.panel13.Location = new System.Drawing.Point(489, 53);
             this.panel13.Name = "panel13";
@@ -296,7 +303,7 @@
             // 
             // panel17
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel17, BunifuAnimatorNS.DecorationType.None);
             this.panel17.Location = new System.Drawing.Point(287, 51);
             this.panel17.Name = "panel17";
@@ -323,41 +330,65 @@
             this.trancisionFormAnalisis.SetDecoration(this.tbxMonto, BunifuAnimatorNS.DecorationType.None);
             this.tbxMonto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxMonto.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxMonto.Location = new System.Drawing.Point(287, 29);
-            this.tbxMonto.Multiline = true;
+            this.tbxMonto.Location = new System.Drawing.Point(287, 33);
             this.tbxMonto.Name = "tbxMonto";
-            this.tbxMonto.Size = new System.Drawing.Size(136, 20);
+            this.tbxMonto.Size = new System.Drawing.Size(136, 15);
             this.tbxMonto.TabIndex = 1;
             this.tbxMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel1
+            // pnlPrincipal
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.tbxMonto);
-            this.panel1.Controls.Add(this.panel17);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.lblCedula);
-            this.panel1.Controls.Add(this.tbxCedula);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel15);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.tbxCuota);
-            this.panel1.Controls.Add(this.contadorPlazo);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.panel13);
-            this.panel1.Controls.Add(this.contadorTasa);
-            this.panel1.Controls.Add(this.panel14);
-            this.panel1.Controls.Add(this.label9);
-            this.trancisionFormAnalisis.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(18, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 102);
-            this.panel1.TabIndex = 97;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.pnlCambioDeColor);
+            this.pnlPrincipal.Controls.Add(this.btnPlanCuotas);
+            this.pnlPrincipal.Controls.Add(this.label12);
+            this.pnlPrincipal.Controls.Add(this.tbxMonto);
+            this.pnlPrincipal.Controls.Add(this.panel17);
+            this.pnlPrincipal.Controls.Add(this.panel4);
+            this.pnlPrincipal.Controls.Add(this.lblCedula);
+            this.pnlPrincipal.Controls.Add(this.tbxCedula);
+            this.pnlPrincipal.Controls.Add(this.panel15);
+            this.pnlPrincipal.Controls.Add(this.label8);
+            this.pnlPrincipal.Controls.Add(this.tbxCuota);
+            this.pnlPrincipal.Controls.Add(this.contadorPlazo);
+            this.pnlPrincipal.Controls.Add(this.label10);
+            this.pnlPrincipal.Controls.Add(this.panel13);
+            this.pnlPrincipal.Controls.Add(this.contadorTasa);
+            this.pnlPrincipal.Controls.Add(this.panel14);
+            this.pnlPrincipal.Controls.Add(this.label9);
+            this.trancisionFormAnalisis.SetDecoration(this.pnlPrincipal, BunifuAnimatorNS.DecorationType.None);
+            this.pnlPrincipal.Location = new System.Drawing.Point(39, 21);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(720, 102);
+            this.pnlPrincipal.TabIndex = 97;
+            // 
+            // pnlCambioDeColor
+            // 
+            this.pnlCambioDeColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.pnlCambioDeColor.Controls.Add(this.lblSimulador);
+            this.trancisionFormAnalisis.SetDecoration(this.pnlCambioDeColor, BunifuAnimatorNS.DecorationType.None);
+            this.pnlCambioDeColor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCambioDeColor.Location = new System.Drawing.Point(0, 0);
+            this.pnlCambioDeColor.Name = "pnlCambioDeColor";
+            this.pnlCambioDeColor.Size = new System.Drawing.Size(720, 22);
+            this.pnlCambioDeColor.TabIndex = 34;
+            // 
+            // lblSimulador
+            // 
+            this.lblSimulador.AutoSize = true;
+            this.lblSimulador.BackColor = System.Drawing.Color.Transparent;
+            this.trancisionFormAnalisis.SetDecoration(this.lblSimulador, BunifuAnimatorNS.DecorationType.None);
+            this.lblSimulador.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSimulador.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblSimulador.Location = new System.Drawing.Point(204, 4);
+            this.lblSimulador.Name = "lblSimulador";
+            this.lblSimulador.Size = new System.Drawing.Size(313, 15);
+            this.lblSimulador.TabIndex = 10;
+            this.lblSimulador.Text = "Variables iniciales de entrada para el análisis del crédito\r\n";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.panel4.Location = new System.Drawing.Point(80, 51);
             this.panel4.Name = "panel4";
@@ -384,127 +415,80 @@
             this.trancisionFormAnalisis.SetDecoration(this.tbxCedula, BunifuAnimatorNS.DecorationType.None);
             this.tbxCedula.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxCedula.Location = new System.Drawing.Point(80, 32);
-            this.tbxCedula.Multiline = true;
+            this.tbxCedula.Location = new System.Drawing.Point(80, 34);
             this.tbxCedula.Name = "tbxCedula";
-            this.tbxCedula.Size = new System.Drawing.Size(136, 20);
+            this.tbxCedula.Size = new System.Drawing.Size(136, 15);
             this.tbxCedula.TabIndex = 1;
             this.tbxCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.panel3.Controls.Add(this.btnLimpiar);
+            this.panel3.Controls.Add(this.btnCalculadora);
+            this.panel3.Controls.Add(this.pnlExportar);
             this.panel3.Controls.Add(this.btnExportar);
             this.panel3.Controls.Add(this.btnAnalisis);
-            this.panel3.Controls.Add(this.btnCalculadora);
+            this.panel3.Controls.Add(this.panel5);
             this.trancisionFormAnalisis.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(104, 493);
+            this.panel3.Size = new System.Drawing.Size(104, 497);
             this.panel3.TabIndex = 100;
-            // 
-            // btnLimpiar
-            // 
-            this.trancisionFormAnalisis.SetDecoration(this.btnLimpiar, BunifuAnimatorNS.DecorationType.None);
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(0, 282);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(104, 30);
-            this.btnLimpiar.TabIndex = 21;
-            this.btnLimpiar.Text = "Nuevo";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnExportar
-            // 
-            this.trancisionFormAnalisis.SetDecoration(this.btnExportar, BunifuAnimatorNS.DecorationType.None);
-            this.btnExportar.FlatAppearance.BorderSize = 0;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportar.ForeColor = System.Drawing.Color.White;
-            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportar.Location = new System.Drawing.Point(0, 249);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(104, 30);
-            this.btnExportar.TabIndex = 20;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
-            // btnAnalisis
-            // 
-            this.trancisionFormAnalisis.SetDecoration(this.btnAnalisis, BunifuAnimatorNS.DecorationType.None);
-            this.btnAnalisis.FlatAppearance.BorderSize = 0;
-            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalisis.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalisis.ForeColor = System.Drawing.Color.White;
-            this.btnAnalisis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalisis.Location = new System.Drawing.Point(0, 216);
-            this.btnAnalisis.Name = "btnAnalisis";
-            this.btnAnalisis.Size = new System.Drawing.Size(104, 30);
-            this.btnAnalisis.TabIndex = 19;
-            this.btnAnalisis.Text = "Análisis";
-            this.btnAnalisis.UseVisualStyleBackColor = true;
             // 
             // btnCalculadora
             // 
             this.trancisionFormAnalisis.SetDecoration(this.btnCalculadora, BunifuAnimatorNS.DecorationType.None);
+            this.btnCalculadora.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCalculadora.FlatAppearance.BorderSize = 0;
+            this.btnCalculadora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnCalculadora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculadora.ForeColor = System.Drawing.Color.White;
             this.btnCalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculadora.Location = new System.Drawing.Point(-1, 316);
+            this.btnCalculadora.Location = new System.Drawing.Point(0, 324);
             this.btnCalculadora.Name = "btnCalculadora";
             this.btnCalculadora.Size = new System.Drawing.Size(104, 30);
             this.btnCalculadora.TabIndex = 18;
             this.btnCalculadora.Text = "      Calculadora";
             this.btnCalculadora.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // pnlExportar
             // 
-            this.panel2.BackColor = System.Drawing.Color.Ivory;
-            this.panel2.BackgroundImage = global::Presentacion.Properties.Resources.panelTitulosMorado;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.lblSimulador);
-            this.trancisionFormAnalisis.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(-5, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(725, 24);
-            this.panel2.TabIndex = 0;
+            this.pnlExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.pnlExportar.Controls.Add(this.btnExportarPDF);
+            this.pnlExportar.Controls.Add(this.btnExportarExcel);
+            this.trancisionFormAnalisis.SetDecoration(this.pnlExportar, BunifuAnimatorNS.DecorationType.None);
+            this.pnlExportar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlExportar.Location = new System.Drawing.Point(0, 261);
+            this.pnlExportar.Name = "pnlExportar";
+            this.pnlExportar.Size = new System.Drawing.Size(104, 63);
+            this.pnlExportar.TabIndex = 22;
             // 
-            // lblSimulador
+            // panel5
             // 
-            this.lblSimulador.AutoSize = true;
-            this.lblSimulador.BackColor = System.Drawing.Color.Transparent;
-            this.trancisionFormAnalisis.SetDecoration(this.lblSimulador, BunifuAnimatorNS.DecorationType.None);
-            this.lblSimulador.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSimulador.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblSimulador.Location = new System.Drawing.Point(206, 5);
-            this.lblSimulador.Name = "lblSimulador";
-            this.lblSimulador.Size = new System.Drawing.Size(313, 15);
-            this.lblSimulador.TabIndex = 10;
-            this.lblSimulador.Text = "Variables iniciales de entrada para el análisis del crédito\r\n";
+            this.trancisionFormAnalisis.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(104, 201);
+            this.panel5.TabIndex = 0;
             // 
             // pnlCentro
             // 
-            this.pnlCentro.Controls.Add(this.panel1);
+            this.pnlCentro.Controls.Add(this.pnlPrincipal);
             this.pnlCentro.Controls.Add(this.dgvPlanPagoComercial);
             this.trancisionFormAnalisis.SetDecoration(this.pnlCentro, BunifuAnimatorNS.DecorationType.None);
             this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentro.Location = new System.Drawing.Point(104, 0);
             this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(771, 493);
+            this.pnlCentro.Size = new System.Drawing.Size(799, 497);
             this.pnlCentro.TabIndex = 101;
             // 
             // trancisionFormAnalisis
             // 
-            this.trancisionFormAnalisis.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
-            this.trancisionFormAnalisis.Cursor = null;
+            this.trancisionFormAnalisis.AnimationType = BunifuAnimatorNS.AnimationType.Transparent;
+            this.trancisionFormAnalisis.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             animation2.AnimateOnlyDifferences = true;
             animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
             animation2.LeafCoeff = 0F;
@@ -512,23 +496,127 @@
             animation2.MinTime = 0F;
             animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
             animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 1;
-            animation2.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
             animation2.RotateCoeff = 0F;
             animation2.RotateLimit = 0F;
             animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
             animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 2F;
-            animation2.TransparencyCoeff = 0F;
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
             this.trancisionFormAnalisis.DefaultAnimation = animation2;
             this.trancisionFormAnalisis.Interval = 30;
+            this.trancisionFormAnalisis.MaxAnimationTime = 1000;
+            this.trancisionFormAnalisis.TimeStep = 0.01F;
+            // 
+            // ttFormConsumo
+            // 
+            this.ttFormConsumo.IsBalloon = true;
+            // 
+            // elipsePnlSuperior
+            // 
+            this.elipsePnlSuperior.ElipseRadius = 6;
+            this.elipsePnlSuperior.TargetControl = this.pnlPrincipal;
+            // 
+            // elipseDgv
+            // 
+            this.elipseDgv.ElipseRadius = 6;
+            this.elipseDgv.TargetControl = this.dgvPlanPagoComercial;
+            // 
+            // btnPlanCuotas
+            // 
+            this.btnPlanCuotas.BackgroundImage = global::Presentacion.Properties.Resources.planCuotas;
+            this.btnPlanCuotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.trancisionFormAnalisis.SetDecoration(this.btnPlanCuotas, BunifuAnimatorNS.DecorationType.None);
+            this.btnPlanCuotas.FlatAppearance.BorderSize = 0;
+            this.btnPlanCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanCuotas.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlanCuotas.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPlanCuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanCuotas.Location = new System.Drawing.Point(462, 61);
+            this.btnPlanCuotas.Name = "btnPlanCuotas";
+            this.btnPlanCuotas.Size = new System.Drawing.Size(39, 30);
+            this.btnPlanCuotas.TabIndex = 33;
+            this.btnPlanCuotas.UseVisualStyleBackColor = true;
+            // 
+            // btnExportarPDF
+            // 
+            this.btnExportarPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportarPDF, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportarPDF.FlatAppearance.BorderSize = 0;
+            this.btnExportarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnExportarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarPDF.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarPDF.ForeColor = System.Drawing.Color.White;
+            this.btnExportarPDF.Image = global::Presentacion.Properties.Resources.pdf_30px;
+            this.btnExportarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarPDF.Location = new System.Drawing.Point(0, 32);
+            this.btnExportarPDF.Name = "btnExportarPDF";
+            this.btnExportarPDF.Size = new System.Drawing.Size(104, 30);
+            this.btnExportarPDF.TabIndex = 22;
+            this.btnExportarPDF.Text = "        PDF";
+            this.btnExportarPDF.UseVisualStyleBackColor = false;
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportarExcel, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportarExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportarExcel.Image = global::Presentacion.Properties.Resources.microsoft_excel_32px;
+            this.btnExportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarExcel.Location = new System.Drawing.Point(0, 1);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(104, 30);
+            this.btnExportarExcel.TabIndex = 21;
+            this.btnExportarExcel.Text = "        Excel";
+            this.btnExportarExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnExportar
+            // 
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportar, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.Image = global::Presentacion.Properties.Resources.export_30px;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(0, 231);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(104, 30);
+            this.btnExportar.TabIndex = 20;
+            this.btnExportar.Text = "      Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnAnalisis
+            // 
+            this.trancisionFormAnalisis.SetDecoration(this.btnAnalisis, BunifuAnimatorNS.DecorationType.None);
+            this.btnAnalisis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnalisis.FlatAppearance.BorderSize = 0;
+            this.btnAnalisis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalisis.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalisis.ForeColor = System.Drawing.Color.White;
+            this.btnAnalisis.Image = global::Presentacion.Properties.Resources.analyze_24px;
+            this.btnAnalisis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalisis.Location = new System.Drawing.Point(0, 201);
+            this.btnAnalisis.Name = "btnAnalisis";
+            this.btnAnalisis.Size = new System.Drawing.Size(104, 30);
+            this.btnAnalisis.TabIndex = 19;
+            this.btnAnalisis.Text = "      Análisis";
+            this.btnAnalisis.UseVisualStyleBackColor = true;
             // 
             // FormConsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(875, 493);
+            this.ClientSize = new System.Drawing.Size(903, 497);
             this.Controls.Add(this.pnlCentro);
             this.Controls.Add(this.panel3);
             this.trancisionFormAnalisis.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
@@ -538,11 +626,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPagoComercial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlPrincipal.ResumeLayout(false);
+            this.pnlPrincipal.PerformLayout();
+            this.pnlCambioDeColor.ResumeLayout(false);
+            this.pnlCambioDeColor.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlExportar.ResumeLayout(false);
             this.pnlCentro.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -569,18 +658,25 @@
         public System.Windows.Forms.Panel panel17;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox tbxMonto;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Label lblCedula;
-        private System.Windows.Forms.TextBox tbxCedula;
-        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label lblSimulador;
         private System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Button btnLimpiar;
         public System.Windows.Forms.Button btnExportar;
         public System.Windows.Forms.Button btnAnalisis;
         public System.Windows.Forms.Button btnCalculadora;
         public System.Windows.Forms.Panel pnlCentro;
         public BunifuAnimatorNS.BunifuTransition trancisionFormAnalisis;
+        public System.Windows.Forms.Button btnPlanCuotas;
+        public System.Windows.Forms.TextBox tbxCedula;
+        public System.Windows.Forms.ToolTip ttFormConsumo;
+        public System.Windows.Forms.Panel pnlExportar;
+        public System.Windows.Forms.Button btnExportarPDF;
+        public System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuElipse elipsePnlSuperior;
+        public System.Windows.Forms.Panel pnlCambioDeColor;
+        public System.Windows.Forms.Panel pnlPrincipal;
+        private Bunifu.Framework.UI.BunifuElipse elipseDgv;
     }
 }

@@ -118,17 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="calculadora (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calculadora (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="diseñoFondoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diseñoFondoAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empresa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empresa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="microsoft_excel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\microsoft_excel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogoPrograma2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoPrograma2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="money_bag_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money_bag_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Micro (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Micro (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panelTitulos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panelTitulos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +154,26 @@
   <data name="vivienda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vivienda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="instagramLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\instagramLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="news_feed_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\news_feed_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_48AAzulMicroAbajopx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_48AAzulMicroAbajopx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoPrograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoPrograma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="consumo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\consumo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calculadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="discount_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\discount_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_48Naranjapx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_48Naranjapx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +184,20 @@
   <data name="panelTitulosMorado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panelTitulosMorado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="twitterLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twitterLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="csharp-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\csharp-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diseñoFondoRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diseñoFondoRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pregunta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pregunta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitterLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitterLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_48AAzulViviendapx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_48AAzulViviendapx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flechaIndicadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flechaIndicadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,20 +205,38 @@
   <data name="logo_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ok1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="facebookLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebookLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaAbajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flechaAbajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pregunta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pregunta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_pointing_left_48AAzulMicropx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_pointing_left_48AAzulMicropx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diseñoFondoVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diseñoFondoVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="empresa (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\empresa (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="analyze_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\analyze_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diseñoFondoRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diseñoFondoRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="savePin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\savePin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pregunta1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pregunta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="percentage_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percentage_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculadora (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculadora (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +247,32 @@
   <data name="pnlRedondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pnlRedondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete_bin_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_bin_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="website_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\website_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="empresa (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\empresa (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_window_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_window_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_in_list_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_in_list_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="instagramLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\instagramLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="export_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panelTitulosAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panelTitulosAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,14 +283,17 @@
   <data name="cerrarVentana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrarVentana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calculadora (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculadora (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ask_question_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ask_question_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diseñoFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diseñoFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogoPrograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoPrograma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calculadora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calculadora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +304,7 @@
   <data name="LogoPrograma1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoPrograma1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="csharp-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\csharp-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="planCuotas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\planCuotas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

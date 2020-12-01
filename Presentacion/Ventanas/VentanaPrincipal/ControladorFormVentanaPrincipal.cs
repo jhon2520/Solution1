@@ -10,7 +10,9 @@ using Presentacion.FormsCarteras.Comercial;
 using Presentacion.FormsCarteras.Consumo;
 using Presentacion.FormsCarteras.Micro;
 using Presentacion.FormsCarteras.Vivienda;
+using Presentacion.Properties;
 using Presentacion.Ventanas.AcercaDe;
+using Presentacion.Ventanas.Salario;
 using Presentacion.Ventanas.VentanaAviso;
 using Presentacion.Ventanas.VentanaConfirmacion;
 using Presentacion.Ventanas.VentanaError;
@@ -21,11 +23,10 @@ namespace Presentacion.Ventanas.VentanaPrincipal
     class ControladorFormVentanaPrincipal
     {
         private FormVentanaPrincipal formVentanaPrincipal;
-        private CodigoComun codigoComun = new CodigoComun();
         private FormConfirmacion formConfirmacion;
-        private FormAviso formAviso;
-        private FormError formError;
         private FormAcercaDE formAcerca = new FormAcercaDE();
+        private CodigoComun codigoComun = new CodigoComun();
+        private FormError formError;
 
         public ControladorFormVentanaPrincipal(FormVentanaPrincipal formVentanaPrincipal)
         {
@@ -47,6 +48,9 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.btnYoutube.Click += new EventHandler(AbrirWeb);
             this.formVentanaPrincipal.btnPagina.Click += new EventHandler(AbrirWeb);
             this.formVentanaPrincipal.lblLinkAcercaDe.Click += new EventHandler(LlamarFormAcercaDE);
+            this.formVentanaPrincipal.linkLblSalario.Click += new EventHandler(AbrirFormSalario);
+            this.formVentanaPrincipal.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formVentanaPrincipal.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
         }
         private void TimerFechaHora(object sender, EventArgs args)
         {
@@ -56,11 +60,17 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         
         private void EfectoLogin(object sender, EventArgs args)
         {
-            codigoComun.Timer(this.formVentanaPrincipal, this.formVentanaPrincipal.timerForm);
+            CodigoComun.Timer(this.formVentanaPrincipal, this.formVentanaPrincipal.timerForm);
         }
         private void CargarForm(object sender, EventArgs args)
         {
-            this.formVentanaPrincipal.lblNombre.Text = Cache.Nombre;
+            this.formVentanaPrincipal.lblNombre.Text = Cache.NombreAnalista;
+
+            if(Settings.Default.salario == 0)
+            {
+                formError = new FormError("El salario mínimo no está almacenado en el sistema o tiene un valor de 0");
+                formError.ShowDialog();
+            }
         }
         private void CerrarForm(object sender, EventArgs args)
         {
@@ -69,13 +79,13 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
             if (resultado == DialogResult.OK)
             {
-                codigoComun.BtnCerrar(this.formVentanaPrincipal);
+                CodigoComun.BtnCerrar(this.formVentanaPrincipal);
                 Application.Exit();
             }
         }
         private void MinimizarForm(object sender, EventArgs args)
         {
-            codigoComun.BtnMinimizar(this.formVentanaPrincipal);
+            CodigoComun.BtnMinimizar(this.formVentanaPrincipal);
         }
        public  void FlechaIndicadora(Button button, Panel panel)
         {
@@ -86,24 +96,32 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             if (((Button)sender).Name == this.formVentanaPrincipal.btnComercial.Name)
             {
-                BotonesCambioDeForm(248, 100, 26, this.formVentanaPrincipal.btnComercial, new FormComercial());
+                BotonesCambioDeForm(248, 100, 26, this.formVentanaPrincipal.btnComercial, new FormConsumo());
+                Cache.TipoDeCredito = 2;
+                Cache.ColorInicio = Color.FromArgb(248, 100, 26);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnConsumo.Name)
             {
                 BotonesCambioDeForm(108, 55, 159, this.formVentanaPrincipal.btnConsumo, new FormConsumo());
+                Cache.TipoDeCredito = 1;
+                Cache.ColorInicio = Color.FromArgb(108, 55, 159);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnVivienda.Name)
             {
-                BotonesCambioDeForm(32, 178, 170, this.formVentanaPrincipal.btnVivienda, new FormVivienda());
+                BotonesCambioDeForm(32, 178, 170, this.formVentanaPrincipal.btnVivienda, new FormConsumo());
+                Cache.TipoDeCredito = 3;
+                Cache.ColorInicio = Color.FromArgb(32, 178, 170);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnMicro.Name)
             {
-                BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormMicro());
+                BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormConsumo());
+                Cache.TipoDeCredito = 4;
+                Cache.ColorInicio = Color.FromArgb(90, 148, 201);
             }
         }
         private void CerrarFormActivo(object sender, EventArgs args)
         {
-            if(codigoComun.ActiveForm != null)
+            if (codigoComun.ActiveForm != null)
             {
                 formConfirmacion = new FormConfirmacion("¿Desea volver a la ventana principal?");
                 DialogResult resultado = formConfirmacion.ShowDialog();
@@ -116,15 +134,26 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                     codigoComun.ActiveForm = null;
                     this.formVentanaPrincipal.pnlFlecha.Visible = false;
                 }
-            } 
+            }
         }
-        private void VisibilidadObjetos(bool Visible)
+            private void VisibilidadObjetos(bool Visible)
         {
             this.formVentanaPrincipal.pnlCentro.Visible = Visible;
             this.formVentanaPrincipal.ptbLogo.Visible = Visible;
             this.formVentanaPrincipal.lblFecha.Visible = Visible;
             this.formVentanaPrincipal.lblHora.Visible = Visible;
             this.formVentanaPrincipal.lblSimulador.Visible = Visible;
+            this.formVentanaPrincipal.btnFacebook.Visible = Visible;
+            this.formVentanaPrincipal.btnInstagram.Visible = Visible;
+            this.formVentanaPrincipal.btnPagina.Visible = Visible;
+            this.formVentanaPrincipal.btnTwitter.Visible = Visible;
+            this.formVentanaPrincipal.btnYoutube.Visible = Visible;
+            this.formVentanaPrincipal.lblLinkAcercaDe.Visible = Visible;
+            this.formVentanaPrincipal.lblSenaCom.Visible = Visible;
+            this.formVentanaPrincipal.lblSenaComunica.Visible = Visible;
+            this.formVentanaPrincipal.panel1.Visible = Visible;
+            this.formVentanaPrincipal.panel2.Visible = Visible;
+
         }
         private void ColoresCambioDeSimulador(int R, int G,int B)
         {
@@ -161,31 +190,42 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             if (((Button)sender).Name == this.formVentanaPrincipal.btnInstagram.Name)
             {
-                codigoComun.AbrirWebs("www.instagram.com/senacomunica/");
+                CodigoComun.AbrirWebs("www.instagram.com/senacomunica/");
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnFacebook.Name)
             {
-                codigoComun.AbrirWebs("www.facebook.com/SENA/");
+                CodigoComun.AbrirWebs("www.facebook.com/SENA/");
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnTwitter.Name)
             {
-                codigoComun.AbrirWebs("www.twitter.com/senacha2?lang=es");
+                CodigoComun.AbrirWebs("www.twitter.com/senacha2?lang=es");
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnYoutube.Name)
             {
-                codigoComun.AbrirWebs("www.youtube.com/user/SENATV");
+                CodigoComun.AbrirWebs("www.youtube.com/user/SENATV");
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnPagina.Name)
             {
-                codigoComun.AbrirWebs("www.sena.edu.co/es-co/Paginas/default.aspx");
+                CodigoComun.AbrirWebs("www.sena.edu.co/es-co/Paginas/default.aspx");
             }
         }
 
-        private void LlamarFormAcercaDE(object sender, EventArgs args)
+        private void LlamarFormAcercaDE(object sender, EventArgs args)=> formAcerca.ShowDialog();
+       
+        private void AbrirFormSalario(object sender, EventArgs args)
         {
-            formAcerca.ShowDialog();
+            FormSalario formSalario = new FormSalario();
+            formSalario.ShowDialog();
         }
 
-  
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formVentanaPrincipal.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formVentanaPrincipal.Opacity = 1;
+        }
+
     }
 }
