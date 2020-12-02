@@ -51,6 +51,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.linkLblSalario.Click += new EventHandler(AbrirFormSalario);
             this.formVentanaPrincipal.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formVentanaPrincipal.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
+            MensajesTooltip();
         }
         private void TimerFechaHora(object sender, EventArgs args)
         {
@@ -142,7 +143,6 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.ptbLogo.Visible = Visible;
             this.formVentanaPrincipal.lblFecha.Visible = Visible;
             this.formVentanaPrincipal.lblHora.Visible = Visible;
-            this.formVentanaPrincipal.lblSimulador.Visible = Visible;
             this.formVentanaPrincipal.btnFacebook.Visible = Visible;
             this.formVentanaPrincipal.btnInstagram.Visible = Visible;
             this.formVentanaPrincipal.btnPagina.Visible = Visible;
@@ -227,5 +227,24 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.Opacity = 1;
         }
 
+        private void MensajesTooltip()
+        {
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnConsumo, "Analizar un crédito bajo la modalidad de consumo.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnComercial, "Analizar un crédito bajo la modalidad de comercial.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnMicro, "Analizar un crédito bajo la modalidad de Microcrédito.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnVivienda, "Analizar un crédito bajo la modalidad de Vivienda.");
+
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnInstagram, "Ingresar al Instagram del SENA.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnFacebook, "Ingresar al Facebook del SENA.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnTwitter, "Ingresar al Twitter del SENA.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnYoutube, "Ingresar al canal de Youtube del SENA.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnPagina, "Ingresar a la página web del SENA.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnCerrarFormActivo, "Volver a la ventana principal.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnCerrar, "Cerrar.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnMinimizar, "Minimizar.");
+
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.linkLblSalario, "Modificar el salario mínimo registrado en el sistema.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.lblLinkAcercaDe, "Acerca del sistema.");
+        }
     }
 }

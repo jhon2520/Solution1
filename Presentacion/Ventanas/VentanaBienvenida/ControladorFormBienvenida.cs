@@ -26,20 +26,16 @@ namespace Presentacion.Ventanas.VentanaBienvenida
         public ControladorFormBienvenida(FormBienvenida formBienvenida)
         {
             this.formBienvenida = formBienvenida;
-
             this.formBienvenida.Opacity = 0.0;
-            this.formBienvenida.timerFechaHora.Tick += new EventHandler(TimerFechaHora);
+
             this.formBienvenida.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formBienvenida.btnMinimizar.Click += new EventHandler(MinimizarForm);
             this.formBienvenida.tbxNombre.Click += new EventHandler(CambiosTbx);
             this.formBienvenida.btnIngresar.Click += new EventHandler(Ingresar);
             this.formBienvenida.timerForm.Tick += new EventHandler(EfectoLogin);
-        }
-
-        private void TimerFechaHora(object sender, EventArgs args)
-        {
-            this.formBienvenida.lblHora.Text = DateTime.Now.ToString("h:mm:ss");
-            this.formBienvenida.lblFecha.Text = DateTime.Today.ToString("d");
+            this.formBienvenida.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formBienvenida.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
+            MensajesTooltip();
         }
 
         private void CerrarForm(object sender, EventArgs args)
@@ -70,8 +66,8 @@ namespace Presentacion.Ventanas.VentanaBienvenida
             { 
                 Cache.NombreAnalista = this.formBienvenida.tbxNombre.Text;
                 formAviso = new FormAviso("Bienvenido, " + Cache.NombreAnalista + " al sistema de análisis de crédito SENA");
-                this.formBienvenida.Hide();
                 formAviso.ShowDialog();
+                this.formBienvenida.Hide();
                 formVentanaPrincipal = new FormVentanaPrincipal();
                 formVentanaPrincipal.ShowDialog();
             }
@@ -86,6 +82,22 @@ namespace Presentacion.Ventanas.VentanaBienvenida
         private void EfectoLogin(object sender, EventArgs args)
         {
             CodigoComun.Timer(this.formBienvenida, this.formBienvenida.timerForm);
+        }
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formBienvenida.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formBienvenida.Opacity = 1;
+        }
+        private void MensajesTooltip()
+        {
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.tbxNombre, "Ingrese el nombre del analista.");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnIngresar, "Ingresar al sistema de análisis.");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnCerrar, "Cerrar.");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnMinimizar, "Minimizar.");
+
         }
 
     }

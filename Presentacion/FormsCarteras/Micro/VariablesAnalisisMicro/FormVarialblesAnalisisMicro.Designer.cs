@@ -31,6 +31,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         {
             this.components = new System.ComponentModel.Container();
             this.panel52 = new System.Windows.Forms.Panel();
+            this.panel57 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
             this.cbxDestinoDelCredito = new System.Windows.Forms.ComboBox();
             this.panel63 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label44 = new System.Windows.Forms.Label();
             this.panel55 = new System.Windows.Forms.Panel();
             this.tbxCedula = new System.Windows.Forms.TextBox();
-            this.panel57 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.panel48 = new System.Windows.Forms.Panel();
@@ -221,6 +221,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel49 = new System.Windows.Forms.Panel();
+            this.panel100 = new System.Windows.Forms.Panel();
             this.panel65 = new System.Windows.Forms.Panel();
             this.panel64 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
@@ -242,11 +243,10 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label61 = new System.Windows.Forms.Label();
             this.btnAnalizar = new System.Windows.Forms.Button();
             this.elipseBtn = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel100 = new System.Windows.Forms.Panel();
             this.panel52.SuspendLayout();
+            this.panel57.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).BeginInit();
-            this.panel57.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTiempoUnidadProductiva)).BeginInit();
             this.panel25.SuspendLayout();
@@ -311,6 +311,30 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 154);
             this.panel52.TabIndex = 108;
+            // 
+            // panel57
+            // 
+            this.panel57.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel57.BackgroundImage = global::Presentacion.Properties.Resources.panelTitulosAzulMicro;
+            this.panel57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel57.Controls.Add(this.label40);
+            this.panel57.Location = new System.Drawing.Point(-4, 1);
+            this.panel57.Name = "panel57";
+            this.panel57.Size = new System.Drawing.Size(742, 24);
+            this.panel57.TabIndex = 0;
+            this.panel57.Paint += new System.Windows.Forms.PaintEventHandler(this.panel57_Paint);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.Window;
+            this.label40.Location = new System.Drawing.Point(307, 5);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(134, 15);
+            this.label40.TabIndex = 10;
+            this.label40.Text = "Información del crédito";
             // 
             // cbxDestinoDelCredito
             // 
@@ -660,30 +684,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.tbxCedula.Size = new System.Drawing.Size(149, 15);
             this.tbxCedula.TabIndex = 31;
             this.tbxCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel57
-            // 
-            this.panel57.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel57.BackgroundImage = global::Presentacion.Properties.Resources.panelTitulosAzulMicro;
-            this.panel57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel57.Controls.Add(this.label40);
-            this.panel57.Location = new System.Drawing.Point(-4, 1);
-            this.panel57.Name = "panel57";
-            this.panel57.Size = new System.Drawing.Size(742, 24);
-            this.panel57.TabIndex = 0;
-            this.panel57.Paint += new System.Windows.Forms.PaintEventHandler(this.panel57_Paint);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.SystemColors.Window;
-            this.label40.Location = new System.Drawing.Point(307, 5);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(134, 15);
-            this.label40.TabIndex = 10;
-            this.label40.Text = "Información del crédito";
             // 
             // panel13
             // 
@@ -2446,9 +2446,9 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel32.Controls.Add(this.panel2);
             this.panel32.Controls.Add(this.label6);
             this.panel32.Controls.Add(this.label7);
-            this.panel32.Location = new System.Drawing.Point(1, 1332);
+            this.panel32.Location = new System.Drawing.Point(5, 1332);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(782, 41);
+            this.panel32.Size = new System.Drawing.Size(758, 41);
             this.panel32.TabIndex = 123;
             // 
             // panel1
@@ -2514,6 +2514,14 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(737, 114);
             this.panel49.TabIndex = 119;
+            // 
+            // panel100
+            // 
+            this.panel100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
+            this.panel100.Location = new System.Drawing.Point(600, 99);
+            this.panel100.Name = "panel100";
+            this.panel100.Size = new System.Drawing.Size(58, 1);
+            this.panel100.TabIndex = 119;
             // 
             // panel65
             // 
@@ -2770,14 +2778,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.elipseBtn.ElipseRadius = 5;
             this.elipseBtn.TargetControl = this.btnAnalizar;
             // 
-            // panel100
-            // 
-            this.panel100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
-            this.panel100.Location = new System.Drawing.Point(600, 99);
-            this.panel100.Name = "panel100";
-            this.panel100.Size = new System.Drawing.Size(58, 1);
-            this.panel100.TabIndex = 119;
-            // 
             // FormVarialblesAnalisisMicro
             // 
             this.AllowDrop = true;
@@ -2785,7 +2785,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 497);
+            this.ClientSize = new System.Drawing.Size(785, 497);
             this.Controls.Add(this.panel78);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);
@@ -2798,10 +2798,10 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.Text = "FormVarialblesAnalisisMicro";
             this.panel52.ResumeLayout(false);
             this.panel52.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).EndInit();
             this.panel57.ResumeLayout(false);
             this.panel57.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTiempoUnidadProductiva)).EndInit();

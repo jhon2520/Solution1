@@ -15,6 +15,7 @@ using Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial;
 using Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda;
 using Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro;
 using Presentacion.Ventanas.VentanaEmergente;
+using Presentacion.Ventanas.Calculadora;
 
 namespace Presentacion.FormsCarteras.Consumo
 {
@@ -30,6 +31,7 @@ namespace Presentacion.FormsCarteras.Consumo
         private FormConfirmacion formConfirmacion;
         private CodigoComun codigoComun = new CodigoComun();
         private ExportarExcel exportarExcel = new ExportarExcel();
+        private FormCalculadora formCalculadora;
 
         private bool validacionFormActivo = false;
         public ControladorFormConsumo(FormConsumo formConsumo)
@@ -45,6 +47,7 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.btnExportarExcel.Click += new EventHandler(ExportarArchivoExcel);
             this.formConsumo.tbxMonto.Leave += new EventHandler(FormatoNumeroTexBox);
             this.formConsumo.btnExportar.Click += new EventHandler(BotonExportar);
+            this.formConsumo.btnCalculadora.Click += new EventHandler(AbrirCalculadora);
             ValidacionSoloNumerosTextBox();
             MensajesToolTip();
             PanelExportarDiseno();
@@ -53,6 +56,7 @@ namespace Presentacion.FormsCarteras.Consumo
         {
              CodigoComun.EstiloDataGrid(this.formConsumo.dgvPlanPagoComercial);
             this.formConsumo.pnlCambioDeColor.BackColor = Cache.ColorInicio;
+            this.formConsumo.tbxCedula.Focus();
         }
         private void MensajesToolTip()
         {
@@ -64,6 +68,9 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.dgvPlanPagoComercial, "Plan de pago.");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnAnalisis, "Analizar crédito luego de tener las variables básicas.");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportar, "Exportar la información del crédito.");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportarExcel, "Exportar la información del crédito a un archivo de excel.");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportarPDF, "Exportar la información del crédito a un archivo PDF.");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnCalculadora, "Abrir calculadora");
 
         }
         private void ValidacionSoloNumerosTextBox()
@@ -96,7 +103,6 @@ namespace Presentacion.FormsCarteras.Consumo
             }
 
         }
-
         private void OcultarFormPlanDeCuotas(bool visibilidad)
         {
             this.formConsumo.pnlPrincipal.Visible = visibilidad;
@@ -170,8 +176,6 @@ namespace Presentacion.FormsCarteras.Consumo
                 exportarExcel.GuardarDataGrid(this.formConsumo.dgvPlanPagoComercial);
             });
         }
-
-
         private void FormatoNumeroTexBox(object sender, EventArgs args)
         {
             if (((TextBox)sender).Name == this.formConsumo.tbxMonto.Name && this.formConsumo.tbxMonto.Text != string.Empty)
@@ -198,6 +202,11 @@ namespace Presentacion.FormsCarteras.Consumo
         {
             MostrarSubMenu(this.formConsumo.pnlExportar);
 
+        }
+        private void AbrirCalculadora(object sender, EventArgs args)
+        {
+            formCalculadora = new FormCalculadora();
+            formCalculadora.Show();
         }
     }
 }

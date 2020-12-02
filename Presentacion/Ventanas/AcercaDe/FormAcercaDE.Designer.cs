@@ -37,6 +37,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timerForm = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
@@ -109,8 +110,13 @@
             // 
             // elipse
             // 
-            this.elipse.ElipseRadius = 7;
+            this.elipse.ElipseRadius = 3;
             this.elipse.TargetControl = this;
+            // 
+            // timerForm
+            // 
+            this.timerForm.Enabled = true;
+            this.timerForm.Interval = 2;
             // 
             // FormAcercaDE
             // 
@@ -126,6 +132,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAcercaDE";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAcercaDE";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -144,5 +151,6 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuElipse elipse;
+        public System.Windows.Forms.Timer timerForm;
     }
 }

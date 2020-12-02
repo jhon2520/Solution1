@@ -165,7 +165,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 7;
+            this.elipseForm.ElipseRadius = 3;
             this.elipseForm.TargetControl = this;
             // 
             // FormConfirmacion
@@ -182,6 +182,7 @@
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfirmacion";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConfirmacion";
             this.pnlSuperior.ResumeLayout(false);

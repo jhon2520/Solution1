@@ -30,30 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBienvenida));
-            this.pnlSuperiorFormBienvenida = new System.Windows.Forms.Panel();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlCentroFormBienvenida = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.timerFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.timerForm = new System.Windows.Forms.Timer(this.components);
-            this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipseBtn = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.tbxNombre = new System.Windows.Forms.TextBox();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pnlSuperiorFormBienvenida.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.timerForm = new System.Windows.Forms.Timer(this.components);
+            this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtn = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ttFormBienvenida = new System.Windows.Forms.ToolTip(this.components);
+            this.pnlSuperior.SuspendLayout();
             this.pnlCentroFormBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,16 +60,48 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlSuperiorFormBienvenida
+            // pnlSuperior
             // 
-            this.pnlSuperiorFormBienvenida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.pnlSuperiorFormBienvenida.Controls.Add(this.btnMinimizar);
-            this.pnlSuperiorFormBienvenida.Controls.Add(this.btnCerrar);
-            this.pnlSuperiorFormBienvenida.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperiorFormBienvenida.Location = new System.Drawing.Point(0, 0);
-            this.pnlSuperiorFormBienvenida.Name = "pnlSuperiorFormBienvenida";
-            this.pnlSuperiorFormBienvenida.Size = new System.Drawing.Size(541, 44);
-            this.pnlSuperiorFormBienvenida.TabIndex = 0;
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.pnlSuperior.Controls.Add(this.btnMinimizar);
+            this.pnlSuperior.Controls.Add(this.btnCerrar);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(541, 33);
+            this.pnlSuperior.TabIndex = 0;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimizar;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(495, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(519, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(20, 20);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // pnlCentroFormBienvenida
             // 
@@ -88,19 +118,17 @@
             this.pnlCentroFormBienvenida.Controls.Add(this.tbxNombre);
             this.pnlCentroFormBienvenida.Controls.Add(this.ptbLogo);
             this.pnlCentroFormBienvenida.Controls.Add(this.panel1);
-            this.pnlCentroFormBienvenida.Controls.Add(this.lblHora);
-            this.pnlCentroFormBienvenida.Controls.Add(this.lblFecha);
             this.pnlCentroFormBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentroFormBienvenida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlCentroFormBienvenida.Location = new System.Drawing.Point(0, 44);
+            this.pnlCentroFormBienvenida.Location = new System.Drawing.Point(0, 33);
             this.pnlCentroFormBienvenida.Name = "pnlCentroFormBienvenida";
-            this.pnlCentroFormBienvenida.Size = new System.Drawing.Size(541, 270);
+            this.pnlCentroFormBienvenida.Size = new System.Drawing.Size(541, 281);
             this.pnlCentroFormBienvenida.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
-            this.panel3.Location = new System.Drawing.Point(16, 249);
+            this.panel3.Location = new System.Drawing.Point(16, 266);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(146, 1);
             this.panel3.TabIndex = 17;
@@ -108,7 +136,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.panel2.Location = new System.Drawing.Point(379, 249);
+            this.panel2.Location = new System.Drawing.Point(379, 266);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 1);
             this.panel2.TabIndex = 16;
@@ -119,7 +147,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(266, 238);
+            this.label3.Location = new System.Drawing.Point(266, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 15);
             this.label3.TabIndex = 15;
@@ -131,97 +159,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label2.Location = new System.Drawing.Point(171, 238);
+            this.label2.Location = new System.Drawing.Point(171, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 14;
             this.label2.Text = "@SENAcomunica";
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(208, 171);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(125, 24);
-            this.btnIngresar.TabIndex = 7;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            // 
-            // tbxNombre
-            // 
-            this.tbxNombre.BackColor = System.Drawing.Color.White;
-            this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.tbxNombre.Location = new System.Drawing.Point(151, 130);
-            this.tbxNombre.Multiline = true;
-            this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(239, 27);
-            this.tbxNombre.TabIndex = 6;
-            this.tbxNombre.Text = "Ingrese su nombre";
-            this.tbxNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel1.Location = new System.Drawing.Point(168, 159);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1);
-            this.panel1.TabIndex = 4;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.lblHora.Location = new System.Drawing.Point(489, 19);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(50, 16);
-            this.lblHora.TabIndex = 3;
-            this.lblHora.Text = "00:00:00";
-            this.lblHora.Visible = false;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.lblFecha.Location = new System.Drawing.Point(475, 3);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 16);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "00/00/0000";
-            this.lblFecha.Visible = false;
-            // 
-            // timerFechaHora
-            // 
-            this.timerFechaHora.Enabled = true;
-            // 
-            // timerForm
-            // 
-            this.timerForm.Enabled = true;
-            this.timerForm.Interval = 10;
-            // 
-            // dragForm
-            // 
-            this.dragForm.Fixed = true;
-            this.dragForm.Horizontal = true;
-            this.dragForm.TargetControl = this.pnlSuperiorFormBienvenida;
-            this.dragForm.Vertical = true;
-            // 
-            // elipseForm
-            // 
-            this.elipseForm.ElipseRadius = 6;
-            this.elipseForm.TargetControl = this;
-            // 
-            // elipseBtn
-            // 
-            this.elipseBtn.ElipseRadius = 7;
-            this.elipseBtn.TargetControl = this.btnIngresar;
             // 
             // pictureBox4
             // 
@@ -263,47 +205,79 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // btnIngresar
+            // 
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnIngresar.FlatAppearance.BorderSize = 0;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(208, 187);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(125, 24);
+            this.btnIngresar.TabIndex = 7;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            // 
+            // tbxNombre
+            // 
+            this.tbxNombre.BackColor = System.Drawing.Color.White;
+            this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxNombre.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
+            this.tbxNombre.Location = new System.Drawing.Point(136, 146);
+            this.tbxNombre.Multiline = true;
+            this.tbxNombre.Name = "tbxNombre";
+            this.tbxNombre.Size = new System.Drawing.Size(268, 27);
+            this.tbxNombre.TabIndex = 6;
+            this.tbxNombre.Text = "Ingrese su nombre";
+            this.tbxNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ptbLogo
             // 
             this.ptbLogo.BackgroundImage = global::Presentacion.Properties.Resources.logo;
             this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptbLogo.Location = new System.Drawing.Point(222, 28);
+            this.ptbLogo.Location = new System.Drawing.Point(222, 34);
             this.ptbLogo.Name = "ptbLogo";
             this.ptbLogo.Size = new System.Drawing.Size(97, 82);
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
-            // btnMinimizar
+            // panel1
             // 
-            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimizar;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(494, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(22, 22);
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Location = new System.Drawing.Point(168, 175);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 1);
+            this.panel1.TabIndex = 4;
             // 
-            // btnCerrar
+            // timerForm
             // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(518, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.timerForm.Enabled = true;
+            this.timerForm.Interval = 10;
+            // 
+            // dragForm
+            // 
+            this.dragForm.Fixed = true;
+            this.dragForm.Horizontal = true;
+            this.dragForm.TargetControl = this.pnlSuperior;
+            this.dragForm.Vertical = true;
+            // 
+            // elipseForm
+            // 
+            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.TargetControl = this;
+            // 
+            // elipseBtn
+            // 
+            this.elipseBtn.ElipseRadius = 4;
+            this.elipseBtn.TargetControl = this.btnIngresar;
+            // 
+            // ttFormBienvenida
+            // 
+            this.ttFormBienvenida.IsBalloon = true;
+            this.ttFormBienvenida.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttFormBienvenida.ToolTipTitle = "Información:";
             // 
             // FormBienvenida
             // 
@@ -313,13 +287,13 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(541, 314);
             this.Controls.Add(this.pnlCentroFormBienvenida);
-            this.Controls.Add(this.pnlSuperiorFormBienvenida);
+            this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBienvenida";
-            this.pnlSuperiorFormBienvenida.ResumeLayout(false);
+            this.pnlSuperior.ResumeLayout(false);
             this.pnlCentroFormBienvenida.ResumeLayout(false);
             this.pnlCentroFormBienvenida.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -332,12 +306,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlSuperiorFormBienvenida;
         private System.Windows.Forms.Panel pnlCentroFormBienvenida;
         private System.Windows.Forms.PictureBox ptbLogo;
-        public System.Windows.Forms.Timer timerFechaHora;
-        public System.Windows.Forms.Label lblHora;
-        public System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnIngresar;
         public System.Windows.Forms.Button btnCerrar;
@@ -355,5 +325,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuElipse elipseBtn;
+        public System.Windows.Forms.Panel pnlSuperior;
+        public System.Windows.Forms.ToolTip ttFormBienvenida;
     }
 }

@@ -68,7 +68,7 @@
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(735, 50);
+            this.pnlSuperior.Size = new System.Drawing.Size(735, 44);
             this.pnlSuperior.TabIndex = 0;
             // 
             // btnCerrar
@@ -81,7 +81,7 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(713, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(711, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(22, 22);
             this.btnCerrar.TabIndex = 15;
@@ -120,9 +120,9 @@
             this.pnlCentro.Controls.Add(this.label3);
             this.pnlCentro.Controls.Add(this.label2);
             this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCentro.Location = new System.Drawing.Point(0, 50);
+            this.pnlCentro.Location = new System.Drawing.Point(0, 44);
             this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(735, 387);
+            this.pnlCentro.Size = new System.Drawing.Size(735, 393);
             this.pnlCentro.TabIndex = 1;
             // 
             // btnAlmacenarInformacion
@@ -134,7 +134,7 @@
             this.btnAlmacenarInformacion.ForeColor = System.Drawing.Color.White;
             this.btnAlmacenarInformacion.Image = global::Presentacion.Properties.Resources.savePin;
             this.btnAlmacenarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlmacenarInformacion.Location = new System.Drawing.Point(251, 315);
+            this.btnAlmacenarInformacion.Location = new System.Drawing.Point(251, 320);
             this.btnAlmacenarInformacion.Name = "btnAlmacenarInformacion";
             this.btnAlmacenarInformacion.Size = new System.Drawing.Size(233, 32);
             this.btnAlmacenarInformacion.TabIndex = 112;
@@ -289,7 +289,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 7;
+            this.elipseForm.ElipseRadius = 3;
             this.elipseForm.TargetControl = this;
             // 
             // timerCargarForm
@@ -312,6 +312,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAnalisisDeCredito";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAnalisisDeCredito";
             this.pnlSuperior.ResumeLayout(false);

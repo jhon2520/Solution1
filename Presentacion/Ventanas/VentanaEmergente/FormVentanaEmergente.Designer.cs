@@ -30,6 +30,7 @@ namespace Presentacion.Ventanas.VentanaEmergente
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentanaEmergente));
             this.lblMensaje = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerForm = new System.Windows.Forms.Timer(this.components);
@@ -44,7 +45,7 @@ namespace Presentacion.Ventanas.VentanaEmergente
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.White;
-            this.lblMensaje.Location = new System.Drawing.Point(59, 12);
+            this.lblMensaje.Location = new System.Drawing.Point(56, 12);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(52, 19);
             this.lblMensaje.TabIndex = 1;
@@ -66,16 +67,16 @@ namespace Presentacion.Ventanas.VentanaEmergente
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 4;
+            this.elipseForm.ElipseRadius = 2;
             this.elipseForm.TargetControl = this;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Presentacion.Properties.Resources.cerrarVentana;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(214, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(214, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -92,7 +93,9 @@ namespace Presentacion.Ventanas.VentanaEmergente
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblMensaje);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVentanaEmergente";
+            this.ShowInTaskbar = false;
             this.Text = "FormVentanaEmergente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

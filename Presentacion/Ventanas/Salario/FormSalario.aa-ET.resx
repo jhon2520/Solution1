@@ -117,16 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="timerForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>-6, 11</value>
-  </metadata>
-  <metadata name="dragForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>102, 11</value>
-  </metadata>
-  <metadata name="elipseForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>207, 11</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCerrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAaZJREFUaEPt
+        mstqwzAQRf0t7aJddtdu+8F9/FdDSAqFtoGqM2EGHGEbjTWSJXIPXAix5NFBiSxsDwAAAAAAAIB6fIdw
+        e/oL75RPyRt9dyOH3ald74KfEO6p4J4Sohx+Q3iUZm7QOZ/43FEtzp6k76RZOajQa1R4HFdpkT1GNcZ5
+        kabloCJLA+C4SCfIcg7SvBxUhP9DU8XHyZJOlOUcpUs5qMjST3qcVdIGWU75n/TCojUVk7RRts6ixdDA
+        HqjgLhrAXL5OITxL11m4zbnt9Dni7HgM0rUOntLNyyoe0t3IKjnS3ckqa6S7lVVoQJYVlreKyW3p3G67
+        N1eMM52S9mY2xlG6fVnFQbofWSVDuj9ZhQZuWcg47S5QKRgvPZykbWiTrJDV9CedIavpR9pBVtO+tKOs
+        pl1p44rc99bSOLPn6yyHP0fH5tLOTK+Rla7Wzcn20jmySjfSHrJK89Keskqz0ld3m5YKXdeNeCqSMpis
+        a6dBuolnSy4bhUTpzZ8tue6KEqQ3fbbkKquI9HYPxBkqpK8gfEhqvfJQpR4AAAAAAAAgZhj+ARVTeDC4
+        N2NlAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAPsAAAEAIACICwQAFgAAACgAAAAAAQAA9gEAAAEAIAAAAAAAAOwDABMLAAATCwAAAAAAAAAA
@@ -4550,7 +4554,4 @@
         //////////////////////////////////////////////////8=
 </value>
   </data>
-  <metadata name="elipseBtnListo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>318, 11</value>
-  </metadata>
 </root>

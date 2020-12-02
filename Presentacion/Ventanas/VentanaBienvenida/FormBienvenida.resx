@@ -131,9 +131,6 @@
         N2NlAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="timerFechaHora.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>18, 12</value>
-  </metadata>
   <metadata name="timerForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 12</value>
   </metadata>
@@ -4568,5 +4565,8 @@
   </data>
   <metadata name="elipseBtn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>475, 12</value>
+  </metadata>
+  <metadata name="ttFormBienvenida.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>8, 15</value>
   </metadata>
 </root>

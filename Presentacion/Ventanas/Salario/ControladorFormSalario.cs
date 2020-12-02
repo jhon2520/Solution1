@@ -11,6 +11,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Presentacion.Ventanas.VentanaAviso;
 using System.Windows.Forms;
 
+
 namespace Presentacion.Ventanas.Salario
 {
     class ControladorFormSalario
@@ -21,12 +22,17 @@ namespace Presentacion.Ventanas.Salario
 
         public ControladorFormSalario(FormSalario formSalario)
         {
+            
             this.formSalario = formSalario;
+            this.formSalario.Opacity = 0.0;
             this.formSalario.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formSalario.Load += new EventHandler(CargarForm);
             this.formSalario.btnGuardarSalario.Click += new EventHandler(GuardarSalario);
             this.formSalario.tbxSalario.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxNumero);
             this.formSalario.tbxSalario.Leave += new EventHandler(FormatoNumeroTexBox);
+            this.formSalario.timerForm.Tick += new EventHandler(EfectoLogin);
+            this.formSalario.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formSalario.MouseUp += new MouseEventHandler(RetornarOpacidad);
         }
 
         private void CerrarForm(object sender, EventArgs args) => CodigoComun.BtnCerrar(this.formSalario);
@@ -63,6 +69,18 @@ namespace Presentacion.Ventanas.Salario
             if (((TextBox)sender).Name == this.formSalario.tbxSalario.Name && this.formSalario.tbxSalario.Text != string.Empty)
                 this.formSalario.tbxSalario.Text = string.Format("{0:n0}", double.Parse(this.formSalario.tbxSalario.Text));
 
+        }
+        private void EfectoLogin(object sender, EventArgs args)
+        {
+            CodigoComun.Timer(this.formSalario, this.formSalario.timerForm);
+        }
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formSalario.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formSalario.Opacity = 1;
         }
     }
 }

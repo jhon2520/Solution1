@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAviso));
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnListo = new System.Windows.Forms.Button();
             this.pnlSuperior = new System.Windows.Forms.Panel();
@@ -140,7 +141,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 7;
+            this.elipseForm.ElipseRadius = 3;
             this.elipseForm.TargetControl = this;
             // 
             // elipseBtnListo
@@ -157,7 +158,9 @@
             this.Controls.Add(this.pnlCentro);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAviso";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAviso";
             this.pnlSuperior.ResumeLayout(false);

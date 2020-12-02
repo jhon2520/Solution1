@@ -38,68 +38,45 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timerForm = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            resources.ApplyResources(this.btnCerrar, "btnCerrar");
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(334, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
-            this.btnCerrar.TabIndex = 9;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(43, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 34);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Valor salario mínimo legal actualizado\r\n\r\n";
             // 
             // tbxSalario
             // 
             this.tbxSalario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
             this.tbxSalario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxSalario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.tbxSalario, "tbxSalario");
             this.tbxSalario.ForeColor = System.Drawing.Color.White;
-            this.tbxSalario.Location = new System.Drawing.Point(120, 90);
-            this.tbxSalario.Multiline = true;
             this.tbxSalario.Name = "tbxSalario";
-            this.tbxSalario.Size = new System.Drawing.Size(119, 20);
-            this.tbxSalario.TabIndex = 11;
-            this.tbxSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(120, 112);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(119, 1);
-            this.panel1.TabIndex = 12;
             // 
             // btnGuardarSalario
             // 
             this.btnGuardarSalario.FlatAppearance.BorderSize = 0;
-            this.btnGuardarSalario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarSalario.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnGuardarSalario, "btnGuardarSalario");
             this.btnGuardarSalario.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarSalario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarSalario.Location = new System.Drawing.Point(127, 138);
             this.btnGuardarSalario.Name = "btnGuardarSalario";
-            this.btnGuardarSalario.Size = new System.Drawing.Size(104, 30);
-            this.btnGuardarSalario.TabIndex = 19;
-            this.btnGuardarSalario.Text = "Guardar y salir";
             this.btnGuardarSalario.UseVisualStyleBackColor = true;
             // 
             // bunifuElipse1
@@ -116,25 +93,27 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 6;
+            this.elipseForm.ElipseRadius = 3;
             this.elipseForm.TargetControl = this;
+            // 
+            // timerForm
+            // 
+            this.timerForm.Enabled = true;
+            this.timerForm.Interval = 2;
             // 
             // FormSalario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(358, 190);
             this.Controls.Add(this.btnGuardarSalario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbxSalario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSalario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormSalario";
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +128,6 @@
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuElipse elipseForm;
         public System.Windows.Forms.TextBox tbxSalario;
+        public System.Windows.Forms.Timer timerForm;
     }
 }

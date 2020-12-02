@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Ventanas\Calculadora\FormCalculadora.resx">
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Salario\FormSalario.aa-ET.resx">
+      <DependentUpon>FormSalario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Salario\FormSalario.resx">
       <DependentUpon>FormSalario.cs</DependentUpon>
     </EmbeddedResource>
@@ -496,6 +499,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\planCuotas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divisor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

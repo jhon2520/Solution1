@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormError));
             this.lblMensaje = new System.Windows.Forms.Label();
             this.btnListo = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
@@ -132,7 +133,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 7;
+            this.elipseForm.ElipseRadius = 3;
             this.elipseForm.TargetControl = this;
             // 
             // FormError
@@ -147,7 +148,9 @@
             this.Controls.Add(this.btnListo);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormError";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormError";
             this.pnlTitulo.ResumeLayout(false);

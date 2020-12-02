@@ -56,23 +56,23 @@
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlCambioDeColor = new System.Windows.Forms.Panel();
             this.lblSimulador = new System.Windows.Forms.Label();
+            this.btnPlanCuotas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblCedula = new System.Windows.Forms.Label();
             this.tbxCedula = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnCalculadora = new System.Windows.Forms.Button();
             this.pnlExportar = new System.Windows.Forms.Panel();
+            this.btnExportarPDF = new System.Windows.Forms.Button();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnAnalisis = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.trancisionFormAnalisis = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.ttFormConsumo = new System.Windows.Forms.ToolTip(this.components);
             this.elipsePnlSuperior = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseDgv = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnPlanCuotas = new System.Windows.Forms.Button();
-            this.btnExportarPDF = new System.Windows.Forms.Button();
-            this.btnExportarExcel = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.btnAnalisis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPagoComercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
@@ -113,7 +113,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.dgvPlanPagoComercial, BunifuAnimatorNS.DecorationType.None);
             this.dgvPlanPagoComercial.EnableHeadersVisualStyles = false;
             this.dgvPlanPagoComercial.GridColor = System.Drawing.Color.SteelBlue;
-            this.dgvPlanPagoComercial.Location = new System.Drawing.Point(39, 139);
+            this.dgvPlanPagoComercial.Location = new System.Drawing.Point(29, 139);
             this.dgvPlanPagoComercial.Name = "dgvPlanPagoComercial";
             this.dgvPlanPagoComercial.ReadOnly = true;
             this.dgvPlanPagoComercial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -136,6 +136,7 @@
             this.dgvPlanPagoComercial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlanPagoComercial.Size = new System.Drawing.Size(720, 333);
             this.dgvPlanPagoComercial.TabIndex = 99;
+            this.dgvPlanPagoComercial.TabStop = false;
             // 
             // Column1
             // 
@@ -258,7 +259,7 @@
             this.contadorTasa.Location = new System.Drawing.Point(626, 35);
             this.contadorTasa.Name = "contadorTasa";
             this.contadorTasa.Size = new System.Drawing.Size(58, 18);
-            this.contadorTasa.TabIndex = 27;
+            this.contadorTasa.TabIndex = 3;
             this.contadorTasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -298,7 +299,7 @@
             0});
             this.contadorPlazo.Name = "contadorPlazo";
             this.contadorPlazo.Size = new System.Drawing.Size(58, 18);
-            this.contadorPlazo.TabIndex = 24;
+            this.contadorPlazo.TabIndex = 2;
             this.contadorPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel17
@@ -357,7 +358,7 @@
             this.pnlPrincipal.Controls.Add(this.panel14);
             this.pnlPrincipal.Controls.Add(this.label9);
             this.trancisionFormAnalisis.SetDecoration(this.pnlPrincipal, BunifuAnimatorNS.DecorationType.None);
-            this.pnlPrincipal.Location = new System.Drawing.Point(39, 21);
+            this.pnlPrincipal.Location = new System.Drawing.Point(29, 21);
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(720, 102);
             this.pnlPrincipal.TabIndex = 97;
@@ -385,6 +386,22 @@
             this.lblSimulador.Size = new System.Drawing.Size(313, 15);
             this.lblSimulador.TabIndex = 10;
             this.lblSimulador.Text = "Variables iniciales de entrada para el análisis del crédito\r\n";
+            // 
+            // btnPlanCuotas
+            // 
+            this.btnPlanCuotas.BackgroundImage = global::Presentacion.Properties.Resources.planCuotas;
+            this.btnPlanCuotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.trancisionFormAnalisis.SetDecoration(this.btnPlanCuotas, BunifuAnimatorNS.DecorationType.None);
+            this.btnPlanCuotas.FlatAppearance.BorderSize = 0;
+            this.btnPlanCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanCuotas.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlanCuotas.ForeColor = System.Drawing.Color.DimGray;
+            this.btnPlanCuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlanCuotas.Location = new System.Drawing.Point(462, 61);
+            this.btnPlanCuotas.Name = "btnPlanCuotas";
+            this.btnPlanCuotas.Size = new System.Drawing.Size(39, 30);
+            this.btnPlanCuotas.TabIndex = 4;
+            this.btnPlanCuotas.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -418,7 +435,7 @@
             this.tbxCedula.Location = new System.Drawing.Point(80, 34);
             this.tbxCedula.Name = "tbxCedula";
             this.tbxCedula.Size = new System.Drawing.Size(136, 15);
-            this.tbxCedula.TabIndex = 1;
+            this.tbxCedula.TabIndex = 0;
             this.tbxCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
@@ -433,7 +450,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(104, 497);
+            this.panel3.Size = new System.Drawing.Size(118, 497);
             this.panel3.TabIndex = 100;
             // 
             // btnCalculadora
@@ -445,12 +462,13 @@
             this.btnCalculadora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculadora.ForeColor = System.Drawing.Color.White;
+            this.btnCalculadora.Image = global::Presentacion.Properties.Resources.divisor;
             this.btnCalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculadora.Location = new System.Drawing.Point(0, 324);
+            this.btnCalculadora.Location = new System.Drawing.Point(0, 327);
             this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(104, 30);
-            this.btnCalculadora.TabIndex = 18;
-            this.btnCalculadora.Text = "      Calculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(118, 33);
+            this.btnCalculadora.TabIndex = 9;
+            this.btnCalculadora.Text = "       Calculadora";
             this.btnCalculadora.UseVisualStyleBackColor = true;
             // 
             // pnlExportar
@@ -462,8 +480,80 @@
             this.pnlExportar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlExportar.Location = new System.Drawing.Point(0, 261);
             this.pnlExportar.Name = "pnlExportar";
-            this.pnlExportar.Size = new System.Drawing.Size(104, 63);
+            this.pnlExportar.Size = new System.Drawing.Size(118, 66);
             this.pnlExportar.TabIndex = 22;
+            // 
+            // btnExportarPDF
+            // 
+            this.btnExportarPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportarPDF, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportarPDF.FlatAppearance.BorderSize = 0;
+            this.btnExportarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExportarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarPDF.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarPDF.ForeColor = System.Drawing.Color.White;
+            this.btnExportarPDF.Image = global::Presentacion.Properties.Resources.pdf_30px;
+            this.btnExportarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarPDF.Location = new System.Drawing.Point(0, 33);
+            this.btnExportarPDF.Name = "btnExportarPDF";
+            this.btnExportarPDF.Size = new System.Drawing.Size(124, 33);
+            this.btnExportarPDF.TabIndex = 8;
+            this.btnExportarPDF.Text = "        PDF";
+            this.btnExportarPDF.UseVisualStyleBackColor = false;
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportarExcel, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportarExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportarExcel.Image = global::Presentacion.Properties.Resources.microsoft_excel_32px;
+            this.btnExportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarExcel.Location = new System.Drawing.Point(0, 0);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(124, 33);
+            this.btnExportarExcel.TabIndex = 7;
+            this.btnExportarExcel.Text = "        Excel";
+            this.btnExportarExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnExportar
+            // 
+            this.trancisionFormAnalisis.SetDecoration(this.btnExportar, BunifuAnimatorNS.DecorationType.None);
+            this.btnExportar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExportar.FlatAppearance.BorderSize = 0;
+            this.btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.Image = global::Presentacion.Properties.Resources.export_30px;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(0, 228);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(118, 33);
+            this.btnExportar.TabIndex = 6;
+            this.btnExportar.Text = "      Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnAnalisis
+            // 
+            this.trancisionFormAnalisis.SetDecoration(this.btnAnalisis, BunifuAnimatorNS.DecorationType.None);
+            this.btnAnalisis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnalisis.FlatAppearance.BorderSize = 0;
+            this.btnAnalisis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalisis.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalisis.ForeColor = System.Drawing.Color.White;
+            this.btnAnalisis.Image = global::Presentacion.Properties.Resources.analyze_24px;
+            this.btnAnalisis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalisis.Location = new System.Drawing.Point(0, 195);
+            this.btnAnalisis.Name = "btnAnalisis";
+            this.btnAnalisis.Size = new System.Drawing.Size(118, 33);
+            this.btnAnalisis.TabIndex = 5;
+            this.btnAnalisis.Text = "      Análisis";
+            this.btnAnalisis.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -471,7 +561,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(104, 201);
+            this.panel5.Size = new System.Drawing.Size(118, 195);
             this.panel5.TabIndex = 0;
             // 
             // pnlCentro
@@ -480,9 +570,9 @@
             this.pnlCentro.Controls.Add(this.dgvPlanPagoComercial);
             this.trancisionFormAnalisis.SetDecoration(this.pnlCentro, BunifuAnimatorNS.DecorationType.None);
             this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCentro.Location = new System.Drawing.Point(104, 0);
+            this.pnlCentro.Location = new System.Drawing.Point(118, 0);
             this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(799, 497);
+            this.pnlCentro.Size = new System.Drawing.Size(785, 497);
             this.pnlCentro.TabIndex = 101;
             // 
             // trancisionFormAnalisis
@@ -523,94 +613,6 @@
             this.elipseDgv.ElipseRadius = 6;
             this.elipseDgv.TargetControl = this.dgvPlanPagoComercial;
             // 
-            // btnPlanCuotas
-            // 
-            this.btnPlanCuotas.BackgroundImage = global::Presentacion.Properties.Resources.planCuotas;
-            this.btnPlanCuotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.trancisionFormAnalisis.SetDecoration(this.btnPlanCuotas, BunifuAnimatorNS.DecorationType.None);
-            this.btnPlanCuotas.FlatAppearance.BorderSize = 0;
-            this.btnPlanCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanCuotas.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlanCuotas.ForeColor = System.Drawing.Color.DimGray;
-            this.btnPlanCuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlanCuotas.Location = new System.Drawing.Point(462, 61);
-            this.btnPlanCuotas.Name = "btnPlanCuotas";
-            this.btnPlanCuotas.Size = new System.Drawing.Size(39, 30);
-            this.btnPlanCuotas.TabIndex = 33;
-            this.btnPlanCuotas.UseVisualStyleBackColor = true;
-            // 
-            // btnExportarPDF
-            // 
-            this.btnExportarPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.trancisionFormAnalisis.SetDecoration(this.btnExportarPDF, BunifuAnimatorNS.DecorationType.None);
-            this.btnExportarPDF.FlatAppearance.BorderSize = 0;
-            this.btnExportarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExportarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarPDF.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarPDF.ForeColor = System.Drawing.Color.White;
-            this.btnExportarPDF.Image = global::Presentacion.Properties.Resources.pdf_30px;
-            this.btnExportarPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarPDF.Location = new System.Drawing.Point(0, 32);
-            this.btnExportarPDF.Name = "btnExportarPDF";
-            this.btnExportarPDF.Size = new System.Drawing.Size(104, 30);
-            this.btnExportarPDF.TabIndex = 22;
-            this.btnExportarPDF.Text = "        PDF";
-            this.btnExportarPDF.UseVisualStyleBackColor = false;
-            // 
-            // btnExportarExcel
-            // 
-            this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.trancisionFormAnalisis.SetDecoration(this.btnExportarExcel, BunifuAnimatorNS.DecorationType.None);
-            this.btnExportarExcel.FlatAppearance.BorderSize = 0;
-            this.btnExportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportarExcel.Image = global::Presentacion.Properties.Resources.microsoft_excel_32px;
-            this.btnExportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarExcel.Location = new System.Drawing.Point(0, 1);
-            this.btnExportarExcel.Name = "btnExportarExcel";
-            this.btnExportarExcel.Size = new System.Drawing.Size(104, 30);
-            this.btnExportarExcel.TabIndex = 21;
-            this.btnExportarExcel.Text = "        Excel";
-            this.btnExportarExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnExportar
-            // 
-            this.trancisionFormAnalisis.SetDecoration(this.btnExportar, BunifuAnimatorNS.DecorationType.None);
-            this.btnExportar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnExportar.FlatAppearance.BorderSize = 0;
-            this.btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportar.ForeColor = System.Drawing.Color.White;
-            this.btnExportar.Image = global::Presentacion.Properties.Resources.export_30px;
-            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportar.Location = new System.Drawing.Point(0, 231);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(104, 30);
-            this.btnExportar.TabIndex = 20;
-            this.btnExportar.Text = "      Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
-            // btnAnalisis
-            // 
-            this.trancisionFormAnalisis.SetDecoration(this.btnAnalisis, BunifuAnimatorNS.DecorationType.None);
-            this.btnAnalisis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAnalisis.FlatAppearance.BorderSize = 0;
-            this.btnAnalisis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnAnalisis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnalisis.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalisis.ForeColor = System.Drawing.Color.White;
-            this.btnAnalisis.Image = global::Presentacion.Properties.Resources.analyze_24px;
-            this.btnAnalisis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalisis.Location = new System.Drawing.Point(0, 201);
-            this.btnAnalisis.Name = "btnAnalisis";
-            this.btnAnalisis.Size = new System.Drawing.Size(104, 30);
-            this.btnAnalisis.TabIndex = 19;
-            this.btnAnalisis.Text = "      Análisis";
-            this.btnAnalisis.UseVisualStyleBackColor = true;
-            // 
             // FormConsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +623,7 @@
             this.Controls.Add(this.panel3);
             this.trancisionFormAnalisis.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConsumo";
             this.Text = "FormConsumo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPagoComercial)).EndInit();

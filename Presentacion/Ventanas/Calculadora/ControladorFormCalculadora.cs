@@ -27,6 +27,8 @@ namespace Presentacion.Ventanas.Calculadora
             this.formCalculadora.timerForm.Tick += new EventHandler(EfectoLogin);
             this.formCalculadora.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formCalculadora.btnMinimizar.Click += new EventHandler(MinimizarForm);
+            this.formCalculadora.pnlSuperiorForm.MouseDown += new MouseEventHandler(VolverTransparente);
+            this.formCalculadora.pnlSuperiorForm.MouseUp += new MouseEventHandler(RetornarOpacidad);
         }
 
         private void RadioBtnTasas(object sender, EventArgs args)
@@ -79,18 +81,19 @@ namespace Presentacion.Ventanas.Calculadora
 
         private void CerrarForm(object sender, EventArgs args)
         {
-            formConfirmacion = new FormConfirmacion("¿Desea cerrar la calculadora de tasas?");
-            DialogResult resultado = formConfirmacion.ShowDialog();
-
-            if (resultado == DialogResult.OK)
-            {
-                CodigoComun.BtnCerrar(this.formCalculadora);
-            }
-
+            CodigoComun.BtnCerrar(this.formCalculadora);
         }
         private void MinimizarForm(object sender, EventArgs args)
         {
             CodigoComun.BtnMinimizar(this.formCalculadora);
+        }
+        private void VolverTransparente(object sender, EventArgs args)
+        {
+            this.formCalculadora.Opacity = 0.6;
+        }
+        private void RetornarOpacidad(object sender, EventArgs args)
+        {
+            this.formCalculadora.Opacity = 1;
         }
     }
 }
