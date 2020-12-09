@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
 using System;
@@ -288,6 +289,8 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                || this.formVariables.tbxDisponible.Text != string.Empty)
             {
                 formAviso = new FormAviso("Se debe recalcular los indicadores de capacidad de pago");
+                this.formVariables.tbxEndeudamientoGlobal.Text = string.Empty;
+                this.formVariables.tbxDisponible.Text = string.Empty;
                 formAviso.ShowDialog();
             }
         }
@@ -350,6 +353,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                     this.formVariables.tbxOtrosIngresos.Text != string.Empty
                     && (this.formVariables.rbtnCiudad.Checked == true || this.formVariables.rbtnMunicipio.Checked == true))
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     CalcularEndeudamientoGlobal(this.formVariables.cbxFormaDePago.Text);
                 }
                 else
@@ -405,6 +409,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 {
                     if (this.formVariables.cbxFormaDePago.Text == "Nomina")
                     {
+                        CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                         if (this.formVariables.cbxLeyLibranza.Checked == false)
                         {
                             disponible = Disponible.CalcularDisponibleNominaSinLibranza(Convert.ToDouble(this.formVariables.tbxIngresos.Text),
@@ -425,6 +430,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                     }
                     else if (this.formVariables.cbxFormaDePago.Text == "Caja")
                     {
+                        CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                         disponible = Disponible.CalcularDisponibleCaja(Convert.ToDouble(this.formVariables.tbxIngresos.Text),
                         Convert.ToDouble(this.formVariables.tbxOtrosIngresos.Text), Convert.ToDouble(this.formVariables.tbxDeduccionesColilla.Text),
                         RetornarDANECiudadPueblo(), RetornarDANEVivienda(), Convert.ToDouble(this.formVariables.tbxCuotasACancelar.Text));
@@ -454,6 +460,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 if (this.formVariables.tbxDeduccionesColilla.Text != string.Empty && this.formVariables.tbxCuotasCreditoCacelarNomina.Text != string.Empty
                     && this.formVariables.tbxIngresos.Text != string.Empty)
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     afectacionColilla = AfectacionColilla.CalcularAfectacionColilla(Convert.ToDouble(this.formVariables.tbxDeduccionesColilla.Text),
                         Convert.ToDouble(this.formVariables.tbxCuota.Text), Convert.ToDouble(this.formVariables.tbxCuotasCreditoCacelarNomina.Text),
                         Convert.ToDouble(this.formVariables.tbxIngresos.Text));
@@ -480,7 +487,19 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
 
         private void RetornarEdad(object sender, EventArgs args)
         {
-            this.formVariables.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariables.dtpEdad);
+            try
+            {
+                this.formVariables.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariables.dtpEdad);
+            }
+            catch 
+            {
+
+                using (formError = new FormError("Seleccione una fecha de nacimiendo válida, no puede ser superior a la fecha actual"))
+                {
+                    formError.ShowDialog();
+                }
+            }
+           
         }
         private double RetornarDANECiudadPueblo()
         {
@@ -519,7 +538,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             {
                 if (this.formVariables.tbxDeduccionesDeSeguridadSocial.Text != string.Empty && this.formVariables.tbxOtrasDeduccionesColilla.Text != string.Empty)
                 {
-
+                    
                     double totalDeduccionesColilla;
                     totalDeduccionesColilla = CodigoComun.RetornarTotalDeducciones(Convert.ToDouble(this.formVariables.tbxDeduccionesDeSeguridadSocial.Text), Convert.ToDouble(this.formVariables.tbxOtrasDeduccionesColilla.Text));
                     this.formVariables.tbxDeduccionesColilla.Text = totalDeduccionesColilla.ToString("N2");

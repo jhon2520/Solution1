@@ -1,0 +1,10 @@
+﻿Listado de cosas por hacer
+
+1: colocar el estilo del cursor para todos los botones
+2: Cambiar lo de la validación de las políticas, la parte del score
+3: Hacer la parte del codeudor para todas las carteras
+4: Colocar mensajes en un tooltip para cada ventana
+5: Arreglar el tab para todas las ventanas
+6: Terminar el método de exportar excel que valide el tipo de crédito
+7: HAcer el método que exporta a PDF
+8: Revisar que todo esté bien con el programa instalado

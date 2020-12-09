@@ -110,7 +110,7 @@
             // 
             // elipse
             // 
-            this.elipse.ElipseRadius = 3;
+            this.elipse.ElipseRadius = 5;
             this.elipse.TargetControl = this;
             // 
             // timerForm

@@ -34,16 +34,15 @@ namespace Presentacion.Ventanas.Calculadora
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCalculadora));
             this.pnlSuperiorForm = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.pnlLinea1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.tbxAConvertir = new System.Windows.Forms.TextBox();
             this.rbtTasaNominal1 = new System.Windows.Forms.RadioButton();
             this.rbtTasaEfectiva1 = new System.Windows.Forms.RadioButton();
             this.rbtTasaEfectiva2 = new System.Windows.Forms.RadioButton();
             this.rbtTasaNominal2 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLinea2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxConvertida = new System.Windows.Forms.TextBox();
             this.btnConvertirTasa = new System.Windows.Forms.Button();
@@ -64,29 +63,12 @@ namespace Presentacion.Ventanas.Calculadora
             // pnlSuperiorForm
             // 
             this.pnlSuperiorForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.pnlSuperiorForm.Controls.Add(this.btnMinimizar);
             this.pnlSuperiorForm.Controls.Add(this.btnCerrar);
             this.pnlSuperiorForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperiorForm.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperiorForm.Name = "pnlSuperiorForm";
             this.pnlSuperiorForm.Size = new System.Drawing.Size(417, 36);
             this.pnlSuperiorForm.TabIndex = 2;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimizar;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(373, 1);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(18, 18);
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
             // 
             // btnCerrar
             // 
@@ -95,8 +77,8 @@ namespace Presentacion.Ventanas.Calculadora
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Location = new System.Drawing.Point(397, 1);
             this.btnCerrar.Name = "btnCerrar";
@@ -104,13 +86,13 @@ namespace Presentacion.Ventanas.Calculadora
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
-            // panel17
+            // pnlLinea1
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel17.Location = new System.Drawing.Point(186, 104);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(75, 1);
-            this.panel17.TabIndex = 13;
+            this.pnlLinea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pnlLinea1.Location = new System.Drawing.Point(186, 104);
+            this.pnlLinea1.Name = "pnlLinea1";
+            this.pnlLinea1.Size = new System.Drawing.Size(75, 1);
+            this.pnlLinea1.TabIndex = 13;
             // 
             // label12
             // 
@@ -187,13 +169,13 @@ namespace Presentacion.Ventanas.Calculadora
             this.rbtTasaNominal2.Text = "NM";
             this.rbtTasaNominal2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pnlLinea2
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel1.Location = new System.Drawing.Point(186, 170);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(75, 1);
-            this.panel1.TabIndex = 18;
+            this.pnlLinea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pnlLinea2.Location = new System.Drawing.Point(186, 170);
+            this.pnlLinea2.Name = "pnlLinea2";
+            this.pnlLinea2.Size = new System.Drawing.Size(75, 1);
+            this.pnlLinea2.TabIndex = 18;
             // 
             // label1
             // 
@@ -269,7 +251,7 @@ namespace Presentacion.Ventanas.Calculadora
             // 
             // elipseBtnNuevo
             // 
-            this.elipseBtnNuevo.ElipseRadius = 4;
+            this.elipseBtnNuevo.ElipseRadius = 5;
             this.elipseBtnNuevo.TargetControl = this;
             // 
             // DragForm
@@ -298,10 +280,10 @@ namespace Presentacion.Ventanas.Calculadora
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnConvertirTasa);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLinea2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxConvertida);
-            this.Controls.Add(this.panel17);
+            this.Controls.Add(this.pnlLinea1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.tbxAConvertir);
             this.Controls.Add(this.pnlSuperiorForm);
@@ -309,7 +291,6 @@ namespace Presentacion.Ventanas.Calculadora
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCalculadora";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCalculadora";
             this.pnlSuperiorForm.ResumeLayout(false);
@@ -322,7 +303,6 @@ namespace Presentacion.Ventanas.Calculadora
         }
 
         #endregion
-        public System.Windows.Forms.Button btnMinimizar;
         public System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.Label label1;
@@ -330,11 +310,11 @@ namespace Presentacion.Ventanas.Calculadora
         public System.Windows.Forms.Button btnConvertirTasa;
         public System.Windows.Forms.RadioButton rbtTasaEfectiva2;
         public System.Windows.Forms.RadioButton rbtTasaNominal2;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel pnlLinea2;
         public System.Windows.Forms.TextBox tbxConvertida;
         public System.Windows.Forms.RadioButton rbtTasaEfectiva1;
         public System.Windows.Forms.RadioButton rbtTasaNominal1;
-        public System.Windows.Forms.Panel panel17;
+        public System.Windows.Forms.Panel pnlLinea1;
         public System.Windows.Forms.TextBox tbxAConvertir;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;

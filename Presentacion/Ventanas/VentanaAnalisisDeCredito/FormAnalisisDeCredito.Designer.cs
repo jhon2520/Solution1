@@ -32,12 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAnalisisDeCredito));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnCerrarFormActivo = new System.Windows.Forms.Button();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.btnAlmacenarInformacion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.panel51 = new System.Windows.Forms.Panel();
+            this.pnlLinea = new System.Windows.Forms.Panel();
             this.tbxCriterioDelAnalista = new System.Windows.Forms.TextBox();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -64,7 +63,6 @@
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
             this.pnlSuperior.Controls.Add(this.btnCerrar);
-            this.pnlSuperior.Controls.Add(this.btnCerrarFormActivo);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlSuperior.Name = "pnlSuperior";
@@ -87,28 +85,13 @@
             this.btnCerrar.TabIndex = 15;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
-            // btnCerrarFormActivo
-            // 
-            this.btnCerrarFormActivo.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFormActivo.BackgroundImage = global::Presentacion.Properties.Resources.logo_blanco;
-            this.btnCerrarFormActivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarFormActivo.FlatAppearance.BorderSize = 0;
-            this.btnCerrarFormActivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCerrarFormActivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCerrarFormActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarFormActivo.Location = new System.Drawing.Point(0, 0);
-            this.btnCerrarFormActivo.Name = "btnCerrarFormActivo";
-            this.btnCerrarFormActivo.Size = new System.Drawing.Size(33, 29);
-            this.btnCerrarFormActivo.TabIndex = 14;
-            this.btnCerrarFormActivo.UseVisualStyleBackColor = false;
-            // 
             // pnlCentro
             // 
             this.pnlCentro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlCentro.Controls.Add(this.btnAlmacenarInformacion);
             this.pnlCentro.Controls.Add(this.label1);
             this.pnlCentro.Controls.Add(this.label36);
-            this.pnlCentro.Controls.Add(this.panel51);
+            this.pnlCentro.Controls.Add(this.pnlLinea);
             this.pnlCentro.Controls.Add(this.tbxCriterioDelAnalista);
             this.pnlCentro.Controls.Add(this.lblMensaje);
             this.pnlCentro.Controls.Add(this.pictureBox4);
@@ -127,7 +110,7 @@
             // 
             // btnAlmacenarInformacion
             // 
-            this.btnAlmacenarInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(55)))), ((int)(((byte)(159)))));
+            this.btnAlmacenarInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
             this.btnAlmacenarInformacion.FlatAppearance.BorderSize = 0;
             this.btnAlmacenarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlmacenarInformacion.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,13 +148,13 @@
             this.label36.TabIndex = 110;
             this.label36.Text = "Criterio del analista";
             // 
-            // panel51
+            // pnlLinea
             // 
-            this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.panel51.Location = new System.Drawing.Point(37, 308);
-            this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(636, 1);
-            this.panel51.TabIndex = 109;
+            this.pnlLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.pnlLinea.Location = new System.Drawing.Point(37, 308);
+            this.pnlLinea.Name = "pnlLinea";
+            this.pnlLinea.Size = new System.Drawing.Size(636, 1);
+            this.pnlLinea.TabIndex = 109;
             // 
             // tbxCriterioDelAnalista
             // 
@@ -289,7 +272,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.ElipseRadius = 5;
             this.elipseForm.TargetControl = this;
             // 
             // timerCargarForm
@@ -312,7 +295,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAnalisisDeCredito";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAnalisisDeCredito";
             this.pnlSuperior.ResumeLayout(false);
@@ -335,7 +317,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
-        public System.Windows.Forms.Button btnCerrarFormActivo;
         private Bunifu.Framework.UI.BunifuElipse elipseForm;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -345,10 +326,10 @@
         public System.Windows.Forms.Label lblMensaje;
         public System.Windows.Forms.Timer timerCargarForm;
         public System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Panel panel51;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnAlmacenarInformacion;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnAlmacenarInformacion;
         public System.Windows.Forms.TextBox tbxCriterioDelAnalista;
+        public System.Windows.Forms.Panel pnlLinea;
     }
 }

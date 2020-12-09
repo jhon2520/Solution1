@@ -1,5 +1,6 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
+using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
 using System;
@@ -60,6 +61,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.dtpEdad.ValueChanged += new EventHandler(RetornarEdad);
             this.formVarialblesAnalisisMicro.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVarialblesAnalisisMicro.btnEstadoDeResultados.Click += new EventHandler(RetornarEstadosDeResultados);
+            this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.TextChanged += new EventHandler(RetornarEndeudamientoDirectoCodeudor);
+            this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.TextChanged += new EventHandler(RetornarEndeudamientoDirectoCodeudor);
 
         }
         private void MensajesTooltip()
@@ -239,6 +242,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                 formError.ShowDialog();
             }
         }
+
+
         private void RetornarUtilidadBruta()
         {
             try
@@ -344,10 +349,11 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         {
             try
             {
-                if(this.formVarialblesAnalisisMicro.tbxVentasMicro.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro.Text != string.Empty
+                if (this.formVarialblesAnalisisMicro.tbxVentasMicro.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro.Text != string.Empty
                     && this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text != string.Empty
                     && this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxCuotaCreditoARefinanciarMicro.Text != string.Empty)
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     RetornarUtilidadBruta();
                     RetornarUtilidadOPerdidaOperativa();
                     RetornarUtilidadOPerdidaneta();
@@ -367,6 +373,37 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                 formError = new FormError("Error en el formato numérico de las variables de entrada");
                 formError.ShowDialog();
             }
+        }
+        private void RetornarEndeudamientoDirectoCodeudor(object sender, EventArgs args)
+        {
+            try
+            {
+                if (this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text != string.Empty &&
+                    this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text != string.Empty &&
+                    this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text != string.Empty &&
+                    this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text != string.Empty)
+
+                {
+                    //Endeudamiento directo
+                    this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text) +
+                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / (Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text) +
+                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text) + Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text) +
+                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text))).ToString("0.00%");
+                    //Disponnible
+                    this.formVarialblesAnalisisMicro.tbxDisponibleCodeudor.Text = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text) +
+                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text)).ToString("0.00%");
+                }
+            }
+            catch 
+            {
+                using (formError = new FormError("Error en el formato numérico de las variables de entrada"))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
+    
+
         }
     }
 }

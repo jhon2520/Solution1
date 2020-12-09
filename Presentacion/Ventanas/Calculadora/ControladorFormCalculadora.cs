@@ -8,7 +8,9 @@ using System.Windows.Forms;
 using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAviso;
 using Presentacion.Ventanas.VentanaConfirmacion;
+using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
+using SoporteUsuario.CacheUsuario;
 
 namespace Presentacion.Ventanas.Calculadora
 {
@@ -26,9 +28,10 @@ namespace Presentacion.Ventanas.Calculadora
             this.formCalculadora.btnConvertirTasa.Click += new EventHandler(ConvertirTasa);
             this.formCalculadora.timerForm.Tick += new EventHandler(EfectoLogin);
             this.formCalculadora.btnCerrar.Click += new EventHandler(CerrarForm);
-            this.formCalculadora.btnMinimizar.Click += new EventHandler(MinimizarForm);
             this.formCalculadora.pnlSuperiorForm.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formCalculadora.pnlSuperiorForm.MouseUp += new MouseEventHandler(RetornarOpacidad);
+            CargarForm();
+         
         }
 
         private void RadioBtnTasas(object sender, EventArgs args)
@@ -43,6 +46,15 @@ namespace Presentacion.Ventanas.Calculadora
             }
         }
 
+        private void CargarForm()
+        {
+            this.formCalculadora.pnlSuperiorForm.BackColor = Cache.ColorInicio;
+            this.formCalculadora.btnConvertirTasa.BackColor = Cache.ColorInicio;
+            this.formCalculadora.btnCerrar.BackColor = Cache.ColorInicio;
+            this.formCalculadora.pnlLinea1.BackColor = Cache.ColorInicio;
+            this.formCalculadora.pnlLinea2.BackColor = Cache.ColorInicio;
+        }
+
         private void ConvertirTasa(object sender, EventArgs args)
         {
             formError = new FormError("Debe agregar un valor y tipo de tasa antes de simular");
@@ -53,10 +65,12 @@ namespace Presentacion.Ventanas.Calculadora
             {
                 if (this.formCalculadora.rbtTasaNominal1.Checked == true)
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     valorTasa = (CodigoComun.NominalAEfectiva(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
                 }
                 else if (this.formCalculadora.rbtTasaEfectiva1.Checked == true)
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     valorTasa = (CodigoComun.EfectivaANominal(Convert.ToDouble(this.formCalculadora.tbxAConvertir.Text)));
                 }
                 else
@@ -83,10 +97,7 @@ namespace Presentacion.Ventanas.Calculadora
         {
             CodigoComun.BtnCerrar(this.formCalculadora);
         }
-        private void MinimizarForm(object sender, EventArgs args)
-        {
-            CodigoComun.BtnMinimizar(this.formCalculadora);
-        }
+     
         private void VolverTransparente(object sender, EventArgs args)
         {
             this.formCalculadora.Opacity = 0.6;

@@ -44,5 +44,6 @@ namespace Presentacion.Ventanas.VentanaConfirmacion
         {
             this.formConfirmacion.Opacity = 1;
         }
+        
     }
 }

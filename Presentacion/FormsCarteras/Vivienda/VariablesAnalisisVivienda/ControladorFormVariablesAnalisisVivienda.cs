@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
 using System;
@@ -279,6 +280,7 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
                     this.formVariablesAnalisisVivienda.tbxOtrosIngresos.Text != string.Empty
                     && (this.formVariablesAnalisisVivienda.rbtnCiudad.Checked == true || this.formVariablesAnalisisVivienda.rbtnMunicipio.Checked == true))
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     CalcularEndeudamientoGlobal();
                 }
                 else
@@ -353,6 +355,7 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
                    this.formVariablesAnalisisVivienda.tbxCuotasACancelar.Text != string.Empty)
 
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     disponible = Disponible.CalcularDisponibleCaja(Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxIngresos.Text),
                     Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxOtrosIngresos.Text), Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxDeduccionesColilla.Text),
                     RetornarDANECiudadPueblo(), RetornarDANEVivienda(), Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxCuotasACancelar.Text));

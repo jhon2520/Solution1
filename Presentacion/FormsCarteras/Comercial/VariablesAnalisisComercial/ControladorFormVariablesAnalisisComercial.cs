@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
 using System;
@@ -91,6 +92,9 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.btnAnalizar, "Analizar crédito según cumplimiento de políticas internas.");
             this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.cbxCantidadDeMoras, "Ingrese el número mayor de moras que registra el solicitante.");
             this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.cbxDiasMora, "Ingrese los días de mora que registra el solicitante.");
+            this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.btnCalcularEndeudamientoGlobal, "Calcular el endeudamiento global del solicitante.");
+            this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.btnCalcularDisponible, "Calcular el disponible del solicitante.");
+
         }
 
         private void FormatoNumeroTexBox(object sender, EventArgs args)
@@ -266,6 +270,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                     this.formVariablesAnalisisComercial.tbxOtrosIngresos.Text != string.Empty
                     && (this.formVariablesAnalisisComercial.rbtnCiudad.Checked == true || this.formVariablesAnalisisComercial.rbtnMunicipio.Checked == true))
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     CalcularEndeudamientoGlobal();
                 }
                 else
@@ -341,6 +346,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                    this.formVariablesAnalisisComercial.tbxCuotasACancelar.Text != string.Empty)
 
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     disponible = Disponible.CalcularDisponibleCaja(Convert.ToDouble(this.formVariablesAnalisisComercial.tbxIngresos.Text),
                     Convert.ToDouble(this.formVariablesAnalisisComercial.tbxOtrosIngresos.Text), Convert.ToDouble(this.formVariablesAnalisisComercial.tbxDeduccionesColilla.Text),
                     RetornarDANECiudadPueblo(), RetornarDANEVivienda(), Convert.ToDouble(this.formVariablesAnalisisComercial.tbxCuotasACancelar.Text));

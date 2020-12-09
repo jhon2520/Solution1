@@ -141,12 +141,12 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.ElipseRadius = 5;
             this.elipseForm.TargetControl = this;
             // 
             // elipseBtnListo
             // 
-            this.elipseBtnListo.ElipseRadius = 7;
+            this.elipseBtnListo.ElipseRadius = 5;
             this.elipseBtnListo.TargetControl = this.btnListo;
             // 
             // FormAviso

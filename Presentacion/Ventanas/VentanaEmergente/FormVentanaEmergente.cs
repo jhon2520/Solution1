@@ -39,7 +39,7 @@ namespace Presentacion.Ventanas.VentanaEmergente
             switch(this.accion)
             {
                 case enmAccion.esperar:
-                    timerForm.Interval = 5000;
+                    timerForm.Interval = 2000;
                     accion = enmAccion.cerrar;
                     break;
                 case enmAccion.iniciar:

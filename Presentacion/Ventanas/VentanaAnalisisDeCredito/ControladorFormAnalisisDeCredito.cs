@@ -12,6 +12,7 @@ using Presentacion.Ventanas.VentanaConfirmacion;
 using Presentacion.Ventanas.VentanaError;
 using Presentacion.Ventanas.VentanaAviso; 
 using SoporteUsuario.CacheUsuario;
+using Presentacion.Ventanas.VentanaEmergente;
 
 namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 {
@@ -33,10 +34,16 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             this.formAnalisisDeCredito.btnAlmacenarInformacion.Click += new EventHandler(BotonAlmacenarInformacion);
 
         }
+    
         private void CargarForm(object sender, EventArgs args)
         {
             this.formAnalisisDeCredito.Opacity = 0.0;
             ValidacionDeDatos();
+            this.formAnalisisDeCredito.pnlSuperior.BackColor = Cache.ColorInicio;
+            this.formAnalisisDeCredito.btnAlmacenarInformacion.BackColor = Cache.ColorInicio;
+            this.formAnalisisDeCredito.btnCerrar.BackColor = Cache.ColorInicio;
+            this.formAnalisisDeCredito.pnlLinea.BackColor = Cache.ColorInicio;
+        
         }
 
         private void CerrarForm(object sender, EventArgs args) => CodigoComun.BtnCerrar(this.formAnalisisDeCredito);
@@ -50,6 +57,8 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             else if (Cache.TipoDeCredito == 3) ValidacionDatosVivienda();
             else if (Cache.TipoDeCredito == 4) ValidacionDatosMicro();
         }
+        
+        //TODO: Quitar lo de que si el score cumple igual sale un aviso, mejor dejar que si todo se cumple aparezca "No se viola políticas"
         private void ValidacionDatosConsumoNomina()
         {
 
@@ -428,6 +437,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 
                 if (resultado == DialogResult.OK)
                 {
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     Cache.CumplimientoDePoliticias = this.formAnalisisDeCredito.lblMensaje.Text;
                     Cache.CriterioDelAnalista = this.formAnalisisDeCredito.tbxCriterioDelAnalista.Text;
                     formAviso = new FormAviso("Información guardada correctamente y lista para ser exportada");

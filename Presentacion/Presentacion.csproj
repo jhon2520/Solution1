@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Jhon Romero\Desktop\Sena\</PublishUrl>
+    <PublishUrl>C:\Users\Jhon Romero\Desktop\prueba pdf\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -137,12 +138,25 @@
     <Compile Include="Ventanas\Calculadora\FormCalculadora.Designer.cs">
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Documentacion\FormDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Documentacion\FormDocumento.Designer.cs">
+      <DependentUpon>FormDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Salario\ControladorFormSalario.cs" />
     <Compile Include="Ventanas\Salario\FormSalario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Salario\FormSalario.Designer.cs">
       <DependentUpon>FormSalario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\SplashScreen\ControladorFormSplash.cs" />
+    <Compile Include="Ventanas\SplashScreen\FormSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\SplashScreen\FormSplash.Designer.cs">
+      <DependentUpon>FormSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\VentanaAnalisisDeCredito\ControladorFormAnalisisDeCredito.cs" />
     <Compile Include="Ventanas\VentanaAnalisisDeCredito\FormAnalisisDeCredito.cs">
@@ -223,11 +237,17 @@
     <EmbeddedResource Include="Ventanas\Calculadora\FormCalculadora.resx">
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Documentacion\FormDocumento.resx">
+      <DependentUpon>FormDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Salario\FormSalario.aa-ET.resx">
       <DependentUpon>FormSalario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Salario\FormSalario.resx">
       <DependentUpon>FormSalario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\SplashScreen\FormSplash.resx">
+      <DependentUpon>FormSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\VentanaAnalisisDeCredito\FormAnalisisDeCredito.resx">
       <DependentUpon>FormAnalisisDeCredito.cs</DependentUpon>
@@ -403,6 +423,41 @@
     <None Include="Resources\microsoft_excel_32px.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcrobatAccessLib">
+      <Guid>{C523F390-9C83-11D3-9094-00104BD0D535}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="InteropExtensionLib">
+      <Guid>{C3D19104-7A67-4EB0-B459-D5B2E734D430}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
@@ -502,6 +557,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\divisor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulominimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circulocerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circuloprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esferaprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cosas por hacer.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

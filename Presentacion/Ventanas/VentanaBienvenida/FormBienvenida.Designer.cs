@@ -85,6 +85,7 @@
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
             this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             // 
             // btnCerrar
@@ -101,6 +102,7 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(20, 20);
             this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.TabStop = false;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // pnlCentroFormBienvenida
@@ -216,6 +218,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(125, 24);
             this.btnIngresar.TabIndex = 7;
+            this.btnIngresar.TabStop = false;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             // 
@@ -230,6 +233,7 @@
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(268, 27);
             this.tbxNombre.TabIndex = 6;
+            this.tbxNombre.TabStop = false;
             this.tbxNombre.Text = "Ingrese su nombre";
             this.tbxNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -265,12 +269,12 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.ElipseRadius = 5;
             this.elipseForm.TargetControl = this;
             // 
             // elipseBtn
             // 
-            this.elipseBtn.ElipseRadius = 4;
+            this.elipseBtn.ElipseRadius = 5;
             this.elipseBtn.TargetControl = this.btnIngresar;
             // 
             // ttFormBienvenida

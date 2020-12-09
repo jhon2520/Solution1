@@ -85,7 +85,7 @@
             this.lblMensaje.Location = new System.Drawing.Point(12, 39);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(373, 78);
-            this.lblMensaje.TabIndex = 20;
+            this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Mensaje";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -99,7 +99,7 @@
             this.btnListo.Location = new System.Drawing.Point(80, 124);
             this.btnListo.Name = "btnListo";
             this.btnListo.Size = new System.Drawing.Size(113, 26);
-            this.btnListo.TabIndex = 21;
+            this.btnListo.TabIndex = 1;
             this.btnListo.Text = "SI";
             this.btnListo.UseVisualStyleBackColor = false;
             // 
@@ -113,7 +113,7 @@
             this.btnNo.Location = new System.Drawing.Point(203, 124);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(113, 26);
-            this.btnNo.TabIndex = 27;
+            this.btnNo.TabIndex = 2;
             this.btnNo.Text = "NO";
             this.btnNo.UseVisualStyleBackColor = false;
             // 
@@ -155,17 +155,17 @@
             // 
             // elipseBtnSi
             // 
-            this.elipseBtnSi.ElipseRadius = 7;
+            this.elipseBtnSi.ElipseRadius = 5;
             this.elipseBtnSi.TargetControl = this.btnListo;
             // 
             // elipseBtnNo
             // 
-            this.elipseBtnNo.ElipseRadius = 7;
+            this.elipseBtnNo.ElipseRadius = 5;
             this.elipseBtnNo.TargetControl = this.btnNo;
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.ElipseRadius = 5;
             this.elipseForm.TargetControl = this;
             // 
             // FormConfirmacion

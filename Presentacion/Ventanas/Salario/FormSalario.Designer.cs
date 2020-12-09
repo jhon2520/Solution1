@@ -93,7 +93,7 @@
             // 
             // elipseForm
             // 
-            this.elipseForm.ElipseRadius = 3;
+            this.elipseForm.ElipseRadius = 5;
             this.elipseForm.TargetControl = this;
             // 
             // timerForm

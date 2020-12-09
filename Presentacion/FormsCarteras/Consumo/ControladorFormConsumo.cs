@@ -16,6 +16,10 @@ using Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda;
 using Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.Calculadora;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Reflection;
 
 namespace Presentacion.FormsCarteras.Consumo
 {
@@ -48,10 +52,13 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.tbxMonto.Leave += new EventHandler(FormatoNumeroTexBox);
             this.formConsumo.btnExportar.Click += new EventHandler(BotonExportar);
             this.formConsumo.btnCalculadora.Click += new EventHandler(AbrirCalculadora);
+            this.formConsumo.KeyDown += new KeyEventHandler(AbrirCalculadoraShortCut);
+           
             ValidacionSoloNumerosTextBox();
             MensajesToolTip();
             PanelExportarDiseno();
         }
+
         private void CargarForm(object sender, EventArgs args)
         {
              CodigoComun.EstiloDataGrid(this.formConsumo.dgvPlanPagoComercial);
@@ -66,11 +73,11 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.contadorTasa, "Ingrese la tasa mes vencida del crédito.");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnPlanCuotas, "Generar pla de cuotas luego de diligenciar todas las variables básicas del crédito.");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.dgvPlanPagoComercial, "Plan de pago.");
-            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnAnalisis, "Analizar crédito luego de tener las variables básicas.");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnAnalisis, "Analizar crédito luego de tener las variables básicas. Alt + A");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportar, "Exportar la información del crédito.");
-            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportarExcel, "Exportar la información del crédito a un archivo de excel.");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportarExcel, "Exportar la información del crédito a un archivo de excel. Alt + E");
             this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnExportarPDF, "Exportar la información del crédito a un archivo PDF.");
-            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnCalculadora, "Abrir calculadora");
+            this.formConsumo.ttFormConsumo.SetToolTip(this.formConsumo.btnCalculadora, "Abrir calculadora Alt + S");
 
         }
         private void ValidacionSoloNumerosTextBox()
@@ -87,7 +94,7 @@ namespace Presentacion.FormsCarteras.Consumo
 
                 if (codigoComun.ActiveForm == null && validacionFormActivo != true)
                 {
-
+                    CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                     OcultarFormPlanDeCuotas(false);
                     this.formConsumo.trancisionFormAnalisis.Show(this.formConsumo.pnlCentro);
                     ValidarTipoDeForm();
@@ -120,11 +127,24 @@ namespace Presentacion.FormsCarteras.Consumo
         }
         private void CalcularCuota(object sender, EventArgs args)
         {
-            if (this.formConsumo.tbxMonto.Text != string.Empty)
+            try
             {
-                this.Cuota = CodigoComun.CalcularCuota(Convert.ToDouble(this.formConsumo.tbxMonto.Text), Convert.ToDouble(this.formConsumo.contadorTasa.Value), Convert.ToInt32(this.formConsumo.contadorPlazo.Value));
-                this.formConsumo.tbxCuota.Text = this.Cuota.ToString("N2");
+                if (this.formConsumo.tbxMonto.Text != string.Empty)
+                {
+                    this.Cuota = CodigoComun.CalcularCuota(Convert.ToDouble(this.formConsumo.tbxMonto.Text), Convert.ToDouble(this.formConsumo.contadorTasa.Value), Convert.ToInt32(this.formConsumo.contadorPlazo.Value));
+                    this.formConsumo.tbxCuota.Text = this.Cuota.ToString("N2");
+                }
             }
+            catch
+            {
+                using (formError = new FormError("Error en el formato numérico de las variables de entrada"))
+                {
+
+                    formError.ShowDialog();
+                    this.formConsumo.tbxMonto.Text = string.Empty;
+                }
+            }
+
 
         }
         private void PlanDeCuotas(object sender, EventArgs args)
@@ -155,17 +175,19 @@ namespace Presentacion.FormsCarteras.Consumo
         }
         private async void ExportarArchivoExcel(object sender, EventArgs args)
         {
-            formConfirmacion = new FormConfirmacion("¿Desea generar un archivo de excel con la información del crédito?");
-            DialogResult result = formConfirmacion.ShowDialog();
-            if (result == DialogResult.OK)
+            using (formConfirmacion = new FormConfirmacion("¿Desea generar un archivo de excel con la información del crédito?"))
             {
-                CodigoComun.Alerta("Exportando, espere", FormVentanaEmergente.enmTipo.info);
-                await MostrarAlerta();
-                CodigoComun.Alerta("Archivo exportado", FormVentanaEmergente.enmTipo.exito);
+                DialogResult result = formConfirmacion.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    CodigoComun.Alerta("Exportando, espere", FormVentanaEmergente.enmTipo.info);
+                    await MostrarAlerta();
+                    CodigoComun.Alerta("Archivo exportado", FormVentanaEmergente.enmTipo.exito);
 
-
+                    
+                }
             }
-
+          
             EsconderSubMenu();
 
         }
@@ -206,7 +228,26 @@ namespace Presentacion.FormsCarteras.Consumo
         private void AbrirCalculadora(object sender, EventArgs args)
         {
             formCalculadora = new FormCalculadora();
-            formCalculadora.Show();
+            formCalculadora.ShowDialog();
+        }
+        private void AbrirCalculadoraShortCut(object sender, KeyEventArgs e)
+        {
+            if(e.Alt &&  e.KeyCode == Keys.S)
+            {
+                this.formConsumo.btnCalculadora.PerformClick();
+            }
+
+            if(e.Alt && e.KeyCode == Keys.E)
+            {
+                this.formConsumo.btnExportar.PerformClick();
+                this.formConsumo.btnExportarExcel.PerformClick();
+            }
+            if (e.Alt && e.KeyCode == Keys.A)
+            {
+
+                this.formConsumo.btnAnalisis.PerformClick();
+            }
+
         }
     }
 }
