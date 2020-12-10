@@ -391,8 +391,11 @@
             // 
             this.btnPlanCuotas.BackgroundImage = global::Presentacion.Properties.Resources.planCuotas;
             this.btnPlanCuotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlanCuotas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnPlanCuotas, BunifuAnimatorNS.DecorationType.None);
             this.btnPlanCuotas.FlatAppearance.BorderSize = 0;
+            this.btnPlanCuotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPlanCuotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPlanCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanCuotas.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlanCuotas.ForeColor = System.Drawing.Color.DimGray;
@@ -455,6 +458,7 @@
             // 
             // btnCalculadora
             // 
+            this.btnCalculadora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnCalculadora, BunifuAnimatorNS.DecorationType.None);
             this.btnCalculadora.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCalculadora.FlatAppearance.BorderSize = 0;
@@ -486,6 +490,7 @@
             // btnExportarPDF
             // 
             this.btnExportarPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnExportarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnExportarPDF, BunifuAnimatorNS.DecorationType.None);
             this.btnExportarPDF.FlatAppearance.BorderSize = 0;
             this.btnExportarPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -504,6 +509,7 @@
             // btnExportarExcel
             // 
             this.btnExportarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnExportarExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnExportarExcel, BunifuAnimatorNS.DecorationType.None);
             this.btnExportarExcel.FlatAppearance.BorderSize = 0;
             this.btnExportarExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
@@ -521,6 +527,7 @@
             // 
             // btnExportar
             // 
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnExportar, BunifuAnimatorNS.DecorationType.None);
             this.btnExportar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnExportar.FlatAppearance.BorderSize = 0;
@@ -539,6 +546,7 @@
             // 
             // btnAnalisis
             // 
+            this.btnAnalisis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trancisionFormAnalisis.SetDecoration(this.btnAnalisis, BunifuAnimatorNS.DecorationType.None);
             this.btnAnalisis.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAnalisis.FlatAppearance.BorderSize = 0;
@@ -605,12 +613,12 @@
             // 
             // elipsePnlSuperior
             // 
-            this.elipsePnlSuperior.ElipseRadius = 6;
+            this.elipsePnlSuperior.ElipseRadius = 4;
             this.elipsePnlSuperior.TargetControl = this.pnlPrincipal;
             // 
             // elipseDgv
             // 
-            this.elipseDgv.ElipseRadius = 6;
+            this.elipseDgv.ElipseRadius = 4;
             this.elipseDgv.TargetControl = this.dgvPlanPagoComercial;
             // 
             // FormConsumo

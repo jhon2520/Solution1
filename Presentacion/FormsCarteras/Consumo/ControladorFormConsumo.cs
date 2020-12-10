@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Reflection;
+using Presentacion.Ventanas.VentanaCodeudor;
 
 namespace Presentacion.FormsCarteras.Consumo
 {
@@ -36,6 +37,7 @@ namespace Presentacion.FormsCarteras.Consumo
         private CodigoComun codigoComun = new CodigoComun();
         private ExportarExcel exportarExcel = new ExportarExcel();
         private FormCalculadora formCalculadora;
+      
 
         private bool validacionFormActivo = false;
         public ControladorFormConsumo(FormConsumo formConsumo)
@@ -249,5 +251,7 @@ namespace Presentacion.FormsCarteras.Consumo
             }
 
         }
+
+ 
     }
 }

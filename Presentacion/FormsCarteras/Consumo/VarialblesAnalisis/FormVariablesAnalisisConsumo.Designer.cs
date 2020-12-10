@@ -202,6 +202,8 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel69 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
+            this.btnCodeudor = new System.Windows.Forms.Button();
+            this.elipseBtnCodeudor = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.contadorAntLaboral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorScore)).BeginInit();
             this.panel13.SuspendLayout();
@@ -438,7 +440,7 @@
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.label10);
             this.panel13.Controls.Add(this.panel21);
-            this.panel13.Location = new System.Drawing.Point(12, 163);
+            this.panel13.Location = new System.Drawing.Point(14, 163);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(738, 259);
             this.panel13.TabIndex = 100;
@@ -990,7 +992,7 @@
             this.panel33.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel33.Controls.Add(this.panel34);
             this.panel33.Controls.Add(this.panel40);
-            this.panel33.Location = new System.Drawing.Point(12, 431);
+            this.panel33.Location = new System.Drawing.Point(14, 431);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(740, 303);
             this.panel33.TabIndex = 102;
@@ -1130,7 +1132,7 @@
             this.panel35.Controls.Add(this.panel38);
             this.panel35.Controls.Add(this.tbxDeduccionesColilla);
             this.panel35.Controls.Add(this.panel39);
-            this.panel35.Location = new System.Drawing.Point(12, 538);
+            this.panel35.Location = new System.Drawing.Point(14, 538);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(740, 241);
             this.panel35.TabIndex = 42;
@@ -1498,7 +1500,7 @@
             this.panel49.Controls.Add(this.panel7);
             this.panel49.Controls.Add(this.contadorScore);
             this.panel49.Controls.Add(this.cbxCalificacion);
-            this.panel49.Location = new System.Drawing.Point(370, 787);
+            this.panel49.Location = new System.Drawing.Point(372, 787);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(385, 170);
             this.panel49.TabIndex = 103;
@@ -1734,7 +1736,7 @@
             this.panel52.Controls.Add(this.label37);
             this.panel52.Controls.Add(this.tbxNombres);
             this.panel52.Controls.Add(this.panel57);
-            this.panel52.Location = new System.Drawing.Point(12, 12);
+            this.panel52.Location = new System.Drawing.Point(14, 12);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 145);
             this.panel52.TabIndex = 104;
@@ -2072,7 +2074,7 @@
             this.panel32.Controls.Add(this.panel2);
             this.panel32.Controls.Add(this.label6);
             this.panel32.Controls.Add(this.label7);
-            this.panel32.Location = new System.Drawing.Point(2, 1049);
+            this.panel32.Location = new System.Drawing.Point(2, 1053);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(757, 41);
             this.panel32.TabIndex = 101;
@@ -2119,19 +2121,21 @@
             // 
             // elipseBtnAnalizar
             // 
-            this.elipseBtnAnalizar.ElipseRadius = 5;
+            this.elipseBtnAnalizar.ElipseRadius = 4;
             this.elipseBtnAnalizar.TargetControl = this.btnAnalizar;
             // 
             // btnAnalizar
             // 
             this.btnAnalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(55)))), ((int)(((byte)(159)))));
             this.btnAnalizar.FlatAppearance.BorderSize = 0;
+            this.btnAnalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(75)))), ((int)(((byte)(159)))));
+            this.btnAnalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(75)))), ((int)(((byte)(159)))));
             this.btnAnalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnalizar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
             this.btnAnalizar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
             this.btnAnalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalizar.Location = new System.Drawing.Point(284, 994);
+            this.btnAnalizar.Location = new System.Drawing.Point(307, 994);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
             this.btnAnalizar.TabIndex = 105;
@@ -2192,7 +2196,7 @@
             this.panel11.Controls.Add(this.tbxEndeudamientoGlobal);
             this.panel11.Controls.Add(this.tbxAfectacionColilla);
             this.panel11.Controls.Add(this.panel4);
-            this.panel11.Location = new System.Drawing.Point(12, 787);
+            this.panel11.Location = new System.Drawing.Point(14, 787);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(352, 170);
             this.panel11.TabIndex = 107;
@@ -2298,6 +2302,29 @@
             this.label55.TabIndex = 12;
             this.label55.Text = "Indicadores de capacidad de pago";
             // 
+            // btnCodeudor
+            // 
+            this.btnCodeudor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(55)))), ((int)(((byte)(159)))));
+            this.btnCodeudor.BackgroundImage = global::Presentacion.Properties.Resources.codeudor;
+            this.btnCodeudor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCodeudor.FlatAppearance.BorderSize = 0;
+            this.btnCodeudor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(75)))), ((int)(((byte)(159)))));
+            this.btnCodeudor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(75)))), ((int)(((byte)(159)))));
+            this.btnCodeudor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCodeudor.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCodeudor.ForeColor = System.Drawing.Color.White;
+            this.btnCodeudor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCodeudor.Location = new System.Drawing.Point(262, 994);
+            this.btnCodeudor.Name = "btnCodeudor";
+            this.btnCodeudor.Size = new System.Drawing.Size(40, 37);
+            this.btnCodeudor.TabIndex = 108;
+            this.btnCodeudor.UseVisualStyleBackColor = false;
+            // 
+            // elipseBtnCodeudor
+            // 
+            this.elipseBtnCodeudor.ElipseRadius = 5;
+            this.elipseBtnCodeudor.TargetControl = this.btnCodeudor;
+            // 
             // FormVariablesAnalisisConsumo
             // 
             this.AllowDrop = true;
@@ -2306,6 +2333,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(788, 426);
+            this.Controls.Add(this.btnCodeudor);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel35);
             this.Controls.Add(this.panel32);
@@ -2537,5 +2565,7 @@
         public System.Windows.Forms.Button btnAfectacionColilla;
         private System.Windows.Forms.Panel panel65;
         private System.Windows.Forms.Panel panel64;
+        public System.Windows.Forms.Button btnCodeudor;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnCodeudor;
     }
 }

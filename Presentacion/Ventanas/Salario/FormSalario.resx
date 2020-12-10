@@ -279,7 +279,7 @@
   <data name="&gt;&gt;btnGuardarSalario.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="elipseBtnGuardar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="dragForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -4723,10 +4723,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>FormSalario</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
-    <value>bunifuElipse1</value>
+  <data name="&gt;&gt;elipseBtnGuardar.Name" xml:space="preserve">
+    <value>elipseBtnGuardar</value>
   </data>
-  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
+  <data name="&gt;&gt;elipseBtnGuardar.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dragForm.Name" xml:space="preserve">
@@ -4747,6 +4747,12 @@
   <data name="&gt;&gt;timerForm.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ttSalario.Name" xml:space="preserve">
+    <value>ttSalario</value>
+  </data>
+  <data name="&gt;&gt;ttSalario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormSalario</value>
   </data>
@@ -4758,5 +4764,8 @@
   </metadata>
   <metadata name="timerForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>357, 17</value>
+  </metadata>
+  <metadata name="ttSalario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 17</value>
   </metadata>
 </root>

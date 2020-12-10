@@ -13,6 +13,7 @@ using Presentacion.Ventanas.VentanaError;
 using Presentacion.Ventanas.VentanaAviso; 
 using SoporteUsuario.CacheUsuario;
 using Presentacion.Ventanas.VentanaEmergente;
+using System.Drawing;
 
 namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 {
@@ -32,7 +33,8 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             this.formAnalisisDeCredito.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formAnalisisDeCredito.timerCargarForm.Tick += new EventHandler(EfectoLogin);
             this.formAnalisisDeCredito.btnAlmacenarInformacion.Click += new EventHandler(BotonAlmacenarInformacion);
-
+            
+            MensajesTooltip();
         }
     
         private void CargarForm(object sender, EventArgs args)
@@ -58,7 +60,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             else if (Cache.TipoDeCredito == 4) ValidacionDatosMicro();
         }
         
-        //TODO: Quitar lo de que si el score cumple igual sale un aviso, mejor dejar que si todo se cumple aparezca "No se viola políticas"
+     
         private void ValidacionDatosConsumoNomina()
         {
 
@@ -68,8 +70,6 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 
             //Validacion Score
             if (Cache.Score < 400) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 400; Requiere codeudor");
-
-            else mensajeDeAnalisis.AppendLine("La persona tiene un score mayor a 400; No requiere codeudor");
 
             //Validacion tipo de contrato y tiempo laborado
 
@@ -140,7 +140,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 mensajeDeAnalisis.AppendLine("El monto solicitado excede el plazo máximo permitido (72 meses)");
             }
 
-       
+            ValidarStringBuilder(mensajeDeAnalisis);
 
             this.formAnalisisDeCredito.lblMensaje.Text = mensajeDeAnalisis.ToString();
         }
@@ -154,7 +154,6 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             //Validacion Score
             if (Cache.Score < 600) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 600; Requiere codeudor");
 
-            else mensajeDeAnalisis.AppendLine("La persona tiene un score mayor a 600; No requiere codeudor");
 
             //Validacion tipo de contrato y tiempo laborado
 
@@ -218,6 +217,8 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 mensajeDeAnalisis.AppendLine("El monto solicitado excede el plazo máximo permitido (72 meses)");
             }
 
+            ValidarStringBuilder(mensajeDeAnalisis);
+
             this.formAnalisisDeCredito.lblMensaje.Text = mensajeDeAnalisis.ToString();
         }
         private void ValidacionDatosComercial()
@@ -229,8 +230,6 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 
             //Validacion Score
             if (Cache.Score < 700) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 700; Requiere codeudor");
-
-            else mensajeDeAnalisis.AppendLine("La persona tiene un score mayor a 700; No requiere codeudor");
 
             //Validacion tipo de contrato y tiempo laborado
 
@@ -288,6 +287,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 mensajeDeAnalisis.AppendLine("El plazo solicitado excede lo permitido por la política en créditos destinados a compra de activos o unificación de pasivos");
             }
 
+            ValidarStringBuilder(mensajeDeAnalisis);
 
             this.formAnalisisDeCredito.lblMensaje.Text = mensajeDeAnalisis.ToString();
 
@@ -300,9 +300,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
             if ((Cache.TotalIngresos) < 2 * salario) mensajeDeAnalisis.AppendLine("La persona tiene ingresos menores a  dos salario minimo legal mensual vigente ");
 
             //Validacion Score
-            if (Cache.Score < 500) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 500; Requiere codeudor");
-
-            else mensajeDeAnalisis.AppendLine("La persona tiene un score mayor a 500; No requiere codeudor");
+            if (Cache.Score < 500) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 500; Requiere codeudor");   
 
             //Validacion tipo de contrato y tiempo laborado
 
@@ -357,6 +355,7 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 mensajeDeAnalisis.AppendLine("El plazo solicitado excede lo permitido por la política en créditos destinados a compra de vivienda nueva o compra de vivienda usada");
             }
 
+            ValidarStringBuilder(mensajeDeAnalisis);
 
             this.formAnalisisDeCredito.lblMensaje.Text = mensajeDeAnalisis.ToString();
 
@@ -370,8 +369,6 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
 
             //Validacion Score
             if (Cache.Score < 700) mensajeDeAnalisis.AppendLine("La persona tiene un score menor a 700; Requiere codeudor");
-
-            else mensajeDeAnalisis.AppendLine("La persona tiene un score mayor a 700; No requiere codeudor");
 
             //Validacion Ant.Laboral
 
@@ -422,11 +419,21 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 mensajeDeAnalisis.AppendLine("El plazo solicitado excede lo permitido por la política en créditos destinados a compra de activos o unificación de pasivos");
             }
 
+            ValidarStringBuilder(mensajeDeAnalisis);
 
             this.formAnalisisDeCredito.lblMensaje.Text = mensajeDeAnalisis.ToString();
 
         }
         
+
+        private void ValidarStringBuilder(StringBuilder stringBuilder)
+        {
+            if (stringBuilder.Length == 0)
+            {
+                stringBuilder.AppendLine("No se encuentran incumplimientos a las políticas internas para este crédito.");
+                this.formAnalisisDeCredito.lblMensaje.Font = new Font(this.formAnalisisDeCredito.lblMensaje.Font, FontStyle.Bold);
+            }
+        }
 
         private void BotonAlmacenarInformacion(object sender, EventArgs args)
         {
@@ -450,6 +457,13 @@ namespace Presentacion.Ventanas.VentanaAnalisisDeCredito
                 formError = new FormError("El criterio del analista es necesario para almacenar la información");
                 formError.ShowDialog();
             }
+        }
+        private void MensajesTooltip()
+        {
+            this.formAnalisisDeCredito.ttFormAnalisis.SetToolTip(this.formAnalisisDeCredito.btnAlmacenarInformacion, "Almacenar toda la información del crédito para ser exportada.");
+            this.formAnalisisDeCredito.ttFormAnalisis.SetToolTip(this.formAnalisisDeCredito.tbxCriterioDelAnalista, "Ingresar el criterio del analista para este caso específico.");
+            this.formAnalisisDeCredito.ttFormAnalisis.SetToolTip(this.formAnalisisDeCredito.btnCerrar, "Cerrar.");
+
         }
     }
 }

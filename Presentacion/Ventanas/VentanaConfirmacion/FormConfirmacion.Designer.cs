@@ -92,6 +92,7 @@
             // btnListo
             // 
             this.btnListo.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnListo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListo.FlatAppearance.BorderSize = 0;
             this.btnListo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +107,7 @@
             // btnNo
             // 
             this.btnNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(93)))), ((int)(((byte)(78)))));
+            this.btnNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNo.FlatAppearance.BorderSize = 0;
             this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaCodeudor;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
@@ -17,6 +18,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
         private FormAviso formAviso;
+        private FormCodeudor formCodeudor;
 
 
         public ControladorFormVariablesAnalisisConsumo(FormVariablesAnalisisConsumo formVariables)
@@ -41,7 +43,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.btnCalcularDisponible.Click += new EventHandler(RetornarDisponible);
             this.formVariables.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariables.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
-
+            this.formVariables.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
             RetornarFormatoTextBox();
             ValidacionSoloLetrasTextbox();
         }
@@ -550,6 +552,15 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formError.ShowDialog();
             }
 
+        }
+        private void AbrirFormCodeudor(object sender, EventArgs args)
+        {
+            using (formCodeudor = new FormCodeudor())
+            {
+                formCodeudor.cbxFormaDePago.Text = this.formVariables.cbxFormaDePago.Text;
+                formCodeudor.tbxCuota.Text = this.formVariables.tbxCuota.Text;
+                formCodeudor.ShowDialog();
+            }
         }
 
     }

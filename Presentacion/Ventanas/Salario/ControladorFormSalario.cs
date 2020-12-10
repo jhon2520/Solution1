@@ -33,6 +33,7 @@ namespace Presentacion.Ventanas.Salario
             this.formSalario.timerForm.Tick += new EventHandler(EfectoLogin);
             this.formSalario.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formSalario.MouseUp += new MouseEventHandler(RetornarOpacidad);
+            MensajesTooltip();
         }
 
         private void CerrarForm(object sender, EventArgs args) => CodigoComun.BtnCerrar(this.formSalario);
@@ -66,8 +67,20 @@ namespace Presentacion.Ventanas.Salario
         private void CargarForm(object sender, EventArgs args)=> this.formSalario.tbxSalario.Text = Settings.Default.salario.ToString("N2");
         private void FormatoNumeroTexBox(object sender, EventArgs args)
         {
-            if (((TextBox)sender).Name == this.formSalario.tbxSalario.Name && this.formSalario.tbxSalario.Text != string.Empty)
-                this.formSalario.tbxSalario.Text = string.Format("{0:n0}", double.Parse(this.formSalario.tbxSalario.Text));
+            try
+            {
+                if (((TextBox)sender).Name == this.formSalario.tbxSalario.Name && this.formSalario.tbxSalario.Text != string.Empty)
+                    this.formSalario.tbxSalario.Text = string.Format("{0:n0}", double.Parse(this.formSalario.tbxSalario.Text));
+            }
+            catch 
+            {
+                using (formError = new FormError("El valor de entrada no tiene el formato correcto"))
+                {
+                    formError.ShowDialog();
+                    this.formSalario.tbxSalario.Text = string.Empty;
+                }
+            }
+        
 
         }
         private void EfectoLogin(object sender, EventArgs args)
@@ -81,6 +94,12 @@ namespace Presentacion.Ventanas.Salario
         private void RetornarOpacidad(object sender, EventArgs args)
         {
             this.formSalario.Opacity = 1;
+        }
+        private void MensajesTooltip()
+        {
+            this.formSalario.ttSalario.SetToolTip(this.formSalario.btnGuardarSalario, "Guarda el salario dentro de las variables del sistema.");
+            this.formSalario.ttSalario.SetToolTip(this.formSalario.btnCerrar, "Cerrar.");
+            this.formSalario.ttSalario.SetToolTip(this.formSalario.tbxSalario, "Ingrese el salario mínimo mensual legal vigente.");
         }
     }
 }

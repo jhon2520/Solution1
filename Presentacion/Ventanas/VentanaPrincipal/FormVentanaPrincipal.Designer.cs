@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentanaPrincipal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.pnlCentro = new System.Windows.Forms.Panel();
@@ -49,8 +49,8 @@
             this.btnInstagram = new System.Windows.Forms.Button();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
             this.btnCerrarFormActivo = new System.Windows.Forms.Button();
-            this.btnDocumentacion = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnDocumentacion = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlFlecha = new System.Windows.Forms.Panel();
             this.btnMicro = new System.Windows.Forms.Button();
@@ -110,6 +110,7 @@
             // 
             this.lblLinkAcercaDe.ActiveLinkColor = System.Drawing.Color.Teal;
             this.lblLinkAcercaDe.AutoSize = true;
+            this.lblLinkAcercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.lblLinkAcercaDe, BunifuAnimatorNS.DecorationType.None);
             this.lblLinkAcercaDe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkAcercaDe.LinkColor = System.Drawing.Color.DarkSlateGray;
@@ -133,6 +134,7 @@
             // 
             this.linkLblSalario.ActiveLinkColor = System.Drawing.Color.Teal;
             this.linkLblSalario.AutoSize = true;
+            this.linkLblSalario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.linkLblSalario, BunifuAnimatorNS.DecorationType.None);
             this.linkLblSalario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblSalario.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -221,6 +223,9 @@
             this.btnPagina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.btnPagina, BunifuAnimatorNS.DecorationType.None);
             this.btnPagina.FlatAppearance.BorderSize = 0;
+            this.btnPagina.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnPagina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPagina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPagina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagina.Location = new System.Drawing.Point(851, 413);
             this.btnPagina.Name = "btnPagina";
@@ -235,6 +240,9 @@
             this.btnYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.btnYoutube, BunifuAnimatorNS.DecorationType.None);
             this.btnYoutube.FlatAppearance.BorderSize = 0;
+            this.btnYoutube.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnYoutube.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnYoutube.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnYoutube.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYoutube.Location = new System.Drawing.Point(814, 413);
             this.btnYoutube.Name = "btnYoutube";
@@ -249,6 +257,9 @@
             this.btnTwitter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.btnTwitter, BunifuAnimatorNS.DecorationType.None);
             this.btnTwitter.FlatAppearance.BorderSize = 0;
+            this.btnTwitter.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnTwitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTwitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTwitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTwitter.Location = new System.Drawing.Point(778, 413);
             this.btnTwitter.Name = "btnTwitter";
@@ -263,6 +274,9 @@
             this.btnFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.btnFacebook, BunifuAnimatorNS.DecorationType.None);
             this.btnFacebook.FlatAppearance.BorderSize = 0;
+            this.btnFacebook.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnFacebook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFacebook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFacebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacebook.Location = new System.Drawing.Point(741, 413);
             this.btnFacebook.Name = "btnFacebook";
@@ -277,6 +291,9 @@
             this.btnInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionForm.SetDecoration(this.btnInstagram, BunifuAnimatorNS.DecorationType.None);
             this.btnInstagram.FlatAppearance.BorderSize = 0;
+            this.btnInstagram.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnInstagram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnInstagram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInstagram.Location = new System.Drawing.Point(705, 413);
             this.btnInstagram.Name = "btnInstagram";
@@ -322,24 +339,6 @@
             this.btnCerrarFormActivo.TabIndex = 0;
             this.btnCerrarFormActivo.UseVisualStyleBackColor = false;
             // 
-            // btnDocumentacion
-            // 
-            this.btnDocumentacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionForm.SetDecoration(this.btnDocumentacion, BunifuAnimatorNS.DecorationType.None);
-            this.btnDocumentacion.FlatAppearance.BorderSize = 0;
-            this.btnDocumentacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnDocumentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocumentacion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDocumentacion.ForeColor = System.Drawing.Color.White;
-            this.btnDocumentacion.Image = global::Presentacion.Properties.Resources.documento;
-            this.btnDocumentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentacion.Location = new System.Drawing.Point(0, 310);
-            this.btnDocumentacion.Name = "btnDocumentacion";
-            this.btnDocumentacion.Size = new System.Drawing.Size(140, 30);
-            this.btnDocumentacion.TabIndex = 6;
-            this.btnDocumentacion.Text = "Guía";
-            this.btnDocumentacion.UseVisualStyleBackColor = true;
-            // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -358,6 +357,24 @@
             this.btnMinimizar.Size = new System.Drawing.Size(18, 18);
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.UseVisualStyleBackColor = false;
+            // 
+            // btnDocumentacion
+            // 
+            this.btnDocumentacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionForm.SetDecoration(this.btnDocumentacion, BunifuAnimatorNS.DecorationType.None);
+            this.btnDocumentacion.FlatAppearance.BorderSize = 0;
+            this.btnDocumentacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnDocumentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumentacion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDocumentacion.ForeColor = System.Drawing.Color.White;
+            this.btnDocumentacion.Image = global::Presentacion.Properties.Resources.documento;
+            this.btnDocumentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocumentacion.Location = new System.Drawing.Point(0, 310);
+            this.btnDocumentacion.Name = "btnDocumentacion";
+            this.btnDocumentacion.Size = new System.Drawing.Size(140, 30);
+            this.btnDocumentacion.TabIndex = 6;
+            this.btnDocumentacion.Text = "Guía";
+            this.btnDocumentacion.UseVisualStyleBackColor = true;
             // 
             // btnCerrar
             // 
@@ -499,22 +516,22 @@
             // 
             this.bunifuTransitionForm.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransitionForm.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 20;
-            animation4.Padding = new System.Windows.Forms.Padding(30);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransitionForm.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 20;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransitionForm.DefaultAnimation = animation1;
             this.bunifuTransitionForm.MaxAnimationTime = 2500;
             // 
             // elipseBtnSalario

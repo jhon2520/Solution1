@@ -26,7 +26,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
     {
         private FormVentanaPrincipal formVentanaPrincipal;
         private FormConfirmacion formConfirmacion;
-        private FormAcercaDE formAcerca = new FormAcercaDE();
+        private FormAcercaDE formAcerca;
         private CodigoComun codigoComun = new CodigoComun();
         private FormError formError;
         private FormDocumento formDocumento;
@@ -73,7 +73,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         }
         private void CargarForm(object sender, EventArgs args)
         {
-            using (formError = new FormError("El salario mínimo no está almacenado en el sistema o tiene un valor de 0"))
+            using (formError = new FormError("El salario mínimo no está almacenado en el sistema o tiene un valor de 0."))
             {
                 this.formVentanaPrincipal.lblNombre.Text = Cache.NombreAnalista;
 
@@ -238,7 +238,13 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             }
         }
 
-        private void LlamarFormAcercaDE(object sender, EventArgs args)=> formAcerca.ShowDialog();
+        private void LlamarFormAcercaDE(object sender, EventArgs args)
+        {
+            using (formAcerca = new FormAcercaDE())
+            {
+                formAcerca.ShowDialog();
+            } 
+        }
        
         private void AbrirFormSalario(object sender, EventArgs args)
         {
@@ -295,8 +301,8 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnYoutube, "Ingresar al canal de Youtube del SENA.");
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnPagina, "Ingresar a la página web del SENA.");
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnCerrarFormActivo, "Volver a la ventana principal. Ctrl + Q");
-            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnCerrar, "Cerrar (esc).");
-            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnMinimizar, "Minimizar.");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnCerrar, "Cerrar aplicación (esc).");
+            this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnMinimizar, "Minimizar aplicación.");
 
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.linkLblSalario, "Modificar el salario mínimo registrado en el sistema. Ctrl + S");
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.lblLinkAcercaDe, "Acerca del sistema.");

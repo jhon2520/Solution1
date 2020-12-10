@@ -104,9 +104,9 @@ namespace Presentacion.Ventanas.VentanaBienvenida
         private void MensajesTooltip()
         {
             this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.tbxNombre, "Ingrese el nombre del analista.");
-            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnIngresar, "Ingresar al sistema de análisis.");
-            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnCerrar, "Cerrar (esc).");
-            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnMinimizar, "Minimizar.");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnIngresar, "Ingresar al sistema de análisis de crédito.");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnCerrar, "Cerrar aplicación (esc).");
+            this.formBienvenida.ttFormBienvenida.SetToolTip(this.formBienvenida.btnMinimizar, "Minimizar aplicación.");
 
         }
 

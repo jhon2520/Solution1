@@ -30,7 +30,10 @@ namespace Presentacion.Ventanas.Calculadora
             this.formCalculadora.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formCalculadora.pnlSuperiorForm.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formCalculadora.pnlSuperiorForm.MouseUp += new MouseEventHandler(RetornarOpacidad);
+         
+           
             CargarForm();
+            MensajesTooltip();
          
         }
 
@@ -106,5 +109,16 @@ namespace Presentacion.Ventanas.Calculadora
         {
             this.formCalculadora.Opacity = 1;
         }
+
+        private void MensajesTooltip()
+        {
+            this.formCalculadora.ttCalculadora.SetToolTip(this.formCalculadora.rbtTasaNominal1, "Seleccione si la tasa es Nominal Mensual.");
+            this.formCalculadora.ttCalculadora.SetToolTip(this.formCalculadora.btnConvertirTasa, "Convertir la tasa seleccionada.");
+            this.formCalculadora.ttCalculadora.SetToolTip(this.formCalculadora.btnCerrar, "Cerrar calculadora.");
+            this.formCalculadora.ttCalculadora.SetToolTip(this.formCalculadora.rbtTasaEfectiva1, "Seleccione si la tasa es Efectiva Anual.");
+                 
+        }
+
+    
     }
 }

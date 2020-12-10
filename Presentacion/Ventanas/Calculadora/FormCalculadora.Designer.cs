@@ -54,6 +54,7 @@ namespace Presentacion.Ventanas.Calculadora
             this.elipseBtnNuevo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.DragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ttCalculadora = new System.Windows.Forms.ToolTip(this.components);
             this.pnlSuperiorForm.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +77,7 @@ namespace Presentacion.Ventanas.Calculadora
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -121,6 +123,7 @@ namespace Presentacion.Ventanas.Calculadora
             // 
             // rbtTasaNominal1
             // 
+            this.rbtTasaNominal1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtTasaNominal1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtTasaNominal1.ForeColor = System.Drawing.Color.DimGray;
             this.rbtTasaNominal1.Location = new System.Drawing.Point(11, 11);
@@ -133,6 +136,7 @@ namespace Presentacion.Ventanas.Calculadora
             // 
             // rbtTasaEfectiva1
             // 
+            this.rbtTasaEfectiva1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtTasaEfectiva1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtTasaEfectiva1.ForeColor = System.Drawing.Color.DimGray;
             this.rbtTasaEfectiva1.Location = new System.Drawing.Point(11, 37);
@@ -193,6 +197,7 @@ namespace Presentacion.Ventanas.Calculadora
             // 
             this.tbxConvertida.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxConvertida.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxConvertida.Enabled = false;
             this.tbxConvertida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxConvertida.ForeColor = System.Drawing.Color.DimGray;
             this.tbxConvertida.Location = new System.Drawing.Point(186, 151);
@@ -205,6 +210,7 @@ namespace Presentacion.Ventanas.Calculadora
             // btnConvertirTasa
             // 
             this.btnConvertirTasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnConvertirTasa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConvertirTasa.FlatAppearance.BorderSize = 0;
             this.btnConvertirTasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConvertirTasa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -271,6 +277,12 @@ namespace Presentacion.Ventanas.Calculadora
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
+            // ttCalculadora
+            // 
+            this.ttCalculadora.IsBalloon = true;
+            this.ttCalculadora.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttCalculadora.ToolTipTitle = "Información:";
+            // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,5 +336,6 @@ namespace Presentacion.Ventanas.Calculadora
         private Bunifu.Framework.UI.BunifuElipse elipseBtnNuevo;
         private Bunifu.Framework.UI.BunifuDragControl DragForm;
         public Panel pnlSuperiorForm;
+        public ToolTip ttCalculadora;
     }
 }

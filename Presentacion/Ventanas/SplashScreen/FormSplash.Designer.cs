@@ -58,7 +58,7 @@ namespace Presentacion.Ventanas.SplashScreen
             this.pnlBarra.BackColor = System.Drawing.Color.Teal;
             this.pnlBarra.Location = new System.Drawing.Point(0, 1);
             this.pnlBarra.Name = "pnlBarra";
-            this.pnlBarra.Size = new System.Drawing.Size(10, 34);
+            this.pnlBarra.Size = new System.Drawing.Size(5, 34);
             this.pnlBarra.TabIndex = 1;
             // 
             // lblCargando

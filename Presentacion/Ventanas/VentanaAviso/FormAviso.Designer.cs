@@ -60,6 +60,7 @@
             // btnListo
             // 
             this.btnListo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(183)))), ((int)(((byte)(211)))));
+            this.btnListo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListo.FlatAppearance.BorderSize = 0;
             this.btnListo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,7 +147,7 @@
             // 
             // elipseBtnListo
             // 
-            this.elipseBtnListo.ElipseRadius = 5;
+            this.elipseBtnListo.ElipseRadius = 4;
             this.elipseBtnListo.TargetControl = this.btnListo;
             // 
             // FormAviso

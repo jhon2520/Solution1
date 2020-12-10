@@ -35,19 +35,21 @@
             this.tbxSalario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardarSalario = new System.Windows.Forms.Button();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnGuardar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerForm = new System.Windows.Forms.Timer(this.components);
+            this.ttSalario = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
             resources.ApplyResources(this.btnCerrar, "btnCerrar");
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
@@ -73,16 +75,19 @@
             // 
             // btnGuardarSalario
             // 
+            this.btnGuardarSalario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarSalario.FlatAppearance.BorderSize = 0;
+            this.btnGuardarSalario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnGuardarSalario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             resources.ApplyResources(this.btnGuardarSalario, "btnGuardarSalario");
             this.btnGuardarSalario.ForeColor = System.Drawing.Color.White;
             this.btnGuardarSalario.Name = "btnGuardarSalario";
             this.btnGuardarSalario.UseVisualStyleBackColor = true;
             // 
-            // bunifuElipse1
+            // elipseBtnGuardar
             // 
-            this.bunifuElipse1.ElipseRadius = 6;
-            this.bunifuElipse1.TargetControl = this.btnGuardarSalario;
+            this.elipseBtnGuardar.ElipseRadius = 4;
+            this.elipseBtnGuardar.TargetControl = this.btnGuardarSalario;
             // 
             // dragForm
             // 
@@ -100,6 +105,12 @@
             // 
             this.timerForm.Enabled = true;
             this.timerForm.Interval = 2;
+            // 
+            // ttSalario
+            // 
+            this.ttSalario.IsBalloon = true;
+            this.ttSalario.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttSalario.ToolTipTitle = "Información:";
             // 
             // FormSalario
             // 
@@ -124,10 +135,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnGuardarSalario;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnGuardar;
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuElipse elipseForm;
         public System.Windows.Forms.TextBox tbxSalario;
         public System.Windows.Forms.Timer timerForm;
+        public System.Windows.Forms.ToolTip ttSalario;
     }
 }

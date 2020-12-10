@@ -51,6 +51,7 @@
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerCargarForm = new System.Windows.Forms.Timer(this.components);
             this.elipseBtnAlmacenarInformacion = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ttFormAnalisis = new System.Windows.Forms.ToolTip(this.components);
             this.pnlSuperior.SuspendLayout();
             this.pnlCentro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -75,9 +76,10 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Location = new System.Drawing.Point(711, 0);
             this.btnCerrar.Name = "btnCerrar";
@@ -111,6 +113,7 @@
             // btnAlmacenarInformacion
             // 
             this.btnAlmacenarInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnAlmacenarInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlmacenarInformacion.FlatAppearance.BorderSize = 0;
             this.btnAlmacenarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlmacenarInformacion.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,11 +133,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label1.Location = new System.Drawing.Point(20, 11);
+            this.label1.Location = new System.Drawing.Point(22, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 17);
+            this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 111;
-            this.label1.Text = "Políticas internas";
+            this.label1.Text = "Políticas internas:";
             // 
             // label36
             // 
@@ -180,7 +183,7 @@
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(680, 188);
             this.lblMensaje.TabIndex = 38;
-            this.lblMensaje.Text = "No se encuentran incumplimientos a las políticas internas\r\n";
+            this.lblMensaje.Text = "No se encuentran incumplimientos a las políticas internas para este crédito.\r\n";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox4
@@ -285,6 +288,12 @@
             this.elipseBtnAlmacenarInformacion.ElipseRadius = 5;
             this.elipseBtnAlmacenarInformacion.TargetControl = this.btnAlmacenarInformacion;
             // 
+            // ttFormAnalisis
+            // 
+            this.ttFormAnalisis.IsBalloon = true;
+            this.ttFormAnalisis.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttFormAnalisis.ToolTipTitle = "Información:";
+            // 
             // FormAnalisisDeCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,5 +340,6 @@
         private Bunifu.Framework.UI.BunifuElipse elipseBtnAlmacenarInformacion;
         public System.Windows.Forms.TextBox tbxCriterioDelAnalista;
         public System.Windows.Forms.Panel pnlLinea;
+        public System.Windows.Forms.ToolTip ttFormAnalisis;
     }
 }

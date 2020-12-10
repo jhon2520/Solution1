@@ -21,6 +21,7 @@ namespace Presentacion.Ventanas.AcercaDe
             this.formAcercaDe.btnCerrar.Click += new EventHandler(CerrarForm);
             this.formAcercaDe.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formAcercaDe.MouseUp += new MouseEventHandler(RetornarOpacidad);
+            MensajesTooltip();
         }
 
         private void CerrarForm(object sender, EventArgs args)
@@ -39,5 +40,10 @@ namespace Presentacion.Ventanas.AcercaDe
         {
             CodigoComun.Timer(this.formAcercaDe, this.formAcercaDe.timerForm);
         }
+        private void MensajesTooltip()
+        {
+            this.formAcercaDe.ttAcercaDe.SetToolTip(this.formAcercaDe.btnCerrar, "Cerrar.");
+        }
+
     }
 }

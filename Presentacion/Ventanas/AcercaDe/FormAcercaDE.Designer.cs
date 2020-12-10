@@ -38,6 +38,7 @@
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerForm = new System.Windows.Forms.Timer(this.components);
+            this.ttAcercaDe = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
@@ -45,11 +46,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(95, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 52);
+            this.label1.Size = new System.Drawing.Size(216, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "      Creado por : Jhon Muñoz Romero\r\nContacto: jhonmunozromero@gmail.com\r\n      " +
     "                         2020\r\n\r\n";
@@ -91,9 +92,10 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkCyan;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Location = new System.Drawing.Point(386, 0);
             this.btnCerrar.Name = "btnCerrar";
@@ -117,6 +119,12 @@
             // 
             this.timerForm.Enabled = true;
             this.timerForm.Interval = 2;
+            // 
+            // ttAcercaDe
+            // 
+            this.ttAcercaDe.IsBalloon = true;
+            this.ttAcercaDe.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttAcercaDe.ToolTipTitle = "Información:";
             // 
             // FormAcercaDE
             // 
@@ -152,5 +160,6 @@
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuElipse elipse;
         public System.Windows.Forms.Timer timerForm;
+        public System.Windows.Forms.ToolTip ttAcercaDe;
     }
 }

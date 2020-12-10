@@ -58,6 +58,7 @@
             // btnListo
             // 
             this.btnListo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(93)))), ((int)(((byte)(78)))));
+            this.btnListo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListo.FlatAppearance.BorderSize = 0;
             this.btnListo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(397, 189);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

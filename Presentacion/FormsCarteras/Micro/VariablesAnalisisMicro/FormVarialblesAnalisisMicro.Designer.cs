@@ -132,6 +132,9 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel40 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel66 = new System.Windows.Forms.Panel();
+            this.panel101 = new System.Windows.Forms.Panel();
+            this.tbxDisponibleCodeudor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnEstadoDeResultados = new System.Windows.Forms.Button();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel99 = new System.Windows.Forms.Panel();
@@ -243,10 +246,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label61 = new System.Windows.Forms.Label();
             this.btnAnalizar = new System.Windows.Forms.Button();
             this.elipseBtn = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.tbxDisponibleCodeudor = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel52.SuspendLayout();
             this.panel57.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
@@ -1588,6 +1587,39 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel66.TabIndex = 42;
             this.panel66.Paint += new System.Windows.Forms.PaintEventHandler(this.panel66_Paint);
             // 
+            // panel101
+            // 
+            this.panel101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
+            this.panel101.Location = new System.Drawing.Point(209, 513);
+            this.panel101.Name = "panel101";
+            this.panel101.Size = new System.Drawing.Size(137, 1);
+            this.panel101.TabIndex = 123;
+            // 
+            // tbxDisponibleCodeudor
+            // 
+            this.tbxDisponibleCodeudor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxDisponibleCodeudor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxDisponibleCodeudor.Enabled = false;
+            this.tbxDisponibleCodeudor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxDisponibleCodeudor.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxDisponibleCodeudor.Location = new System.Drawing.Point(209, 499);
+            this.tbxDisponibleCodeudor.Name = "tbxDisponibleCodeudor";
+            this.tbxDisponibleCodeudor.Size = new System.Drawing.Size(137, 15);
+            this.tbxDisponibleCodeudor.TabIndex = 121;
+            this.tbxDisponibleCodeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(25, 498);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 16);
+            this.label8.TabIndex = 122;
+            this.label8.Text = "Disponible codeudor";
+            // 
             // btnEstadoDeResultados
             // 
             this.btnEstadoDeResultados.BackColor = System.Drawing.Color.Transparent;
@@ -2771,6 +2803,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             // 
             this.btnAnalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
             this.btnAnalizar.FlatAppearance.BorderSize = 0;
+            this.btnAnalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(175)))), ((int)(((byte)(210)))));
+            this.btnAnalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(175)))), ((int)(((byte)(210)))));
             this.btnAnalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnalizar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
@@ -2788,55 +2822,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.elipseBtn.ElipseRadius = 5;
             this.elipseBtn.TargetControl = this.btnAnalizar;
             // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
-            this.btnRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.ForeColor = System.Drawing.Color.White;
-            this.btnRefrescar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
-            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefrescar.Location = new System.Drawing.Point(510, 1259);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(202, 37);
-            this.btnRefrescar.TabIndex = 124;
-            this.btnRefrescar.Text = "Refresscar";
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            // 
-            // panel101
-            // 
-            this.panel101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
-            this.panel101.Location = new System.Drawing.Point(209, 513);
-            this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(137, 1);
-            this.panel101.TabIndex = 123;
-            // 
-            // tbxDisponibleCodeudor
-            // 
-            this.tbxDisponibleCodeudor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxDisponibleCodeudor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDisponibleCodeudor.Enabled = false;
-            this.tbxDisponibleCodeudor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDisponibleCodeudor.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDisponibleCodeudor.Location = new System.Drawing.Point(209, 499);
-            this.tbxDisponibleCodeudor.Name = "tbxDisponibleCodeudor";
-            this.tbxDisponibleCodeudor.Size = new System.Drawing.Size(137, 15);
-            this.tbxDisponibleCodeudor.TabIndex = 121;
-            this.tbxDisponibleCodeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(25, 498);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 16);
-            this.label8.TabIndex = 122;
-            this.label8.Text = "Disponible codeudor";
-            // 
             // FormVarialblesAnalisisMicro
             // 
             this.AllowDrop = true;
@@ -2845,7 +2830,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(785, 497);
-            this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.panel78);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);
@@ -3120,7 +3104,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuElipse elipseBtn;
         private System.Windows.Forms.Panel panel100;
-        public System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Panel panel101;
         public System.Windows.Forms.TextBox tbxDisponibleCodeudor;
         public System.Windows.Forms.Label label8;
