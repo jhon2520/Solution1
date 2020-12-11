@@ -148,8 +148,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxEmpresa.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
             this.formVariables.tbxActividadEconomica.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
         }
-
-
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
             if (this.formVariables.tbxNombres.Text != string.Empty && this.formVariables.tbxApellidos.Text != string.Empty
@@ -179,7 +177,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formError.ShowDialog();
             }
         }
-
         private void GeneracionDatosCache()
         {
 
@@ -254,7 +251,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             Cache.TipoDePersona = "Persona natural";
 
         }
-
         private void RetornarTotalIngresos(Object sender, EventArgs args)
         {
             OcultarCheckBox();
@@ -284,7 +280,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formError.ShowDialog();
             }
         }
-
         private void AdvertenciaCambioDeFormaDePago()
         {
             if ((this.formVariables.tbxAfectacionColilla.Text != string.Empty && this.formVariables.tbxAfectacionColilla.Text != "N/A") || this.formVariables.tbxEndeudamientoGlobal.Text != string.Empty
@@ -296,7 +291,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formAviso.ShowDialog();
             }
         }
-
         private void OcultarCheckBox()
         {
             if (this.formVariables.cbxFormaDePago.Text == "Caja")
@@ -314,7 +308,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 this.formVariables.btnAfectacionColilla.Enabled = true;
             }
         }
-
         private void FormatoNumeroTexBox(object sender, EventArgs args)
         {
             if (((TextBox)sender).Name == this.formVariables.tbxIngresos.Name && this.formVariables.tbxIngresos.Text != string.Empty)
@@ -341,7 +334,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 this.formVariables.tbxOtrasDeduccionesColilla.Text = string.Format("{0:n0}", double.Parse(this.formVariables.tbxOtrasDeduccionesColilla.Text));
 
         }
-
         private void RetornarEndeudamientoGlobal(object sender, EventArgs args)
         {
             try
@@ -370,7 +362,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formError.ShowDialog();
             }
         }
-
         private void CalcularEndeudamientoGlobal(string formaDePago)
         {
             double endeudamientoGlobal;
@@ -453,7 +444,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 formError.ShowDialog();
             }
         }
-
         public void RetornarAfectacionColilla(object sender, EventArgs args)
         {
             double afectacionColilla;
@@ -486,7 +476,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             if (this.formVariables.cbxCantidadDeMoras.Text != string.Empty && this.formVariables.cbxDiasMora.Text != string.Empty)
                 this.formVariables.tbxComportamientoDePagos.Text = CodigoComun.RetornarMorasTotales(this.formVariables.cbxCantidadDeMoras, this.formVariables.cbxDiasMora);
         }
-
         private void RetornarEdad(object sender, EventArgs args)
         {
             try
@@ -533,7 +522,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             }
             return ValorDANEVivienda;
         }
-
         private void RetornarTotalDeducciones(object sender, EventArgs args)
         {
             try
@@ -559,6 +547,12 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             {
                 formCodeudor.cbxFormaDePago.Text = this.formVariables.cbxFormaDePago.Text;
                 formCodeudor.tbxCuota.Text = this.formVariables.tbxCuota.Text;
+                if(this.formVariables.cbxFormaDePago.Text  == "Caja")
+                {
+                    formCodeudor.tbxAfectacionColilla.Text = "N/A";
+                    formCodeudor.tbxAfectacionColilla.Enabled = false;
+                    formCodeudor.cbxLeyLibranza.Visible = false;
+                }
                 formCodeudor.ShowDialog();
             }
         }

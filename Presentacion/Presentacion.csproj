@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodigoCompartido\AfectacionColilla.cs" />
+    <Compile Include="CodigoCompartido\Codeudor.cs" />
     <Compile Include="CodigoCompartido\CodigoComun.cs" />
     <Compile Include="CodigoCompartido\Disponible.cs" />
     <Compile Include="CodigoCompartido\EndeudamientoGlobal.cs" />
@@ -186,6 +187,8 @@
     <Compile Include="Ventanas\VentanaCodeudor\FormCodeudor.Designer.cs">
       <DependentUpon>FormCodeudor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\VentanaCodeudor\IndicadoresCaja.cs" />
+    <Compile Include="Ventanas\VentanaCodeudor\IndicadoresConsumoNomina.cs" />
     <Compile Include="Ventanas\VentanaConfirmacion\ControladorFormConfirmacion.cs" />
     <Compile Include="Ventanas\VentanaConfirmacion\FormConfirmacion.cs">
       <SubType>Form</SubType>

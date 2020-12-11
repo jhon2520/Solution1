@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaCodeudor;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
@@ -18,7 +19,8 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
         private FormVariablesAnalisisVivienda formVariablesAnalisisVivienda;
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
-      
+        private FormCodeudor formCodeudor;
+
 
         public ControladorFormVariablesAnalisisVivienda(FormVariablesAnalisisVivienda formVariablesAnalisisVivienda)
         {
@@ -51,6 +53,7 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVariablesAnalisisVivienda.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisVivienda.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
+            this.formVariablesAnalisisVivienda.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
         }
         private void MensajesTooltip()
         {
@@ -411,6 +414,14 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             {
                 formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
                 formError.ShowDialog();
+            }
+        }
+        private void AbrirFormCodeudor(object sender, EventArgs args)
+        {
+            using (formCodeudor = new FormCodeudor())
+            {
+                formCodeudor.tbxCuota.Text = this.formVariablesAnalisisVivienda.tbxCuota.Text;
+                formCodeudor.ShowDialog();
             }
         }
 

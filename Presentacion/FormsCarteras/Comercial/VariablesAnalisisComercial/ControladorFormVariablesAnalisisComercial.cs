@@ -1,6 +1,7 @@
 ﻿using Presentacion.CodigoCompartido;
 using Presentacion.Ventanas.VentanaAnalisisDeCredito;
 using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaCodeudor;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
@@ -18,12 +19,14 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         private FormVariablesAnalisisComercial formVariablesAnalisisComercial;
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
-    
+        private FormCodeudor formCodeudor;
+
 
         public ControladorformVariablesAnalisisComercial(FormVariablesAnalisisComercial formVariablesAnalisisComercial)
         {
             this.formVariablesAnalisisComercial = formVariablesAnalisisComercial;
             this.formVariablesAnalisisComercial.Load += new EventHandler(CargarForm);
+
             MensajesTooltip();
             RetornarFormatoTextBox();
             ValidacionSoloNumerosTextBox();
@@ -52,6 +55,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVariablesAnalisisComercial.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
+            this.formVariablesAnalisisComercial.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
         }
         private void MensajesTooltip()
         {
@@ -425,6 +429,14 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 formError.ShowDialog();
             }
 
+        }
+        private void AbrirFormCodeudor(object sender, EventArgs args)
+        {
+            using (formCodeudor = new FormCodeudor())
+            {
+                formCodeudor.tbxCuota.Text = this.formVariablesAnalisisComercial.tbxCuota.Text;
+                formCodeudor.ShowDialog();
+            }
         }
     }
 }

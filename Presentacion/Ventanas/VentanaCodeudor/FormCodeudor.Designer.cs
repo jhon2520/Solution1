@@ -32,6 +32,8 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCodeudor));
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.pbx = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -76,6 +78,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.label47 = new System.Windows.Forms.Label();
             this.tbxDisponible = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnCalcularDisponible = new System.Windows.Forms.Button();
             this.panelColor4 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -91,14 +94,19 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnAfectacionColilla = new System.Windows.Forms.Button();
-            this.btnCalcularEndeudamientoGlobal = new System.Windows.Forms.Button();
-            this.btnCalcularDisponible = new System.Windows.Forms.Button();
-            this.pbx = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.timerForm = new System.Windows.Forms.Timer(this.components);
             this.dragPbx = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.tbxCuotasACancelar = new System.Windows.Forms.TextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.rbtnMunicipio = new System.Windows.Forms.RadioButton();
+            this.rbtnCiudad = new System.Windows.Forms.RadioButton();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbxVivienda = new System.Windows.Forms.ComboBox();
             this.pnlSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx)).BeginInit();
             this.panel34.SuspendLayout();
             this.panelColor2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,7 +116,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel11.SuspendLayout();
             this.panelColor4.SuspendLayout();
             this.panel32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx)).BeginInit();
+            this.panel30.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -122,9 +130,40 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.pnlSuperior.Size = new System.Drawing.Size(736, 42);
             this.pnlSuperior.TabIndex = 1;
             // 
+            // pbx
+            // 
+            this.pbx.Image = global::Presentacion.Properties.Resources.codeudor;
+            this.pbx.Location = new System.Drawing.Point(351, 3);
+            this.pbx.Name = "pbx";
+            this.pbx.Size = new System.Drawing.Size(35, 35);
+            this.pbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx.TabIndex = 17;
+            this.pbx.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(712, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel34.Controls.Add(this.panel14);
+            this.panel34.Controls.Add(this.label12);
+            this.panel34.Controls.Add(this.cbxVivienda);
+            this.panel34.Controls.Add(this.panel30);
             this.panel34.Controls.Add(this.label2);
             this.panel34.Controls.Add(this.panel1);
             this.panel34.Controls.Add(this.tbxOtrosIngresos);
@@ -137,7 +176,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel34.Controls.Add(this.tbxIngresos);
             this.panel34.Location = new System.Drawing.Point(18, 150);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(701, 80);
+            this.panel34.Size = new System.Drawing.Size(701, 121);
             this.panel34.TabIndex = 42;
             // 
             // label2
@@ -469,6 +508,9 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.panel13);
+            this.panel3.Controls.Add(this.tbxCuotasACancelar);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.tbxValorCuotaLibranza);
@@ -485,9 +527,9 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel3.Controls.Add(this.panel38);
             this.panel3.Controls.Add(this.tbxOtrasDeduccionesColilla);
             this.panel3.Controls.Add(this.tbxDeduccionesColilla);
-            this.panel3.Location = new System.Drawing.Point(18, 240);
+            this.panel3.Location = new System.Drawing.Point(18, 280);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(352, 229);
+            this.panel3.Size = new System.Drawing.Size(352, 274);
             this.panel3.TabIndex = 67;
             // 
             // label4
@@ -579,8 +621,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel11.Controls.Add(this.btnAfectacionColilla);
-            this.panel11.Controls.Add(this.btnCalcularEndeudamientoGlobal);
             this.panel11.Controls.Add(this.cbxLeyLibranza);
             this.panel11.Controls.Add(this.label47);
             this.panel11.Controls.Add(this.tbxDisponible);
@@ -593,7 +633,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel11.Controls.Add(this.tbxEndeudamientoGlobal);
             this.panel11.Controls.Add(this.tbxAfectacionColilla);
             this.panel11.Controls.Add(this.panel10);
-            this.panel11.Location = new System.Drawing.Point(376, 240);
+            this.panel11.Location = new System.Drawing.Point(376, 282);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(343, 175);
             this.panel11.TabIndex = 108;
@@ -643,6 +683,22 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(132, 1);
             this.panel12.TabIndex = 112;
+            // 
+            // btnCalcularDisponible
+            // 
+            this.btnCalcularDisponible.BackColor = System.Drawing.Color.Transparent;
+            this.btnCalcularDisponible.BackgroundImage = global::Presentacion.Properties.Resources.arrow_pointing_left_48px;
+            this.btnCalcularDisponible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCalcularDisponible.FlatAppearance.BorderSize = 0;
+            this.btnCalcularDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcularDisponible.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcularDisponible.ForeColor = System.Drawing.Color.White;
+            this.btnCalcularDisponible.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalcularDisponible.Location = new System.Drawing.Point(305, 113);
+            this.btnCalcularDisponible.Name = "btnCalcularDisponible";
+            this.btnCalcularDisponible.Size = new System.Drawing.Size(22, 22);
+            this.btnCalcularDisponible.TabIndex = 107;
+            this.btnCalcularDisponible.UseVisualStyleBackColor = false;
             // 
             // panelColor4
             // 
@@ -745,7 +801,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel32.Controls.Add(this.panel9);
             this.panel32.Controls.Add(this.label9);
             this.panel32.Controls.Add(this.label10);
-            this.panel32.Location = new System.Drawing.Point(0, 520);
+            this.panel32.Location = new System.Drawing.Point(0, 607);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(734, 41);
             this.panel32.TabIndex = 109;
@@ -795,81 +851,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.elipseForm.ElipseRadius = 4;
             this.elipseForm.TargetControl = this;
             // 
-            // btnAfectacionColilla
-            // 
-            this.btnAfectacionColilla.BackColor = System.Drawing.Color.Transparent;
-            this.btnAfectacionColilla.BackgroundImage = global::Presentacion.Properties.Resources.arrow_pointing_left_48px;
-            this.btnAfectacionColilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAfectacionColilla.FlatAppearance.BorderSize = 0;
-            this.btnAfectacionColilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAfectacionColilla.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAfectacionColilla.ForeColor = System.Drawing.Color.White;
-            this.btnAfectacionColilla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAfectacionColilla.Location = new System.Drawing.Point(305, 35);
-            this.btnAfectacionColilla.Name = "btnAfectacionColilla";
-            this.btnAfectacionColilla.Size = new System.Drawing.Size(22, 22);
-            this.btnAfectacionColilla.TabIndex = 119;
-            this.btnAfectacionColilla.UseVisualStyleBackColor = false;
-            // 
-            // btnCalcularEndeudamientoGlobal
-            // 
-            this.btnCalcularEndeudamientoGlobal.BackColor = System.Drawing.Color.Transparent;
-            this.btnCalcularEndeudamientoGlobal.BackgroundImage = global::Presentacion.Properties.Resources.arrow_pointing_left_48px;
-            this.btnCalcularEndeudamientoGlobal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCalcularEndeudamientoGlobal.FlatAppearance.BorderSize = 0;
-            this.btnCalcularEndeudamientoGlobal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcularEndeudamientoGlobal.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularEndeudamientoGlobal.ForeColor = System.Drawing.Color.White;
-            this.btnCalcularEndeudamientoGlobal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalcularEndeudamientoGlobal.Location = new System.Drawing.Point(305, 74);
-            this.btnCalcularEndeudamientoGlobal.Name = "btnCalcularEndeudamientoGlobal";
-            this.btnCalcularEndeudamientoGlobal.Size = new System.Drawing.Size(22, 22);
-            this.btnCalcularEndeudamientoGlobal.TabIndex = 118;
-            this.btnCalcularEndeudamientoGlobal.UseVisualStyleBackColor = false;
-            // 
-            // btnCalcularDisponible
-            // 
-            this.btnCalcularDisponible.BackColor = System.Drawing.Color.Transparent;
-            this.btnCalcularDisponible.BackgroundImage = global::Presentacion.Properties.Resources.arrow_pointing_left_48px;
-            this.btnCalcularDisponible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCalcularDisponible.FlatAppearance.BorderSize = 0;
-            this.btnCalcularDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcularDisponible.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcularDisponible.ForeColor = System.Drawing.Color.White;
-            this.btnCalcularDisponible.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalcularDisponible.Location = new System.Drawing.Point(305, 113);
-            this.btnCalcularDisponible.Name = "btnCalcularDisponible";
-            this.btnCalcularDisponible.Size = new System.Drawing.Size(22, 22);
-            this.btnCalcularDisponible.TabIndex = 107;
-            this.btnCalcularDisponible.UseVisualStyleBackColor = false;
-            // 
-            // pbx
-            // 
-            this.pbx.Image = global::Presentacion.Properties.Resources.codeudor;
-            this.pbx.Location = new System.Drawing.Point(351, 3);
-            this.pbx.Name = "pbx";
-            this.pbx.Size = new System.Drawing.Size(35, 35);
-            this.pbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx.TabIndex = 17;
-            this.pbx.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(712, 2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
-            this.btnCerrar.TabIndex = 15;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            // 
             // timerForm
             // 
             this.timerForm.Enabled = true;
@@ -882,12 +863,121 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.dragPbx.TargetControl = this.pbx;
             this.dragPbx.Vertical = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(18, 225);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 16);
+            this.label11.TabIndex = 74;
+            this.label11.Text = "Cuotas a cancelar";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(55)))), ((int)(((byte)(159)))));
+            this.panel13.Location = new System.Drawing.Point(208, 245);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(132, 1);
+            this.panel13.TabIndex = 73;
+            // 
+            // tbxCuotasACancelar
+            // 
+            this.tbxCuotasACancelar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxCuotasACancelar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxCuotasACancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxCuotasACancelar.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxCuotasACancelar.Location = new System.Drawing.Point(208, 228);
+            this.tbxCuotasACancelar.Name = "tbxCuotasACancelar";
+            this.tbxCuotasACancelar.Size = new System.Drawing.Size(132, 15);
+            this.tbxCuotasACancelar.TabIndex = 72;
+            this.tbxCuotasACancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel30.Controls.Add(this.rbtnMunicipio);
+            this.panel30.Controls.Add(this.rbtnCiudad);
+            this.panel30.Location = new System.Drawing.Point(229, 77);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(217, 33);
+            this.panel30.TabIndex = 110;
+            // 
+            // rbtnMunicipio
+            // 
+            this.rbtnMunicipio.AutoSize = true;
+            this.rbtnMunicipio.FlatAppearance.BorderSize = 0;
+            this.rbtnMunicipio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rbtnMunicipio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnMunicipio.ForeColor = System.Drawing.Color.DimGray;
+            this.rbtnMunicipio.Location = new System.Drawing.Point(100, 6);
+            this.rbtnMunicipio.Name = "rbtnMunicipio";
+            this.rbtnMunicipio.Size = new System.Drawing.Size(83, 21);
+            this.rbtnMunicipio.TabIndex = 1;
+            this.rbtnMunicipio.TabStop = true;
+            this.rbtnMunicipio.Text = "Municipio";
+            this.rbtnMunicipio.UseVisualStyleBackColor = true;
+            // 
+            // rbtnCiudad
+            // 
+            this.rbtnCiudad.AutoSize = true;
+            this.rbtnCiudad.FlatAppearance.BorderSize = 0;
+            this.rbtnCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rbtnCiudad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnCiudad.ForeColor = System.Drawing.Color.DimGray;
+            this.rbtnCiudad.Location = new System.Drawing.Point(32, 6);
+            this.rbtnCiudad.Name = "rbtnCiudad";
+            this.rbtnCiudad.Size = new System.Drawing.Size(68, 21);
+            this.rbtnCiudad.TabIndex = 0;
+            this.rbtnCiudad.TabStop = true;
+            this.rbtnCiudad.Text = "Ciudad";
+            this.rbtnCiudad.UseVisualStyleBackColor = true;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(55)))), ((int)(((byte)(159)))));
+            this.panel14.Location = new System.Drawing.Point(86, 106);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(115, 1);
+            this.panel14.TabIndex = 113;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Gray;
+            this.label12.Location = new System.Drawing.Point(19, 89);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 16);
+            this.label12.TabIndex = 112;
+            this.label12.Text = "Vivienda";
+            // 
+            // cbxVivienda
+            // 
+            this.cbxVivienda.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxVivienda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxVivienda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxVivienda.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxVivienda.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxVivienda.FormattingEnabled = true;
+            this.cbxVivienda.Items.AddRange(new object[] {
+            "Arrendada",
+            "Propia",
+            "Familiar"});
+            this.cbxVivienda.Location = new System.Drawing.Point(86, 81);
+            this.cbxVivienda.Name = "cbxVivienda";
+            this.cbxVivienda.Size = new System.Drawing.Size(115, 25);
+            this.cbxVivienda.TabIndex = 111;
+            // 
             // FormCodeudor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(736, 564);
+            this.ClientSize = new System.Drawing.Size(736, 652);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel3);
@@ -900,6 +990,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCodeudor";
             this.pnlSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx)).EndInit();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panelColor2.ResumeLayout(false);
@@ -918,7 +1009,8 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panelColor4.PerformLayout();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx)).EndInit();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -967,8 +1059,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         public System.Windows.Forms.Panel panelColor1;
         public System.Windows.Forms.Panel panelColor3;
         public System.Windows.Forms.Panel panel11;
-        public System.Windows.Forms.Button btnAfectacionColilla;
-        public System.Windows.Forms.Button btnCalcularEndeudamientoGlobal;
         public System.Windows.Forms.CheckBox cbxLeyLibranza;
         public System.Windows.Forms.Label label47;
         public System.Windows.Forms.TextBox tbxDisponible;
@@ -992,5 +1082,14 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         public System.Windows.Forms.Timer timerForm;
         private Bunifu.Framework.UI.BunifuDragControl dragPbx;
         public System.Windows.Forms.PictureBox pbx;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Panel panel13;
+        public System.Windows.Forms.TextBox tbxCuotasACancelar;
+        private System.Windows.Forms.Panel panel30;
+        public System.Windows.Forms.RadioButton rbtnMunicipio;
+        public System.Windows.Forms.RadioButton rbtnCiudad;
+        public System.Windows.Forms.Panel panel14;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ComboBox cbxVivienda;
     }
 }

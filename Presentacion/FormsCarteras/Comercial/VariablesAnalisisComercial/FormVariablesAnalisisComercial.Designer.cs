@@ -191,6 +191,8 @@
             this.ttMensajesFormComercial = new System.Windows.Forms.ToolTip(this.components);
             this.btnAnalizar = new System.Windows.Forms.Button();
             this.elipseBtnAnalizar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnCodeudor = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel52.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).BeginInit();
@@ -2169,7 +2171,7 @@
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
             this.btnAnalizar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
             this.btnAnalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalizar.Location = new System.Drawing.Point(284, 981);
+            this.btnAnalizar.Location = new System.Drawing.Point(307, 981);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
             this.btnAnalizar.TabIndex = 110;
@@ -2181,6 +2183,29 @@
             this.elipseBtnAnalizar.ElipseRadius = 5;
             this.elipseBtnAnalizar.TargetControl = this.btnAnalizar;
             // 
+            // btnCodeudor
+            // 
+            this.btnCodeudor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnCodeudor.BackgroundImage = global::Presentacion.Properties.Resources.codeudor;
+            this.btnCodeudor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCodeudor.FlatAppearance.BorderSize = 0;
+            this.btnCodeudor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(120)))), ((int)(((byte)(26)))));
+            this.btnCodeudor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(120)))), ((int)(((byte)(26)))));
+            this.btnCodeudor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCodeudor.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCodeudor.ForeColor = System.Drawing.Color.White;
+            this.btnCodeudor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCodeudor.Location = new System.Drawing.Point(261, 981);
+            this.btnCodeudor.Name = "btnCodeudor";
+            this.btnCodeudor.Size = new System.Drawing.Size(40, 37);
+            this.btnCodeudor.TabIndex = 113;
+            this.btnCodeudor.UseVisualStyleBackColor = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 4;
+            this.bunifuElipse1.TargetControl = this.btnCodeudor;
+            // 
             // FormVariablesAnalisisComercial
             // 
             this.AllowDrop = true;
@@ -2188,6 +2213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(788, 426);
+            this.Controls.Add(this.btnCodeudor);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);
             this.Controls.Add(this.panel11);
@@ -2409,5 +2435,7 @@
         public System.Windows.Forms.ToolTip ttMensajesFormComercial;
         public System.Windows.Forms.ComboBox cbxDestinoDelCredito;
         public Bunifu.Framework.UI.BunifuElipse elipseBtnAnalizar;
+        public System.Windows.Forms.Button btnCodeudor;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
