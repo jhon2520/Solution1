@@ -39,6 +39,7 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.tbxCuota.Text = Cache.Cuota.ToString("N2");
             this.formVariablesAnalisisVivienda.contadorPlazo.Value = Cache.Plazo;
             this.formVariablesAnalisisVivienda.contadorTasa.Value = Cache.Tasa;
+            this.formVariablesAnalisisVivienda.tbxNombres.Focus();
 
         }
         private void EventoBotones()
@@ -49,6 +50,8 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.btnCalcularDisponible.Click += new EventHandler(RetornarDisponible);
             this.formVariablesAnalisisVivienda.cbxDiasMora.TextChanged += new EventHandler(RetornarTotalMora);
             this.formVariablesAnalisisVivienda.cbxCantidadDeMoras.TextChanged += new EventHandler(RetornarTotalMora);
+            this.formVariablesAnalisisVivienda.cbxDiasMora.Leave += new EventHandler(RetornarTotalMora);
+            this.formVariablesAnalisisVivienda.cbxCantidadDeMoras.Leave += new EventHandler(RetornarTotalMora);
             this.formVariablesAnalisisVivienda.dtpEdad.ValueChanged += new EventHandler(RetornarEdad);
             this.formVariablesAnalisisVivienda.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVariablesAnalisisVivienda.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);

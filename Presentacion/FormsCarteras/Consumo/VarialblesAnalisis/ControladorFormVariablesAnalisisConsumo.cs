@@ -36,6 +36,8 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxOtrosIngresos.TextChanged += new EventHandler(RetornarTotalIngresos);
             this.formVariables.cbxDiasMora.TextChanged += new EventHandler(RetornarTotalMora);
             this.formVariables.cbxCantidadDeMoras.TextChanged += new EventHandler(RetornarTotalMora);
+            this.formVariables.cbxDiasMora.Leave += new EventHandler(RetornarTotalMora);
+            this.formVariables.cbxCantidadDeMoras.Leave += new EventHandler(RetornarTotalMora);
             this.formVariables.cbxFormaDePago.TextChanged += new EventHandler(RetornarTotalIngresos);
             this.formVariables.dtpEdad.ValueChanged += new EventHandler(RetornarEdad);
             this.formVariables.btnCalcularEndeudamientoGlobal.Click += new EventHandler(RetornarEndeudamientoGlobal);
@@ -103,6 +105,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxCuota.Text = Cache.Cuota.ToString("N2");
             this.formVariables.contadorPlazo.Value = Cache.Plazo;
             this.formVariables.contadorTasa.Value = Cache.Tasa;
+            this.formVariables.tbxNombres.Focus();
 
         }
 

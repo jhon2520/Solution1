@@ -7,6 +7,7 @@ using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
         private FormCodeudor formCodeudor;
+        private int sumaPosicionX;
 
 
         public ControladorformVariablesAnalisisComercial(FormVariablesAnalisisComercial formVariablesAnalisisComercial)
@@ -40,6 +42,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.tbxCuota.Text = Cache.Cuota.ToString("N2");
             this.formVariablesAnalisisComercial.contadorPlazo.Value = Cache.Plazo;
             this.formVariablesAnalisisComercial.contadorTasa.Value = Cache.Tasa;
+            this.formVariablesAnalisisComercial.tbxNombres.Focus();
 
         }
 
@@ -51,11 +54,16 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.btnCalcularDisponible.Click += new EventHandler(RetornarDisponible);
             this.formVariablesAnalisisComercial.cbxDiasMora.TextChanged += new EventHandler(RetornarTotalMora);
             this.formVariablesAnalisisComercial.cbxCantidadDeMoras.TextChanged += new EventHandler(RetornarTotalMora);
+            this.formVariablesAnalisisComercial.cbxDiasMora.Leave += new EventHandler(RetornarTotalMora);
+            this.formVariablesAnalisisComercial.cbxCantidadDeMoras.Leave += new EventHandler(RetornarTotalMora);
             this.formVariablesAnalisisComercial.dtpEdad.ValueChanged += new EventHandler(RetornarEdad);
             this.formVariablesAnalisisComercial.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVariablesAnalisisComercial.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisComercial.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
+            this.formVariablesAnalisisComercial.tbxIngresos.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisComercial.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisComercial.tbxNombres.Enter += new EventHandler(CambiarScroll);
         }
         private void MensajesTooltip()
         {
@@ -100,7 +108,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.ttMensajesFormComercial.SetToolTip(this.formVariablesAnalisisComercial.btnCalcularDisponible, "Calcular el disponible del solicitante.");
 
         }
-
         private void FormatoNumeroTexBox(object sender, EventArgs args)
         {
             if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxIngresos.Name && this.formVariablesAnalisisComercial.tbxIngresos.Text != string.Empty)
@@ -127,7 +134,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.Text = string.Format("{0:n0}", double.Parse(this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.Text));
 
         }
-
         private void RetornarFormatoTextBox()
         {
             this.formVariablesAnalisisComercial.tbxIngresos.Leave += new EventHandler(FormatoNumeroTexBox);
@@ -369,18 +375,15 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 formError.ShowDialog();
             }
         }
-
         private void RetornarTotalMora(object sender, EventArgs args)
         {
             if (this.formVariablesAnalisisComercial.cbxCantidadDeMoras.Text != string.Empty && this.formVariablesAnalisisComercial.cbxDiasMora.Text != string.Empty)
                 this.formVariablesAnalisisComercial.tbxComportamientoDePagos.Text = CodigoComun.RetornarMorasTotales(this.formVariablesAnalisisComercial.cbxCantidadDeMoras, this.formVariablesAnalisisComercial.cbxDiasMora);
         }
-
         private void RetornarEdad(object sender, EventArgs args)
         {
             this.formVariablesAnalisisComercial.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisComercial.dtpEdad);
         }
-
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
             if (this.formVariablesAnalisisComercial.tbxNombres.Text != string.Empty 
@@ -437,6 +440,12 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 formCodeudor.tbxCuota.Text = this.formVariablesAnalisisComercial.tbxCuota.Text;
                 formCodeudor.ShowDialog();
             }
+        }
+        private void CambiarScroll(object sender, EventArgs args)
+        {
+           if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 300);
+           else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 700);
+           else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 0);
         }
     }
 }

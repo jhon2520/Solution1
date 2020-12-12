@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.Ventanas.VentanaCodeudor
 {
-    public class IndicadoresCaja
+    public class IndicadoresCaja:IDisposable
     {
         //debe Tener endeduamiento global y disponible, por caja los dos
 
@@ -86,5 +86,13 @@ namespace Presentacion.Ventanas.VentanaCodeudor
 
             return disponible;
         }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        protected virtual void Dispose(bool disposing) { }
+      
     }
 }

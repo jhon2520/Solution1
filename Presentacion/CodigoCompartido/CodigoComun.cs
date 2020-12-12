@@ -224,12 +224,16 @@ namespace Presentacion.CodigoCompartido
 
         
         }
-
         public static void Alerta(string mensaje, FormVentanaEmergente.enmTipo tipo)
         {
             FormVentanaEmergente formVentanaEmergente = new FormVentanaEmergente();
             formVentanaEmergente.MostrarAlerta(mensaje, tipo);
 
+        }
+
+        public static void SetScroll(Form form, int puntoY)
+        {
+            form.AutoScrollPosition = new Point(0, puntoY);
         }
     }
 }

@@ -265,7 +265,7 @@
             this.cbxPeriodicidad.Location = new System.Drawing.Point(101, 110);
             this.cbxPeriodicidad.Name = "cbxPeriodicidad";
             this.cbxPeriodicidad.Size = new System.Drawing.Size(135, 25);
-            this.cbxPeriodicidad.TabIndex = 42;
+            this.cbxPeriodicidad.TabIndex = 8;
             // 
             // lblCedula
             // 
@@ -312,7 +312,7 @@
             0});
             this.contadorAntLaboral.Name = "contadorAntLaboral";
             this.contadorAntLaboral.Size = new System.Drawing.Size(58, 18);
-            this.contadorAntLaboral.TabIndex = 21;
+            this.contadorAntLaboral.TabIndex = 4;
             this.contadorAntLaboral.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -355,7 +355,7 @@
             0});
             this.contadorScore.Name = "contadorScore";
             this.contadorScore.Size = new System.Drawing.Size(58, 18);
-            this.contadorScore.TabIndex = 18;
+            this.contadorScore.TabIndex = 5;
             this.contadorScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel6
@@ -387,7 +387,7 @@
             this.tbxOtrosIngresos.Location = new System.Drawing.Point(331, 40);
             this.tbxOtrosIngresos.Name = "tbxOtrosIngresos";
             this.tbxOtrosIngresos.Size = new System.Drawing.Size(137, 15);
-            this.tbxOtrosIngresos.TabIndex = 15;
+            this.tbxOtrosIngresos.TabIndex = 3;
             this.tbxOtrosIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel5
@@ -419,7 +419,7 @@
             this.tbxIngresos.Location = new System.Drawing.Point(85, 40);
             this.tbxIngresos.Name = "tbxIngresos";
             this.tbxIngresos.Size = new System.Drawing.Size(132, 15);
-            this.tbxIngresos.TabIndex = 12;
+            this.tbxIngresos.TabIndex = 2;
             this.tbxIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel13
@@ -443,7 +443,7 @@
             this.panel13.Location = new System.Drawing.Point(14, 163);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(738, 259);
-            this.panel13.TabIndex = 100;
+            this.panel13.TabIndex = 1;
             // 
             // panel25
             // 
@@ -463,7 +463,7 @@
             this.panel25.Location = new System.Drawing.Point(379, 108);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(359, 148);
-            this.panel25.TabIndex = 41;
+            this.panel25.TabIndex = 6;
             // 
             // tbxEmpresa
             // 
@@ -474,7 +474,7 @@
             this.tbxEmpresa.Location = new System.Drawing.Point(91, 41);
             this.tbxEmpresa.Name = "tbxEmpresa";
             this.tbxEmpresa.Size = new System.Drawing.Size(250, 15);
-            this.tbxEmpresa.TabIndex = 31;
+            this.tbxEmpresa.TabIndex = 1;
             this.tbxEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel19
@@ -522,7 +522,7 @@
             this.tbxActividadEconomica.Location = new System.Drawing.Point(167, 71);
             this.tbxActividadEconomica.Name = "tbxActividadEconomica";
             this.tbxActividadEconomica.Size = new System.Drawing.Size(175, 15);
-            this.tbxActividadEconomica.TabIndex = 34;
+            this.tbxActividadEconomica.TabIndex = 2;
             this.tbxActividadEconomica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel26
@@ -533,7 +533,7 @@
             this.panel26.Location = new System.Drawing.Point(0, 1);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(361, 24);
-            this.panel26.TabIndex = 1;
+            this.panel26.TabIndex = 0;
             // 
             // label18
             // 
@@ -562,7 +562,7 @@
             this.cbxTipoDeContrato.Location = new System.Drawing.Point(166, 99);
             this.cbxTipoDeContrato.Name = "cbxTipoDeContrato";
             this.cbxTipoDeContrato.Size = new System.Drawing.Size(176, 25);
-            this.cbxTipoDeContrato.TabIndex = 37;
+            this.cbxTipoDeContrato.TabIndex = 3;
             // 
             // label15
             // 
@@ -599,7 +599,7 @@
             this.panel23.Location = new System.Drawing.Point(1, 107);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(372, 149);
-            this.panel23.TabIndex = 40;
+            this.panel23.TabIndex = 5;
             // 
             // contadorEstrato
             // 
@@ -615,7 +615,7 @@
             0});
             this.contadorEstrato.Name = "contadorEstrato";
             this.contadorEstrato.Size = new System.Drawing.Size(58, 18);
-            this.contadorEstrato.TabIndex = 58;
+            this.contadorEstrato.TabIndex = 5;
             this.contadorEstrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel31
@@ -646,7 +646,7 @@
             this.panel30.Location = new System.Drawing.Point(134, 106);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(217, 33);
-            this.panel30.TabIndex = 57;
+            this.panel30.TabIndex = 6;
             // 
             // rbtnMunicipio
             // 
@@ -713,7 +713,7 @@
             this.cbxVivienda.Location = new System.Drawing.Point(240, 66);
             this.cbxVivienda.Name = "cbxVivienda";
             this.cbxVivienda.Size = new System.Drawing.Size(111, 25);
-            this.cbxVivienda.TabIndex = 54;
+            this.cbxVivienda.TabIndex = 4;
             // 
             // label21
             // 
@@ -749,7 +749,7 @@
             0});
             this.contadorPersonasACargo.Name = "contadorPersonasACargo";
             this.contadorPersonasACargo.Size = new System.Drawing.Size(58, 18);
-            this.contadorPersonasACargo.TabIndex = 51;
+            this.contadorPersonasACargo.TabIndex = 3;
             this.contadorPersonasACargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
@@ -787,7 +787,7 @@
             0});
             this.contadorEdad.Name = "contadorEdad";
             this.contadorEdad.Size = new System.Drawing.Size(66, 18);
-            this.contadorEdad.TabIndex = 48;
+            this.contadorEdad.TabIndex = 2;
             this.contadorEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel27
@@ -826,7 +826,7 @@
             this.cbxEstadoCivil.Location = new System.Drawing.Point(85, 34);
             this.cbxEstadoCivil.Name = "cbxEstadoCivil";
             this.cbxEstadoCivil.Size = new System.Drawing.Size(139, 25);
-            this.cbxEstadoCivil.TabIndex = 45;
+            this.cbxEstadoCivil.TabIndex = 1;
             // 
             // panel24
             // 
@@ -836,7 +836,7 @@
             this.panel24.Location = new System.Drawing.Point(0, 1);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(372, 24);
-            this.panel24.TabIndex = 1;
+            this.panel24.TabIndex = 0;
             // 
             // panel18
             // 
@@ -867,7 +867,7 @@
             this.tbxOcupacion.Location = new System.Drawing.Point(337, 71);
             this.tbxOcupacion.Name = "tbxOcupacion";
             this.tbxOcupacion.Size = new System.Drawing.Size(149, 15);
-            this.tbxOcupacion.TabIndex = 28;
+            this.tbxOcupacion.TabIndex = 4;
             this.tbxOcupacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel17
@@ -899,7 +899,7 @@
             this.tbxCargo.Location = new System.Drawing.Point(570, 36);
             this.tbxCargo.Name = "tbxCargo";
             this.tbxCargo.Size = new System.Drawing.Size(149, 15);
-            this.tbxCargo.TabIndex = 25;
+            this.tbxCargo.TabIndex = 3;
             this.tbxCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel15
@@ -931,7 +931,7 @@
             this.tbxProfesion.Location = new System.Drawing.Point(337, 36);
             this.tbxProfesion.Name = "tbxProfesion";
             this.tbxProfesion.Size = new System.Drawing.Size(149, 15);
-            this.tbxProfesion.TabIndex = 22;
+            this.tbxProfesion.TabIndex = 2;
             this.tbxProfesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtpEdad
@@ -942,7 +942,7 @@
             this.dtpEdad.Location = new System.Drawing.Point(147, 33);
             this.dtpEdad.Name = "dtpEdad";
             this.dtpEdad.Size = new System.Drawing.Size(104, 21);
-            this.dtpEdad.TabIndex = 21;
+            this.dtpEdad.TabIndex = 1;
             // 
             // panel14
             // 
@@ -995,7 +995,7 @@
             this.panel33.Location = new System.Drawing.Point(14, 431);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(740, 303);
-            this.panel33.TabIndex = 102;
+            this.panel33.TabIndex = 2;
             // 
             // panel34
             // 
@@ -1012,7 +1012,7 @@
             this.panel34.Location = new System.Drawing.Point(0, 30);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(740, 94);
-            this.panel34.TabIndex = 41;
+            this.panel34.TabIndex = 0;
             // 
             // panel37
             // 
@@ -1032,7 +1032,7 @@
             this.tbxTotalIngresos.Location = new System.Drawing.Point(591, 40);
             this.tbxTotalIngresos.Name = "tbxTotalIngresos";
             this.tbxTotalIngresos.Size = new System.Drawing.Size(137, 15);
-            this.tbxTotalIngresos.TabIndex = 19;
+            this.tbxTotalIngresos.TabIndex = 4;
             this.tbxTotalIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label25
@@ -1087,7 +1087,7 @@
             this.panel40.Location = new System.Drawing.Point(1, 0);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(739, 24);
-            this.panel40.TabIndex = 0;
+            this.panel40.TabIndex = 1;
             // 
             // label29
             // 
@@ -1135,7 +1135,7 @@
             this.panel35.Location = new System.Drawing.Point(14, 538);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(740, 241);
-            this.panel35.TabIndex = 42;
+            this.panel35.TabIndex = 3;
             // 
             // label49
             // 
@@ -1166,7 +1166,7 @@
             this.tbxOtrasDeduccionesColilla.Location = new System.Drawing.Point(202, 86);
             this.tbxOtrasDeduccionesColilla.Name = "tbxOtrasDeduccionesColilla";
             this.tbxOtrasDeduccionesColilla.Size = new System.Drawing.Size(132, 15);
-            this.tbxOtrasDeduccionesColilla.TabIndex = 39;
+            this.tbxOtrasDeduccionesColilla.TabIndex = 2;
             this.tbxOtrasDeduccionesColilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label48
@@ -1198,7 +1198,7 @@
             this.tbxDeduccionesDeSeguridadSocial.Location = new System.Drawing.Point(202, 50);
             this.tbxDeduccionesDeSeguridadSocial.Name = "tbxDeduccionesDeSeguridadSocial";
             this.tbxDeduccionesDeSeguridadSocial.Size = new System.Drawing.Size(132, 15);
-            this.tbxDeduccionesDeSeguridadSocial.TabIndex = 36;
+            this.tbxDeduccionesDeSeguridadSocial.TabIndex = 1;
             this.tbxDeduccionesDeSeguridadSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label33
@@ -1230,7 +1230,7 @@
             this.tbxCupoRotativo.Location = new System.Drawing.Point(591, 48);
             this.tbxCupoRotativo.Name = "tbxCupoRotativo";
             this.tbxCupoRotativo.Size = new System.Drawing.Size(132, 15);
-            this.tbxCupoRotativo.TabIndex = 33;
+            this.tbxCupoRotativo.TabIndex = 5;
             this.tbxCupoRotativo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label32
@@ -1262,7 +1262,7 @@
             this.tbxEstimacionTarjetasCredito.Location = new System.Drawing.Point(591, 159);
             this.tbxEstimacionTarjetasCredito.Name = "tbxEstimacionTarjetasCredito";
             this.tbxEstimacionTarjetasCredito.Size = new System.Drawing.Size(132, 15);
-            this.tbxEstimacionTarjetasCredito.TabIndex = 30;
+            this.tbxEstimacionTarjetasCredito.TabIndex = 8;
             this.tbxEstimacionTarjetasCredito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label31
@@ -1294,7 +1294,7 @@
             this.tbxCuotasACancelar.Location = new System.Drawing.Point(202, 158);
             this.tbxCuotasACancelar.Name = "tbxCuotasACancelar";
             this.tbxCuotasACancelar.Size = new System.Drawing.Size(132, 15);
-            this.tbxCuotasACancelar.TabIndex = 27;
+            this.tbxCuotasACancelar.TabIndex = 4;
             this.tbxCuotasACancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label30
@@ -1326,7 +1326,7 @@
             this.tbxCuotasCreditoCacelarNomina.Location = new System.Drawing.Point(591, 122);
             this.tbxCuotasCreditoCacelarNomina.Name = "tbxCuotasCreditoCacelarNomina";
             this.tbxCuotasCreditoCacelarNomina.Size = new System.Drawing.Size(132, 15);
-            this.tbxCuotasCreditoCacelarNomina.TabIndex = 24;
+            this.tbxCuotasCreditoCacelarNomina.TabIndex = 7;
             this.tbxCuotasCreditoCacelarNomina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label28
@@ -1358,7 +1358,7 @@
             this.tbxCuotaCentrales.Location = new System.Drawing.Point(591, 196);
             this.tbxCuotaCentrales.Name = "tbxCuotaCentrales";
             this.tbxCuotaCentrales.Size = new System.Drawing.Size(132, 15);
-            this.tbxCuotaCentrales.TabIndex = 21;
+            this.tbxCuotaCentrales.TabIndex = 9;
             this.tbxCuotaCentrales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label27
@@ -1390,7 +1390,7 @@
             this.tbxValorCuotaLibranza.Location = new System.Drawing.Point(591, 85);
             this.tbxValorCuotaLibranza.Name = "tbxValorCuotaLibranza";
             this.tbxValorCuotaLibranza.Size = new System.Drawing.Size(132, 15);
-            this.tbxValorCuotaLibranza.TabIndex = 18;
+            this.tbxValorCuotaLibranza.TabIndex = 6;
             this.tbxValorCuotaLibranza.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
@@ -1423,7 +1423,7 @@
             this.tbxDeduccionesColilla.Location = new System.Drawing.Point(202, 122);
             this.tbxDeduccionesColilla.Name = "tbxDeduccionesColilla";
             this.tbxDeduccionesColilla.Size = new System.Drawing.Size(132, 15);
-            this.tbxDeduccionesColilla.TabIndex = 15;
+            this.tbxDeduccionesColilla.TabIndex = 3;
             this.tbxDeduccionesColilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel39
@@ -1435,7 +1435,7 @@
             this.panel39.Location = new System.Drawing.Point(0, 1);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(740, 24);
-            this.panel39.TabIndex = 1;
+            this.panel39.TabIndex = 0;
             // 
             // label24
             // 
@@ -1467,7 +1467,7 @@
             this.panel48.Location = new System.Drawing.Point(170, 58);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(132, 1);
-            this.panel48.TabIndex = 37;
+            this.panel48.TabIndex = 8;
             // 
             // tbxAfectacionColilla
             // 
@@ -1479,7 +1479,7 @@
             this.tbxAfectacionColilla.Location = new System.Drawing.Point(170, 41);
             this.tbxAfectacionColilla.Name = "tbxAfectacionColilla";
             this.tbxAfectacionColilla.Size = new System.Drawing.Size(132, 15);
-            this.tbxAfectacionColilla.TabIndex = 36;
+            this.tbxAfectacionColilla.TabIndex = 7;
             this.tbxAfectacionColilla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel49
@@ -1503,7 +1503,7 @@
             this.panel49.Location = new System.Drawing.Point(372, 787);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(385, 170);
-            this.panel49.TabIndex = 103;
+            this.panel49.TabIndex = 5;
             // 
             // panel65
             // 
@@ -1563,7 +1563,7 @@
             this.tbxComportamientoDePagos.Location = new System.Drawing.Point(10, 76);
             this.tbxComportamientoDePagos.Name = "tbxComportamientoDePagos";
             this.tbxComportamientoDePagos.Size = new System.Drawing.Size(132, 15);
-            this.tbxComportamientoDePagos.TabIndex = 113;
+            this.tbxComportamientoDePagos.TabIndex = 3;
             this.tbxComportamientoDePagos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbxDiasMora
@@ -1582,7 +1582,7 @@
             this.cbxDiasMora.Location = new System.Drawing.Point(298, 33);
             this.cbxDiasMora.Name = "cbxDiasMora";
             this.cbxDiasMora.Size = new System.Drawing.Size(67, 25);
-            this.cbxDiasMora.TabIndex = 112;
+            this.cbxDiasMora.TabIndex = 2;
             // 
             // cbxCantidadDeMoras
             // 
@@ -1601,7 +1601,7 @@
             this.cbxCantidadDeMoras.Location = new System.Drawing.Point(125, 33);
             this.cbxCantidadDeMoras.Name = "cbxCantidadDeMoras";
             this.cbxCantidadDeMoras.Size = new System.Drawing.Size(73, 25);
-            this.cbxCantidadDeMoras.TabIndex = 111;
+            this.cbxCantidadDeMoras.TabIndex = 1;
             // 
             // panel50
             // 
@@ -1667,7 +1667,7 @@
             this.cbxCalificacion.Location = new System.Drawing.Point(234, 68);
             this.cbxCalificacion.Name = "cbxCalificacion";
             this.cbxCalificacion.Size = new System.Drawing.Size(129, 25);
-            this.cbxCalificacion.TabIndex = 48;
+            this.cbxCalificacion.TabIndex = 4;
             // 
             // label8
             // 
@@ -1699,7 +1699,7 @@
             this.tbxEndeudamientoGlobal.Location = new System.Drawing.Point(170, 76);
             this.tbxEndeudamientoGlobal.Name = "tbxEndeudamientoGlobal";
             this.tbxEndeudamientoGlobal.Size = new System.Drawing.Size(132, 15);
-            this.tbxEndeudamientoGlobal.TabIndex = 108;
+            this.tbxEndeudamientoGlobal.TabIndex = 5;
             this.tbxEndeudamientoGlobal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel52
@@ -1739,7 +1739,7 @@
             this.panel52.Location = new System.Drawing.Point(14, 12);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 145);
-            this.panel52.TabIndex = 104;
+            this.panel52.TabIndex = 0;
             // 
             // panel63
             // 
@@ -1778,7 +1778,7 @@
             this.cbxFormaDePago.Location = new System.Drawing.Point(570, 110);
             this.cbxFormaDePago.Name = "cbxFormaDePago";
             this.cbxFormaDePago.Size = new System.Drawing.Size(148, 25);
-            this.cbxFormaDePago.TabIndex = 51;
+            this.cbxFormaDePago.TabIndex = 10;
             // 
             // panel62
             // 
@@ -1815,7 +1815,7 @@
             this.cbxGarantia.Location = new System.Drawing.Point(322, 110);
             this.cbxGarantia.Name = "cbxGarantia";
             this.cbxGarantia.Size = new System.Drawing.Size(135, 25);
-            this.cbxGarantia.TabIndex = 48;
+            this.cbxGarantia.TabIndex = 9;
             // 
             // label39
             // 
@@ -1839,7 +1839,7 @@
             this.tbxMonto.Location = new System.Drawing.Point(88, 74);
             this.tbxMonto.Name = "tbxMonto";
             this.tbxMonto.Size = new System.Drawing.Size(148, 15);
-            this.tbxMonto.TabIndex = 34;
+            this.tbxMonto.TabIndex = 4;
             this.tbxMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel58
@@ -1880,7 +1880,7 @@
             this.tbxCuota.Location = new System.Drawing.Point(570, 72);
             this.tbxCuota.Name = "tbxCuota";
             this.tbxCuota.Size = new System.Drawing.Size(149, 15);
-            this.tbxCuota.TabIndex = 43;
+            this.tbxCuota.TabIndex = 7;
             this.tbxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // contadorPlazo
@@ -1898,7 +1898,7 @@
             0});
             this.contadorPlazo.Name = "contadorPlazo";
             this.contadorPlazo.Size = new System.Drawing.Size(58, 18);
-            this.contadorPlazo.TabIndex = 37;
+            this.contadorPlazo.TabIndex = 5;
             this.contadorPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
@@ -1937,7 +1937,7 @@
             this.contadorTasa.Location = new System.Drawing.Point(439, 73);
             this.contadorTasa.Name = "contadorTasa";
             this.contadorTasa.Size = new System.Drawing.Size(58, 18);
-            this.contadorTasa.TabIndex = 40;
+            this.contadorTasa.TabIndex = 6;
             this.contadorTasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel61
@@ -1978,7 +1978,7 @@
             this.tbxCedula.Location = new System.Drawing.Point(570, 33);
             this.tbxCedula.Name = "tbxCedula";
             this.tbxCedula.Size = new System.Drawing.Size(149, 15);
-            this.tbxCedula.TabIndex = 31;
+            this.tbxCedula.TabIndex = 3;
             this.tbxCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel54
@@ -2010,7 +2010,7 @@
             this.tbxApellidos.Location = new System.Drawing.Point(322, 33);
             this.tbxApellidos.Name = "tbxApellidos";
             this.tbxApellidos.Size = new System.Drawing.Size(149, 15);
-            this.tbxApellidos.TabIndex = 28;
+            this.tbxApellidos.TabIndex = 2;
             this.tbxApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel53
@@ -2042,7 +2042,7 @@
             this.tbxNombres.Location = new System.Drawing.Point(88, 33);
             this.tbxNombres.Name = "tbxNombres";
             this.tbxNombres.Size = new System.Drawing.Size(149, 15);
-            this.tbxNombres.TabIndex = 25;
+            this.tbxNombres.TabIndex = 1;
             this.tbxNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel57
@@ -2065,7 +2065,7 @@
             this.label40.Location = new System.Drawing.Point(301, 4);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(134, 15);
-            this.label40.TabIndex = 10;
+            this.label40.TabIndex = 0;
             this.label40.Text = "Información del crédito";
             // 
             // panel32
@@ -2138,7 +2138,7 @@
             this.btnAnalizar.Location = new System.Drawing.Point(307, 994);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
-            this.btnAnalizar.TabIndex = 105;
+            this.btnAnalizar.TabIndex = 7;
             this.btnAnalizar.Text = "Analizar crédito";
             this.btnAnalizar.UseVisualStyleBackColor = false;
             // 
@@ -2170,7 +2170,7 @@
             this.btnCalcularDisponible.Location = new System.Drawing.Point(313, 113);
             this.btnCalcularDisponible.Name = "btnCalcularDisponible";
             this.btnCalcularDisponible.Size = new System.Drawing.Size(22, 22);
-            this.btnCalcularDisponible.TabIndex = 107;
+            this.btnCalcularDisponible.TabIndex = 4;
             this.btnCalcularDisponible.UseVisualStyleBackColor = false;
             // 
             // ttMensajesFormConsumo
@@ -2199,7 +2199,7 @@
             this.panel11.Location = new System.Drawing.Point(14, 787);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(352, 170);
-            this.panel11.TabIndex = 107;
+            this.panel11.TabIndex = 4;
             // 
             // btnAfectacionColilla
             // 
@@ -2214,7 +2214,7 @@
             this.btnAfectacionColilla.Location = new System.Drawing.Point(313, 35);
             this.btnAfectacionColilla.Name = "btnAfectacionColilla";
             this.btnAfectacionColilla.Size = new System.Drawing.Size(22, 22);
-            this.btnAfectacionColilla.TabIndex = 119;
+            this.btnAfectacionColilla.TabIndex = 1;
             this.btnAfectacionColilla.UseVisualStyleBackColor = false;
             // 
             // btnCalcularEndeudamientoGlobal
@@ -2230,7 +2230,7 @@
             this.btnCalcularEndeudamientoGlobal.Location = new System.Drawing.Point(313, 74);
             this.btnCalcularEndeudamientoGlobal.Name = "btnCalcularEndeudamientoGlobal";
             this.btnCalcularEndeudamientoGlobal.Size = new System.Drawing.Size(22, 22);
-            this.btnCalcularEndeudamientoGlobal.TabIndex = 118;
+            this.btnCalcularEndeudamientoGlobal.TabIndex = 2;
             this.btnCalcularEndeudamientoGlobal.UseVisualStyleBackColor = false;
             // 
             // cbxLeyLibranza
@@ -2242,7 +2242,7 @@
             this.cbxLeyLibranza.Location = new System.Drawing.Point(170, 136);
             this.cbxLeyLibranza.Name = "cbxLeyLibranza";
             this.cbxLeyLibranza.Size = new System.Drawing.Size(112, 21);
-            this.cbxLeyLibranza.TabIndex = 117;
+            this.cbxLeyLibranza.TabIndex = 3;
             this.cbxLeyLibranza.Text = "Ley de libranza";
             this.cbxLeyLibranza.UseVisualStyleBackColor = true;
             // 
@@ -2268,7 +2268,7 @@
             this.tbxDisponible.Location = new System.Drawing.Point(170, 111);
             this.tbxDisponible.Name = "tbxDisponible";
             this.tbxDisponible.Size = new System.Drawing.Size(132, 15);
-            this.tbxDisponible.TabIndex = 111;
+            this.tbxDisponible.TabIndex = 9;
             this.tbxDisponible.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel12
@@ -2288,7 +2288,7 @@
             this.panel69.Location = new System.Drawing.Point(0, 1);
             this.panel69.Name = "panel69";
             this.panel69.Size = new System.Drawing.Size(352, 24);
-            this.panel69.TabIndex = 1;
+            this.panel69.TabIndex = 0;
             // 
             // label55
             // 
@@ -2317,7 +2317,7 @@
             this.btnCodeudor.Location = new System.Drawing.Point(262, 994);
             this.btnCodeudor.Name = "btnCodeudor";
             this.btnCodeudor.Size = new System.Drawing.Size(40, 37);
-            this.btnCodeudor.TabIndex = 108;
+            this.btnCodeudor.TabIndex = 6;
             this.btnCodeudor.UseVisualStyleBackColor = false;
             // 
             // elipseBtnCodeudor

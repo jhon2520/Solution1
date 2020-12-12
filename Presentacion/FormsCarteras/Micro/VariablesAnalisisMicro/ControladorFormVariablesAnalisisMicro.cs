@@ -26,17 +26,13 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
 
 
             this.formVarialblesAnalisisMicro = formVarialblesAnalisisMicro;
-
             textBoxesNumeros = new TextBox[] { this.formVarialblesAnalisisMicro.tbxVentasMicro, this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro, this.formVarialblesAnalisisMicro.tbxIngresos,
             this.formVarialblesAnalisisMicro.tbxOtrosIngresos,this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo,this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro,this.formVarialblesAnalisisMicro.tbxGastosDelNegocio,
             this.formVarialblesAnalisisMicro.tbxUtilidadOPerdidaOperativa,this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros,this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros,this.formVarialblesAnalisisMicro.tbxUtilidadOPerdidaNeta,
             this.formVarialblesAnalisisMicro.tbxCuotaCreditoARefinanciarMicro,this.formVarialblesAnalisisMicro.tbxUtilidadDisponible,
             this.formVarialblesAnalisisMicro.tbxIngresosCodeudor,this.formVarialblesAnalisisMicro.tbxEgresosCodeudor};
-
             textBoxesLetras = new TextBox[] { this.formVarialblesAnalisisMicro.tbxNombres, this.formVarialblesAnalisisMicro.tbxApellidos, this.formVarialblesAnalisisMicro.tbxProfesion,
             this.formVarialblesAnalisisMicro.tbxCargo,this.formVarialblesAnalisisMicro.tbxOcupacion,this.formVarialblesAnalisisMicro.tbxEmpresa,this.formVarialblesAnalisisMicro.tbxActividadEconomica};
-
-
             this.formVarialblesAnalisisMicro.Load += new EventHandler(CargarForm);
             MensajesTooltip();
             RetornarFormatoTextBox();
@@ -51,6 +47,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.tbxCuota.Text = Cache.Cuota.ToString("N2");
             this.formVarialblesAnalisisMicro.contadorPlazo.Value = Cache.Plazo;
             this.formVarialblesAnalisisMicro.contadorTasa.Value = Cache.Tasa;
+            this.formVarialblesAnalisisMicro.tbxNombres.Focus();
         }
         private void EventoBotones()
         {
@@ -58,6 +55,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.tbxOtrosIngresos.TextChanged += new EventHandler(RetornarTotalIngresos);
             this.formVarialblesAnalisisMicro.cbxDiasMora.TextChanged += new EventHandler(RetornarTotalMora);
             this.formVarialblesAnalisisMicro.cbxCantidadDeMoras.TextChanged += new EventHandler(RetornarTotalMora);
+            this.formVarialblesAnalisisMicro.cbxDiasMora.Leave += new EventHandler(RetornarTotalMora);
+            this.formVarialblesAnalisisMicro.cbxCantidadDeMoras.Leave += new EventHandler(RetornarTotalMora);
             this.formVarialblesAnalisisMicro.dtpEdad.ValueChanged += new EventHandler(RetornarEdad);
             this.formVarialblesAnalisisMicro.btnAnalizar.Click += new EventHandler(AbrirFormAnalisisCredito);
             this.formVarialblesAnalisisMicro.btnEstadoDeResultados.Click += new EventHandler(RetornarEstadosDeResultados);
