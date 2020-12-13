@@ -29,9 +29,6 @@ namespace Presentacion.CodigoCompartido
             Color colorAzulClaroValorVariables = Color.FromArgb(217, 225, 242);
             FormError formError;
 
-
-           
-
             for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
             {
                 worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;

@@ -46,6 +46,9 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariables.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariables.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
+            this.formVariables.tbxIngresos.Enter += new EventHandler(CambiarScroll);
+            this.formVariables.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
+            this.formVariables.tbxNombres.Enter += new EventHandler(CambiarScroll);
             RetornarFormatoTextBox();
             ValidacionSoloLetrasTextbox();
         }
@@ -558,6 +561,12 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 }
                 formCodeudor.ShowDialog();
             }
+        }
+        private void CambiarScroll(object sender, EventArgs args)
+        {
+            if (((TextBox)sender).Name == this.formVariables.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariables, 300);
+            else if (((TextBox)sender).Name == this.formVariables.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariables, 700);
+            else if (((TextBox)sender).Name == this.formVariables.tbxNombres.Name) CodigoComun.SetScroll(this.formVariables, 0);
         }
 
     }

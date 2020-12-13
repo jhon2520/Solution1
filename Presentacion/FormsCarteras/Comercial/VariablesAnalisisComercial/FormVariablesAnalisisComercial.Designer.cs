@@ -875,12 +875,12 @@
             this.rbtnMunicipio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rbtnMunicipio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnMunicipio.ForeColor = System.Drawing.Color.DimGray;
-            this.rbtnMunicipio.Location = new System.Drawing.Point(100, 6);
+            this.rbtnMunicipio.Location = new System.Drawing.Point(117, 6);
             this.rbtnMunicipio.Name = "rbtnMunicipio";
             this.rbtnMunicipio.Size = new System.Drawing.Size(83, 21);
             this.rbtnMunicipio.TabIndex = 1;
             this.rbtnMunicipio.TabStop = true;
-            this.rbtnMunicipio.Text = "Municipio";
+            this.rbtnMunicipio.Text = "Zona rural";
             this.rbtnMunicipio.UseVisualStyleBackColor = true;
             // 
             // rbtnCiudad
@@ -890,12 +890,12 @@
             this.rbtnCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rbtnCiudad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCiudad.ForeColor = System.Drawing.Color.DimGray;
-            this.rbtnCiudad.Location = new System.Drawing.Point(32, 6);
+            this.rbtnCiudad.Location = new System.Drawing.Point(16, 6);
             this.rbtnCiudad.Name = "rbtnCiudad";
-            this.rbtnCiudad.Size = new System.Drawing.Size(68, 21);
+            this.rbtnCiudad.Size = new System.Drawing.Size(99, 21);
             this.rbtnCiudad.TabIndex = 0;
             this.rbtnCiudad.TabStop = true;
-            this.rbtnCiudad.Text = "Ciudad";
+            this.rbtnCiudad.Text = "Zona urbana";
             this.rbtnCiudad.UseVisualStyleBackColor = true;
             // 
             // panel9

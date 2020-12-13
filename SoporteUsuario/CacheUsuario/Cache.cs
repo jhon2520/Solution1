@@ -68,6 +68,24 @@ namespace SoporteUsuario.CacheUsuario
         private static string aplicaLeyLibranza;
         private static string comportamientoDePagos;
 
+        //Codeudor
+
+        private static double ingresosCodeudor;
+        private static double otrosIngresosCodeudor;
+        private static double totalIngresosCodeudor;
+        private static string tipoDeViviendaCodeudor;
+        private static string ciudadMunicipioCodeduor;
+        private static double deduccionesDeSeguridadSocialCodeudor;
+        private static double otrasDeduccionesColillaCodeudor;
+        private static double totalDeduccionesColillaCodeudor;
+        private static double cuotasCentralesDeRiesgoCodeudor;
+        private static double valorCuotaLibranzaCodeudor;
+        private static double cuotasACancelarCodeudor;
+        private static double afectacionColillaCodeudor;
+        private static double endeudamientoGlobalCodeudor;
+        private static double disponibleCodeudor;
+        private static string aplicaLeyLibranzaCodeduor;
+
         //Variables básicas para el crédito
         public static string Nombre { get => nombre; set => nombre = value; }
         public static string Cedula { get => cedula; set => cedula = value; }
@@ -130,5 +148,20 @@ namespace SoporteUsuario.CacheUsuario
         public static double OtrasDeduccionesColilla { get => otrasDeduccionesColilla; set => otrasDeduccionesColilla = value; }
         public static string AplicaLeyLibranza { get => aplicaLeyLibranza; set => aplicaLeyLibranza = value; }
         public static string ComportamientoDePagos { get => comportamientoDePagos; set => comportamientoDePagos = value; }
+        public static double IngresosCodeudor { get => ingresosCodeudor; set => ingresosCodeudor = value; }
+        public static double OtrosIngresosCodeudor { get => otrosIngresosCodeudor; set => otrosIngresosCodeudor = value; }
+        public static double TotalIngresosCodeudor { get => totalIngresosCodeudor; set => totalIngresosCodeudor = value; }
+        public static string TipoDeViviendaCodeudor { get => tipoDeViviendaCodeudor; set => tipoDeViviendaCodeudor = value; }
+        public static string CiudadMunicipioCodeduor { get => ciudadMunicipioCodeduor; set => ciudadMunicipioCodeduor = value; }
+        public static double DeduccionesDeSeguridadSocialCodeudor { get => deduccionesDeSeguridadSocialCodeudor; set => deduccionesDeSeguridadSocialCodeudor = value; }
+        public static double OtrasDeduccionesColillaCodeudor { get => otrasDeduccionesColillaCodeudor; set => otrasDeduccionesColillaCodeudor = value; }
+        public static double TotalDeduccionesColillaCodeudor { get => totalDeduccionesColillaCodeudor; set => totalDeduccionesColillaCodeudor = value; }
+        public static double CuotasCentralesDeRiesgoCodeudor { get => cuotasCentralesDeRiesgoCodeudor; set => cuotasCentralesDeRiesgoCodeudor = value; }
+        public static double ValorCuotaLibranzaCodeudor { get => valorCuotaLibranzaCodeudor; set => valorCuotaLibranzaCodeudor = value; }
+        public static double CuotasACancelarCodeudor { get => cuotasACancelarCodeudor; set => cuotasACancelarCodeudor = value; }
+        public static double AfectacionColillaCodeudor { get => afectacionColillaCodeudor; set => afectacionColillaCodeudor = value; }
+        public static double EndeudamientoGlobalCodeudor { get => endeudamientoGlobalCodeudor; set => endeudamientoGlobalCodeudor = value; }
+        public static double DisponibleCodeudor { get => disponibleCodeudor; set => disponibleCodeudor = value; }
+        public static string AplicaLeyLibranzaCodeduor { get => aplicaLeyLibranzaCodeduor; set => aplicaLeyLibranzaCodeduor = value; }
     }
 }

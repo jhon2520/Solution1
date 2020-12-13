@@ -63,7 +63,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
             this.formVariablesAnalisisComercial.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisComercial.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
-            this.formVariablesAnalisisComercial.tbxNombres.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisComercial.tbxNombres.Enter +=      new EventHandler(CambiarScroll);
         }
         private void MensajesTooltip()
         {
@@ -413,7 +413,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 formError.ShowDialog();
             }
         }
-
         private void RetornarTotalDeducciones(object sender, EventArgs args)
         {
             try

@@ -40,7 +40,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
 
             endeudamientoGlobal = EndeudamientoGlobal.CalcularEndeudamientoGlobalCaja(this.deduccionesColilla, this.cuotaCentrales, this.cuota, RetornarDANECiudadPueblo(),
                 RetornarDANEVivienda(), this.cuotaACancelar, this.ingresos, this.otrosIngresos);
-
             return endeudamientoGlobal;
 
         }

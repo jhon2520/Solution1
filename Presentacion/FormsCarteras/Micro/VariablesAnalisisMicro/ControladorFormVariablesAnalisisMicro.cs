@@ -62,6 +62,10 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.btnEstadoDeResultados.Click += new EventHandler(RetornarEstadosDeResultados);
             this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.TextChanged += new EventHandler(RetornarEndeudamientoDirectoCodeudor);
             this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.TextChanged += new EventHandler(RetornarEndeudamientoDirectoCodeudor);
+            this.formVarialblesAnalisisMicro.tbxIngresos.Enter += new EventHandler(CambiarScroll);
+            this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Enter += new EventHandler(CambiarScroll);
+            this.formVarialblesAnalisisMicro.tbxNombres.Enter += new EventHandler(CambiarScroll);
+           
 
         }
         private void MensajesTooltip()
@@ -400,9 +404,12 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                     formError.ShowDialog();
                 }
             }
-
-    
-
+        }
+        private void CambiarScroll(object sender, EventArgs args)
+        {
+            if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxIngresos.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 300);
+            else if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 950);
+            else if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxNombres.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 0);
         }
     }
 }

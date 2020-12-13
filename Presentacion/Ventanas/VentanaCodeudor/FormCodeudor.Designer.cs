@@ -83,6 +83,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panelColor3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnAlmacenarInformacion = new System.Windows.Forms.Button();
             this.cbxLeyLibranza = new System.Windows.Forms.CheckBox();
             this.label47 = new System.Windows.Forms.Label();
             this.tbxDisponible = new System.Windows.Forms.TextBox();
@@ -105,7 +106,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timerForm = new System.Windows.Forms.Timer(this.components);
             this.dragPbx = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnAlmacenarInformacion = new System.Windows.Forms.Button();
             this.elipsebtnCalcularIndicadores = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnAlmacenarInformacion = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ttFormCodeudor = new System.Windows.Forms.ToolTip(this.components);
@@ -237,12 +237,12 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.rbtnMunicipio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rbtnMunicipio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnMunicipio.ForeColor = System.Drawing.Color.DimGray;
-            this.rbtnMunicipio.Location = new System.Drawing.Point(100, 6);
+            this.rbtnMunicipio.Location = new System.Drawing.Point(117, 6);
             this.rbtnMunicipio.Name = "rbtnMunicipio";
             this.rbtnMunicipio.Size = new System.Drawing.Size(83, 21);
             this.rbtnMunicipio.TabIndex = 1;
             this.rbtnMunicipio.TabStop = true;
-            this.rbtnMunicipio.Text = "Municipio";
+            this.rbtnMunicipio.Text = "Zona rural";
             this.rbtnMunicipio.UseVisualStyleBackColor = true;
             // 
             // rbtnCiudad
@@ -252,12 +252,12 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.rbtnCiudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.rbtnCiudad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCiudad.ForeColor = System.Drawing.Color.DimGray;
-            this.rbtnCiudad.Location = new System.Drawing.Point(32, 6);
+            this.rbtnCiudad.Location = new System.Drawing.Point(12, 6);
             this.rbtnCiudad.Name = "rbtnCiudad";
-            this.rbtnCiudad.Size = new System.Drawing.Size(68, 21);
+            this.rbtnCiudad.Size = new System.Drawing.Size(99, 21);
             this.rbtnCiudad.TabIndex = 0;
             this.rbtnCiudad.TabStop = true;
-            this.rbtnCiudad.Text = "Ciudad";
+            this.rbtnCiudad.Text = "Zona urbana";
             this.rbtnCiudad.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -752,6 +752,23 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel11.Size = new System.Drawing.Size(343, 272);
             this.panel11.TabIndex = 4;
             // 
+            // btnAlmacenarInformacion
+            // 
+            this.btnAlmacenarInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.btnAlmacenarInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlmacenarInformacion.FlatAppearance.BorderSize = 0;
+            this.btnAlmacenarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlmacenarInformacion.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlmacenarInformacion.ForeColor = System.Drawing.Color.White;
+            this.btnAlmacenarInformacion.Image = global::Presentacion.Properties.Resources.savePin;
+            this.btnAlmacenarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlmacenarInformacion.Location = new System.Drawing.Point(61, 222);
+            this.btnAlmacenarInformacion.Name = "btnAlmacenarInformacion";
+            this.btnAlmacenarInformacion.Size = new System.Drawing.Size(233, 32);
+            this.btnAlmacenarInformacion.TabIndex = 2;
+            this.btnAlmacenarInformacion.Text = "Almacenar Información";
+            this.btnAlmacenarInformacion.UseVisualStyleBackColor = false;
+            // 
             // cbxLeyLibranza
             // 
             this.cbxLeyLibranza.AutoSize = true;
@@ -976,23 +993,6 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.dragPbx.Horizontal = true;
             this.dragPbx.TargetControl = this.pbx;
             this.dragPbx.Vertical = true;
-            // 
-            // btnAlmacenarInformacion
-            // 
-            this.btnAlmacenarInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.btnAlmacenarInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlmacenarInformacion.FlatAppearance.BorderSize = 0;
-            this.btnAlmacenarInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlmacenarInformacion.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlmacenarInformacion.ForeColor = System.Drawing.Color.White;
-            this.btnAlmacenarInformacion.Image = global::Presentacion.Properties.Resources.savePin;
-            this.btnAlmacenarInformacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlmacenarInformacion.Location = new System.Drawing.Point(61, 222);
-            this.btnAlmacenarInformacion.Name = "btnAlmacenarInformacion";
-            this.btnAlmacenarInformacion.Size = new System.Drawing.Size(233, 32);
-            this.btnAlmacenarInformacion.TabIndex = 2;
-            this.btnAlmacenarInformacion.Text = "Almacenar Información";
-            this.btnAlmacenarInformacion.UseVisualStyleBackColor = false;
             // 
             // elipsebtnCalcularIndicadores
             // 

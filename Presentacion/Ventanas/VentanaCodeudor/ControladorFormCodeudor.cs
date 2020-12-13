@@ -1,4 +1,6 @@
 ﻿using Presentacion.CodigoCompartido;
+using Presentacion.Ventanas.VentanaAviso;
+using Presentacion.Ventanas.VentanaConfirmacion;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
@@ -18,6 +20,9 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         private FormError formError;
         private IndicadoresConsumoNomina indicadoresConsumoNomina;
         private IndicadoresCaja indicadoresCaja;
+        private FormConfirmacion formConfirmacion;
+        private FormAviso formAviso; 
+        
 
         public ControladorFormCodeudor(FormCodeudor formCodeudor)
         {
@@ -36,6 +41,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.formCodeudor.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formCodeudor.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formCodeudor.btnCalcularIndicadores.Click += new EventHandler(RetornarIndicadoresSegunCartera);
+            this.formCodeudor.btnAlmacenarInformacion.Click += new EventHandler(BtnAlmacenarInformacion);
             CargarColoresForm();
             MensajesToolTip();
             RetornarFormatoTextBox();
@@ -159,9 +165,9 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         private void RetornarIndicadoresConsumo()
         {
 
-            if (ValidarInformación())
+            if (ValidarInformacion())
             {
-                
+
                 if (this.formCodeudor.cbxFormaDePago.Text == "Nomina")
                 {
                     CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
@@ -172,18 +178,21 @@ namespace Presentacion.Ventanas.VentanaCodeudor
                     //disponible
                     if (this.formCodeudor.cbxLeyLibranza.Checked == true)
                     {
+                        Cache.DisponibleCodeudor = indicadoresConsumoNomina.RetornarDisponibleConLibranza();
                         this.formCodeudor.tbxDisponible.Text = indicadoresConsumoNomina.RetornarDisponibleConLibranza().ToString("N2");
+                      
                     }
                     else
                     {
+                        Cache.DisponibleCodeudor = indicadoresConsumoNomina.RetornarDisponibleSinLibranza();
                         this.formCodeudor.tbxDisponible.Text = indicadoresConsumoNomina.RetornarDisponibleSinLibranza().ToString("N2");
                     }
                     //Afectacion colilla
-
+                    Cache.AfectacionColillaCodeudor = indicadoresConsumoNomina.RetornarAfectacionColilla();
                     this.formCodeudor.tbxAfectacionColilla.Text = indicadoresConsumoNomina.RetornarAfectacionColilla().ToString("0.00%");
 
                     //Endeudamiento global
-
+                    Cache.EndeudamientoGlobalCodeudor = indicadoresConsumoNomina.RetornarEndeudamientoGlobal();
                     this.formCodeudor.tbxEndeudamientoGlobal.Text = indicadoresConsumoNomina.RetornarEndeudamientoGlobal().ToString("0.00%");
                 }
 
@@ -200,10 +209,8 @@ namespace Presentacion.Ventanas.VentanaCodeudor
                 }
             }
 
-
-
         }
-        private bool ValidarInformación()
+        private bool ValidarInformacion()
         {
             bool validacionCorrecta;
 
@@ -218,28 +225,24 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         }
         private void RetornarIndicadoresCaja()
         {
-            if (ValidarInformación())
+            if (ValidarInformacion())
             {
                 CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
                 using (indicadoresCaja = new IndicadoresCaja(Convert.ToDouble(this.formCodeudor.tbxDeduccionesColilla.Text), Convert.ToDouble(this.formCodeudor.tbxCuotasCentralesDeRiesgo.Text),
                 Convert.ToDouble(this.formCodeudor.tbxCuota.Text), Convert.ToDouble(this.formCodeudor.tbxCuotasACancelar.Text), Convert.ToDouble(this.formCodeudor.tbxIngresos.Text),
                 Convert.ToDouble(this.formCodeudor.tbxOtrosIngresos.Text), this.formCodeudor.rbtnCiudad, this.formCodeudor.cbxVivienda))
                 {
+                    Cache.EndeudamientoGlobalCodeudor = indicadoresCaja.RetornarEndeudamientoGlobal();
                     this.formCodeudor.tbxEndeudamientoGlobal.Text = indicadoresCaja.RetornarEndeudamientoGlobal().ToString("0.00%");
+                    Cache.DisponibleCodeudor = indicadoresCaja.RetornarDisponible();
                     this.formCodeudor.tbxDisponible.Text = indicadoresCaja.RetornarDisponible().ToString("N2");
 
                 }
             }
             else
             {
-                using (formError = new FormError("Datos insuficientes para calcular los indicadores"))
-                {
-                    formError.ShowDialog();
-                }
+                LlamarFormError("Datos insuficientes para calcular los indicadores");     
             }
-
-
-
 
         }
         private void RetornarIndicadoresSegunCartera(object sender, EventArgs args)
@@ -268,7 +271,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         }
         private void MensajesToolTip()
         {
-      
+
             this.formCodeudor.ttFormCodeudor.SetToolTip(this.formCodeudor.cbxFormaDePago, "Ingrese si el pago será por nómina o caja.");
             this.formCodeudor.ttFormCodeudor.SetToolTip(this.formCodeudor.cbxVivienda, "Ingrese el tipo de vivienda del codeudor.");
             this.formCodeudor.ttFormCodeudor.SetToolTip(this.formCodeudor.rbtnCiudad, "El codeudor vive actualmente en una zona urbana.");
@@ -286,5 +289,68 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.formCodeudor.ttFormCodeudor.SetToolTip(this.formCodeudor.btnCerrar, "Cerrar");
             this.formCodeudor.ttFormCodeudor.SetToolTip(this.formCodeudor.cbxLeyLibranza, "Seleccione en caso de que le aplique ley de libranza.");
         }
+        private void GuardarCache()
+        {
+            Cache.IngresosCodeudor = Convert.ToDouble(this.formCodeudor.tbxIngresos.Text);
+            Cache.OtrosIngresosCodeudor = Convert.ToDouble(this.formCodeudor.tbxOtrosIngresos.Text);
+            Cache.TotalIngresosCodeudor = Convert.ToDouble(this.formCodeudor.tbxTotalIngresos.Text);
+            Cache.TipoDeViviendaCodeudor = this.formCodeudor.cbxVivienda.Text;
+            Cache.CiudadMunicipioCodeduor = RetornarCacheMunicioCiudad();
+            Cache.DeduccionesDeSeguridadSocialCodeudor = Convert.ToDouble(this.formCodeudor.tbxDeduccionesDeSeguridadSocial.Text);
+            Cache.OtrasDeduccionesColillaCodeudor = Convert.ToDouble(this.formCodeudor.tbxOtrasDeduccionesColilla.Text);
+            Cache.TotalDeduccionesColillaCodeudor = Convert.ToDouble(this.formCodeudor.tbxDeduccionesColilla.Text);
+            Cache.CuotasCentralesDeRiesgoCodeudor = Convert.ToDouble(this.formCodeudor.tbxCuotasCentralesDeRiesgo.Text);
+            Cache.ValorCuotaLibranzaCodeudor = Convert.ToDouble(this.formCodeudor.tbxValorCuotaLibranza.Text);
+            Cache.CuotasACancelarCodeudor = Convert.ToDouble(this.formCodeudor.tbxCuotasACancelar.Text);
+            Cache.AplicaLeyLibranzaCodeduor = RetornarCacheLeyLibranza();
+        }
+        private void GuardadoBtnOK()
+        {
+            using (formAviso = new FormAviso("Información guardada correctamente y lista para ser exportada"))
+            {
+                CodigoComun.Alerta("Correcto", FormVentanaEmergente.enmTipo.exito);
+                GuardarCache();
+                formAviso.ShowDialog();
+            }
+        }
+        private string RetornarCacheLeyLibranza()
+        {
+            string aplicaLeyLibranza = (this.formCodeudor.cbxLeyLibranza.Checked == true) ? "Aplica" : "No aplica";
+            return aplicaLeyLibranza;
+        }
+        private string RetornarCacheMunicioCiudad()
+        {
+            string ciudadMunicipio = (this.formCodeudor.rbtnCiudad.Checked == true) ? "Zona Urbana" : "Zona rural";
+            return ciudadMunicipio;
+        }
+        private void BtnAlmacenarInformacion(object sender, EventArgs args)
+        {
+            if (ValidarInformacion())
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea guardar la información del codeudor?"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+
+                    if(result == DialogResult.OK)
+                    {
+                        GuardadoBtnOK();
+                    }
+                }
+            }
+            else
+            {
+                LlamarFormError("Ingrese el valor de todas las variables del codeudor para almacenar la información.");
+            }
+        }
+        private void LlamarFormError(string mensaje)
+        {
+            using (formError = new FormError(mensaje))
+            {
+                formError.ShowDialog();
+            }
+        }
+
     }
+
+
 }

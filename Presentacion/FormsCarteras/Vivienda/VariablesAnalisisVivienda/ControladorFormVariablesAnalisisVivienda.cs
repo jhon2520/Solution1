@@ -57,6 +57,9 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.tbxDeduccionesDeSeguridadSocial.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisVivienda.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formVariablesAnalisisVivienda.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
+            this.formVariablesAnalisisVivienda.tbxIngresos.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisVivienda.tbxNombres.Enter += new EventHandler(CambiarScroll);
         }
         private void MensajesTooltip()
         {
@@ -428,6 +431,12 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             }
         }
 
+        private void CambiarScroll(object sender, EventArgs args)
+        {
+            if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 300);
+            else if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 800);
+            else if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 0);
+        }
 
     }
 }

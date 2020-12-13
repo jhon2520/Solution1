@@ -106,29 +106,38 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             panel.Top = button.Top;
             panel.Height = button.Height;
         }
-        private void Flecha(object sender, EventArgs args)
+        private async void Flecha(object sender, EventArgs args)
         {
             if (((Button)sender).Name == this.formVentanaPrincipal.btnComercial.Name)
             {
+                
                 BotonesCambioDeForm(248, 100, 26, this.formVentanaPrincipal.btnComercial, new FormConsumo());
+
+                //await RetornarCambioDeColores(248, 100, 26);
                 Cache.TipoDeCredito = 2;
                 Cache.ColorInicio = Color.FromArgb(248, 100, 26);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnConsumo.Name)
             {
+                
                 BotonesCambioDeForm(108, 55, 159, this.formVentanaPrincipal.btnConsumo, new FormConsumo());
+                //await RetornarCambioDeColores(108, 55, 159);
                 Cache.TipoDeCredito = 1;
                 Cache.ColorInicio = Color.FromArgb(108, 55, 159);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnVivienda.Name)
             {
+                
                 BotonesCambioDeForm(32, 178, 170, this.formVentanaPrincipal.btnVivienda, new FormConsumo());
+                //await RetornarCambioDeColores(32, 178, 170);
                 Cache.TipoDeCredito = 3;
                 Cache.ColorInicio = Color.FromArgb(32, 178, 170);
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnMicro.Name)
             {
+                
                 BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormConsumo());
+                //await RetornarCambioDeColores(90, 148, 201);
                 Cache.TipoDeCredito = 4;
                 Cache.ColorInicio = Color.FromArgb(90, 148, 201);
             }
@@ -177,10 +186,20 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         private void ColoresCambioDeSimulador(int R, int G,int B)
         {
             this.formVentanaPrincipal.pnlSuperior.BackColor = Color.FromArgb(R, G, B);
-            //this.formVentanaPrincipal.btnCerrarFormActivo.BackColor = Color.FromArgb(R, G, B);
-            //this.formVentanaPrincipal.btnCerrar.BackColor = Color.FromArgb(R, G, B);
-            //this.formVentanaPrincipal.btnMinimizar.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.pnlFlecha.BackColor = Color.FromArgb(R, G, B);
+            this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+        }
+
+        private  void CambiarColoresBotonesPrincipales(int R, int G, int B)
+        {
+            this.formVentanaPrincipal.btnCerrarFormActivo.BackColor = Color.FromArgb(R, G, B);
+            this.formVentanaPrincipal.btnCerrar.BackColor = Color.FromArgb(R, G, B);
+            this.formVentanaPrincipal.btnMinimizar.BackColor = Color.FromArgb(R, G, B);
+        }
+
+        private async Task RetornarCambioDeColores(int R, int G, int B)
+        {
+            await Task.Run(() => { CambiarColoresBotonesPrincipales(R, G, B); });
         }
 
         private void AbrirFormhijoEstilo(int R, int G, int B, Button buttonFormHijo, Form formHijo)
@@ -195,14 +214,18 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
         private void BotonesCambioDeForm(int R, int G, int B, Button buttonFormHijo, Form formHijo)
         {
+       
             using (FormConfirmacion formConfirmacion = new FormConfirmacion("¿Desea cambiar de simulador?"))
             {
+                this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
                 if (codigoComun.ActiveForm == null) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
+               
 
                 else if (codigoComun.ActiveForm != null)
                 {
                     DialogResult dialogResult = formConfirmacion.ShowDialog();
                     if (dialogResult == DialogResult.OK) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
+                    this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
                 }
             }
 
