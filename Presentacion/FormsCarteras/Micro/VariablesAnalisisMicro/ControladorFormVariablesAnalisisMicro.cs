@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
 {
-    //TODO: Hacer el tab de los objetos 
+    
     class ControladorFormVariablesAnalisisMicro
     {
         private FormVarialblesAnalisisMicro formVarialblesAnalisisMicro;
@@ -23,8 +23,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
 
         public ControladorFormVariablesAnalisisMicro(FormVarialblesAnalisisMicro formVarialblesAnalisisMicro)
         {
-
-
             this.formVarialblesAnalisisMicro = formVarialblesAnalisisMicro;
             textBoxesNumeros = new TextBox[] { this.formVarialblesAnalisisMicro.tbxVentasMicro, this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro, this.formVarialblesAnalisisMicro.tbxIngresos,
             this.formVarialblesAnalisisMicro.tbxOtrosIngresos,this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo,this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro,this.formVarialblesAnalisisMicro.tbxGastosDelNegocio,
@@ -190,6 +188,23 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             Cache.IngresoBasico = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresos.Text);
             Cache.TipoDePersona = "Persona natural";
             Cache.TiempoUnidadProductiva = (int)this.formVarialblesAnalisisMicro.contadorTiempoUnidadProductiva.Value;
+            Cache.IngresosCodeudor = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text);
+            Cache.EgresosCodeudorMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text);
+            Cache.VentasMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxVentasMicro.Text);
+            Cache.CostosDeVentasMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro.Text);
+            Cache.GastosDelNegocioMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text);
+            Cache.IngresosFamiliarYOtrosMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text);
+            Cache.GastosFamiliaresYOtrosMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text);
+            Cache.CuotaDelCreditoARefinancierMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotaCreditoARefinanciarMicro.Text);
+            Cache.CuotaCentralesDeRiesgoMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text);
+            Cache.UtilidadBrutaMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text);
+            Cache.UtilidadOPerdidaOperativaMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadOPerdidaOperativa.Text);
+            Cache.UtilidadOPerdiaNeta = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadOPerdidaNeta.Text);
+            Cache.UtildiadDisponibleMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadDisponible.Text);
+            Cache.FormaDePago = "Caja";
+            
+     
+
         }
         private void RetornarTotalIngresos(Object sender, EventArgs args)
         {
@@ -217,7 +232,19 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         }
         private void RetornarEdad(object sender, EventArgs args)
         {
-            this.formVarialblesAnalisisMicro.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVarialblesAnalisisMicro.dtpEdad);
+            
+            try
+            {
+                this.formVarialblesAnalisisMicro.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVarialblesAnalisisMicro.dtpEdad);
+            }
+            catch
+            {
+
+                using (formError = new FormError("Seleccione una fecha de nacimiendo válida, no puede ser superior a la fecha actual"))
+                {
+                    formError.ShowDialog();
+                }
+            }
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
@@ -245,8 +272,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                 formError.ShowDialog();
             }
         }
-
-
         private void RetornarUtilidadBruta()
         {
             try
@@ -308,6 +333,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             {
                 this.formVarialblesAnalisisMicro.tbxMargenDeConfianza.Text = (Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text) /
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadDisponible.Text)).ToString("0.00%");
+                Cache.MargenDeConfianzaMicro = (Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text) /
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadDisponible.Text));
             }
             catch
             {
@@ -324,6 +351,11 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / (
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text) +
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text))).ToString("0.00%");
+                Cache.CapaciodadDePagoConCuotaMicro = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text) +
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text) +
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / (
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text) +
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text)));
             }
             catch
             {
@@ -335,12 +367,15 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         {
             try
             {
-                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoDeudor.Text = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text) +
+                double endeudamientoDirecto;
+                endeudamientoDirecto = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text) +
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / (
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text) +
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text) -
                 Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text) +
-                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text))).ToString("0.00%");
+                Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text)));
+                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoDeudor.Text = endeudamientoDirecto.ToString("0.00%");
+                Cache.EndeudamientoDirectodeudorMicro = endeudamientoDirecto;
             }
             catch
             {
@@ -387,14 +422,14 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                     this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text != string.Empty)
 
                 {
-                    //Endeudamiento directo
-                    this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Text) +
-                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / (Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadBrutaMicro.Text) +
-                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Text) + Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Text) +
-                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Text))).ToString("0.00%");
-                    //Disponnible
-                    this.formVarialblesAnalisisMicro.tbxDisponibleCodeudor.Text = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text) +
-                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text)).ToString("0.00%");
+                    double endeudamientoDirectoCodeudor;
+                 
+                    endeudamientoDirectoCodeudor = ((Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text) +
+                    Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxCuota.Text)) / Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text));
+                    this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text = endeudamientoDirectoCodeudor.ToString("0.00%");
+
+               
+                    Cache.EndeudamientoDirectoCodeudorMicro = endeudamientoDirectoCodeudor;
                 }
             }
             catch 

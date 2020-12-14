@@ -85,6 +85,26 @@ namespace SoporteUsuario.CacheUsuario
         private static double endeudamientoGlobalCodeudor;
         private static double disponibleCodeudor;
         private static string aplicaLeyLibranzaCodeduor;
+        private static double endeudamientoDirectoCodeudorMicro;
+        private static double endeudamientoDirectodeudorMicro;
+        private static double egresosCodeudorMicro;
+
+        //Ventana Micro
+
+        private static double ventasMicro;
+        private static double costosDeVentasMicro;
+        private static double gastosDelNegocioMicro;
+        private static double ingresosFamiliarYOtrosMicro;
+        private static double gastosFamiliaresYOtrosMicro;
+        private static double cuotaDelCreditoARefinancierMicro;
+        private static double cuotaCentralesDeRiesgoMicro;
+        private static double utilidadBrutaMicro;
+        private static double utilidadOPerdidaOperativaMicro;
+        private static double utilidadOPerdiaNeta;
+        private static double utildiadDisponibleMicro;
+        private static double margenDeConfianzaMicro;
+        private static double capaciodadDePagoConCuotaMicro;
+
 
         //Variables básicas para el crédito
         public static string Nombre { get => nombre; set => nombre = value; }
@@ -163,5 +183,21 @@ namespace SoporteUsuario.CacheUsuario
         public static double EndeudamientoGlobalCodeudor { get => endeudamientoGlobalCodeudor; set => endeudamientoGlobalCodeudor = value; }
         public static double DisponibleCodeudor { get => disponibleCodeudor; set => disponibleCodeudor = value; }
         public static string AplicaLeyLibranzaCodeduor { get => aplicaLeyLibranzaCodeduor; set => aplicaLeyLibranzaCodeduor = value; }
+        public static double EndeudamientoDirectoCodeudorMicro { get => endeudamientoDirectoCodeudorMicro; set => endeudamientoDirectoCodeudorMicro = value; }
+        public static double EgresosCodeudorMicro { get => egresosCodeudorMicro; set => egresosCodeudorMicro = value; }
+        public static double EndeudamientoDirectodeudorMicro { get => endeudamientoDirectodeudorMicro; set => endeudamientoDirectodeudorMicro = value; }
+        public static double VentasMicro { get => ventasMicro; set => ventasMicro = value; }
+        public static double CostosDeVentasMicro { get => costosDeVentasMicro; set => costosDeVentasMicro = value; }
+        public static double GastosDelNegocioMicro { get => gastosDelNegocioMicro; set => gastosDelNegocioMicro = value; }
+        public static double IngresosFamiliarYOtrosMicro { get => ingresosFamiliarYOtrosMicro; set => ingresosFamiliarYOtrosMicro = value; }
+        public static double GastosFamiliaresYOtrosMicro { get => gastosFamiliaresYOtrosMicro; set => gastosFamiliaresYOtrosMicro = value; }
+        public static double CuotaDelCreditoARefinancierMicro { get => cuotaDelCreditoARefinancierMicro; set => cuotaDelCreditoARefinancierMicro = value; }
+        public static double CuotaCentralesDeRiesgoMicro { get => cuotaCentralesDeRiesgoMicro; set => cuotaCentralesDeRiesgoMicro = value; }
+        public static double UtilidadBrutaMicro { get => utilidadBrutaMicro; set => utilidadBrutaMicro = value; }
+        public static double UtilidadOPerdidaOperativaMicro { get => utilidadOPerdidaOperativaMicro; set => utilidadOPerdidaOperativaMicro = value; }
+        public static double UtilidadOPerdiaNeta { get => utilidadOPerdiaNeta; set => utilidadOPerdiaNeta = value; }
+        public static double UtildiadDisponibleMicro { get => utildiadDisponibleMicro; set => utildiadDisponibleMicro = value; }
+        public static double MargenDeConfianzaMicro { get => margenDeConfianzaMicro; set => margenDeConfianzaMicro = value; }
+        public static double CapaciodadDePagoConCuotaMicro { get => capaciodadDePagoConCuotaMicro; set => capaciodadDePagoConCuotaMicro = value; }
     }
 }

@@ -226,7 +226,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             Cache.TipoDeContrato = this.formVariablesAnalisisComercial.cbxTipoDeContrato.Text;
             Cache.Edad = (int)this.formVariablesAnalisisComercial.contadorEdad.Value;
             Cache.Nombre = this.formVariablesAnalisisComercial.tbxNombres.Text;
-            Cache.Apellido = " ";
             Cache.FechaDeNaciento = (this.formVariablesAnalisisComercial.dtpEdad.Value.Date).ToString();
             Cache.Profesion = this.formVariablesAnalisisComercial.tbxProfesion.Text;
             Cache.Cargo = this.formVariablesAnalisisComercial.tbxCargo.Text;
@@ -242,10 +241,19 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             Cache.NumeroDemoras = Convert.ToInt32(this.formVariablesAnalisisComercial.cbxCantidadDeMoras.Text);
             Cache.DiasDeMora = Convert.ToInt32(this.formVariablesAnalisisComercial.cbxDiasMora.Text);
             Cache.DeduccionesDeSeguridadSocial = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxDeduccionesDeSeguridadSocial.Text);
+            Cache.OtrasDeduccionesColilla = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.Text);
             Cache.DeduccionesColilla = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxDeduccionesColilla.Text);
             Cache.ValorCuotaLibranza = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxValorCuotaLibranza.Text);
             Cache.IngresoBasico = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxIngresos.Text);
+            Cache.OtrosIngresos = Convert.ToDouble(this.formVariablesAnalisisComercial.tbxOtrosIngresos.Text);
+            Cache.DiasDeMora = Convert.ToInt32(this.formVariablesAnalisisComercial.cbxDiasMora.Text);
+            Cache.CuotaCentrales = Convert.ToInt32(this.formVariablesAnalisisComercial.tbxCuotaCentrales.Text);
+            Cache.ComportamientoDePagos = this.formVariablesAnalisisComercial.tbxComportamientoDePagos.Text;
             Cache.FormaDePago = "Caja";
+            Cache.Apellido = "N/A";
+            Cache.AplicaLeyLibranza = "N/A";
+
+
         }
 
         private void RetornarTotalIngresos(Object sender, EventArgs args)
@@ -382,7 +390,20 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         }
         private void RetornarEdad(object sender, EventArgs args)
         {
-            this.formVariablesAnalisisComercial.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisComercial.dtpEdad);
+            
+            try
+            {
+                this.formVariablesAnalisisComercial.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisComercial.dtpEdad);
+            }
+            catch
+            {
+
+                using (formError = new FormError("Seleccione una fecha de nacimiendo válida, no puede ser superior a la fecha actual"))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {

@@ -52,7 +52,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             textBoxesNumeros = new TextBox[]
             {
                 this.formCodeudor.tbxCuota,this.formCodeudor.tbxIngresos,this.formCodeudor.tbxOtrosIngresos,this.formCodeudor.tbxCuota,this.formCodeudor.tbxDeduccionesDeSeguridadSocial,
-                this.formCodeudor.tbxOtrasDeduccionesColilla, this.formCodeudor.tbxCuotasCentralesDeRiesgo,this.formCodeudor.tbxValorCuotaLibranza
+                this.formCodeudor.tbxOtrasDeduccionesColilla, this.formCodeudor.tbxCuotasCentralesDeRiesgo,this.formCodeudor.tbxValorCuotaLibranza,this.formCodeudor.tbxCuotasACancelar
             };
         }
         private void FormatoNumeroTexBox(object sender, EventArgs args)
@@ -334,6 +334,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
                     if(result == DialogResult.OK)
                     {
                         GuardadoBtnOK();
+                        this.formCodeudor.Close();
                     }
                 }
             }

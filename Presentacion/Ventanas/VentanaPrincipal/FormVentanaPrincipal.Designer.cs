@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation10 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVentanaPrincipal));
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.pnlBotonesColores = new System.Windows.Forms.Panel();
+            this.btnCerrarFormActivo = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.pnlCentro = new System.Windows.Forms.Panel();
             this.lblLinkAcercaDe = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,10 +52,7 @@
             this.btnFacebook = new System.Windows.Forms.Button();
             this.btnInstagram = new System.Windows.Forms.Button();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
-            this.btnCerrarFormActivo = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnDocumentacion = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.pnlFlecha = new System.Windows.Forms.Panel();
             this.btnMicro = new System.Windows.Forms.Button();
             this.btnVivienda = new System.Windows.Forms.Button();
@@ -65,13 +66,12 @@
             this.bunifuTransitionForm = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.elipseBtnSalario = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ttFormPrincipal = new System.Windows.Forms.ToolTip(this.components);
-            this.pnlBotonesColores = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlSuperior.SuspendLayout();
+            this.pnlBotonesColores.SuspendLayout();
             this.pnlCentro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.pnlIzquierdo.SuspendLayout();
-            this.pnlBotonesColores.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -85,6 +85,74 @@
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1043, 52);
             this.pnlSuperior.TabIndex = 2;
+            // 
+            // pnlBotonesColores
+            // 
+            this.pnlBotonesColores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
+            this.pnlBotonesColores.Controls.Add(this.btnCerrarFormActivo);
+            this.pnlBotonesColores.Controls.Add(this.btnCerrar);
+            this.pnlBotonesColores.Controls.Add(this.btnMinimizar);
+            this.bunifuTransitionForm.SetDecoration(this.pnlBotonesColores, BunifuAnimatorNS.DecorationType.None);
+            this.pnlBotonesColores.Location = new System.Drawing.Point(987, 2);
+            this.pnlBotonesColores.Name = "pnlBotonesColores";
+            this.pnlBotonesColores.Size = new System.Drawing.Size(54, 18);
+            this.pnlBotonesColores.TabIndex = 3;
+            // 
+            // btnCerrarFormActivo
+            // 
+            this.btnCerrarFormActivo.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFormActivo.BackgroundImage = global::Presentacion.Properties.Resources.circuloprincipal;
+            this.btnCerrarFormActivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarFormActivo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionForm.SetDecoration(this.btnCerrarFormActivo, BunifuAnimatorNS.DecorationType.None);
+            this.btnCerrarFormActivo.FlatAppearance.BorderSize = 0;
+            this.btnCerrarFormActivo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFormActivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFormActivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFormActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarFormActivo.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrarFormActivo.Name = "btnCerrarFormActivo";
+            this.btnCerrarFormActivo.Size = new System.Drawing.Size(18, 18);
+            this.btnCerrarFormActivo.TabIndex = 0;
+            this.btnCerrarFormActivo.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = global::Presentacion.Properties.Resources.circulocerrar;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionForm.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(36, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(18, 18);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.circulominimizar;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionForm.SetDecoration(this.btnMinimizar, BunifuAnimatorNS.DecorationType.None);
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(18, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(18, 18);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
             // 
             // pnlCentro
             // 
@@ -323,43 +391,6 @@
             this.pnlIzquierdo.Size = new System.Drawing.Size(140, 497);
             this.pnlIzquierdo.TabIndex = 0;
             // 
-            // btnCerrarFormActivo
-            // 
-            this.btnCerrarFormActivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(213)))), ((int)(((byte)(236)))));
-            this.btnCerrarFormActivo.BackgroundImage = global::Presentacion.Properties.Resources.circuloprincipal;
-            this.btnCerrarFormActivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarFormActivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionForm.SetDecoration(this.btnCerrarFormActivo, BunifuAnimatorNS.DecorationType.None);
-            this.btnCerrarFormActivo.FlatAppearance.BorderSize = 0;
-            this.btnCerrarFormActivo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFormActivo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFormActivo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFormActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarFormActivo.Location = new System.Drawing.Point(0, 0);
-            this.btnCerrarFormActivo.Name = "btnCerrarFormActivo";
-            this.btnCerrarFormActivo.Size = new System.Drawing.Size(18, 18);
-            this.btnCerrarFormActivo.TabIndex = 0;
-            this.btnCerrarFormActivo.UseVisualStyleBackColor = false;
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(130)))), ((int)(((byte)(162)))));
-            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.circulominimizar;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionForm.SetDecoration(this.btnMinimizar, BunifuAnimatorNS.DecorationType.None);
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(18, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(18, 18);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            // 
             // btnDocumentacion
             // 
             this.btnDocumentacion.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -377,25 +408,6 @@
             this.btnDocumentacion.TabIndex = 5;
             this.btnDocumentacion.Text = "Guía";
             this.btnDocumentacion.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
-            this.btnCerrar.BackgroundImage = global::Presentacion.Properties.Resources.circulocerrar;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionForm.SetDecoration(this.btnCerrar, BunifuAnimatorNS.DecorationType.None);
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(36, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(18, 18);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // pnlFlecha
             // 
@@ -518,22 +530,22 @@
             // 
             this.bunifuTransitionForm.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.bunifuTransitionForm.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            animation10.AnimateOnlyDifferences = true;
-            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
-            animation10.LeafCoeff = 0F;
-            animation10.MaxTime = 1F;
-            animation10.MinTime = 0F;
-            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
-            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
-            animation10.MosaicSize = 20;
-            animation10.Padding = new System.Windows.Forms.Padding(30);
-            animation10.RotateCoeff = 0F;
-            animation10.RotateLimit = 0F;
-            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
-            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
-            animation10.TimeCoeff = 0F;
-            animation10.TransparencyCoeff = 0F;
-            this.bunifuTransitionForm.DefaultAnimation = animation10;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 20;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransitionForm.DefaultAnimation = animation1;
             this.bunifuTransitionForm.MaxAnimationTime = 2500;
             // 
             // elipseBtnSalario
@@ -547,18 +559,6 @@
             this.ttFormPrincipal.IsBalloon = true;
             this.ttFormPrincipal.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.ttFormPrincipal.ToolTipTitle = "Información:";
-            // 
-            // pnlBotonesColores
-            // 
-            this.pnlBotonesColores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.pnlBotonesColores.Controls.Add(this.btnCerrarFormActivo);
-            this.pnlBotonesColores.Controls.Add(this.btnCerrar);
-            this.pnlBotonesColores.Controls.Add(this.btnMinimizar);
-            this.bunifuTransitionForm.SetDecoration(this.pnlBotonesColores, BunifuAnimatorNS.DecorationType.None);
-            this.pnlBotonesColores.Location = new System.Drawing.Point(987, 2);
-            this.pnlBotonesColores.Name = "pnlBotonesColores";
-            this.pnlBotonesColores.Size = new System.Drawing.Size(54, 18);
-            this.pnlBotonesColores.TabIndex = 3;
             // 
             // bunifuElipse1
             // 
@@ -585,11 +585,11 @@
             this.Name = "FormVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlSuperior.ResumeLayout(false);
+            this.pnlBotonesColores.ResumeLayout(false);
             this.pnlCentro.ResumeLayout(false);
             this.pnlCentro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.pnlIzquierdo.ResumeLayout(false);
-            this.pnlBotonesColores.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

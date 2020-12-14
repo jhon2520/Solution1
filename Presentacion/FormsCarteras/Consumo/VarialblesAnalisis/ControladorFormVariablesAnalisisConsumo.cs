@@ -253,8 +253,10 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             Cache.OtrasDeduccionesColilla = Convert.ToDouble(this.formVariables.tbxOtrasDeduccionesColilla.Text);
             Cache.ValorCuotaLibranza = Convert.ToDouble(this.formVariables.tbxValorCuotaLibranza.Text);
             Cache.IngresoBasico = Convert.ToDouble(this.formVariables.tbxIngresos.Text);
+            Cache.OtrosIngresos = Convert.ToDouble(this.formVariables.tbxOtrosIngresos.Text);
             Cache.ComportamientoDePagos = this.formVariables.tbxComportamientoDePagos.Text;
             Cache.TipoDePersona = "Persona natural";
+            Cache.CuotaCentrales = Convert.ToDouble(this.formVariables.tbxCuotaCentrales.Text);
 
         }
         private void RetornarTotalIngresos(Object sender, EventArgs args)

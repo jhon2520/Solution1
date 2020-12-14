@@ -132,9 +132,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel40 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel66 = new System.Windows.Forms.Panel();
-            this.panel101 = new System.Windows.Forms.Panel();
-            this.tbxDisponibleCodeudor = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnEstadoDeResultados = new System.Windows.Forms.Button();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel99 = new System.Windows.Forms.Panel();
@@ -1513,9 +1510,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             // 
             // panel66
             // 
-            this.panel66.Controls.Add(this.panel101);
-            this.panel66.Controls.Add(this.tbxDisponibleCodeudor);
-            this.panel66.Controls.Add(this.label8);
             this.panel66.Controls.Add(this.btnEstadoDeResultados);
             this.panel66.Controls.Add(this.panel46);
             this.panel66.Controls.Add(this.panel45);
@@ -1586,39 +1580,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel66.Size = new System.Drawing.Size(736, 537);
             this.panel66.TabIndex = 2;
             this.panel66.Paint += new System.Windows.Forms.PaintEventHandler(this.panel66_Paint);
-            // 
-            // panel101
-            // 
-            this.panel101.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(155)))), ((int)(((byte)(210)))));
-            this.panel101.Location = new System.Drawing.Point(209, 513);
-            this.panel101.Name = "panel101";
-            this.panel101.Size = new System.Drawing.Size(137, 1);
-            this.panel101.TabIndex = 123;
-            // 
-            // tbxDisponibleCodeudor
-            // 
-            this.tbxDisponibleCodeudor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxDisponibleCodeudor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDisponibleCodeudor.Enabled = false;
-            this.tbxDisponibleCodeudor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDisponibleCodeudor.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDisponibleCodeudor.Location = new System.Drawing.Point(209, 499);
-            this.tbxDisponibleCodeudor.Name = "tbxDisponibleCodeudor";
-            this.tbxDisponibleCodeudor.Size = new System.Drawing.Size(137, 15);
-            this.tbxDisponibleCodeudor.TabIndex = 14;
-            this.tbxDisponibleCodeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(25, 498);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 16);
-            this.label8.TabIndex = 122;
-            this.label8.Text = "Disponible codeudor";
             // 
             // btnEstadoDeResultados
             // 
@@ -2686,7 +2647,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label41.BackColor = System.Drawing.Color.Transparent;
             this.label41.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.SystemColors.Window;
-            this.label41.Location = new System.Drawing.Point(134, 5);
+            this.label41.Location = new System.Drawing.Point(294, 5);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(151, 15);
             this.label41.TabIndex = 10;
@@ -3104,8 +3065,5 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuElipse elipseBtn;
         private System.Windows.Forms.Panel panel100;
-        private System.Windows.Forms.Panel panel101;
-        public System.Windows.Forms.TextBox tbxDisponibleCodeudor;
-        public System.Windows.Forms.Label label8;
     }
 }

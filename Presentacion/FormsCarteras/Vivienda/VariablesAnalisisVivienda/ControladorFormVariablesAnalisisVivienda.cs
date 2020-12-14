@@ -236,6 +236,7 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             Cache.ValorCuotaLibranza = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxValorCuotaLibranza.Text);
             Cache.IngresoBasico = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxIngresos.Text);
             Cache.TipoDePersona = "Persona natural";
+            Cache.FormaDePago = "Caja";
 
         }
 
@@ -391,7 +392,20 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
 
         private void RetornarEdad(object sender, EventArgs args)
         {
-            this.formVariablesAnalisisVivienda.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisVivienda.dtpEdad);
+            try
+            {
+                this.formVariablesAnalisisVivienda.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisVivienda.dtpEdad);
+            }
+            catch
+            {
+
+                using (formError = new FormError("Seleccione una fecha de nacimiendo válida, no puede ser superior a la fecha actual"))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
+           
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {

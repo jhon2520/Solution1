@@ -8,9 +8,10 @@
 6: Terminar el método de exportar excel que valide el tipo de crédito
 7: HAcer el método que exporta a PDF
 8: Revisar que todo esté bien con el programa instalado
-13: Arreglar el color del Form de vivienda
 
-
+14: Crear metodo que limpie caché y que se llame cada que se cambie de form
+15: Hacer método que limpia todo el caché
+16: terminar de validar la ventana de crédito comercial
 
 
 LISTO
@@ -24,3 +25,4 @@ LISTO
 10: Revisar que todas las ventanas tengan el efecto Login
 11: Hacer las capturas de exepciones y validación de inofmración antes de generar indicadores en la ventana del codeudor
 12: Terminar de cuadrar el autoscroll para todos los forms, ya está el de comercial
+13: Arreglar el color del Form de vivienda

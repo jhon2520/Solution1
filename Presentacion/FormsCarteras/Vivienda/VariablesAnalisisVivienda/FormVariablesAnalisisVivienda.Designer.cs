@@ -1303,6 +1303,7 @@
             // 
             // panel11
             // 
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Controls.Add(this.btnCalcularEndeudamientoGlobal);
             this.panel11.Controls.Add(this.label47);
             this.panel11.Controls.Add(this.tbxDisponible);
@@ -1684,6 +1685,7 @@
             // 
             // panel35
             // 
+            this.panel35.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel35.Controls.Add(this.label49);
             this.panel35.Controls.Add(this.panel51);
             this.panel35.Controls.Add(this.tbxOtrasDeduccionesColilla);
@@ -2248,6 +2250,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(788, 426);
             this.Controls.Add(this.btnCodeudor);
             this.Controls.Add(this.panel32);
