@@ -117,7 +117,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel21 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.pnlIngresos = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.tbxTotalIngresos = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -131,7 +131,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label2 = new System.Windows.Forms.Label();
             this.panel40 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.panel66 = new System.Windows.Forms.Panel();
+            this.pnlEstadoResultados = new System.Windows.Forms.Panel();
             this.btnEstadoDeResultados = new System.Windows.Forms.Button();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel99 = new System.Windows.Forms.Panel();
@@ -258,10 +258,10 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             ((System.ComponentModel.ISupportInitialize)(this.contadorEdad)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel33.SuspendLayout();
-            this.panel34.SuspendLayout();
+            this.pnlIngresos.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel40.SuspendLayout();
-            this.panel66.SuspendLayout();
+            this.pnlEstadoResultados.SuspendLayout();
             this.panel46.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel70.SuspendLayout();
@@ -1340,30 +1340,30 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             // panel33
             // 
             this.panel33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel33.Controls.Add(this.panel34);
+            this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
-            this.panel33.Controls.Add(this.panel66);
+            this.panel33.Controls.Add(this.pnlEstadoResultados);
             this.panel33.Location = new System.Drawing.Point(21, 446);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(736, 656);
             this.panel33.TabIndex = 3;
             // 
-            // panel34
+            // pnlIngresos
             // 
-            this.panel34.Controls.Add(this.panel37);
-            this.panel34.Controls.Add(this.tbxTotalIngresos);
-            this.panel34.Controls.Add(this.label25);
-            this.panel34.Controls.Add(this.panel36);
-            this.panel34.Controls.Add(this.panel43);
-            this.panel34.Controls.Add(this.label1);
-            this.panel34.Controls.Add(this.panel5);
-            this.panel34.Controls.Add(this.tbxIngresos);
-            this.panel34.Controls.Add(this.tbxOtrosIngresos);
-            this.panel34.Controls.Add(this.label2);
-            this.panel34.Location = new System.Drawing.Point(0, 30);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(736, 81);
-            this.panel34.TabIndex = 1;
+            this.pnlIngresos.Controls.Add(this.panel37);
+            this.pnlIngresos.Controls.Add(this.tbxTotalIngresos);
+            this.pnlIngresos.Controls.Add(this.label25);
+            this.pnlIngresos.Controls.Add(this.panel36);
+            this.pnlIngresos.Controls.Add(this.panel43);
+            this.pnlIngresos.Controls.Add(this.label1);
+            this.pnlIngresos.Controls.Add(this.panel5);
+            this.pnlIngresos.Controls.Add(this.tbxIngresos);
+            this.pnlIngresos.Controls.Add(this.tbxOtrosIngresos);
+            this.pnlIngresos.Controls.Add(this.label2);
+            this.pnlIngresos.Location = new System.Drawing.Point(0, 30);
+            this.pnlIngresos.Name = "pnlIngresos";
+            this.pnlIngresos.Size = new System.Drawing.Size(736, 81);
+            this.pnlIngresos.TabIndex = 1;
             // 
             // panel37
             // 
@@ -1508,78 +1508,78 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label29.TabIndex = 0;
             this.label29.Text = "Información financiera\n";
             // 
-            // panel66
+            // pnlEstadoResultados
             // 
-            this.panel66.Controls.Add(this.btnEstadoDeResultados);
-            this.panel66.Controls.Add(this.panel46);
-            this.panel66.Controls.Add(this.panel45);
-            this.panel66.Controls.Add(this.panel4);
-            this.panel66.Controls.Add(this.panel44);
-            this.panel66.Controls.Add(this.panel35);
-            this.panel66.Controls.Add(this.panel42);
-            this.panel66.Controls.Add(this.tbxCuotasCentralesDeRiesgo);
-            this.panel66.Controls.Add(this.label28);
-            this.panel66.Controls.Add(this.panel41);
-            this.panel66.Controls.Add(this.panel70);
-            this.panel66.Controls.Add(this.panel86);
-            this.panel66.Controls.Add(this.tbxGastosDelNegocio);
-            this.panel66.Controls.Add(this.label69);
-            this.panel66.Controls.Add(this.panel85);
-            this.panel66.Controls.Add(this.tbxEndeudamientoDirectoCodeudor);
-            this.panel66.Controls.Add(this.label68);
-            this.panel66.Controls.Add(this.panel83);
-            this.panel66.Controls.Add(this.tbxEgresosCodeudor);
-            this.panel66.Controls.Add(this.label66);
-            this.panel66.Controls.Add(this.panel84);
-            this.panel66.Controls.Add(this.tbxIngresosCodeudor);
-            this.panel66.Controls.Add(this.label67);
-            this.panel66.Controls.Add(this.panel82);
-            this.panel66.Controls.Add(this.panel81);
-            this.panel66.Controls.Add(this.tbxEndeudamientoDirectoDeudor);
-            this.panel66.Controls.Add(this.label64);
-            this.panel66.Controls.Add(this.panel80);
-            this.panel66.Controls.Add(this.tbxCapacidadDePagoConCuota);
-            this.panel66.Controls.Add(this.panel16);
-            this.panel66.Controls.Add(this.label63);
-            this.panel66.Controls.Add(this.panel79);
-            this.panel66.Controls.Add(this.tbxMargenDeConfianza);
-            this.panel66.Controls.Add(this.label62);
-            this.panel66.Controls.Add(this.panel76);
-            this.panel66.Controls.Add(this.tbxUtilidadDisponible);
-            this.panel66.Controls.Add(this.label59);
-            this.panel66.Controls.Add(this.panel77);
-            this.panel66.Controls.Add(this.tbxCuotaCreditoARefinanciarMicro);
-            this.panel66.Controls.Add(this.panel39);
-            this.panel66.Controls.Add(this.label60);
-            this.panel66.Controls.Add(this.panel75);
-            this.panel66.Controls.Add(this.tbxUtilidadOPerdidaNeta);
-            this.panel66.Controls.Add(this.panel38);
-            this.panel66.Controls.Add(this.label58);
-            this.panel66.Controls.Add(this.panel72);
-            this.panel66.Controls.Add(this.tbxGastosFamiliaresYOtros);
-            this.panel66.Controls.Add(this.label54);
-            this.panel66.Controls.Add(this.panel73);
-            this.panel66.Controls.Add(this.label56);
-            this.panel66.Controls.Add(this.panel74);
-            this.panel66.Controls.Add(this.tbxUtilidadOPerdidaOperativa);
-            this.panel66.Controls.Add(this.tbxIngresosFamiliaresYOtros);
-            this.panel66.Controls.Add(this.panel12);
-            this.panel66.Controls.Add(this.label57);
-            this.panel66.Controls.Add(this.panel67);
-            this.panel66.Controls.Add(this.tbxUtilidadBrutaMicro);
-            this.panel66.Controls.Add(this.label50);
-            this.panel66.Controls.Add(this.panel68);
-            this.panel66.Controls.Add(this.panel11);
-            this.panel66.Controls.Add(this.label52);
-            this.panel66.Controls.Add(this.panel71);
-            this.panel66.Controls.Add(this.tbxVentasMicro);
-            this.panel66.Controls.Add(this.tbxCostosDeVentasMicro);
-            this.panel66.Controls.Add(this.label53);
-            this.panel66.Location = new System.Drawing.Point(0, 116);
-            this.panel66.Name = "panel66";
-            this.panel66.Size = new System.Drawing.Size(736, 537);
-            this.panel66.TabIndex = 2;
-            this.panel66.Paint += new System.Windows.Forms.PaintEventHandler(this.panel66_Paint);
+            this.pnlEstadoResultados.Controls.Add(this.btnEstadoDeResultados);
+            this.pnlEstadoResultados.Controls.Add(this.panel46);
+            this.pnlEstadoResultados.Controls.Add(this.panel45);
+            this.pnlEstadoResultados.Controls.Add(this.panel4);
+            this.pnlEstadoResultados.Controls.Add(this.panel44);
+            this.pnlEstadoResultados.Controls.Add(this.panel35);
+            this.pnlEstadoResultados.Controls.Add(this.panel42);
+            this.pnlEstadoResultados.Controls.Add(this.tbxCuotasCentralesDeRiesgo);
+            this.pnlEstadoResultados.Controls.Add(this.label28);
+            this.pnlEstadoResultados.Controls.Add(this.panel41);
+            this.pnlEstadoResultados.Controls.Add(this.panel70);
+            this.pnlEstadoResultados.Controls.Add(this.panel86);
+            this.pnlEstadoResultados.Controls.Add(this.tbxGastosDelNegocio);
+            this.pnlEstadoResultados.Controls.Add(this.label69);
+            this.pnlEstadoResultados.Controls.Add(this.panel85);
+            this.pnlEstadoResultados.Controls.Add(this.tbxEndeudamientoDirectoCodeudor);
+            this.pnlEstadoResultados.Controls.Add(this.label68);
+            this.pnlEstadoResultados.Controls.Add(this.panel83);
+            this.pnlEstadoResultados.Controls.Add(this.tbxEgresosCodeudor);
+            this.pnlEstadoResultados.Controls.Add(this.label66);
+            this.pnlEstadoResultados.Controls.Add(this.panel84);
+            this.pnlEstadoResultados.Controls.Add(this.tbxIngresosCodeudor);
+            this.pnlEstadoResultados.Controls.Add(this.label67);
+            this.pnlEstadoResultados.Controls.Add(this.panel82);
+            this.pnlEstadoResultados.Controls.Add(this.panel81);
+            this.pnlEstadoResultados.Controls.Add(this.tbxEndeudamientoDirectoDeudor);
+            this.pnlEstadoResultados.Controls.Add(this.label64);
+            this.pnlEstadoResultados.Controls.Add(this.panel80);
+            this.pnlEstadoResultados.Controls.Add(this.tbxCapacidadDePagoConCuota);
+            this.pnlEstadoResultados.Controls.Add(this.panel16);
+            this.pnlEstadoResultados.Controls.Add(this.label63);
+            this.pnlEstadoResultados.Controls.Add(this.panel79);
+            this.pnlEstadoResultados.Controls.Add(this.tbxMargenDeConfianza);
+            this.pnlEstadoResultados.Controls.Add(this.label62);
+            this.pnlEstadoResultados.Controls.Add(this.panel76);
+            this.pnlEstadoResultados.Controls.Add(this.tbxUtilidadDisponible);
+            this.pnlEstadoResultados.Controls.Add(this.label59);
+            this.pnlEstadoResultados.Controls.Add(this.panel77);
+            this.pnlEstadoResultados.Controls.Add(this.tbxCuotaCreditoARefinanciarMicro);
+            this.pnlEstadoResultados.Controls.Add(this.panel39);
+            this.pnlEstadoResultados.Controls.Add(this.label60);
+            this.pnlEstadoResultados.Controls.Add(this.panel75);
+            this.pnlEstadoResultados.Controls.Add(this.tbxUtilidadOPerdidaNeta);
+            this.pnlEstadoResultados.Controls.Add(this.panel38);
+            this.pnlEstadoResultados.Controls.Add(this.label58);
+            this.pnlEstadoResultados.Controls.Add(this.panel72);
+            this.pnlEstadoResultados.Controls.Add(this.tbxGastosFamiliaresYOtros);
+            this.pnlEstadoResultados.Controls.Add(this.label54);
+            this.pnlEstadoResultados.Controls.Add(this.panel73);
+            this.pnlEstadoResultados.Controls.Add(this.label56);
+            this.pnlEstadoResultados.Controls.Add(this.panel74);
+            this.pnlEstadoResultados.Controls.Add(this.tbxUtilidadOPerdidaOperativa);
+            this.pnlEstadoResultados.Controls.Add(this.tbxIngresosFamiliaresYOtros);
+            this.pnlEstadoResultados.Controls.Add(this.panel12);
+            this.pnlEstadoResultados.Controls.Add(this.label57);
+            this.pnlEstadoResultados.Controls.Add(this.panel67);
+            this.pnlEstadoResultados.Controls.Add(this.tbxUtilidadBrutaMicro);
+            this.pnlEstadoResultados.Controls.Add(this.label50);
+            this.pnlEstadoResultados.Controls.Add(this.panel68);
+            this.pnlEstadoResultados.Controls.Add(this.panel11);
+            this.pnlEstadoResultados.Controls.Add(this.label52);
+            this.pnlEstadoResultados.Controls.Add(this.panel71);
+            this.pnlEstadoResultados.Controls.Add(this.tbxVentasMicro);
+            this.pnlEstadoResultados.Controls.Add(this.tbxCostosDeVentasMicro);
+            this.pnlEstadoResultados.Controls.Add(this.label53);
+            this.pnlEstadoResultados.Location = new System.Drawing.Point(0, 116);
+            this.pnlEstadoResultados.Name = "pnlEstadoResultados";
+            this.pnlEstadoResultados.Size = new System.Drawing.Size(736, 537);
+            this.pnlEstadoResultados.TabIndex = 2;
+            this.pnlEstadoResultados.Paint += new System.Windows.Forms.PaintEventHandler(this.panel66_Paint);
             // 
             // btnEstadoDeResultados
             // 
@@ -2823,14 +2823,14 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.panel33.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
+            this.pnlIngresos.ResumeLayout(false);
+            this.pnlIngresos.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.panel40.ResumeLayout(false);
             this.panel40.PerformLayout();
-            this.panel66.ResumeLayout(false);
-            this.panel66.PerformLayout();
+            this.pnlEstadoResultados.ResumeLayout(false);
+            this.pnlEstadoResultados.PerformLayout();
             this.panel46.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel70.ResumeLayout(false);
@@ -2935,7 +2935,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         private System.Windows.Forms.Panel panel33;
         public System.Windows.Forms.Label label28;
         public System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel37;
         public System.Windows.Forms.TextBox tbxTotalIngresos;
         public System.Windows.Forms.Label label25;
@@ -2979,7 +2978,6 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         public System.Windows.Forms.ComboBox cbxDestinoDelCredito;
         private System.Windows.Forms.Panel panel63;
         public System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Panel panel66;
         private System.Windows.Forms.Panel panel67;
         public System.Windows.Forms.TextBox tbxUtilidadBrutaMicro;
         public System.Windows.Forms.Label label50;
@@ -3065,5 +3063,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuElipse elipseBtn;
         private System.Windows.Forms.Panel panel100;
+        public System.Windows.Forms.Panel pnlIngresos;
+        public System.Windows.Forms.Panel pnlEstadoResultados;
     }
 }

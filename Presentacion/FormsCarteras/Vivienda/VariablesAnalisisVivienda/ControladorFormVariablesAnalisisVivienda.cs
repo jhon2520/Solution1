@@ -60,6 +60,16 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisVivienda.tbxNombres.Enter += new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisVivienda.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariablesAnalisisVivienda.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariablesAnalisisVivienda.tbxDeduccionesDeSeguridadSocial.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxOtrasDeduccionesColilla.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxCuotasACancelar.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxEstimacionTarjetasCredito.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxCupoRotativo.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
         }
         private void MensajesTooltip()
         {
@@ -159,7 +169,6 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.tbxOtrasDeduccionesColilla.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxNumero);
 
         }
-
         private void ValidacionSoloLetrasTextbox()
         {
             this.formVariablesAnalisisVivienda.tbxNombres.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
@@ -232,14 +241,18 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             Cache.NumeroDemoras = Convert.ToInt32(this.formVariablesAnalisisVivienda.cbxCantidadDeMoras.Text);
             Cache.DiasDeMora = Convert.ToInt32(this.formVariablesAnalisisVivienda.cbxDiasMora.Text);
             Cache.DeduccionesDeSeguridadSocial = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxDeduccionesDeSeguridadSocial.Text);
+            Cache.OtrasDeduccionesColilla = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxOtrasDeduccionesColilla.Text);
+            Cache.CuotaCentrales = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Text);
             Cache.DeduccionesColilla = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxDeduccionesColilla.Text);
             Cache.ValorCuotaLibranza = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxValorCuotaLibranza.Text);
             Cache.IngresoBasico = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxIngresos.Text);
+            Cache.OtrosIngresos = Convert.ToDouble(this.formVariablesAnalisisVivienda.tbxOtrosIngresos.Text);
+            Cache.ComportamientoDePagos = this.formVariablesAnalisisVivienda.tbxComportamientoDePagos.Text;
             Cache.TipoDePersona = "Persona natural";
             Cache.FormaDePago = "Caja";
+            Cache.AplicaLeyLibranza = "N/A";
 
         }
-
         private void RetornarTotalDeducciones(object sender, EventArgs args)
         {
             try
@@ -389,7 +402,6 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             if (this.formVariablesAnalisisVivienda.cbxCantidadDeMoras.Text != string.Empty && this.formVariablesAnalisisVivienda.cbxDiasMora.Text != string.Empty)
                 this.formVariablesAnalisisVivienda.tbxComportamientoDePagos.Text = CodigoComun.RetornarMorasTotales(this.formVariablesAnalisisVivienda.cbxCantidadDeMoras, this.formVariablesAnalisisVivienda.cbxDiasMora);
         }
-
         private void RetornarEdad(object sender, EventArgs args)
         {
             try
@@ -444,12 +456,25 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
                 formCodeudor.ShowDialog();
             }
         }
-
         private void CambiarScroll(object sender, EventArgs args)
         {
             if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 300);
             else if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 800);
             else if (((TextBox)sender).Name == this.formVariablesAnalisisVivienda.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisVivienda, 0);
+        }
+        private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariablesAnalisisVivienda.pnlIngresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void SeleccionarFinalDeTextoEgresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariablesAnalisisVivienda.pnlEgresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
         }
 
     }

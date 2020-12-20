@@ -126,6 +126,7 @@ namespace Presentacion.CodigoCompartido
             worksheet.Columns.AutoFit();
             worksheet.Range["A6:B6"].Merge();
 
+            //Información general
 
             if (Cache.TipoDeCredito != 4)
             {

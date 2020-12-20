@@ -49,6 +49,16 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVariables.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
             this.formVariables.tbxNombres.Enter += new EventHandler(CambiarScroll);
+            this.formVariables.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariables.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariables.tbxDeduccionesDeSeguridadSocial.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxOtrasDeduccionesColilla.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxCuotasACancelar.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxEstimacionTarjetasCredito.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxCupoRotativo.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             RetornarFormatoTextBox();
             ValidacionSoloLetrasTextbox();
         }
@@ -100,7 +110,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.ttMensajesFormConsumo.SetToolTip(this.formVariables.cbxLeyLibranza, "Selecciones si el cáculo del disponible será bajo la ley de libranza");
 
         }
-
         private void CargarForm(object sender, EventArgs args)
         {
             this.formVariables.tbxCedula.Text = Cache.Cedula;
@@ -111,7 +120,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxNombres.Focus();
 
         }
-
         private void RetornarFormatoTextBox()
         {
             this.formVariables.tbxIngresos.Leave += new EventHandler(FormatoNumeroTexBox);
@@ -127,7 +135,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxOtrasDeduccionesColilla.Leave += new EventHandler(FormatoNumeroTexBox);
 
         }
-
         private void ValidacionSoloNumerosTextBox()
         {
             this.formVariables.tbxIngresos.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxNumero);
@@ -143,7 +150,6 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxOtrasDeduccionesColilla.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxNumero);
 
         }
-
         private void ValidacionSoloLetrasTextbox()
         {
             this.formVariables.tbxNombres.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
@@ -569,6 +575,22 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             if (((TextBox)sender).Name == this.formVariables.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariables, 300);
             else if (((TextBox)sender).Name == this.formVariables.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariables, 700);
             else if (((TextBox)sender).Name == this.formVariables.tbxNombres.Name) CodigoComun.SetScroll(this.formVariables, 0);
+
+            
+        }
+        private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariables.pnlIngresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void SeleccionarFinalDeTextoEgresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariables.pnlEgresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
         }
 
     }

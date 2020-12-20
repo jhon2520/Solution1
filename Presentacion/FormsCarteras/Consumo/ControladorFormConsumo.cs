@@ -55,7 +55,10 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.btnExportar.Click += new EventHandler(BotonExportar);
             this.formConsumo.btnCalculadora.Click += new EventHandler(AbrirCalculadora);
             this.formConsumo.KeyDown += new KeyEventHandler(AbrirCalculadoraShortCut);
-           
+            this.formConsumo.tbxCedula.Click += new EventHandler(SeleccionarFinalDeTexto);
+            this.formConsumo.tbxMonto.Click += new EventHandler(SeleccionarFinalDeTexto);
+
+
             ValidacionSoloNumerosTextBox();
             MensajesToolTip();
             PanelExportarDiseno();
@@ -250,6 +253,13 @@ namespace Presentacion.FormsCarteras.Consumo
                 this.formConsumo.btnAnalisis.PerformClick();
             }
 
+        }
+        private void SeleccionarFinalDeTexto(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formConsumo.pnlPrincipal.Controls)
+            {
+                if(control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
         }
 
  

@@ -21,7 +21,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
         private FormCodeudor formCodeudor;
-        private int sumaPosicionX;
+   
 
 
         public ControladorformVariablesAnalisisComercial(FormVariablesAnalisisComercial formVariablesAnalisisComercial)
@@ -64,6 +64,18 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisComercial.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisComercial.tbxNombres.Enter +=      new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisComercial.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariablesAnalisisComercial.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVariablesAnalisisComercial.tbxDeduccionesDeSeguridadSocial.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxOtrasDeduccionesColilla.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxCuotasACancelar.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxEstimacionTarjetasCredito.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxCupoRotativo.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisComercial.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+
+
         }
         private void MensajesTooltip()
         {
@@ -172,7 +184,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.tbxOcupacion.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
             this.formVariablesAnalisisComercial.tbxActividadEconomica.KeyPress += new KeyPressEventHandler(CodigoComun.ValidarTextBoxLetras);
         }
-
         private void GeneracionDatosCache()
         {
 
@@ -255,7 +266,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
 
 
         }
-
         private void RetornarTotalIngresos(Object sender, EventArgs args)
         {
             try
@@ -466,6 +476,20 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
            if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 300);
            else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 700);
            else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 0);
+        }
+        private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariablesAnalisisComercial.pnlIngresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void SeleccionarFinalDeTextoEgresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVariablesAnalisisComercial.pnlEgresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
         }
     }
 }

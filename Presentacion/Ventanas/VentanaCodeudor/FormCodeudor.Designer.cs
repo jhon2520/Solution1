@@ -34,7 +34,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.pbx = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.pnlInformacionFinanciera = new System.Windows.Forms.Panel();
             this.pnlColor6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.cbxVivienda = new System.Windows.Forms.ComboBox();
@@ -70,7 +70,7 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.label6 = new System.Windows.Forms.Label();
             this.pnlColor1 = new System.Windows.Forms.Panel();
             this.tbxCuota = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlEgresos = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlColor13 = new System.Windows.Forms.Panel();
             this.tbxCuotasACancelar = new System.Windows.Forms.TextBox();
@@ -111,12 +111,12 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.ttFormCodeudor = new System.Windows.Forms.ToolTip(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx)).BeginInit();
-            this.panel34.SuspendLayout();
+            this.pnlInformacionFinanciera.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panelColor2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelColor1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlEgresos.SuspendLayout();
             this.panelColor3.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panelColor4.SuspendLayout();
@@ -161,27 +161,27 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
-            // panel34
+            // pnlInformacionFinanciera
             // 
-            this.panel34.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel34.Controls.Add(this.pnlColor6);
-            this.panel34.Controls.Add(this.label12);
-            this.panel34.Controls.Add(this.cbxVivienda);
-            this.panel34.Controls.Add(this.panel30);
-            this.panel34.Controls.Add(this.label2);
-            this.panel34.Controls.Add(this.pnlColor4);
-            this.panel34.Controls.Add(this.tbxOtrosIngresos);
-            this.panel34.Controls.Add(this.pnlColor5);
-            this.panel34.Controls.Add(this.tbxTotalIngresos);
-            this.panel34.Controls.Add(this.label25);
-            this.panel34.Controls.Add(this.panelColor2);
-            this.panel34.Controls.Add(this.label1);
-            this.panel34.Controls.Add(this.pnlColor3);
-            this.panel34.Controls.Add(this.tbxIngresos);
-            this.panel34.Location = new System.Drawing.Point(18, 150);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(701, 121);
-            this.panel34.TabIndex = 2;
+            this.pnlInformacionFinanciera.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlInformacionFinanciera.Controls.Add(this.pnlColor6);
+            this.pnlInformacionFinanciera.Controls.Add(this.label12);
+            this.pnlInformacionFinanciera.Controls.Add(this.cbxVivienda);
+            this.pnlInformacionFinanciera.Controls.Add(this.panel30);
+            this.pnlInformacionFinanciera.Controls.Add(this.label2);
+            this.pnlInformacionFinanciera.Controls.Add(this.pnlColor4);
+            this.pnlInformacionFinanciera.Controls.Add(this.tbxOtrosIngresos);
+            this.pnlInformacionFinanciera.Controls.Add(this.pnlColor5);
+            this.pnlInformacionFinanciera.Controls.Add(this.tbxTotalIngresos);
+            this.pnlInformacionFinanciera.Controls.Add(this.label25);
+            this.pnlInformacionFinanciera.Controls.Add(this.panelColor2);
+            this.pnlInformacionFinanciera.Controls.Add(this.label1);
+            this.pnlInformacionFinanciera.Controls.Add(this.pnlColor3);
+            this.pnlInformacionFinanciera.Controls.Add(this.tbxIngresos);
+            this.pnlInformacionFinanciera.Location = new System.Drawing.Point(18, 150);
+            this.pnlInformacionFinanciera.Name = "pnlInformacionFinanciera";
+            this.pnlInformacionFinanciera.Size = new System.Drawing.Size(701, 121);
+            this.pnlInformacionFinanciera.TabIndex = 2;
             // 
             // pnlColor6
             // 
@@ -586,32 +586,32 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.tbxCuota.TabIndex = 0;
             this.tbxCuota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel3
+            // pnlEgresos
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.pnlColor13);
-            this.panel3.Controls.Add(this.tbxCuotasACancelar);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.pnlColor12);
-            this.panel3.Controls.Add(this.tbxValorCuotaLibranza);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pnlColor10);
-            this.panel3.Controls.Add(this.tbxCuotasCentralesDeRiesgo);
-            this.panel3.Controls.Add(this.panelColor3);
-            this.panel3.Controls.Add(this.label48);
-            this.panel3.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.label49);
-            this.panel3.Controls.Add(this.pnlColor7);
-            this.panel3.Controls.Add(this.pnlColor8);
-            this.panel3.Controls.Add(this.pnlColor9);
-            this.panel3.Controls.Add(this.tbxOtrasDeduccionesColilla);
-            this.panel3.Controls.Add(this.tbxDeduccionesColilla);
-            this.panel3.Location = new System.Drawing.Point(18, 280);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(352, 274);
-            this.panel3.TabIndex = 3;
+            this.pnlEgresos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlEgresos.Controls.Add(this.label11);
+            this.pnlEgresos.Controls.Add(this.pnlColor13);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasACancelar);
+            this.pnlEgresos.Controls.Add(this.label4);
+            this.pnlEgresos.Controls.Add(this.pnlColor12);
+            this.pnlEgresos.Controls.Add(this.tbxValorCuotaLibranza);
+            this.pnlEgresos.Controls.Add(this.label3);
+            this.pnlEgresos.Controls.Add(this.pnlColor10);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasCentralesDeRiesgo);
+            this.pnlEgresos.Controls.Add(this.panelColor3);
+            this.pnlEgresos.Controls.Add(this.label48);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
+            this.pnlEgresos.Controls.Add(this.label26);
+            this.pnlEgresos.Controls.Add(this.label49);
+            this.pnlEgresos.Controls.Add(this.pnlColor7);
+            this.pnlEgresos.Controls.Add(this.pnlColor8);
+            this.pnlEgresos.Controls.Add(this.pnlColor9);
+            this.pnlEgresos.Controls.Add(this.tbxOtrasDeduccionesColilla);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesColilla);
+            this.pnlEgresos.Location = new System.Drawing.Point(18, 280);
+            this.pnlEgresos.Name = "pnlEgresos";
+            this.pnlEgresos.Size = new System.Drawing.Size(352, 274);
+            this.pnlEgresos.TabIndex = 3;
             // 
             // label11
             // 
@@ -1018,9 +1018,9 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.ClientSize = new System.Drawing.Size(736, 617);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlEgresos);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel34);
+            this.Controls.Add(this.pnlInformacionFinanciera);
             this.Controls.Add(this.pnlSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1029,8 +1029,8 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.Text = "FormCodeudor";
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbx)).EndInit();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
+            this.pnlInformacionFinanciera.ResumeLayout(false);
+            this.pnlInformacionFinanciera.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panelColor2.ResumeLayout(false);
@@ -1039,8 +1039,8 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.panel2.PerformLayout();
             this.panelColor1.ResumeLayout(false);
             this.panelColor1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlEgresos.ResumeLayout(false);
+            this.pnlEgresos.PerformLayout();
             this.panelColor3.ResumeLayout(false);
             this.panelColor3.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -1123,13 +1123,13 @@ namespace Presentacion.Ventanas.VentanaCodeudor
         public System.Windows.Forms.Button btnAlmacenarInformacion;
         private Bunifu.Framework.UI.BunifuElipse elipsebtnCalcularIndicadores;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnAlmacenarInformacion;
-        public System.Windows.Forms.Panel panel34;
+        public System.Windows.Forms.Panel pnlInformacionFinanciera;
         public System.Windows.Forms.Panel pnlColor5;
         public System.Windows.Forms.Panel pnlColor3;
         public System.Windows.Forms.Panel pnlColor4;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel pnlColor1;
-        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel pnlEgresos;
         public System.Windows.Forms.Panel pnlColor16;
         public System.Windows.Forms.Panel pnlColor15;
         public System.Windows.Forms.ToolTip ttFormCodeudor;

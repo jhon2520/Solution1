@@ -60,7 +60,7 @@
             this.tbxNombres = new System.Windows.Forms.TextBox();
             this.panel57 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.pnlInfoGeneral = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.cbxDestinoDelCredito = new System.Windows.Forms.ComboBox();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -111,7 +111,7 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
+            this.pnlEgresos = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
             this.tbxOtrasDeduccionesColilla = new System.Windows.Forms.TextBox();
@@ -141,7 +141,7 @@
             this.tbxDeduccionesColilla = new System.Windows.Forms.TextBox();
             this.panel39 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.pnlIngresos = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.tbxTotalIngresos = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -197,7 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.contadorPlazo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).BeginInit();
             this.panel57.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.pnlInfoGeneral.SuspendLayout();
             this.panel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorAntLaboral)).BeginInit();
             this.panel23.SuspendLayout();
@@ -207,9 +207,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.contadorEdad)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel33.SuspendLayout();
-            this.panel35.SuspendLayout();
+            this.pnlEgresos.SuspendLayout();
             this.panel39.SuspendLayout();
-            this.panel34.SuspendLayout();
+            this.pnlIngresos.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel40.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -598,28 +598,28 @@
             this.label40.TabIndex = 10;
             this.label40.Text = "Información del crédito";
             // 
-            // panel13
+            // pnlInfoGeneral
             // 
-            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Controls.Add(this.panel25);
-            this.panel13.Controls.Add(this.panel23);
-            this.panel13.Controls.Add(this.panel18);
-            this.panel13.Controls.Add(this.label14);
-            this.panel13.Controls.Add(this.tbxOcupacion);
-            this.panel13.Controls.Add(this.panel17);
-            this.panel13.Controls.Add(this.label13);
-            this.panel13.Controls.Add(this.tbxCargo);
-            this.panel13.Controls.Add(this.panel15);
-            this.panel13.Controls.Add(this.label12);
-            this.panel13.Controls.Add(this.tbxProfesion);
-            this.panel13.Controls.Add(this.dtpEdad);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.label10);
-            this.panel13.Controls.Add(this.panel21);
-            this.panel13.Location = new System.Drawing.Point(12, 172);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(738, 259);
-            this.panel13.TabIndex = 1;
+            this.pnlInfoGeneral.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlInfoGeneral.Controls.Add(this.panel25);
+            this.pnlInfoGeneral.Controls.Add(this.panel23);
+            this.pnlInfoGeneral.Controls.Add(this.panel18);
+            this.pnlInfoGeneral.Controls.Add(this.label14);
+            this.pnlInfoGeneral.Controls.Add(this.tbxOcupacion);
+            this.pnlInfoGeneral.Controls.Add(this.panel17);
+            this.pnlInfoGeneral.Controls.Add(this.label13);
+            this.pnlInfoGeneral.Controls.Add(this.tbxCargo);
+            this.pnlInfoGeneral.Controls.Add(this.panel15);
+            this.pnlInfoGeneral.Controls.Add(this.label12);
+            this.pnlInfoGeneral.Controls.Add(this.tbxProfesion);
+            this.pnlInfoGeneral.Controls.Add(this.dtpEdad);
+            this.pnlInfoGeneral.Controls.Add(this.panel14);
+            this.pnlInfoGeneral.Controls.Add(this.label10);
+            this.pnlInfoGeneral.Controls.Add(this.panel21);
+            this.pnlInfoGeneral.Location = new System.Drawing.Point(12, 172);
+            this.pnlInfoGeneral.Name = "pnlInfoGeneral";
+            this.pnlInfoGeneral.Size = new System.Drawing.Size(738, 259);
+            this.pnlInfoGeneral.TabIndex = 1;
             // 
             // panel25
             // 
@@ -1220,48 +1220,48 @@
             // panel33
             // 
             this.panel33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel33.Controls.Add(this.panel35);
-            this.panel33.Controls.Add(this.panel34);
+            this.panel33.Controls.Add(this.pnlEgresos);
+            this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
             this.panel33.Location = new System.Drawing.Point(12, 439);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(738, 346);
             this.panel33.TabIndex = 3;
             // 
-            // panel35
+            // pnlEgresos
             // 
-            this.panel35.Controls.Add(this.label49);
-            this.panel35.Controls.Add(this.panel51);
-            this.panel35.Controls.Add(this.tbxOtrasDeduccionesColilla);
-            this.panel35.Controls.Add(this.label48);
-            this.panel35.Controls.Add(this.panel16);
-            this.panel35.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
-            this.panel35.Controls.Add(this.label33);
-            this.panel35.Controls.Add(this.panel47);
-            this.panel35.Controls.Add(this.tbxCupoRotativo);
-            this.panel35.Controls.Add(this.label32);
-            this.panel35.Controls.Add(this.panel46);
-            this.panel35.Controls.Add(this.tbxEstimacionTarjetasCredito);
-            this.panel35.Controls.Add(this.label31);
-            this.panel35.Controls.Add(this.panel45);
-            this.panel35.Controls.Add(this.tbxCuotasACancelar);
-            this.panel35.Controls.Add(this.label30);
-            this.panel35.Controls.Add(this.panel44);
-            this.panel35.Controls.Add(this.tbxCuotasCreditoCacelarNomina);
-            this.panel35.Controls.Add(this.label28);
-            this.panel35.Controls.Add(this.panel42);
-            this.panel35.Controls.Add(this.tbxCuotaCentrales);
-            this.panel35.Controls.Add(this.label27);
-            this.panel35.Controls.Add(this.panel41);
-            this.panel35.Controls.Add(this.tbxValorCuotaLibranza);
-            this.panel35.Controls.Add(this.label26);
-            this.panel35.Controls.Add(this.panel38);
-            this.panel35.Controls.Add(this.tbxDeduccionesColilla);
-            this.panel35.Controls.Add(this.panel39);
-            this.panel35.Location = new System.Drawing.Point(1, 109);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(737, 235);
-            this.panel35.TabIndex = 2;
+            this.pnlEgresos.Controls.Add(this.label49);
+            this.pnlEgresos.Controls.Add(this.panel51);
+            this.pnlEgresos.Controls.Add(this.tbxOtrasDeduccionesColilla);
+            this.pnlEgresos.Controls.Add(this.label48);
+            this.pnlEgresos.Controls.Add(this.panel16);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
+            this.pnlEgresos.Controls.Add(this.label33);
+            this.pnlEgresos.Controls.Add(this.panel47);
+            this.pnlEgresos.Controls.Add(this.tbxCupoRotativo);
+            this.pnlEgresos.Controls.Add(this.label32);
+            this.pnlEgresos.Controls.Add(this.panel46);
+            this.pnlEgresos.Controls.Add(this.tbxEstimacionTarjetasCredito);
+            this.pnlEgresos.Controls.Add(this.label31);
+            this.pnlEgresos.Controls.Add(this.panel45);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasACancelar);
+            this.pnlEgresos.Controls.Add(this.label30);
+            this.pnlEgresos.Controls.Add(this.panel44);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasCreditoCacelarNomina);
+            this.pnlEgresos.Controls.Add(this.label28);
+            this.pnlEgresos.Controls.Add(this.panel42);
+            this.pnlEgresos.Controls.Add(this.tbxCuotaCentrales);
+            this.pnlEgresos.Controls.Add(this.label27);
+            this.pnlEgresos.Controls.Add(this.panel41);
+            this.pnlEgresos.Controls.Add(this.tbxValorCuotaLibranza);
+            this.pnlEgresos.Controls.Add(this.label26);
+            this.pnlEgresos.Controls.Add(this.panel38);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesColilla);
+            this.pnlEgresos.Controls.Add(this.panel39);
+            this.pnlEgresos.Location = new System.Drawing.Point(1, 109);
+            this.pnlEgresos.Name = "pnlEgresos";
+            this.pnlEgresos.Size = new System.Drawing.Size(737, 235);
+            this.pnlEgresos.TabIndex = 2;
             // 
             // label49
             // 
@@ -1575,22 +1575,22 @@
             this.label24.TabIndex = 0;
             this.label24.Text = "Egresos";
             // 
-            // panel34
+            // pnlIngresos
             // 
-            this.panel34.Controls.Add(this.panel37);
-            this.panel34.Controls.Add(this.tbxTotalIngresos);
-            this.panel34.Controls.Add(this.label25);
-            this.panel34.Controls.Add(this.panel36);
-            this.panel34.Controls.Add(this.panel43);
-            this.panel34.Controls.Add(this.label1);
-            this.panel34.Controls.Add(this.panel5);
-            this.panel34.Controls.Add(this.tbxIngresos);
-            this.panel34.Controls.Add(this.tbxOtrosIngresos);
-            this.panel34.Controls.Add(this.label2);
-            this.panel34.Location = new System.Drawing.Point(0, 30);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(740, 77);
-            this.panel34.TabIndex = 0;
+            this.pnlIngresos.Controls.Add(this.panel37);
+            this.pnlIngresos.Controls.Add(this.tbxTotalIngresos);
+            this.pnlIngresos.Controls.Add(this.label25);
+            this.pnlIngresos.Controls.Add(this.panel36);
+            this.pnlIngresos.Controls.Add(this.panel43);
+            this.pnlIngresos.Controls.Add(this.label1);
+            this.pnlIngresos.Controls.Add(this.panel5);
+            this.pnlIngresos.Controls.Add(this.tbxIngresos);
+            this.pnlIngresos.Controls.Add(this.tbxOtrosIngresos);
+            this.pnlIngresos.Controls.Add(this.label2);
+            this.pnlIngresos.Location = new System.Drawing.Point(0, 30);
+            this.pnlIngresos.Name = "pnlIngresos";
+            this.pnlIngresos.Size = new System.Drawing.Size(740, 77);
+            this.pnlIngresos.TabIndex = 0;
             // 
             // panel37
             // 
@@ -2219,7 +2219,7 @@
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel49);
             this.Controls.Add(this.panel33);
-            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.pnlInfoGeneral);
             this.Controls.Add(this.panel52);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2232,8 +2232,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.contadorTasa)).EndInit();
             this.panel57.ResumeLayout(false);
             this.panel57.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.pnlInfoGeneral.ResumeLayout(false);
+            this.pnlInfoGeneral.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorAntLaboral)).EndInit();
@@ -2247,12 +2247,12 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.panel33.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
+            this.pnlEgresos.ResumeLayout(false);
+            this.pnlEgresos.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
+            this.pnlIngresos.ResumeLayout(false);
+            this.pnlIngresos.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.panel40.ResumeLayout(false);
@@ -2301,7 +2301,6 @@
         public System.Windows.Forms.TextBox tbxNombres;
         private System.Windows.Forms.Panel panel57;
         public System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
@@ -2351,7 +2350,6 @@
         private System.Windows.Forms.Panel panel21;
         public System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel37;
         public System.Windows.Forms.TextBox tbxTotalIngresos;
         public System.Windows.Forms.Label label25;
@@ -2365,7 +2363,7 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel40;
         public System.Windows.Forms.Label label29;
-        public System.Windows.Forms.Panel panel35;
+        public System.Windows.Forms.Panel pnlEgresos;
         public System.Windows.Forms.Label label49;
         public System.Windows.Forms.Panel panel51;
         public System.Windows.Forms.TextBox tbxOtrasDeduccionesColilla;
@@ -2437,5 +2435,7 @@
         public Bunifu.Framework.UI.BunifuElipse elipseBtnAnalizar;
         public System.Windows.Forms.Button btnCodeudor;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public System.Windows.Forms.Panel pnlInfoGeneral;
+        public System.Windows.Forms.Panel pnlIngresos;
     }
 }

@@ -230,10 +230,13 @@ namespace Presentacion.CodigoCompartido
             formVentanaEmergente.MostrarAlerta(mensaje, tipo);
 
         }
-
         public static void SetScroll(Form form, int puntoY)
         {
             form.AutoScrollPosition = new Point(0, puntoY);
+        }
+        public static void TextoFinalTextbox(TextBox textBox)
+        {
+            textBox.Select(textBox.Text.Length, 0);
         }
     }
 }

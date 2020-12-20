@@ -42,6 +42,14 @@ namespace Presentacion.Ventanas.VentanaCodeudor
             this.formCodeudor.tbxOtrasDeduccionesColilla.TextChanged += new EventHandler(RetornarTotalDeducciones);
             this.formCodeudor.btnCalcularIndicadores.Click += new EventHandler(RetornarIndicadoresSegunCartera);
             this.formCodeudor.btnAlmacenarInformacion.Click += new EventHandler(BtnAlmacenarInformacion);
+            this.formCodeudor.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formCodeudor.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formCodeudor.tbxDeduccionesDeSeguridadSocial.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formCodeudor.tbxOtrasDeduccionesColilla.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formCodeudor.tbxCuotasACancelar.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formCodeudor.tbxCuotasCentralesDeRiesgo.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formCodeudor.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formCodeudor.tbxCuotasACancelar.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             CargarColoresForm();
             MensajesToolTip();
             RetornarFormatoTextBox();
@@ -350,6 +358,21 @@ namespace Presentacion.Ventanas.VentanaCodeudor
                 formError.ShowDialog();
             }
         }
+        private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formCodeudor.pnlInformacionFinanciera.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void SeleccionarFinalDeTextoEgresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formCodeudor.pnlEgresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+
 
     }
 

@@ -63,7 +63,17 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Enter += new EventHandler(CambiarScroll);
             this.formVarialblesAnalisisMicro.tbxNombres.Enter += new EventHandler(CambiarScroll);
-           
+            this.formVarialblesAnalisisMicro.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVarialblesAnalisisMicro.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
+            this.formVarialblesAnalisisMicro.tbxVentasMicro.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxGastosDelNegocio.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxGastosFamiliaresYOtros.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxCuotasCentralesDeRiesgo.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxCostosDeVentasMicro.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxIngresosFamiliaresYOtros.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxCuotaCreditoARefinanciarMicro.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
 
         }
         private void MensajesTooltip()
@@ -445,6 +455,20 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxIngresos.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 300);
             else if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 950);
             else if (((TextBox)sender).Name == this.formVarialblesAnalisisMicro.tbxNombres.Name) CodigoComun.SetScroll(this.formVarialblesAnalisisMicro, 0);
+        }
+        private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVarialblesAnalisisMicro.pnlIngresos.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void SeleccionarFinalDeTextoEgresos(object sender, EventArgs args)
+        {
+            foreach (Control control in this.formVarialblesAnalisisMicro.pnlEstadoResultados.Controls)
+            {
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
         }
     }
 }

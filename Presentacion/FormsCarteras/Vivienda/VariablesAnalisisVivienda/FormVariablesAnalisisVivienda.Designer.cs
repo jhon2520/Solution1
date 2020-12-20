@@ -147,7 +147,7 @@
             this.contadorScore = new System.Windows.Forms.NumericUpDown();
             this.cbxCalificacion = new System.Windows.Forms.ComboBox();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
+            this.pnlEgresos = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
             this.tbxOtrasDeduccionesColilla = new System.Windows.Forms.TextBox();
@@ -177,7 +177,7 @@
             this.tbxDeduccionesColilla = new System.Windows.Forms.TextBox();
             this.panel39 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
+            this.pnlIngresos = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.tbxTotalIngresos = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -216,9 +216,9 @@
             this.panel56.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorScore)).BeginInit();
             this.panel33.SuspendLayout();
-            this.panel35.SuspendLayout();
+            this.pnlEgresos.SuspendLayout();
             this.panel39.SuspendLayout();
-            this.panel34.SuspendLayout();
+            this.pnlIngresos.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel40.SuspendLayout();
             this.SuspendLayout();
@@ -1674,8 +1674,8 @@
             // panel33
             // 
             this.panel33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel33.Controls.Add(this.panel35);
-            this.panel33.Controls.Add(this.panel34);
+            this.panel33.Controls.Add(this.pnlEgresos);
+            this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
             this.panel33.Location = new System.Drawing.Point(13, 431);
             this.panel33.Name = "panel33";
@@ -1683,41 +1683,41 @@
             this.panel33.TabIndex = 2;
             this.panel33.Paint += new System.Windows.Forms.PaintEventHandler(this.panel33_Paint);
             // 
-            // panel35
+            // pnlEgresos
             // 
-            this.panel35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel35.Controls.Add(this.label49);
-            this.panel35.Controls.Add(this.panel51);
-            this.panel35.Controls.Add(this.tbxOtrasDeduccionesColilla);
-            this.panel35.Controls.Add(this.label48);
-            this.panel35.Controls.Add(this.panel16);
-            this.panel35.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
-            this.panel35.Controls.Add(this.label33);
-            this.panel35.Controls.Add(this.panel47);
-            this.panel35.Controls.Add(this.tbxCupoRotativo);
-            this.panel35.Controls.Add(this.label32);
-            this.panel35.Controls.Add(this.panel46);
-            this.panel35.Controls.Add(this.tbxEstimacionTarjetasCredito);
-            this.panel35.Controls.Add(this.label31);
-            this.panel35.Controls.Add(this.panel45);
-            this.panel35.Controls.Add(this.tbxCuotasACancelar);
-            this.panel35.Controls.Add(this.label30);
-            this.panel35.Controls.Add(this.panel44);
-            this.panel35.Controls.Add(this.tbxCuotasCreditoCacelarNomina);
-            this.panel35.Controls.Add(this.label28);
-            this.panel35.Controls.Add(this.panel42);
-            this.panel35.Controls.Add(this.tbxCuotaCentrales);
-            this.panel35.Controls.Add(this.label27);
-            this.panel35.Controls.Add(this.panel41);
-            this.panel35.Controls.Add(this.tbxValorCuotaLibranza);
-            this.panel35.Controls.Add(this.label26);
-            this.panel35.Controls.Add(this.panel38);
-            this.panel35.Controls.Add(this.tbxDeduccionesColilla);
-            this.panel35.Controls.Add(this.panel39);
-            this.panel35.Location = new System.Drawing.Point(1, 109);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(736, 235);
-            this.panel35.TabIndex = 1;
+            this.pnlEgresos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlEgresos.Controls.Add(this.label49);
+            this.pnlEgresos.Controls.Add(this.panel51);
+            this.pnlEgresos.Controls.Add(this.tbxOtrasDeduccionesColilla);
+            this.pnlEgresos.Controls.Add(this.label48);
+            this.pnlEgresos.Controls.Add(this.panel16);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesDeSeguridadSocial);
+            this.pnlEgresos.Controls.Add(this.label33);
+            this.pnlEgresos.Controls.Add(this.panel47);
+            this.pnlEgresos.Controls.Add(this.tbxCupoRotativo);
+            this.pnlEgresos.Controls.Add(this.label32);
+            this.pnlEgresos.Controls.Add(this.panel46);
+            this.pnlEgresos.Controls.Add(this.tbxEstimacionTarjetasCredito);
+            this.pnlEgresos.Controls.Add(this.label31);
+            this.pnlEgresos.Controls.Add(this.panel45);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasACancelar);
+            this.pnlEgresos.Controls.Add(this.label30);
+            this.pnlEgresos.Controls.Add(this.panel44);
+            this.pnlEgresos.Controls.Add(this.tbxCuotasCreditoCacelarNomina);
+            this.pnlEgresos.Controls.Add(this.label28);
+            this.pnlEgresos.Controls.Add(this.panel42);
+            this.pnlEgresos.Controls.Add(this.tbxCuotaCentrales);
+            this.pnlEgresos.Controls.Add(this.label27);
+            this.pnlEgresos.Controls.Add(this.panel41);
+            this.pnlEgresos.Controls.Add(this.tbxValorCuotaLibranza);
+            this.pnlEgresos.Controls.Add(this.label26);
+            this.pnlEgresos.Controls.Add(this.panel38);
+            this.pnlEgresos.Controls.Add(this.tbxDeduccionesColilla);
+            this.pnlEgresos.Controls.Add(this.panel39);
+            this.pnlEgresos.Location = new System.Drawing.Point(1, 109);
+            this.pnlEgresos.Name = "pnlEgresos";
+            this.pnlEgresos.Size = new System.Drawing.Size(736, 235);
+            this.pnlEgresos.TabIndex = 1;
             // 
             // label49
             // 
@@ -2031,22 +2031,22 @@
             this.label24.TabIndex = 12;
             this.label24.Text = "Egresos";
             // 
-            // panel34
+            // pnlIngresos
             // 
-            this.panel34.Controls.Add(this.panel37);
-            this.panel34.Controls.Add(this.tbxTotalIngresos);
-            this.panel34.Controls.Add(this.label25);
-            this.panel34.Controls.Add(this.panel36);
-            this.panel34.Controls.Add(this.panel43);
-            this.panel34.Controls.Add(this.label1);
-            this.panel34.Controls.Add(this.panel5);
-            this.panel34.Controls.Add(this.tbxIngresos);
-            this.panel34.Controls.Add(this.tbxOtrosIngresos);
-            this.panel34.Controls.Add(this.label2);
-            this.panel34.Location = new System.Drawing.Point(0, 30);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(737, 77);
-            this.panel34.TabIndex = 0;
+            this.pnlIngresos.Controls.Add(this.panel37);
+            this.pnlIngresos.Controls.Add(this.tbxTotalIngresos);
+            this.pnlIngresos.Controls.Add(this.label25);
+            this.pnlIngresos.Controls.Add(this.panel36);
+            this.pnlIngresos.Controls.Add(this.panel43);
+            this.pnlIngresos.Controls.Add(this.label1);
+            this.pnlIngresos.Controls.Add(this.panel5);
+            this.pnlIngresos.Controls.Add(this.tbxIngresos);
+            this.pnlIngresos.Controls.Add(this.tbxOtrosIngresos);
+            this.pnlIngresos.Controls.Add(this.label2);
+            this.pnlIngresos.Location = new System.Drawing.Point(0, 30);
+            this.pnlIngresos.Name = "pnlIngresos";
+            this.pnlIngresos.Size = new System.Drawing.Size(737, 77);
+            this.pnlIngresos.TabIndex = 0;
             // 
             // panel37
             // 
@@ -2296,12 +2296,12 @@
             this.panel56.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contadorScore)).EndInit();
             this.panel33.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
+            this.pnlEgresos.ResumeLayout(false);
+            this.pnlEgresos.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
+            this.pnlIngresos.ResumeLayout(false);
+            this.pnlIngresos.PerformLayout();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
             this.panel40.ResumeLayout(false);
@@ -2418,7 +2418,7 @@
         public System.Windows.Forms.NumericUpDown contadorScore;
         public System.Windows.Forms.ComboBox cbxCalificacion;
         private System.Windows.Forms.Panel panel33;
-        public System.Windows.Forms.Panel panel35;
+        public System.Windows.Forms.Panel pnlEgresos;
         public System.Windows.Forms.Label label49;
         public System.Windows.Forms.Panel panel51;
         public System.Windows.Forms.TextBox tbxOtrasDeduccionesColilla;
@@ -2448,7 +2448,6 @@
         public System.Windows.Forms.TextBox tbxDeduccionesColilla;
         private System.Windows.Forms.Panel panel39;
         public System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel37;
         public System.Windows.Forms.TextBox tbxTotalIngresos;
         public System.Windows.Forms.Label label25;
@@ -2478,5 +2477,6 @@
         public Bunifu.Framework.UI.BunifuElipse elipseBtnAnalizar;
         public System.Windows.Forms.Button btnCodeudor;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnCodeudor;
+        public System.Windows.Forms.Panel pnlIngresos;
     }
 }
