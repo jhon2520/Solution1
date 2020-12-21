@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -64,6 +64,24 @@
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\OneDrive\Escritorio\Jhon\Programación\BUNIFU\Version1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -139,18 +157,18 @@
     <Compile Include="Ventanas\Calculadora\FormCalculadora.Designer.cs">
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Documentacion\FormDocumento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\Documentacion\FormDocumento.Designer.cs">
-      <DependentUpon>FormDocumento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ventanas\Salario\ControladorFormSalario.cs" />
     <Compile Include="Ventanas\Salario\FormSalario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Salario\FormSalario.Designer.cs">
       <DependentUpon>FormSalario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\SARC\FormDocumentoSARC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\SARC\FormDocumentoSARC.Designer.cs">
+      <DependentUpon>FormDocumentoSARC.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\SplashScreen\ControladorFormSplash.cs" />
     <Compile Include="Ventanas\SplashScreen\FormSplash.cs">
@@ -247,14 +265,14 @@
     <EmbeddedResource Include="Ventanas\Calculadora\FormCalculadora.resx">
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Documentacion\FormDocumento.resx">
-      <DependentUpon>FormDocumento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Salario\FormSalario.aa-ET.resx">
       <DependentUpon>FormSalario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Salario\FormSalario.resx">
       <DependentUpon>FormSalario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\SARC\FormDocumentoSARC.resx">
+      <DependentUpon>FormDocumentoSARC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\SplashScreen\FormSplash.resx">
       <DependentUpon>FormSplash.cs</DependentUpon>
@@ -283,6 +301,7 @@
     <EmbeddedResource Include="Ventanas\VentanaPrincipal\FormVentanaPrincipal.resx">
       <DependentUpon>FormVentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Presentacion_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -489,6 +508,15 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>5</VersionMajor>
@@ -591,6 +619,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cosas por hacer.txt" />
+    <None Include="Resources\documento2.PNG" />
+    <None Include="Resources\documento1.PNG" />
     <None Include="Resources\codeudor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,7 +21,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         private FormAnalisisDeCredito formAnalisisDeCredito = new FormAnalisisDeCredito();
         private FormError formError;
         private FormCodeudor formCodeudor;
-   
+
 
 
         public ControladorformVariablesAnalisisComercial(FormVariablesAnalisisComercial formVariablesAnalisisComercial)
@@ -45,7 +45,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.tbxNombres.Focus();
 
         }
-
         private void EventoBotones()
         {
             this.formVariablesAnalisisComercial.tbxIngresos.TextChanged += new EventHandler(RetornarTotalIngresos);
@@ -63,7 +62,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.btnCodeudor.Click += new EventHandler(AbrirFormCodeudor);
             this.formVariablesAnalisisComercial.tbxIngresos.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisComercial.tbxCuotaCentrales.Enter += new EventHandler(CambiarScroll);
-            this.formVariablesAnalisisComercial.tbxNombres.Enter +=      new EventHandler(CambiarScroll);
+            this.formVariablesAnalisisComercial.tbxNombres.Enter += new EventHandler(CambiarScroll);
             this.formVariablesAnalisisComercial.tbxIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
             this.formVariablesAnalisisComercial.tbxOtrosIngresos.Click += new EventHandler(SeleccionarFinalDeTextoIngresos);
             this.formVariablesAnalisisComercial.tbxDeduccionesDeSeguridadSocial.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
@@ -74,8 +73,9 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             this.formVariablesAnalisisComercial.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariablesAnalisisComercial.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariablesAnalisisComercial.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
-
-
+            this.formVariablesAnalisisComercial.cbxGarantia.TextChanged += new EventHandler(AplicaCodeudor);
+            this.formVariablesAnalisisComercial.cbxGarantia.Leave += new EventHandler(AplicaCodeudor);
+            this.formVariablesAnalisisComercial.cbxGarantia.MouseWheel += new MouseEventHandler(AplicaCodeudor);
         }
         private void MensajesTooltip()
         {
@@ -285,7 +285,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
                 formError.ShowDialog();
             }
         }
-
         private void RetornarEndeudamientoGlobal(object sender, EventArgs args)
         {
             try
@@ -326,7 +325,6 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             Cache.EndeudamientoGlobal = endeudamientoGlobal;
 
         }
-
         private double RetornarDANEVivienda()
         {
             double ValorDANEVivienda = 0;
@@ -359,7 +357,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         }
         private void RetornarDisponible(object senderm, EventArgs args)
         {
-            
+
             double disponible;
             try
             {
@@ -400,7 +398,7 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         }
         private void RetornarEdad(object sender, EventArgs args)
         {
-            
+
             try
             {
                 this.formVariablesAnalisisComercial.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariablesAnalisisComercial.dtpEdad);
@@ -417,32 +415,43 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
-            if (this.formVariablesAnalisisComercial.tbxNombres.Text != string.Empty 
-                && this.formVariablesAnalisisComercial.cbxPeriodicidad.Text != string.Empty && this.formVariablesAnalisisComercial.cbxGarantia.Text != string.Empty
-                && this.formVariablesAnalisisComercial.cbxTipoDePersona.Text != string.Empty && this.formVariablesAnalisisComercial.tbxProfesion.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxCargo.Text != string.Empty && this.formVariablesAnalisisComercial.tbxOcupacion.Text != string.Empty
-                && this.formVariablesAnalisisComercial.cbxEstadoCivil.Text != string.Empty && this.formVariablesAnalisisComercial.contadorEdad.Value != 0
-                && this.formVariablesAnalisisComercial.cbxVivienda.Text != string.Empty
-                && this.formVariablesAnalisisComercial.contadorEstrato.Value != 0 && (this.formVariablesAnalisisComercial.rbtnCiudad.Checked == true ||
-                this.formVariablesAnalisisComercial.rbtnMunicipio.Checked == true) && this.formVariablesAnalisisComercial.cbxDestinoDelCredito.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxActividadEconomica.Text != string.Empty && this.formVariablesAnalisisComercial.cbxTipoDeContrato.Text != string.Empty
-                && this.formVariablesAnalisisComercial.contadorAntLaboral.Value != 0 && this.formVariablesAnalisisComercial.tbxIngresos.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxOtrosIngresos.Text != string.Empty && this.formVariablesAnalisisComercial.tbxDeduccionesColilla.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxCuotaCentrales.Text != string.Empty && this.formVariablesAnalisisComercial.tbxCuotasACancelar.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxEstimacionTarjetasCredito.Text != string.Empty && this.formVariablesAnalisisComercial.tbxValorCuotaLibranza.Text != string.Empty
-                && this.formVariablesAnalisisComercial.tbxCuotasCreditoCacelarNomina.Text != string.Empty && this.formVariablesAnalisisComercial.tbxEstimacionTarjetasCredito.Text != string.Empty
-                && this.formVariablesAnalisisComercial.contadorScore.Value != 0
-                && this.formVariablesAnalisisComercial.cbxCalificacion.Text != string.Empty && this.formVariablesAnalisisComercial.tbxEndeudamientoGlobal.Text != string.Empty)
+
+            if (this.formVariablesAnalisisComercial.btnCodeudor.Visible == true && Cache.DisponibleCodeudor == 0)
             {
-                GeneracionDatosCache();
-                formAnalisisDeCredito = new FormAnalisisDeCredito();
-                formAnalisisDeCredito.ShowDialog();
+                formError = new FormError("Debe ingresar la información del codeudor antes de analizar este crédito");
+                formError.ShowDialog();
             }
             else
             {
-                formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
-                formError.ShowDialog();
+                if (this.formVariablesAnalisisComercial.tbxNombres.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.cbxPeriodicidad.Text != string.Empty && this.formVariablesAnalisisComercial.cbxGarantia.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.cbxTipoDePersona.Text != string.Empty && this.formVariablesAnalisisComercial.tbxProfesion.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxCargo.Text != string.Empty && this.formVariablesAnalisisComercial.tbxOcupacion.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.cbxEstadoCivil.Text != string.Empty && this.formVariablesAnalisisComercial.contadorEdad.Value != 0
+                    && this.formVariablesAnalisisComercial.cbxVivienda.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.contadorEstrato.Value != 0 && (this.formVariablesAnalisisComercial.rbtnCiudad.Checked == true ||
+                    this.formVariablesAnalisisComercial.rbtnMunicipio.Checked == true) && this.formVariablesAnalisisComercial.cbxDestinoDelCredito.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxActividadEconomica.Text != string.Empty && this.formVariablesAnalisisComercial.cbxTipoDeContrato.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.contadorAntLaboral.Value != 0 && this.formVariablesAnalisisComercial.tbxIngresos.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxOtrosIngresos.Text != string.Empty && this.formVariablesAnalisisComercial.tbxDeduccionesColilla.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxCuotaCentrales.Text != string.Empty && this.formVariablesAnalisisComercial.tbxCuotasACancelar.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxEstimacionTarjetasCredito.Text != string.Empty && this.formVariablesAnalisisComercial.tbxValorCuotaLibranza.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.tbxCuotasCreditoCacelarNomina.Text != string.Empty && this.formVariablesAnalisisComercial.tbxEstimacionTarjetasCredito.Text != string.Empty
+                    && this.formVariablesAnalisisComercial.contadorScore.Value != 0
+                    && this.formVariablesAnalisisComercial.cbxCalificacion.Text != string.Empty && this.formVariablesAnalisisComercial.tbxEndeudamientoGlobal.Text != string.Empty)
+                {
+                    GeneracionDatosCache();
+                    formAnalisisDeCredito = new FormAnalisisDeCredito();
+                    formAnalisisDeCredito.ShowDialog();
+                }
+                else
+                {
+                    formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
+                    formError.ShowDialog();
+                }
             }
+
+
         }
         private void RetornarTotalDeducciones(object sender, EventArgs args)
         {
@@ -473,9 +482,9 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
         }
         private void CambiarScroll(object sender, EventArgs args)
         {
-           if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 300);
-           else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 700);
-           else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 0);
+            if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxIngresos.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 300);
+            else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 700);
+            else if (((TextBox)sender).Name == this.formVariablesAnalisisComercial.tbxNombres.Name) CodigoComun.SetScroll(this.formVariablesAnalisisComercial, 0);
         }
         private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
         {
@@ -489,6 +498,19 @@ namespace Presentacion.FormsCarteras.Comercial.VariablesAnalisisComercial
             foreach (Control control in this.formVariablesAnalisisComercial.pnlEgresos.Controls)
             {
                 if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void AplicaCodeudor(object sender, EventArgs args)
+        {
+            if (this.formVariablesAnalisisComercial.cbxGarantia.Text != "Codeudor")
+            {
+                this.formVariablesAnalisisComercial.btnCodeudor.Visible = false;
+                Cache.AplicaCodeudor = false;
+            }
+            else
+            {
+                this.formVariablesAnalisisComercial.btnCodeudor.Visible = true;
+                Cache.AplicaCodeudor = true;
             }
         }
     }

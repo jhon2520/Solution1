@@ -5,19 +5,19 @@
 
 
 
-6: validar excel para micro 
+
 7: HAcer el método que exporta a PDF
 8: Revisar que todo esté bien con el programa instalado
-14: Crear metodo que limpie caché y que se llame cada que se cambie de form
-15: Hacer método que limpia todo el caché
-17: Colocar que el codeudor sea opcional
-18: Colocar DTF a la calculadora de tasas
+20: Arreglar botones del form principal (salir,minimizar,cerrar)
+21: Sobreescribir el método de cerrar del Documento para que no se cierre si no que se esconda;
+
 
 
 LISTO
 
 1: colocar el estilo del cursor para todos los botones
 5: Arreglar el tab para todas las ventanas
+6: validar excel para micro 
 2: Cambiar lo de la validación de las políticas, la parte del score
 3: Hacer la parte del codeudor para todas las carteras
 4: Colocar mensajes en un tooltip para cada ventana
@@ -28,3 +28,5 @@ LISTO
 13: Arreglar el color del Form de vivienda
 16: terminar de validar la ventana de crédito comercial
 17: Revisar "Aplica libranza" para codeudor.
+18: Colocar DTF a la calculadora de tasas
+19: Colocar que el codeudor sea opcional

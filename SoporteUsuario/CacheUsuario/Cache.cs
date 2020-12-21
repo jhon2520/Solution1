@@ -105,6 +105,8 @@ namespace SoporteUsuario.CacheUsuario
         private static double margenDeConfianzaMicro;
         private static double capaciodadDePagoConCuotaMicro;
 
+        private static bool aplicaCodeudor;
+
 
         //Variables básicas para el crédito
         public static string Nombre { get => nombre; set => nombre = value; }
@@ -199,5 +201,15 @@ namespace SoporteUsuario.CacheUsuario
         public static double UtildiadDisponibleMicro { get => utildiadDisponibleMicro; set => utildiadDisponibleMicro = value; }
         public static double MargenDeConfianzaMicro { get => margenDeConfianzaMicro; set => margenDeConfianzaMicro = value; }
         public static double CapaciodadDePagoConCuotaMicro { get => capaciodadDePagoConCuotaMicro; set => capaciodadDePagoConCuotaMicro = value; }
+        public static bool AplicaCodeudor { get => aplicaCodeudor; set => aplicaCodeudor = value; }
+
+
+        public static void LimpiarCache()
+        {
+            Disponible = 0;
+            EndeudamientoGlobal = 0;
+            DisponibleCodeudor = 0;
+            EndeudamientoGlobalCodeudor = 0;
+        }
     }
 }

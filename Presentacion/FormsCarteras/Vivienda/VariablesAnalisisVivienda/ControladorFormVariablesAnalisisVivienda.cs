@@ -70,6 +70,9 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             this.formVariablesAnalisisVivienda.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariablesAnalisisVivienda.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariablesAnalisisVivienda.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariablesAnalisisVivienda.cbxGarantia.TextChanged += new EventHandler(AplicaCodeudor);
+            this.formVariablesAnalisisVivienda.cbxGarantia.Leave += new EventHandler(AplicaCodeudor);
+            this.formVariablesAnalisisVivienda.cbxGarantia.MouseWheel += new MouseEventHandler(AplicaCodeudor);
         }
         private void MensajesTooltip()
         {
@@ -421,7 +424,14 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
-            if (this.formVariablesAnalisisVivienda.tbxNombres.Text != string.Empty
+            if (this.formVariablesAnalisisVivienda.btnCodeudor.Visible == true && Cache.DisponibleCodeudor == 0)
+            {
+                formError = new FormError("Debe ingresar la información del codeudor antes de analizar este crédito");
+                formError.ShowDialog();
+            }
+            else
+            {
+                if (this.formVariablesAnalisisVivienda.tbxNombres.Text != string.Empty
                 && this.formVariablesAnalisisVivienda.cbxPeriodicidad.Text != string.Empty && this.formVariablesAnalisisVivienda.cbxGarantia.Text != string.Empty
                 && this.formVariablesAnalisisVivienda.cbxTipoDeCredito.Text != string.Empty && this.formVariablesAnalisisVivienda.tbxProfesion.Text != string.Empty
                 && this.formVariablesAnalisisVivienda.tbxCargo.Text != string.Empty && this.formVariablesAnalisisVivienda.tbxOcupacion.Text != string.Empty
@@ -437,16 +447,18 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
                 && this.formVariablesAnalisisVivienda.tbxCuotasCreditoCacelarNomina.Text != string.Empty && this.formVariablesAnalisisVivienda.tbxEstimacionTarjetasCredito.Text != string.Empty
                 && this.formVariablesAnalisisVivienda.contadorScore.Value != 0
                 && this.formVariablesAnalisisVivienda.cbxCalificacion.Text != string.Empty && this.formVariablesAnalisisVivienda.tbxEndeudamientoGlobal.Text != string.Empty)
-            {
-                GeneracionDatosCache();
-                formAnalisisDeCredito = new FormAnalisisDeCredito();
-                formAnalisisDeCredito.ShowDialog();
+                {
+                    GeneracionDatosCache();
+                    formAnalisisDeCredito = new FormAnalisisDeCredito();
+                    formAnalisisDeCredito.ShowDialog();
+                }
+                else
+                {
+                    formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
+                    formError.ShowDialog();
+                }
             }
-            else
-            {
-                formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
-                formError.ShowDialog();
-            }
+            
         }
         private void AbrirFormCodeudor(object sender, EventArgs args)
         {
@@ -474,6 +486,19 @@ namespace Presentacion.FormsCarteras.Vivienda.VariablesAnalisisVivienda
             foreach (Control control in this.formVariablesAnalisisVivienda.pnlEgresos.Controls)
             {
                 if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void AplicaCodeudor(object sender, EventArgs args)
+        {
+            if (this.formVariablesAnalisisVivienda.cbxGarantia.Text != "Codeudor")
+            {
+                this.formVariablesAnalisisVivienda.btnCodeudor.Visible = false;
+                Cache.AplicaCodeudor = false;
+            }
+            else
+            {
+                this.formVariablesAnalisisVivienda.btnCodeudor.Visible = true;
+                Cache.AplicaCodeudor = true;
             }
         }
 

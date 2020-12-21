@@ -141,42 +141,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
         private void GeneracionDatosCache()
         {
 
-            Cache.FormaDePago = string.Empty;
-
-            //Garantia
-            if (this.formVarialblesAnalisisMicro.cbxGarantia.Text == "Codeudor") Cache.Garantia = "Codeudor";
-            else if (this.formVarialblesAnalisisMicro.cbxGarantia.Text == "Hipoteca") Cache.Garantia = "Hipoteca";
-            else if (this.formVarialblesAnalisisMicro.cbxGarantia.Text == "Sin garantía") Cache.Garantia = "Sin garantía";
-
-            if (this.formVarialblesAnalisisMicro.cbxPeriodicidad.Text == "Quincenal") Cache.Periodicidad = "Quincenal";
-            else if (this.formVarialblesAnalisisMicro.cbxPeriodicidad.Text == "Mensual") Cache.Periodicidad = "Mensual";
-
-            if (this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text == "Soltero") Cache.EstadoCivil = "Soltero";
-            else if (this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text == "Casado") Cache.EstadoCivil = "Casado";
-            else if (this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text == "Union libre") Cache.EstadoCivil = "Union libre";
-            else if (this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text == "Viudo") Cache.EstadoCivil = "Viudo";
-
-            if (this.formVarialblesAnalisisMicro.cbxVivienda.Text == "Arrendada") Cache.Vivienda = "Arrendada";
-            else if (this.formVarialblesAnalisisMicro.cbxVivienda.Text == "Casado") Cache.Vivienda = "Propia";
-            else if (this.formVarialblesAnalisisMicro.cbxVivienda.Text == "Union libre") Cache.Vivienda = "Familiar";
-
             if (this.formVarialblesAnalisisMicro.rbtnCiudad.Checked == true) Cache.CiudadMunicipio = "Ciudad";
             else if (this.formVarialblesAnalisisMicro.rbtnMunicipio.Checked == true) Cache.CiudadMunicipio = "Municipio";
-
-            if (this.formVarialblesAnalisisMicro.cbxDestinoDelCredito.Text == "Capital de trabajo") Cache.DestinoDelCredito = "Capital de trabajo";
-            else if (this.formVarialblesAnalisisMicro.cbxDestinoDelCredito.Text == "Compra de activos") Cache.DestinoDelCredito = "Compra de activos";
-            else if (this.formVarialblesAnalisisMicro.cbxDestinoDelCredito.Text == "Unificacion de pasivos") Cache.DestinoDelCredito = "Unificacion de pasivos";
-            else Cache.DestinoDelCredito = "N/A";
-
-            if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "AAA") Cache.Calificacion = "AAA";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "AA") Cache.Calificacion = "AA";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "A") Cache.Calificacion = "A";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "BBB") Cache.Calificacion = "BBB";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "BB") Cache.Calificacion = "BB";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "B") Cache.Calificacion = "B";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "C") Cache.Calificacion = "C";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "D") Cache.Calificacion = "D";
-            else if (this.formVarialblesAnalisisMicro.cbxCalificacion.Text == "E") Cache.Calificacion = "E";
 
             Cache.TotalIngresos = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxTotalIngresos.Text);
             Cache.Score = (double)this.formVarialblesAnalisisMicro.contadorScore.Value;
@@ -196,6 +162,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             Cache.NumeroDemoras = Convert.ToInt32(this.formVarialblesAnalisisMicro.cbxCantidadDeMoras.Text);
             Cache.DiasDeMora = Convert.ToInt32(this.formVarialblesAnalisisMicro.cbxDiasMora.Text);
             Cache.IngresoBasico = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresos.Text);
+            Cache.OtrosIngresos = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxOtrosIngresos.Text);
             Cache.TipoDePersona = "Persona natural";
             Cache.TiempoUnidadProductiva = (int)this.formVarialblesAnalisisMicro.contadorTiempoUnidadProductiva.Value;
             Cache.IngresosCodeudor = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text);
@@ -212,7 +179,12 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             Cache.UtilidadOPerdiaNeta = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadOPerdidaNeta.Text);
             Cache.UtildiadDisponibleMicro = Convert.ToDouble(this.formVarialblesAnalisisMicro.tbxUtilidadDisponible.Text);
             Cache.FormaDePago = "Caja";
-            
+            Cache.DestinoDelCredito = this.formVarialblesAnalisisMicro.cbxDestinoDelCredito.Text;
+            Cache.Vivienda = this.formVarialblesAnalisisMicro.cbxVivienda.Text;
+            Cache.Garantia = this.formVarialblesAnalisisMicro.cbxGarantia.Text;
+            Cache.Periodicidad = this.formVarialblesAnalisisMicro.cbxPeriodicidad.Text;
+            Cache.EstadoCivil = this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text;
+            Cache.Calificacion = this.formVarialblesAnalisisMicro.cbxCalificacion.Text;
      
 
         }

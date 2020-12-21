@@ -52,7 +52,7 @@
             this.btnFacebook = new System.Windows.Forms.Button();
             this.btnInstagram = new System.Windows.Forms.Button();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
-            this.btnDocumentacion = new System.Windows.Forms.Button();
+            this.btnSARC = new System.Windows.Forms.Button();
             this.pnlFlecha = new System.Windows.Forms.Panel();
             this.btnMicro = new System.Windows.Forms.Button();
             this.btnVivienda = new System.Windows.Forms.Button();
@@ -377,7 +377,7 @@
             // pnlIzquierdo
             // 
             this.pnlIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.pnlIzquierdo.Controls.Add(this.btnDocumentacion);
+            this.pnlIzquierdo.Controls.Add(this.btnSARC);
             this.pnlIzquierdo.Controls.Add(this.pnlFlecha);
             this.pnlIzquierdo.Controls.Add(this.btnMicro);
             this.pnlIzquierdo.Controls.Add(this.btnVivienda);
@@ -391,23 +391,23 @@
             this.pnlIzquierdo.Size = new System.Drawing.Size(140, 497);
             this.pnlIzquierdo.TabIndex = 0;
             // 
-            // btnDocumentacion
+            // btnSARC
             // 
-            this.btnDocumentacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionForm.SetDecoration(this.btnDocumentacion, BunifuAnimatorNS.DecorationType.None);
-            this.btnDocumentacion.FlatAppearance.BorderSize = 0;
-            this.btnDocumentacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnDocumentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocumentacion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDocumentacion.ForeColor = System.Drawing.Color.White;
-            this.btnDocumentacion.Image = global::Presentacion.Properties.Resources.documento;
-            this.btnDocumentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocumentacion.Location = new System.Drawing.Point(0, 310);
-            this.btnDocumentacion.Name = "btnDocumentacion";
-            this.btnDocumentacion.Size = new System.Drawing.Size(140, 30);
-            this.btnDocumentacion.TabIndex = 5;
-            this.btnDocumentacion.Text = "Guía";
-            this.btnDocumentacion.UseVisualStyleBackColor = true;
+            this.btnSARC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionForm.SetDecoration(this.btnSARC, BunifuAnimatorNS.DecorationType.None);
+            this.btnSARC.FlatAppearance.BorderSize = 0;
+            this.btnSARC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnSARC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSARC.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSARC.ForeColor = System.Drawing.Color.White;
+            this.btnSARC.Image = global::Presentacion.Properties.Resources.documento;
+            this.btnSARC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSARC.Location = new System.Drawing.Point(0, 310);
+            this.btnSARC.Name = "btnSARC";
+            this.btnSARC.Size = new System.Drawing.Size(140, 30);
+            this.btnSARC.TabIndex = 5;
+            this.btnSARC.Text = "SARC";
+            this.btnSARC.UseVisualStyleBackColor = true;
             // 
             // pnlFlecha
             // 
@@ -628,7 +628,7 @@
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.LinkLabel linkLblSalario;
         public System.Windows.Forms.ToolTip ttFormPrincipal;
-        public System.Windows.Forms.Button btnDocumentacion;
+        public System.Windows.Forms.Button btnSARC;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public System.Windows.Forms.Panel pnlBotonesColores;
     }

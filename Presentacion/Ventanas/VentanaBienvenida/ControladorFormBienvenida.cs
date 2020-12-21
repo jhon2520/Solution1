@@ -19,7 +19,6 @@ namespace Presentacion.Ventanas.VentanaBienvenida
     public class ControladorFormBienvenida
     {
         private FormBienvenida formBienvenida;
-        private FormAviso formAviso;
         private FormError formError;
         private FormSplash formSplash;
         private FormConfirmacion formConfirmacion;

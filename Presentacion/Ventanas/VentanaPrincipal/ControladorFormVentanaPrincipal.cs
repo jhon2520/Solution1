@@ -12,7 +12,7 @@ using Presentacion.FormsCarteras.Micro;
 using Presentacion.FormsCarteras.Vivienda;
 using Presentacion.Properties;
 using Presentacion.Ventanas.AcercaDe;
-using Presentacion.Ventanas.Documentacion;
+using Presentacion.Ventanas.SARC;
 using Presentacion.Ventanas.Salario;
 using Presentacion.Ventanas.VentanaAviso;
 using Presentacion.Ventanas.VentanaConfirmacion;
@@ -29,11 +29,12 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         private FormAcercaDE formAcerca;
         private CodigoComun codigoComun = new CodigoComun();
         private FormError formError;
-        private FormDocumento formDocumento;
+        private FormDocumentoSARC formDocumento;
+
 
         public ControladorFormVentanaPrincipal(FormVentanaPrincipal formVentanaPrincipal)
         {
-            
+
             this.formVentanaPrincipal = formVentanaPrincipal;
             this.formVentanaPrincipal.Opacity = 0.0;
             this.formVentanaPrincipal.timerFecha.Tick += new EventHandler(TimerFechaHora);
@@ -56,17 +57,18 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.pnlSuperior.MouseDown += new MouseEventHandler(VolverTransparente);
             this.formVentanaPrincipal.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
             this.formVentanaPrincipal.KeyDown += new KeyEventHandler(AbrirFormSalarioShortCut);
-            this.formVentanaPrincipal.btnDocumentacion.Click += new EventHandler(AbrirDocumento);
+            this.formVentanaPrincipal.btnSARC.Click += new EventHandler(AbrirDocumentoSARC);
+
             MensajesTooltip();
-        
-           
+
+
         }
         private void TimerFechaHora(object sender, EventArgs args)
         {
             this.formVentanaPrincipal.lblHora.Text = DateTime.Now.ToString("h:mm:ss");
             this.formVentanaPrincipal.lblFecha.Text = DateTime.Today.ToString("d");
         }
-        
+
         private void EfectoLogin(object sender, EventArgs args)
         {
             CodigoComun.Timer(this.formVentanaPrincipal, this.formVentanaPrincipal.timerForm);
@@ -82,7 +84,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                     formError.ShowDialog();
                 }
             }
-      
+
         }
         private void CerrarForm(object sender, EventArgs args)
         {
@@ -101,45 +103,49 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             CodigoComun.BtnMinimizar(this.formVentanaPrincipal);
         }
-       public  void FlechaIndicadora(Button button, Panel panel)
+        public void FlechaIndicadora(Button button, Panel panel)
         {
             panel.Top = button.Top;
             panel.Height = button.Height;
         }
-        private async void Flecha(object sender, EventArgs args)
+        private  void Flecha(object sender, EventArgs args)
         {
             if (((Button)sender).Name == this.formVentanaPrincipal.btnComercial.Name)
             {
-                
+
                 BotonesCambioDeForm(248, 100, 26, this.formVentanaPrincipal.btnComercial, new FormConsumo());
 
                 //await RetornarCambioDeColores(248, 100, 26);
                 Cache.TipoDeCredito = 2;
                 Cache.ColorInicio = Color.FromArgb(248, 100, 26);
+                Cache.LimpiarCache();
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnConsumo.Name)
             {
-                
+
                 BotonesCambioDeForm(108, 55, 159, this.formVentanaPrincipal.btnConsumo, new FormConsumo());
                 //await RetornarCambioDeColores(108, 55, 159);
                 Cache.TipoDeCredito = 1;
                 Cache.ColorInicio = Color.FromArgb(108, 55, 159);
+                Cache.LimpiarCache();
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnVivienda.Name)
             {
-                
+
                 BotonesCambioDeForm(32, 178, 170, this.formVentanaPrincipal.btnVivienda, new FormConsumo());
                 //await RetornarCambioDeColores(32, 178, 170);
                 Cache.TipoDeCredito = 3;
                 Cache.ColorInicio = Color.FromArgb(32, 178, 170);
+                Cache.LimpiarCache();
             }
             else if (((Button)sender).Name == this.formVentanaPrincipal.btnMicro.Name)
             {
-                
+
                 BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormConsumo());
                 //await RetornarCambioDeColores(90, 148, 201);
                 Cache.TipoDeCredito = 4;
                 Cache.ColorInicio = Color.FromArgb(90, 148, 201);
+                Cache.LimpiarCache();
             }
         }
         private void CerrarFormActivo(object sender, EventArgs args)
@@ -162,9 +168,9 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                 }
             }
 
-      
+
         }
-            private void VisibilidadObjetos(bool Visible)
+        private void VisibilidadObjetos(bool Visible)
         {
             this.formVentanaPrincipal.pnlCentro.Visible = Visible;
             this.formVentanaPrincipal.ptbLogo.Visible = Visible;
@@ -183,14 +189,14 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.panel2.Visible = Visible;
 
         }
-        private void ColoresCambioDeSimulador(int R, int G,int B)
+        private void ColoresCambioDeSimulador(int R, int G, int B)
         {
             this.formVentanaPrincipal.pnlSuperior.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.pnlFlecha.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
         }
 
-        private  void CambiarColoresBotonesPrincipales(int R, int G, int B)
+        private void CambiarColoresBotonesPrincipales(int R, int G, int B)
         {
             this.formVentanaPrincipal.btnCerrarFormActivo.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.btnCerrar.BackColor = Color.FromArgb(R, G, B);
@@ -214,12 +220,12 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
         private void BotonesCambioDeForm(int R, int G, int B, Button buttonFormHijo, Form formHijo)
         {
-       
+
             using (FormConfirmacion formConfirmacion = new FormConfirmacion("¿Desea cambiar de simulador?"))
             {
                 this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
                 if (codigoComun.ActiveForm == null) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
-               
+
 
                 else if (codigoComun.ActiveForm != null)
                 {
@@ -229,7 +235,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                 }
             }
 
-          
+
         }
 
         private void AbrirWeb(object sender, EventArgs args)
@@ -266,16 +272,16 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             using (formAcerca = new FormAcercaDE())
             {
                 formAcerca.ShowDialog();
-            } 
+            }
         }
-       
+
         private void AbrirFormSalario(object sender, EventArgs args)
         {
             using (FormSalario formSalario = new FormSalario())
             {
                 formSalario.ShowDialog();
             }
-               
+
         }
 
         private void AbrirFormSalarioShortCut(object sender, KeyEventArgs e)
@@ -287,14 +293,14 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
                     formSalario.ShowDialog();
                 }
-            
+
             }
             if (e.Control && e.KeyCode == Keys.Q)
             {
                 this.formVentanaPrincipal.btnCerrarFormActivo.PerformClick();
             }
 
-            if(e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
                 this.formVentanaPrincipal.btnCerrar.PerformClick();
             }
@@ -310,7 +316,6 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             this.formVentanaPrincipal.Opacity = 1;
         }
-
         private void MensajesTooltip()
         {
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.btnConsumo, "Analizar un crédito bajo la modalidad de consumo.");
@@ -330,13 +335,12 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.linkLblSalario, "Modificar el salario mínimo registrado en el sistema. Ctrl + S");
             this.formVentanaPrincipal.ttFormPrincipal.SetToolTip(this.formVentanaPrincipal.lblLinkAcercaDe, "Acerca del sistema.");
         }
-
-        private void AbrirDocumento(object sender, EventArgs args)
+        private void AbrirDocumentoSARC(object sender, EventArgs args)
         {
-            using(formDocumento = new FormDocumento())
-            {
-                formDocumento.ShowDialog();
-            }
+            formDocumento = new FormDocumentoSARC();
+            formDocumento.Show();
         }
+
+
     }
 }

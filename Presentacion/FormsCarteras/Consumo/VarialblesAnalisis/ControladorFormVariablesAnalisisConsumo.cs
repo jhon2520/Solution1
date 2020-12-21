@@ -59,6 +59,9 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             this.formVariables.tbxValorCuotaLibranza.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariables.tbxCuotasCreditoCacelarNomina.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVariables.tbxCuotaCentrales.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVariables.cbxGarantia.TextChanged += new EventHandler(AplicaCodeudor);
+            this.formVariables.cbxGarantia.Leave += new EventHandler(AplicaCodeudor);
+            this.formVariables.cbxGarantia.MouseWheel += new MouseEventHandler(AplicaCodeudor);
             RetornarFormatoTextBox();
             ValidacionSoloLetrasTextbox();
         }
@@ -162,32 +165,43 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
         }
         private void AbrirFormAnalisisCredito(object sender, EventArgs args)
         {
-            if (this.formVariables.tbxNombres.Text != string.Empty && this.formVariables.tbxApellidos.Text != string.Empty
-                && this.formVariables.cbxPeriodicidad.Text != string.Empty && this.formVariables.cbxGarantia.Text != string.Empty
-                && this.formVariables.cbxFormaDePago.Text != string.Empty && this.formVariables.tbxProfesion.Text != string.Empty
-                && this.formVariables.tbxCargo.Text != string.Empty && this.formVariables.tbxOcupacion.Text != string.Empty
-                && this.formVariables.cbxEstadoCivil.Text != string.Empty && this.formVariables.contadorEdad.Value != 0
-                && this.formVariables.cbxVivienda.Text != string.Empty
-                && this.formVariables.contadorEstrato.Value != 0 && (this.formVariables.rbtnCiudad.Checked == true ||
-                this.formVariables.rbtnMunicipio.Checked == true) && this.formVariables.tbxEmpresa.Text != string.Empty
-                && this.formVariables.tbxActividadEconomica.Text != string.Empty && this.formVariables.cbxTipoDeContrato.Text != string.Empty
-                && this.formVariables.contadorAntLaboral.Value != 0 && this.formVariables.tbxIngresos.Text != string.Empty
-                && this.formVariables.tbxOtrosIngresos.Text != string.Empty && this.formVariables.tbxDeduccionesColilla.Text != string.Empty
-                && this.formVariables.tbxCuotaCentrales.Text != string.Empty && this.formVariables.tbxCuotasACancelar.Text != string.Empty
-                && this.formVariables.tbxEstimacionTarjetasCredito.Text != string.Empty && this.formVariables.tbxValorCuotaLibranza.Text != string.Empty
-                && this.formVariables.tbxCuotasCreditoCacelarNomina.Text != string.Empty && this.formVariables.tbxEstimacionTarjetasCredito.Text != string.Empty
-                && this.formVariables.tbxAfectacionColilla.Text != string.Empty && this.formVariables.contadorScore.Value != 0
-                && this.formVariables.cbxCalificacion.Text != string.Empty && this.formVariables.tbxEndeudamientoGlobal.Text != string.Empty)
+
+            if (this.formVariables.btnCodeudor.Visible == true && Cache.DisponibleCodeudor == 0)
             {
-                GeneracionDatosCache();
-                formAnalisisDeCredito = new FormAnalisisDeCredito();
-                formAnalisisDeCredito.ShowDialog();
+                formError = new FormError("Debe ingresar la información del codeudor antes de analizar este crédito");
+                formError.ShowDialog();
             }
             else
             {
-                formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
-                formError.ShowDialog();
+                if (this.formVariables.tbxNombres.Text != string.Empty && this.formVariables.tbxApellidos.Text != string.Empty
+                    && this.formVariables.cbxPeriodicidad.Text != string.Empty && this.formVariables.cbxGarantia.Text != string.Empty
+                    && this.formVariables.cbxFormaDePago.Text != string.Empty && this.formVariables.tbxProfesion.Text != string.Empty
+                    && this.formVariables.tbxCargo.Text != string.Empty && this.formVariables.tbxOcupacion.Text != string.Empty
+                    && this.formVariables.cbxEstadoCivil.Text != string.Empty && this.formVariables.contadorEdad.Value != 0
+                    && this.formVariables.cbxVivienda.Text != string.Empty
+                    && this.formVariables.contadorEstrato.Value != 0 && (this.formVariables.rbtnCiudad.Checked == true ||
+                    this.formVariables.rbtnMunicipio.Checked == true) && this.formVariables.tbxEmpresa.Text != string.Empty
+                    && this.formVariables.tbxActividadEconomica.Text != string.Empty && this.formVariables.cbxTipoDeContrato.Text != string.Empty
+                    && this.formVariables.contadorAntLaboral.Value != 0 && this.formVariables.tbxIngresos.Text != string.Empty
+                    && this.formVariables.tbxOtrosIngresos.Text != string.Empty && this.formVariables.tbxDeduccionesColilla.Text != string.Empty
+                    && this.formVariables.tbxCuotaCentrales.Text != string.Empty && this.formVariables.tbxCuotasACancelar.Text != string.Empty
+                    && this.formVariables.tbxEstimacionTarjetasCredito.Text != string.Empty && this.formVariables.tbxValorCuotaLibranza.Text != string.Empty
+                    && this.formVariables.tbxCuotasCreditoCacelarNomina.Text != string.Empty && this.formVariables.tbxEstimacionTarjetasCredito.Text != string.Empty
+                    && this.formVariables.tbxAfectacionColilla.Text != string.Empty && this.formVariables.contadorScore.Value != 0
+                    && this.formVariables.cbxCalificacion.Text != string.Empty && this.formVariables.tbxEndeudamientoGlobal.Text != string.Empty)
+                {
+                    GeneracionDatosCache();
+                    formAnalisisDeCredito = new FormAnalisisDeCredito();
+                    formAnalisisDeCredito.ShowDialog();
+                }
+                else
+                {
+                    formError = new FormError("Ingrese el valor de todas las variables de entrada iniciales para la validación de políticas internas del crédito");
+                    formError.ShowDialog();
+                }
             }
+
+
         }
         private void GeneracionDatosCache()
         {
@@ -496,7 +510,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             {
                 this.formVariables.contadorEdad.Value = CodigoComun.CalcularEdad(this.formVariables.dtpEdad);
             }
-            catch 
+            catch
             {
 
                 using (formError = new FormError("Seleccione una fecha de nacimiendo válida, no puede ser superior a la fecha actual"))
@@ -504,7 +518,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                     formError.ShowDialog();
                 }
             }
-           
+
         }
         private double RetornarDANECiudadPueblo()
         {
@@ -542,7 +556,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             {
                 if (this.formVariables.tbxDeduccionesDeSeguridadSocial.Text != string.Empty && this.formVariables.tbxOtrasDeduccionesColilla.Text != string.Empty)
                 {
-                    
+
                     double totalDeduccionesColilla;
                     totalDeduccionesColilla = CodigoComun.RetornarTotalDeducciones(Convert.ToDouble(this.formVariables.tbxDeduccionesDeSeguridadSocial.Text), Convert.ToDouble(this.formVariables.tbxOtrasDeduccionesColilla.Text));
                     this.formVariables.tbxDeduccionesColilla.Text = totalDeduccionesColilla.ToString("N2");
@@ -561,7 +575,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             {
                 formCodeudor.cbxFormaDePago.Text = this.formVariables.cbxFormaDePago.Text;
                 formCodeudor.tbxCuota.Text = this.formVariables.tbxCuota.Text;
-                if(this.formVariables.cbxFormaDePago.Text  == "Caja")
+                if (this.formVariables.cbxFormaDePago.Text == "Caja")
                 {
                     formCodeudor.tbxAfectacionColilla.Text = "N/A";
                     formCodeudor.tbxAfectacionColilla.Enabled = false;
@@ -576,7 +590,7 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
             else if (((TextBox)sender).Name == this.formVariables.tbxCuotaCentrales.Name) CodigoComun.SetScroll(this.formVariables, 700);
             else if (((TextBox)sender).Name == this.formVariables.tbxNombres.Name) CodigoComun.SetScroll(this.formVariables, 0);
 
-            
+
         }
         private void SeleccionarFinalDeTextoIngresos(object sender, EventArgs args)
         {
@@ -592,7 +606,19 @@ namespace Presentacion.FormsCarteras.Consumo.VarialblesAnalisis
                 if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
             }
         }
-
+        private void AplicaCodeudor(object sender, EventArgs args)
+        {
+            if (this.formVariables.cbxGarantia.Text != "Codeudor")
+            {
+                this.formVariables.btnCodeudor.Visible = false;
+                Cache.AplicaCodeudor = false;
+            }
+            else
+            {
+                this.formVariables.btnCodeudor.Visible = true;
+                Cache.AplicaCodeudor = true;
+            }
+        }
     }
 
 }

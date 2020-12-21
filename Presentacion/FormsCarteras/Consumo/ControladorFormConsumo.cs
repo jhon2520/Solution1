@@ -262,6 +262,7 @@ namespace Presentacion.FormsCarteras.Consumo
             }
         }
 
- 
+
+
     }
 }

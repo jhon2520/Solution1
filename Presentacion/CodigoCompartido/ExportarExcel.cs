@@ -24,7 +24,7 @@ namespace Presentacion.CodigoCompartido
             Workbook workbook = application.Workbooks.Add(XlSheetType.xlWorksheet);
             Worksheet worksheet = (Worksheet)application.ActiveSheet;
             Worksheet worksheet2 = (Worksheet)workbook.Worksheets.Add();
-            Worksheet worksheet3 = (Worksheet)workbook.Worksheets.Add();
+            
             Color colorNaranjaTitulos = Color.FromArgb(248, 100, 26);
             Color colorNarnjaClaroNombreVariables = Color.FromArgb(252, 228, 214);
             Color colorAzulClaroValorVariables = Color.FromArgb(217, 225, 242);
@@ -347,7 +347,7 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[4, 3] = "Persona a cargo";
                 worksheet2.Cells[4, 4] = Cache.PersonasAcargo;
                 worksheet2.Cells[5, 3] = "Tipo de vivienda";
-                worksheet2.Cells[5, 4] = Cache.Vivienda + ", " + Cache.CiudadMunicipio;
+                worksheet2.Cells[5, 4] = Cache.Vivienda + ", " + Cache.CiudadMunicipio + ", estrato " + Cache.Estrato;
 
                 worksheet2.Cells[8, 1] = "Empresa donde labora";
                 worksheet2.Cells[8, 2] = Cache.Empresa;
@@ -473,7 +473,7 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[28, 3] = "Egresos Codeudor";
                 worksheet2.Cells[28, 4] = Cache.EgresosCodeudorMicro;
                 worksheet2.Cells[28, 5] = "Endeudamiento directo";
-                worksheet2.Cells[28, 6] = Cache.EndeudamientoDirectodeudorMicro;
+                worksheet2.Cells[28, 6] = Cache.EndeudamientoDirectoCodeudorMicro;
 
                 worksheet2.Range["A28:A28"].Interior.Color = colorNarnjaClaroNombreVariables;
                 worksheet2.Range["A28:A28"].Font.Bold = true;
@@ -488,10 +488,10 @@ namespace Presentacion.CodigoCompartido
 
 
                 worksheet2.Cells[30, 1] = "Calificación del solicitante";
-                worksheet2.Range["A30:H30"].Interior.Color = colorNaranjaTitulos;
-                worksheet2.Range["A30:H30"].Font.Color = Color.White;
-                worksheet2.Cells[30, 8].EntireRow.Font.Bold = true;
-                worksheet2.Range["A30:H30"].Merge();
+                worksheet2.Range["A30:J30"].Interior.Color = colorNaranjaTitulos;
+                worksheet2.Range["A30:J30"].Font.Color = Color.White;
+                worksheet2.Cells[30, 1].EntireRow.Font.Bold = true;
+                worksheet2.Range["A30:J30"].Merge();
 
                 worksheet2.Cells[31, 1] = "Número de moras";
                 worksheet2.Cells[31, 2] = Cache.NumeroDemoras;
@@ -501,6 +501,9 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[31, 6] = Cache.Calificacion;
                 worksheet2.Cells[31, 7] = "Score";
                 worksheet2.Cells[31, 8] = Cache.Score;
+                worksheet2.Cells[31, 9] = "Destino del crédito";
+                worksheet2.Cells[31, 10] = Cache.DestinoDelCredito;
+
 
                 worksheet2.Range["A31:A31"].Interior.Color = colorNarnjaClaroNombreVariables;
                 worksheet2.Range["A31:A31"].Font.Bold = true;
@@ -510,11 +513,13 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Range["E31:E31"].Font.Bold = true;
                 worksheet2.Range["G31:G31"].Interior.Color = colorNarnjaClaroNombreVariables;
                 worksheet2.Range["G31:G31"].Font.Bold = true;
+                worksheet2.Range["I31:I31"].Interior.Color = colorNarnjaClaroNombreVariables;
+                worksheet2.Range["I31:I31"].Font.Bold = true;
                 worksheet2.Range["B31:B31"].Interior.Color = colorAzulClaroValorVariables;
                 worksheet2.Range["D31:D31"].Interior.Color = colorAzulClaroValorVariables;
                 worksheet2.Range["F31:F31"].Interior.Color = colorAzulClaroValorVariables;
                 worksheet2.Range["H31:H31"].Interior.Color = colorAzulClaroValorVariables;
-
+                worksheet2.Range["J31:J31"].Interior.Color = colorAzulClaroValorVariables;
 
                 //Cumplimiento de políticas
                 worksheet2.Cells[33, 1] = "Cumplimiento de políticas";
@@ -543,21 +548,21 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[48, 2].EntireRow.Font.Italic = true;
                 worksheet2.Range["A48:B48"].Interior.Color = colorAzulClaroValorVariables;
 
-
-                // worksheet3.Range["B2:D11"].Style = "Comma";
-                // worksheet3.Range["B16:B17"].Style = "Comma";
+                worksheet2.Range["B1:B31"].Style = "Comma";
+                worksheet2.Range["D1:D31"].Style = "Comma";
+                worksheet2.Range["B25:F25"].NumberFormat = "0.00%";
+                worksheet2.Range["F28:F28"].NumberFormat = "0.00%";
+      
                 worksheet2.Columns.AutoFit();
                 worksheet2.Rows.AutoFit();
 
             }
 
-
-
-
             //Codeudor
 
-            if (Cache.TipoDeCredito != 4)
+            if (Cache.TipoDeCredito != 4 && Cache.AplicaCodeudor)
             {
+                Worksheet worksheet3 = (Worksheet)workbook.Worksheets.Add();
                 worksheet3.Activate();
                 worksheet3.Name = "Informacion Codeudor";
                 application.ActiveWindow.DisplayGridlines = false;
@@ -645,6 +650,7 @@ namespace Presentacion.CodigoCompartido
 
             else if (Cache.TipoDeCredito == 4)
             {
+                Worksheet worksheet3 = (Worksheet)workbook.Worksheets.Add();
                 worksheet3.Activate();
                 worksheet3.Name = "Informacion Codeudor";
                 application.ActiveWindow.DisplayGridlines = false;
