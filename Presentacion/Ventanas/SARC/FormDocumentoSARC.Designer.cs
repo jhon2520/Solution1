@@ -42,7 +42,7 @@ namespace Presentacion.Ventanas.SARC
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 0);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(628, 494);
+            this.richTextBox1.Size = new System.Drawing.Size(575, 494);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -56,7 +56,7 @@ namespace Presentacion.Ventanas.SARC
             this.btnImportar.ForeColor = System.Drawing.Color.White;
             this.btnImportar.Location = new System.Drawing.Point(0, 471);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(628, 23);
+            this.btnImportar.Size = new System.Drawing.Size(575, 23);
             this.btnImportar.TabIndex = 1;
             this.btnImportar.Text = "Importar documento SARC";
             this.btnImportar.UseVisualStyleBackColor = false;
@@ -75,7 +75,7 @@ namespace Presentacion.Ventanas.SARC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(628, 494);
+            this.ClientSize = new System.Drawing.Size(575, 494);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

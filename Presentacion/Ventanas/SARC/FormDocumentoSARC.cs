@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -19,15 +20,20 @@ namespace Presentacion.Ventanas.SARC
         public FormDocumentoSARC()
         {
             InitializeComponent();
+            this.FormClosing += new FormClosingEventHandler(MyForm_FormClosing);
+
         }
 
         private void FormDocumentoSARC_Load(object sender, EventArgs e)
         {
-            this.Opacity = 0.0;
+            //this.Opacity = 0.0;
         }
 
         private async System.Threading.Tasks.Task ImportarArchivoWord()
         {
+
+
+
 
             await System.Threading.Tasks.Task.Run(() =>
             {
@@ -39,14 +45,15 @@ namespace Presentacion.Ventanas.SARC
 
                     if (this.btnImportar.InvokeRequired)
                     {
-                        this.btnImportar.Invoke(new Action(() => this.btnImportar.Enabled = false));
+                        //this.btnImportar.Invoke(new Action(() => this.btnImportar.Enabled = false));
                         this.btnImportar.Invoke(new Action(() => this.btnImportar.Text = "Importando, espere un momento ..."));
                     }
 
                     Microsoft.Office.Interop.Word.Application wordObject = new Microsoft.Office.Interop.Word.Application();
-                    object File = rutaCompleta; //this is the path
+                    object File = rutaCompleta;
                     object nullobject = System.Reflection.Missing.Value; Microsoft.Office.Interop.Word.Application wordobject = new Microsoft.Office.Interop.Word.Application();
-                    wordobject.DisplayAlerts = Microsoft.Office.Interop.Word.WdAlertLevel.wdAlertsNone; Microsoft.Office.Interop.Word._Document docs = wordObject.Documents.Open(ref File, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject); docs.ActiveWindow.Selection.WholeStory();
+                    wordobject.DisplayAlerts = Microsoft.Office.Interop.Word.WdAlertLevel.wdAlertsNone; Microsoft.Office.Interop.Word._Document docs = wordObject.Documents.Open(ref File, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject, ref nullobject); 
+                    docs.ActiveWindow.Selection.WholeStory();
                     docs.ActiveWindow.Selection.Copy();
                     if (this.richTextBox1.InvokeRequired)
                     {
@@ -56,21 +63,32 @@ namespace Presentacion.Ventanas.SARC
 
                     docs.Close(ref nullobject, ref nullobject, ref nullobject);
                     wordobject.Quit(ref nullobject, ref nullobject, ref nullobject);
+                    
 
 
                     if (this.btnImportar.InvokeRequired)
                     {
-                        this.btnImportar.Invoke(new Action(() => this.btnImportar.Enabled = false));
+                       // this.btnImportar.Invoke(new Action(() => this.btnImportar.Enabled = false));
                         this.btnImportar.Invoke(new Action(() => this.btnImportar.Text = "Importar documento SARC"));
                     }
+
+      
 
                 }
                 catch (Exception e)
                 {
-
                     MessageBox.Show($"No se encontró archivo en la ruta: {rutaCompleta} o error tipo: {e}");
                 }
             });
+
+
+            foreach (Process Proc in Process.GetProcesses())
+            {
+                if (Proc.ProcessName.Equals("Microsoft Word") || Proc.ProcessName.Equals("WINWORD.EXE") || Proc.StartInfo.FileName  == "notepad.exe")  //Process WORD?
+                    Proc.Kill();
+
+            }
+
 
         }
 
@@ -119,5 +137,19 @@ namespace Presentacion.Ventanas.SARC
         {
             this.Opacity = 0.6;
         }
+
+        private void CerrarForm(object sender, EventArgs args)
+        {
+            this.Hide();
+        }
+        private void MyForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                Hide();
+            }
+        }
+
     }
 }

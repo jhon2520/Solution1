@@ -29,7 +29,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         private FormAcercaDE formAcerca;
         private CodigoComun codigoComun = new CodigoComun();
         private FormError formError;
-        private FormDocumentoSARC formDocumento;
+        private FormDocumentoSARC formDocumento = new FormDocumentoSARC();
 
 
         public ControladorFormVentanaPrincipal(FormVentanaPrincipal formVentanaPrincipal)
@@ -115,7 +115,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
                 BotonesCambioDeForm(248, 100, 26, this.formVentanaPrincipal.btnComercial, new FormConsumo());
 
-                //await RetornarCambioDeColores(248, 100, 26);
+               
                 Cache.TipoDeCredito = 2;
                 Cache.ColorInicio = Color.FromArgb(248, 100, 26);
                 Cache.LimpiarCache();
@@ -124,7 +124,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             {
 
                 BotonesCambioDeForm(108, 55, 159, this.formVentanaPrincipal.btnConsumo, new FormConsumo());
-                //await RetornarCambioDeColores(108, 55, 159);
+                
                 Cache.TipoDeCredito = 1;
                 Cache.ColorInicio = Color.FromArgb(108, 55, 159);
                 Cache.LimpiarCache();
@@ -133,7 +133,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             {
 
                 BotonesCambioDeForm(32, 178, 170, this.formVentanaPrincipal.btnVivienda, new FormConsumo());
-                //await RetornarCambioDeColores(32, 178, 170);
+               
                 Cache.TipoDeCredito = 3;
                 Cache.ColorInicio = Color.FromArgb(32, 178, 170);
                 Cache.LimpiarCache();
@@ -142,7 +142,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             {
 
                 BotonesCambioDeForm(90, 148, 201, this.formVentanaPrincipal.btnMicro, new FormConsumo());
-                //await RetornarCambioDeColores(90, 148, 201);
+                
                 Cache.TipoDeCredito = 4;
                 Cache.ColorInicio = Color.FromArgb(90, 148, 201);
                 Cache.LimpiarCache();
@@ -193,20 +193,11 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             this.formVentanaPrincipal.pnlSuperior.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.pnlFlecha.BackColor = Color.FromArgb(R, G, B);
-            this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+           // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
         }
 
-        private void CambiarColoresBotonesPrincipales(int R, int G, int B)
-        {
-            this.formVentanaPrincipal.btnCerrarFormActivo.BackColor = Color.FromArgb(R, G, B);
-            this.formVentanaPrincipal.btnCerrar.BackColor = Color.FromArgb(R, G, B);
-            this.formVentanaPrincipal.btnMinimizar.BackColor = Color.FromArgb(R, G, B);
-        }
-
-        private async Task RetornarCambioDeColores(int R, int G, int B)
-        {
-            await Task.Run(() => { CambiarColoresBotonesPrincipales(R, G, B); });
-        }
+ 
+      
 
         private void AbrirFormhijoEstilo(int R, int G, int B, Button buttonFormHijo, Form formHijo)
         {
@@ -223,7 +214,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
             using (FormConfirmacion formConfirmacion = new FormConfirmacion("¿Desea cambiar de simulador?"))
             {
-                this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+               // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
                 if (codigoComun.ActiveForm == null) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
 
 
@@ -231,7 +222,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                 {
                     DialogResult dialogResult = formConfirmacion.ShowDialog();
                     if (dialogResult == DialogResult.OK) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
-                    this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+                   // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
                 }
             }
 
@@ -337,7 +328,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         }
         private void AbrirDocumentoSARC(object sender, EventArgs args)
         {
-            formDocumento = new FormDocumentoSARC();
+            //formDocumento = new FormDocumentoSARC();
             formDocumento.Show();
         }
 

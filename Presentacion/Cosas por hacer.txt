@@ -8,9 +8,9 @@
 
 7: HAcer el método que exporta a PDF
 8: Revisar que todo esté bien con el programa instalado
-20: Arreglar botones del form principal (salir,minimizar,cerrar)
-21: Sobreescribir el método de cerrar del Documento para que no se cierre si no que se esconda;
 
+
+22: que no deje abrir el form de codeudor hasta que no esté el resto de información
 
 
 LISTO
@@ -26,7 +26,10 @@ LISTO
 11: Hacer las capturas de exepciones y validación de inofmración antes de generar indicadores en la ventana del codeudor
 12: Terminar de cuadrar el autoscroll para todos los forms, ya está el de comercial
 13: Arreglar el color del Form de vivienda
-16: terminar de validar la ventana de crédito comercial
+16: terminar de validar la ventana de crédito comercialy
+
 17: Revisar "Aplica libranza" para codeudor.
 18: Colocar DTF a la calculadora de tasas
 19: Colocar que el codeudor sea opcional
+20: Arreglar botones del form principal (salir,minimizar,cerrar)
+21: Sobreescribir el método de cerrar del Documento para que no se cierre si no que se esconda;

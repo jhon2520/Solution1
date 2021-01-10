@@ -36,6 +36,7 @@ namespace Presentacion.FormsCarteras.Consumo
         private FormConfirmacion formConfirmacion;
         private CodigoComun codigoComun = new CodigoComun();
         private ExportarExcel exportarExcel = new ExportarExcel();
+        private ExportarPDF exportarPDF = new ExportarPDF();
         private FormCalculadora formCalculadora;
       
 
@@ -51,6 +52,7 @@ namespace Presentacion.FormsCarteras.Consumo
             this.formConsumo.contadorTasa.ValueChanged += new EventHandler(CalcularCuota);
             this.formConsumo.btnPlanCuotas.Click += new EventHandler(PlanDeCuotas);
             this.formConsumo.btnExportarExcel.Click += new EventHandler(ExportarArchivoExcel);
+            this.formConsumo.btnExportarPDF.Click += new EventHandler(ExportarArchivoPDF);
             this.formConsumo.tbxMonto.Leave += new EventHandler(FormatoNumeroTexBox);
             this.formConsumo.btnExportar.Click += new EventHandler(BotonExportar);
             this.formConsumo.btnCalculadora.Click += new EventHandler(AbrirCalculadora);
@@ -260,6 +262,11 @@ namespace Presentacion.FormsCarteras.Consumo
             {
                 if(control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
             }
+        }
+        private void ExportarArchivoPDF(object sender, EventArgs eventArgs)
+        {
+            exportarPDF.Exportar(this.formConsumo.dgvPlanPagoComercial);
+            MessageBox.Show("Archivo exportado");
         }
 
 
