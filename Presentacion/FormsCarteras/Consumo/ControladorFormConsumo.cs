@@ -21,6 +21,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Reflection;
 using Presentacion.Ventanas.VentanaCodeudor;
+using Presentacion.Ventanas.VentanaAviso;
 
 namespace Presentacion.FormsCarteras.Consumo
 {
@@ -34,11 +35,13 @@ namespace Presentacion.FormsCarteras.Consumo
         private double Cuota;
         private FormError formError;
         private FormConfirmacion formConfirmacion;
+        private FormAviso formAviso;
         private CodigoComun codigoComun = new CodigoComun();
         private ExportarExcel exportarExcel = new ExportarExcel();
         private ExportarPDF exportarPDF = new ExportarPDF();
         private FormCalculadora formCalculadora;
-      
+        private string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
 
         private bool validacionFormActivo = false;
         public ControladorFormConsumo(FormConsumo formConsumo)
@@ -68,7 +71,7 @@ namespace Presentacion.FormsCarteras.Consumo
 
         private void CargarForm(object sender, EventArgs args)
         {
-             CodigoComun.EstiloDataGrid(this.formConsumo.dgvPlanPagoComercial);
+            CodigoComun.EstiloDataGrid(this.formConsumo.dgvPlanPagoComercial);
             this.formConsumo.pnlCambioDeColor.BackColor = Cache.ColorInicio;
             this.formConsumo.tbxCedula.Focus();
         }
@@ -182,27 +185,86 @@ namespace Presentacion.FormsCarteras.Consumo
         }
         private async void ExportarArchivoExcel(object sender, EventArgs args)
         {
-            using (formConfirmacion = new FormConfirmacion("¿Desea generar un archivo de excel con la información del crédito?"))
-            {
-                DialogResult result = formConfirmacion.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    CodigoComun.Alerta("Exportando, espere", FormVentanaEmergente.enmTipo.info);
-                    await MostrarAlerta();
-                    CodigoComun.Alerta("Archivo exportado", FormVentanaEmergente.enmTipo.exito);
 
-                    
+            if (Cache.CriterioDelAnalista == string.Empty)
+            {
+                using (formError = new FormError("Complete toda la información del crédito antes de exportar un archivo Excel"))
+                {
+                    formError.ShowDialog();
                 }
             }
-          
-            EsconderSubMenu();
+
+            else
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea generar un archivo de excel con la información del crédito?"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        CodigoComun.Alerta("Exportando, espere", FormVentanaEmergente.enmTipo.info);
+                        await MostrarAlertaExcel();
+                        CodigoComun.Alerta("Archivo exportado", FormVentanaEmergente.enmTipo.exito);
+                        using (formAviso = new FormAviso($"Archivo guardo en la ruta: {ruta}"))
+                        {
+                            formAviso.ShowDialog();
+                        }
+
+                    }
+                }
+
+                EsconderSubMenu();
+            }   
+
+     
 
         }
-        private async Task MostrarAlerta()
+        private async void ExportarArchivoPDF(object sender, EventArgs eventArgs)
+        {
+
+            if (Cache.CriterioDelAnalista == string.Empty)
+            {
+                using (formError = new FormError("Complete toda la información del crédito antes de exportar un archivo PDF"))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
+            else
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea generar un archivo PDF con la información del crédito?"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        CodigoComun.Alerta("Exportando, espere", FormVentanaEmergente.enmTipo.info);
+                        await MostrarAlertaPDF();
+                        CodigoComun.Alerta("Archivo exportado", FormVentanaEmergente.enmTipo.exito);
+                        using (formAviso = new FormAviso($"Archivo guardo en la ruta: {ruta}"))
+                        {
+                            formAviso.ShowDialog();
+                        }
+
+
+                    }
+                }
+
+                EsconderSubMenu();
+            }
+
+
+        }
+        private async Task MostrarAlertaExcel()
         {
             await Task.Run(() =>
             {
-                exportarExcel.GuardarDataGrid(this.formConsumo.dgvPlanPagoComercial);
+                exportarExcel.Exportar(this.formConsumo.dgvPlanPagoComercial);
+            });
+        }
+        private async Task MostrarAlertaPDF()
+        {
+            await Task.Run(() =>
+            {
+                exportarPDF.Exportar(this.formConsumo.dgvPlanPagoComercial);
             });
         }
         private void FormatoNumeroTexBox(object sender, EventArgs args)
@@ -239,12 +301,12 @@ namespace Presentacion.FormsCarteras.Consumo
         }
         private void AbrirCalculadoraShortCut(object sender, KeyEventArgs e)
         {
-            if(e.Alt &&  e.KeyCode == Keys.S)
+            if (e.Alt && e.KeyCode == Keys.S)
             {
                 this.formConsumo.btnCalculadora.PerformClick();
             }
 
-            if(e.Alt && e.KeyCode == Keys.E)
+            if (e.Alt && e.KeyCode == Keys.E)
             {
                 this.formConsumo.btnExportar.PerformClick();
                 this.formConsumo.btnExportarExcel.PerformClick();
@@ -260,14 +322,10 @@ namespace Presentacion.FormsCarteras.Consumo
         {
             foreach (Control control in this.formConsumo.pnlPrincipal.Controls)
             {
-                if(control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+                if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
             }
         }
-        private void ExportarArchivoPDF(object sender, EventArgs eventArgs)
-        {
-            exportarPDF.Exportar(this.formConsumo.dgvPlanPagoComercial);
-            MessageBox.Show("Archivo exportado");
-        }
+
 
 
 

@@ -210,6 +210,8 @@ namespace SoporteUsuario.CacheUsuario
             EndeudamientoGlobal = 0;
             DisponibleCodeudor = 0;
             EndeudamientoGlobalCodeudor = 0;
+            criterioDelAnalista = string.Empty;
+
         }
     }
 }

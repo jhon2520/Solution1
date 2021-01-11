@@ -6,11 +6,10 @@
 
 
 
-7: HAcer el método que exporta a PDF
+
 8: Revisar que todo esté bien con el programa instalado
 
 
-22: que no deje abrir el form de codeudor hasta que no esté el resto de información
 
 
 LISTO
@@ -18,6 +17,7 @@ LISTO
 1: colocar el estilo del cursor para todos los botones
 5: Arreglar el tab para todas las ventanas
 6: validar excel para micro 
+7: HAcer el método que exporta a PDF
 2: Cambiar lo de la validación de las políticas, la parte del score
 3: Hacer la parte del codeudor para todas las carteras
 4: Colocar mensajes en un tooltip para cada ventana
@@ -27,9 +27,12 @@ LISTO
 12: Terminar de cuadrar el autoscroll para todos los forms, ya está el de comercial
 13: Arreglar el color del Form de vivienda
 16: terminar de validar la ventana de crédito comercialy
-
 17: Revisar "Aplica libranza" para codeudor.
 18: Colocar DTF a la calculadora de tasas
 19: Colocar que el codeudor sea opcional
 20: Arreglar botones del form principal (salir,minimizar,cerrar)
 21: Sobreescribir el método de cerrar del Documento para que no se cierre si no que se esconda;
+22: que no deje exportar hasta que todo no esté completo
+23: revisar el codeudor del crédito de microcrédito: crear método que ponga en cero el codeudor en caso de que no aplique
+24: mostrar la ruta de guardado
+25: try catch en los métodos de exportar y guardar excel y pdf

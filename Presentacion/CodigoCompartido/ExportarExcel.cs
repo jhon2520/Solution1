@@ -17,7 +17,7 @@ namespace Presentacion.CodigoCompartido
     public class ExportarExcel
     {
 
-        public void GuardarDataGrid(DataGridView dataGridView)
+        public void Exportar(DataGridView dataGridView)
         {
 
             Microsoft.Office.Interop.Excel.Application application = new Microsoft.Office.Interop.Excel.Application();
@@ -153,7 +153,7 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[2, 4] = Cache.EstadoCivil;
                 worksheet2.Cells[3, 3] = "Edad";
                 worksheet2.Cells[3, 4] = Cache.Edad + " años";
-                worksheet2.Cells[4, 3] = "Persona a cargo";
+                worksheet2.Cells[4, 3] = "Personas a cargo";
                 worksheet2.Cells[4, 4] = Cache.PersonasAcargo;
                 worksheet2.Cells[5, 3] = "Tipo de vivienda";
                 worksheet2.Cells[5, 4] = Cache.Vivienda + ", " + Cache.CiudadMunicipio + ", estrato " + Cache.Estrato;
@@ -344,7 +344,7 @@ namespace Presentacion.CodigoCompartido
                 worksheet2.Cells[2, 4] = Cache.EstadoCivil;
                 worksheet2.Cells[3, 3] = "Edad";
                 worksheet2.Cells[3, 4] = Cache.Edad + " años";
-                worksheet2.Cells[4, 3] = "Persona a cargo";
+                worksheet2.Cells[4, 3] = "Personas a cargo";
                 worksheet2.Cells[4, 4] = Cache.PersonasAcargo;
                 worksheet2.Cells[5, 3] = "Tipo de vivienda";
                 worksheet2.Cells[5, 4] = Cache.Vivienda + ", " + Cache.CiudadMunicipio + ", estrato " + Cache.Estrato;

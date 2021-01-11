@@ -48,19 +48,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(95, 130);
+            this.label1.Location = new System.Drawing.Point(164, 159);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 60);
+            this.label1.Size = new System.Drawing.Size(216, 75);
             this.label1.TabIndex = 0;
             this.label1.Text = "      Creado por : Jhon Muñoz Romero\r\nContacto: jhonmunozromero@gmail.com\r\n      " +
-    "                         2020\r\n\r\n";
+    "                         2021\r\n\r\n\r\n";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(61, 87);
+            this.label2.Location = new System.Drawing.Point(129, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(286, 46);
             this.label2.TabIndex = 1;
@@ -70,9 +72,10 @@
             // 
             this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.csharp_01;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(192, 181);
+            this.pictureBox1.Location = new System.Drawing.Point(256, 223);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -80,9 +83,10 @@
             // 
             this.ptbLogo.BackgroundImage = global::Presentacion.Properties.Resources.logo;
             this.ptbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptbLogo.Location = new System.Drawing.Point(174, 12);
+            this.ptbLogo.Location = new System.Drawing.Point(232, 15);
+            this.ptbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(60, 60);
+            this.ptbLogo.Size = new System.Drawing.Size(80, 74);
             this.ptbLogo.TabIndex = 5;
             this.ptbLogo.TabStop = false;
             // 
@@ -97,9 +101,10 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(386, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(515, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 22);
+            this.btnCerrar.Size = new System.Drawing.Size(29, 27);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.UseVisualStyleBackColor = false;
             // 
@@ -128,10 +133,10 @@
             // 
             // FormAcercaDE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(408, 217);
+            this.ClientSize = new System.Drawing.Size(544, 267);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ptbLogo);
@@ -139,6 +144,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormAcercaDE";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

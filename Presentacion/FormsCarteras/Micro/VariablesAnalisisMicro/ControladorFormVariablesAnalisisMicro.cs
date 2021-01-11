@@ -74,6 +74,9 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.formVarialblesAnalisisMicro.tbxCuotaCreditoARefinanciarMicro.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
             this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Click += new EventHandler(SeleccionarFinalDeTextoEgresos);
+            this.formVarialblesAnalisisMicro.cbxGarantia.TextChanged += new EventHandler(AplicarCodeudor);
+            this.formVarialblesAnalisisMicro.cbxGarantia.Leave += new EventHandler(AplicarCodeudor);
+            this.formVarialblesAnalisisMicro.cbxGarantia.MouseWheel += new MouseEventHandler(AplicarCodeudor);
 
         }
         private void MensajesTooltip()
@@ -185,7 +188,9 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             Cache.Periodicidad = this.formVarialblesAnalisisMicro.cbxPeriodicidad.Text;
             Cache.EstadoCivil = this.formVarialblesAnalisisMicro.cbxEstadoCivil.Text;
             Cache.Calificacion = this.formVarialblesAnalisisMicro.cbxCalificacion.Text;
-     
+            Cache.ComportamientoDePagos = this.formVarialblesAnalisisMicro.tbxComportamientoDePagos.Text;
+
+
 
         }
         private void RetornarTotalIngresos(Object sender, EventArgs args)
@@ -242,7 +247,8 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
                 && this.formVarialblesAnalisisMicro.contadorAntLaboral.Value != 0 && this.formVarialblesAnalisisMicro.tbxIngresos.Text != string.Empty
                 && this.formVarialblesAnalisisMicro.tbxOtrosIngresos.Text != string.Empty
                 && this.formVarialblesAnalisisMicro.contadorScore.Value != 0
-                && this.formVarialblesAnalisisMicro.cbxCalificacion.Text != string.Empty)
+                && this.formVarialblesAnalisisMicro.cbxCalificacion.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text != string.Empty
+                 && this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text != string.Empty && this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text != string.Empty)
             {
                 GeneracionDatosCache();
                 formAnalisisDeCredito = new FormAnalisisDeCredito();
@@ -440,6 +446,27 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             foreach (Control control in this.formVarialblesAnalisisMicro.pnlEstadoResultados.Controls)
             {
                 if (control is TextBox) { CodigoComun.TextoFinalTextbox((TextBox)control); }
+            }
+        }
+        private void AplicarCodeudor(object sender, EventArgs eventArgs)
+        {
+            if(this.formVarialblesAnalisisMicro.cbxGarantia.Text != "Codeudor")
+            {
+                this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text = "0";
+                this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text = "0";
+                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text = "0";
+                this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Enabled = false;
+                this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Enabled = false;
+                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Enabled = false;
+            }
+            else
+            {
+                this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Text = string.Empty;
+                this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Text = string.Empty;
+                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Text = string.Empty;
+                this.formVarialblesAnalisisMicro.tbxIngresosCodeudor.Enabled = true;
+                this.formVarialblesAnalisisMicro.tbxEgresosCodeudor.Enabled = true;
+                this.formVarialblesAnalisisMicro.tbxEndeudamientoDirectoCodeudor.Enabled = true;
             }
         }
     }
