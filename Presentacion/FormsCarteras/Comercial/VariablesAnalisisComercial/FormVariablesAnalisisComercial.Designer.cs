@@ -251,7 +251,7 @@
             this.panel52.Controls.Add(this.label37);
             this.panel52.Controls.Add(this.tbxNombres);
             this.panel52.Controls.Add(this.panel57);
-            this.panel52.Location = new System.Drawing.Point(12, 12);
+            this.panel52.Location = new System.Drawing.Point(41, 29);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 145);
             this.panel52.TabIndex = 0;
@@ -616,7 +616,7 @@
             this.pnlInfoGeneral.Controls.Add(this.panel14);
             this.pnlInfoGeneral.Controls.Add(this.label10);
             this.pnlInfoGeneral.Controls.Add(this.panel21);
-            this.pnlInfoGeneral.Location = new System.Drawing.Point(12, 172);
+            this.pnlInfoGeneral.Location = new System.Drawing.Point(41, 184);
             this.pnlInfoGeneral.Name = "pnlInfoGeneral";
             this.pnlInfoGeneral.Size = new System.Drawing.Size(738, 259);
             this.pnlInfoGeneral.TabIndex = 1;
@@ -1223,7 +1223,7 @@
             this.panel33.Controls.Add(this.pnlEgresos);
             this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
-            this.panel33.Location = new System.Drawing.Point(12, 439);
+            this.panel33.Location = new System.Drawing.Point(41, 453);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(738, 346);
             this.panel33.TabIndex = 3;
@@ -1747,7 +1747,7 @@
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.tbxEndeudamientoGlobal);
             this.panel11.Controls.Add(this.panel4);
-            this.panel11.Location = new System.Drawing.Point(13, 792);
+            this.panel11.Location = new System.Drawing.Point(42, 814);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(352, 170);
             this.panel11.TabIndex = 4;
@@ -1891,7 +1891,7 @@
             this.panel49.Controls.Add(this.panel7);
             this.panel49.Controls.Add(this.contadorScore);
             this.panel49.Controls.Add(this.cbxCalificacion);
-            this.panel49.Location = new System.Drawing.Point(371, 792);
+            this.panel49.Location = new System.Drawing.Point(400, 814);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(379, 170);
             this.panel49.TabIndex = 5;
@@ -2109,15 +2109,15 @@
             this.panel32.Controls.Add(this.panel2);
             this.panel32.Controls.Add(this.label6);
             this.panel32.Controls.Add(this.label7);
-            this.panel32.Location = new System.Drawing.Point(0, 1045);
+            this.panel32.Location = new System.Drawing.Point(0, 1132);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(759, 41);
+            this.panel32.Size = new System.Drawing.Size(817, 41);
             this.panel32.TabIndex = 112;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(521, 22);
+            this.panel1.Location = new System.Drawing.Point(551, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 1);
             this.panel1.TabIndex = 33;
@@ -2125,7 +2125,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.panel2.Location = new System.Drawing.Point(12, 22);
+            this.panel2.Location = new System.Drawing.Point(42, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 1);
             this.panel2.TabIndex = 32;
@@ -2136,7 +2136,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(389, 12);
+            this.label6.Location = new System.Drawing.Point(419, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 17);
             this.label6.TabIndex = 31;
@@ -2148,7 +2148,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label7.Location = new System.Drawing.Point(262, 12);
+            this.label7.Location = new System.Drawing.Point(292, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 17);
             this.label7.TabIndex = 30;
@@ -2171,7 +2171,7 @@
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
             this.btnAnalizar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
             this.btnAnalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalizar.Location = new System.Drawing.Point(307, 981);
+            this.btnAnalizar.Location = new System.Drawing.Point(346, 1033);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
             this.btnAnalizar.TabIndex = 7;
@@ -2195,7 +2195,7 @@
             this.btnCodeudor.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCodeudor.ForeColor = System.Drawing.Color.White;
             this.btnCodeudor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCodeudor.Location = new System.Drawing.Point(261, 981);
+            this.btnCodeudor.Location = new System.Drawing.Point(300, 1033);
             this.btnCodeudor.Name = "btnCodeudor";
             this.btnCodeudor.Size = new System.Drawing.Size(40, 37);
             this.btnCodeudor.TabIndex = 6;
@@ -2212,7 +2212,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(788, 426);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(832, 648);
             this.Controls.Add(this.btnCodeudor);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);
@@ -2223,6 +2224,7 @@
             this.Controls.Add(this.panel52);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(842, 648);
             this.Name = "FormVariablesAnalisisComercial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVariablesAnalisisComercial";

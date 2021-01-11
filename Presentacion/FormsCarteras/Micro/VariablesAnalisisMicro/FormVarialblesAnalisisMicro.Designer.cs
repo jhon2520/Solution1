@@ -307,7 +307,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel52.Controls.Add(this.label44);
             this.panel52.Controls.Add(this.panel55);
             this.panel52.Controls.Add(this.tbxCedula);
-            this.panel52.Location = new System.Drawing.Point(20, 14);
+            this.panel52.Location = new System.Drawing.Point(40, 18);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 154);
             this.panel52.TabIndex = 0;
@@ -706,7 +706,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.label10);
             this.panel13.Controls.Add(this.panel21);
-            this.panel13.Location = new System.Drawing.Point(20, 178);
+            this.panel13.Location = new System.Drawing.Point(40, 180);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(738, 259);
             this.panel13.TabIndex = 2;
@@ -1343,7 +1343,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
             this.panel33.Controls.Add(this.pnlEstadoResultados);
-            this.panel33.Location = new System.Drawing.Point(21, 446);
+            this.panel33.Location = new System.Drawing.Point(41, 450);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(736, 656);
             this.panel33.TabIndex = 3;
@@ -2447,15 +2447,15 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel32.Controls.Add(this.panel2);
             this.panel32.Controls.Add(this.label6);
             this.panel32.Controls.Add(this.label7);
-            this.panel32.Location = new System.Drawing.Point(5, 1332);
+            this.panel32.Location = new System.Drawing.Point(5, 1357);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(758, 41);
+            this.panel32.Size = new System.Drawing.Size(818, 41);
             this.panel32.TabIndex = 123;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(521, 22);
+            this.panel1.Location = new System.Drawing.Point(552, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 1);
             this.panel1.TabIndex = 33;
@@ -2463,7 +2463,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
-            this.panel2.Location = new System.Drawing.Point(12, 22);
+            this.panel2.Location = new System.Drawing.Point(43, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(242, 1);
             this.panel2.TabIndex = 32;
@@ -2474,7 +2474,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(100)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(389, 12);
+            this.label6.Location = new System.Drawing.Point(420, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 17);
             this.label6.TabIndex = 31;
@@ -2486,7 +2486,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(87)))), ((int)(((byte)(86)))));
-            this.label7.Location = new System.Drawing.Point(262, 12);
+            this.label7.Location = new System.Drawing.Point(293, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 17);
             this.label7.TabIndex = 30;
@@ -2511,7 +2511,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel49.Controls.Add(this.panel7);
             this.panel49.Controls.Add(this.contadorScore);
             this.panel49.Controls.Add(this.cbxCalificacion);
-            this.panel49.Location = new System.Drawing.Point(21, 1107);
+            this.panel49.Location = new System.Drawing.Point(41, 1115);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(737, 114);
             this.panel49.TabIndex = 4;
@@ -2743,7 +2743,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.panel78.BackgroundImage = global::Presentacion.Properties.Resources.panelTitulosAzulMicro;
             this.panel78.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel78.Controls.Add(this.label61);
-            this.panel78.Location = new System.Drawing.Point(20, 865);
+            this.panel78.Location = new System.Drawing.Point(41, 865);
             this.panel78.Name = "panel78";
             this.panel78.Size = new System.Drawing.Size(737, 24);
             this.panel78.TabIndex = 3;
@@ -2771,7 +2771,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
             this.btnAnalizar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
             this.btnAnalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalizar.Location = new System.Drawing.Point(290, 1259);
+            this.btnAnalizar.Location = new System.Drawing.Point(311, 1270);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
             this.btnAnalizar.TabIndex = 5;
@@ -2790,7 +2790,7 @@ namespace Presentacion.FormsCarteras.Micro.VariablesAnalisisMicro
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(785, 497);
+            this.ClientSize = new System.Drawing.Size(842, 648);
             this.Controls.Add(this.panel78);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);

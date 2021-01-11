@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Jhon Romero\Desktop\prueba pdf\</PublishUrl>
+    <PublishUrl>C:\Users\Jhon Romero\Desktop\SENA\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ProductName>Sistema de Análisis de Crédito SENA</ProductName>
+    <PublisherName>Jhon Romero</PublisherName>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -344,6 +346,9 @@
     <EmbeddedResource Include="Ventanas\VentanaPrincipal\FormVentanaPrincipal.resx">
       <DependentUpon>FormVentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="doc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Presentacion_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -360,6 +365,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Documentacion\doc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\close_window_52px.png" />
   </ItemGroup>
   <ItemGroup>
@@ -661,7 +669,7 @@
     <None Include="Resources\esferaprincipal.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cosas por hacer.txt" />
+    <Content Include="icons8_error.ico" />
     <Content Include="logo_blanco.ico" />
     <None Include="Resources\documento2.PNG" />
     <None Include="Resources\documento1.PNG" />

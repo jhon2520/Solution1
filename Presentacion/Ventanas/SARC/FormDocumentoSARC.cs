@@ -39,7 +39,7 @@ namespace Presentacion.Ventanas.SARC
             {
 
                 string ruta = Directory.GetCurrentDirectory();
-                string rutaCompleta = ruta + @"\doc.docx";
+                string rutaCompleta = ruta + @"\Documentacion\doc.docx";
                 try
                 {
 
@@ -82,12 +82,7 @@ namespace Presentacion.Ventanas.SARC
             });
 
 
-            foreach (Process Proc in Process.GetProcesses())
-            {
-                if (Proc.ProcessName.Equals("Microsoft Word") || Proc.ProcessName.Equals("WINWORD.EXE") || Proc.StartInfo.FileName  == "notepad.exe")  //Process WORD?
-                    Proc.Kill();
-
-            }
+  
 
 
         }

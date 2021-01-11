@@ -241,7 +241,7 @@
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.label10);
             this.panel13.Controls.Add(this.panel21);
-            this.panel13.Location = new System.Drawing.Point(12, 165);
+            this.panel13.Location = new System.Drawing.Point(40, 195);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(738, 259);
             this.panel13.TabIndex = 1;
@@ -868,7 +868,7 @@
             this.panel52.Controls.Add(this.panel55);
             this.panel52.Controls.Add(this.tbxCedula);
             this.panel52.Controls.Add(this.panel57);
-            this.panel52.Location = new System.Drawing.Point(12, 4);
+            this.panel52.Location = new System.Drawing.Point(40, 30);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(738, 154);
             this.panel52.TabIndex = 0;
@@ -1255,9 +1255,9 @@
             this.panel32.Controls.Add(this.panel2);
             this.panel32.Controls.Add(this.label6);
             this.panel32.Controls.Add(this.label7);
-            this.panel32.Location = new System.Drawing.Point(-2, 1050);
+            this.panel32.Location = new System.Drawing.Point(-2, 1095);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(771, 41);
+            this.panel32.Size = new System.Drawing.Size(826, 41);
             this.panel32.TabIndex = 118;
             this.panel32.Paint += new System.Windows.Forms.PaintEventHandler(this.panel32_Paint);
             // 
@@ -1313,7 +1313,7 @@
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.tbxEndeudamientoGlobal);
             this.panel11.Controls.Add(this.panel4);
-            this.panel11.Location = new System.Drawing.Point(12, 780);
+            this.panel11.Location = new System.Drawing.Point(42, 819);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(351, 153);
             this.panel11.TabIndex = 3;
@@ -1458,7 +1458,7 @@
             this.panel49.Controls.Add(this.panel7);
             this.panel49.Controls.Add(this.contadorScore);
             this.panel49.Controls.Add(this.cbxCalificacion);
-            this.panel49.Location = new System.Drawing.Point(369, 780);
+            this.panel49.Location = new System.Drawing.Point(399, 819);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(381, 153);
             this.panel49.TabIndex = 4;
@@ -1677,7 +1677,7 @@
             this.panel33.Controls.Add(this.pnlEgresos);
             this.panel33.Controls.Add(this.pnlIngresos);
             this.panel33.Controls.Add(this.panel40);
-            this.panel33.Location = new System.Drawing.Point(13, 431);
+            this.panel33.Location = new System.Drawing.Point(41, 464);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(737, 346);
             this.panel33.TabIndex = 2;
@@ -2202,7 +2202,7 @@
             this.btnAnalizar.ForeColor = System.Drawing.Color.White;
             this.btnAnalizar.Image = global::Presentacion.Properties.Resources.search_in_list_32px;
             this.btnAnalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalizar.Location = new System.Drawing.Point(307, 967);
+            this.btnAnalizar.Location = new System.Drawing.Point(307, 997);
             this.btnAnalizar.Name = "btnAnalizar";
             this.btnAnalizar.Size = new System.Drawing.Size(202, 37);
             this.btnAnalizar.TabIndex = 6;
@@ -2233,7 +2233,7 @@
             this.btnCodeudor.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCodeudor.ForeColor = System.Drawing.Color.White;
             this.btnCodeudor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCodeudor.Location = new System.Drawing.Point(261, 967);
+            this.btnCodeudor.Location = new System.Drawing.Point(261, 997);
             this.btnCodeudor.Name = "btnCodeudor";
             this.btnCodeudor.Size = new System.Drawing.Size(40, 37);
             this.btnCodeudor.TabIndex = 5;
@@ -2251,7 +2251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 426);
+            this.ClientSize = new System.Drawing.Size(842, 648);
             this.Controls.Add(this.btnCodeudor);
             this.Controls.Add(this.panel32);
             this.Controls.Add(this.btnAnalizar);
@@ -2262,6 +2262,7 @@
             this.Controls.Add(this.panel52);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(842, 648);
             this.Name = "FormVariablesAnalisisVivienda";
             this.Text = "FormVariablesAnalisisVivienda";
             this.panel13.ResumeLayout(false);

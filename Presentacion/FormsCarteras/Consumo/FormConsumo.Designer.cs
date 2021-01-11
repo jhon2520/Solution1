@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsumo));
             this.dgvPlanPagoComercial = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,14 +93,14 @@
             this.dgvPlanPagoComercial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPlanPagoComercial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPlanPagoComercial.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanPagoComercial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanPagoComercial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPlanPagoComercial.ColumnHeadersHeight = 30;
             this.dgvPlanPagoComercial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPlanPagoComercial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -117,24 +117,24 @@
             this.dgvPlanPagoComercial.Name = "dgvPlanPagoComercial";
             this.dgvPlanPagoComercial.ReadOnly = true;
             this.dgvPlanPagoComercial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlanPagoComercial.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlanPagoComercial.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvPlanPagoComercial.RowHeadersVisible = false;
             this.dgvPlanPagoComercial.RowHeadersWidth = 62;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvPlanPagoComercial.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvPlanPagoComercial.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvPlanPagoComercial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlanPagoComercial.Size = new System.Drawing.Size(720, 333);
+            this.dgvPlanPagoComercial.Size = new System.Drawing.Size(768, 445);
             this.dgvPlanPagoComercial.TabIndex = 99;
             this.dgvPlanPagoComercial.TabStop = false;
             // 
@@ -189,7 +189,7 @@
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel15, BunifuAnimatorNS.DecorationType.None);
-            this.panel15.Location = new System.Drawing.Point(314, 84);
+            this.panel15.Location = new System.Drawing.Point(326, 84);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(136, 1);
             this.panel15.TabIndex = 31;
@@ -201,7 +201,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(264, 64);
+            this.label10.Location = new System.Drawing.Point(276, 64);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 32;
@@ -215,7 +215,7 @@
             this.tbxCuota.Enabled = false;
             this.tbxCuota.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCuota.ForeColor = System.Drawing.Color.Gray;
-            this.tbxCuota.Location = new System.Drawing.Point(316, 67);
+            this.tbxCuota.Location = new System.Drawing.Point(328, 67);
             this.tbxCuota.Name = "tbxCuota";
             this.tbxCuota.Size = new System.Drawing.Size(136, 15);
             this.tbxCuota.TabIndex = 30;
@@ -228,7 +228,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(572, 36);
+            this.label9.Location = new System.Drawing.Point(608, 36);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 16);
             this.label9.TabIndex = 29;
@@ -238,7 +238,7 @@
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel14, BunifuAnimatorNS.DecorationType.None);
-            this.panel14.Location = new System.Drawing.Point(624, 53);
+            this.panel14.Location = new System.Drawing.Point(660, 53);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(58, 1);
             this.panel14.TabIndex = 28;
@@ -256,7 +256,7 @@
             0,
             0,
             65536});
-            this.contadorTasa.Location = new System.Drawing.Point(626, 35);
+            this.contadorTasa.Location = new System.Drawing.Point(662, 35);
             this.contadorTasa.Name = "contadorTasa";
             this.contadorTasa.Size = new System.Drawing.Size(58, 18);
             this.contadorTasa.TabIndex = 3;
@@ -269,7 +269,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(449, 36);
+            this.label8.Location = new System.Drawing.Point(485, 36);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 16);
             this.label8.TabIndex = 26;
@@ -279,7 +279,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel13, BunifuAnimatorNS.DecorationType.None);
-            this.panel13.Location = new System.Drawing.Point(489, 53);
+            this.panel13.Location = new System.Drawing.Point(525, 53);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(58, 1);
             this.panel13.TabIndex = 25;
@@ -291,9 +291,9 @@
             this.trancisionFormAnalisis.SetDecoration(this.contadorPlazo, BunifuAnimatorNS.DecorationType.None);
             this.contadorPlazo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contadorPlazo.ForeColor = System.Drawing.Color.Gray;
-            this.contadorPlazo.Location = new System.Drawing.Point(491, 33);
+            this.contadorPlazo.Location = new System.Drawing.Point(527, 33);
             this.contadorPlazo.Maximum = new decimal(new int[] {
-            2000,
+            200,
             0,
             0,
             0});
@@ -306,7 +306,7 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel17, BunifuAnimatorNS.DecorationType.None);
-            this.panel17.Location = new System.Drawing.Point(287, 51);
+            this.panel17.Location = new System.Drawing.Point(323, 51);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(136, 1);
             this.panel17.TabIndex = 5;
@@ -318,7 +318,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.label12, BunifuAnimatorNS.DecorationType.None);
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(239, 32);
+            this.label12.Location = new System.Drawing.Point(275, 32);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 16);
             this.label12.TabIndex = 11;
@@ -331,7 +331,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.tbxMonto, BunifuAnimatorNS.DecorationType.None);
             this.tbxMonto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxMonto.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxMonto.Location = new System.Drawing.Point(287, 33);
+            this.tbxMonto.Location = new System.Drawing.Point(323, 33);
             this.tbxMonto.Name = "tbxMonto";
             this.tbxMonto.Size = new System.Drawing.Size(136, 15);
             this.tbxMonto.TabIndex = 1;
@@ -360,7 +360,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.pnlPrincipal, BunifuAnimatorNS.DecorationType.None);
             this.pnlPrincipal.Location = new System.Drawing.Point(29, 21);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(720, 102);
+            this.pnlPrincipal.Size = new System.Drawing.Size(768, 102);
             this.pnlPrincipal.TabIndex = 97;
             // 
             // pnlCambioDeColor
@@ -371,7 +371,7 @@
             this.pnlCambioDeColor.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCambioDeColor.Location = new System.Drawing.Point(0, 0);
             this.pnlCambioDeColor.Name = "pnlCambioDeColor";
-            this.pnlCambioDeColor.Size = new System.Drawing.Size(720, 22);
+            this.pnlCambioDeColor.Size = new System.Drawing.Size(768, 22);
             this.pnlCambioDeColor.TabIndex = 34;
             // 
             // lblSimulador
@@ -400,7 +400,7 @@
             this.btnPlanCuotas.Font = new System.Drawing.Font("Century Gothic", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlanCuotas.ForeColor = System.Drawing.Color.DimGray;
             this.btnPlanCuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlanCuotas.Location = new System.Drawing.Point(462, 61);
+            this.btnPlanCuotas.Location = new System.Drawing.Point(474, 61);
             this.btnPlanCuotas.Name = "btnPlanCuotas";
             this.btnPlanCuotas.Size = new System.Drawing.Size(39, 30);
             this.btnPlanCuotas.TabIndex = 4;
@@ -410,7 +410,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.trancisionFormAnalisis.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Location = new System.Drawing.Point(80, 51);
+            this.panel4.Location = new System.Drawing.Point(116, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(136, 1);
             this.panel4.TabIndex = 5;
@@ -422,7 +422,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.lblCedula, BunifuAnimatorNS.DecorationType.None);
             this.lblCedula.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.Gray;
-            this.lblCedula.Location = new System.Drawing.Point(32, 32);
+            this.lblCedula.Location = new System.Drawing.Point(68, 32);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(51, 16);
             this.lblCedula.TabIndex = 11;
@@ -435,7 +435,7 @@
             this.trancisionFormAnalisis.SetDecoration(this.tbxCedula, BunifuAnimatorNS.DecorationType.None);
             this.tbxCedula.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxCedula.Location = new System.Drawing.Point(80, 34);
+            this.tbxCedula.Location = new System.Drawing.Point(116, 34);
             this.tbxCedula.Name = "tbxCedula";
             this.tbxCedula.Size = new System.Drawing.Size(136, 15);
             this.tbxCedula.TabIndex = 0;
@@ -453,7 +453,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(118, 497);
+            this.panel3.Size = new System.Drawing.Size(118, 648);
             this.panel3.TabIndex = 100;
             // 
             // btnCalculadora
@@ -468,7 +468,7 @@
             this.btnCalculadora.ForeColor = System.Drawing.Color.White;
             this.btnCalculadora.Image = global::Presentacion.Properties.Resources.divisor;
             this.btnCalculadora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculadora.Location = new System.Drawing.Point(0, 327);
+            this.btnCalculadora.Location = new System.Drawing.Point(0, 383);
             this.btnCalculadora.Name = "btnCalculadora";
             this.btnCalculadora.Size = new System.Drawing.Size(118, 33);
             this.btnCalculadora.TabIndex = 9;
@@ -482,7 +482,7 @@
             this.pnlExportar.Controls.Add(this.btnExportarExcel);
             this.trancisionFormAnalisis.SetDecoration(this.pnlExportar, BunifuAnimatorNS.DecorationType.None);
             this.pnlExportar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlExportar.Location = new System.Drawing.Point(0, 261);
+            this.pnlExportar.Location = new System.Drawing.Point(0, 317);
             this.pnlExportar.Name = "pnlExportar";
             this.pnlExportar.Size = new System.Drawing.Size(118, 66);
             this.pnlExportar.TabIndex = 22;
@@ -537,7 +537,7 @@
             this.btnExportar.ForeColor = System.Drawing.Color.White;
             this.btnExportar.Image = global::Presentacion.Properties.Resources.export_30px;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportar.Location = new System.Drawing.Point(0, 228);
+            this.btnExportar.Location = new System.Drawing.Point(0, 284);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(118, 33);
             this.btnExportar.TabIndex = 6;
@@ -556,7 +556,7 @@
             this.btnAnalisis.ForeColor = System.Drawing.Color.White;
             this.btnAnalisis.Image = global::Presentacion.Properties.Resources.analyze_24px;
             this.btnAnalisis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnalisis.Location = new System.Drawing.Point(0, 195);
+            this.btnAnalisis.Location = new System.Drawing.Point(0, 251);
             this.btnAnalisis.Name = "btnAnalisis";
             this.btnAnalisis.Size = new System.Drawing.Size(118, 33);
             this.btnAnalisis.TabIndex = 5;
@@ -569,40 +569,42 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(118, 195);
+            this.panel5.Size = new System.Drawing.Size(118, 251);
             this.panel5.TabIndex = 0;
             // 
             // pnlCentro
             // 
+            this.pnlCentro.AutoScroll = true;
+            this.pnlCentro.AutoSize = true;
             this.pnlCentro.Controls.Add(this.pnlPrincipal);
             this.pnlCentro.Controls.Add(this.dgvPlanPagoComercial);
             this.trancisionFormAnalisis.SetDecoration(this.pnlCentro, BunifuAnimatorNS.DecorationType.None);
             this.pnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCentro.Location = new System.Drawing.Point(118, 0);
             this.pnlCentro.Name = "pnlCentro";
-            this.pnlCentro.Size = new System.Drawing.Size(785, 497);
+            this.pnlCentro.Size = new System.Drawing.Size(842, 648);
             this.pnlCentro.TabIndex = 101;
             // 
             // trancisionFormAnalisis
             // 
             this.trancisionFormAnalisis.AnimationType = BunifuAnimatorNS.AnimationType.Mosaic;
             this.trancisionFormAnalisis.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 20;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.trancisionFormAnalisis.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 20;
+            animation4.Padding = new System.Windows.Forms.Padding(30);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.trancisionFormAnalisis.DefaultAnimation = animation4;
             this.trancisionFormAnalisis.MaxAnimationTime = 2500;
             // 
             // ttFormConsumo
@@ -626,13 +628,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(903, 497);
+            this.ClientSize = new System.Drawing.Size(960, 648);
             this.Controls.Add(this.pnlCentro);
             this.Controls.Add(this.panel3);
             this.trancisionFormAnalisis.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MaximumSize = new System.Drawing.Size(960, 648);
+            this.MinimumSize = new System.Drawing.Size(960, 648);
             this.Name = "FormConsumo";
             this.Text = "FormConsumo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPagoComercial)).EndInit();
@@ -646,6 +650,7 @@
             this.pnlExportar.ResumeLayout(false);
             this.pnlCentro.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

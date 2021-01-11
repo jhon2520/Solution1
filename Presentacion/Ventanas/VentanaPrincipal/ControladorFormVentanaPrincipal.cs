@@ -19,6 +19,7 @@ using Presentacion.Ventanas.VentanaConfirmacion;
 using Presentacion.Ventanas.VentanaEmergente;
 using Presentacion.Ventanas.VentanaError;
 using SoporteUsuario.CacheUsuario;
+using System.IO;
 
 namespace Presentacion.Ventanas.VentanaPrincipal
 {
@@ -58,6 +59,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             this.formVentanaPrincipal.pnlSuperior.MouseUp += new MouseEventHandler(RetornarOpacidad);
             this.formVentanaPrincipal.KeyDown += new KeyEventHandler(AbrirFormSalarioShortCut);
             this.formVentanaPrincipal.btnSARC.Click += new EventHandler(AbrirDocumentoSARC);
+          
 
             MensajesTooltip();
 
@@ -193,7 +195,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
         {
             this.formVentanaPrincipal.pnlSuperior.BackColor = Color.FromArgb(R, G, B);
             this.formVentanaPrincipal.pnlFlecha.BackColor = Color.FromArgb(R, G, B);
-           // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+          
         }
 
  
@@ -214,7 +216,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
 
             using (FormConfirmacion formConfirmacion = new FormConfirmacion("¿Desea cambiar de simulador?"))
             {
-               // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+               
                 if (codigoComun.ActiveForm == null) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
 
 
@@ -222,7 +224,7 @@ namespace Presentacion.Ventanas.VentanaPrincipal
                 {
                     DialogResult dialogResult = formConfirmacion.ShowDialog();
                     if (dialogResult == DialogResult.OK) AbrirFormhijoEstilo(R, G, B, buttonFormHijo, formHijo);
-                   // this.formVentanaPrincipal.pnlBotonesColores.BackColor = Color.FromArgb(R, G, B);
+                   
                 }
             }
 
@@ -331,6 +333,24 @@ namespace Presentacion.Ventanas.VentanaPrincipal
             //formDocumento = new FormDocumentoSARC();
             formDocumento.Show();
         }
+
+        //private void ProbarRuta(object sender, EventArgs args)
+        //{
+        //    var ruta1 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+        //    var ruta2 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+        //    var ruta3 = Environment.GetFolderPath(Environment.SpecialFolder.Resources);
+        //    var ruta4 = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        //    var ruta5 = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        //    var ruta6 = Directory.GetCurrentDirectory();
+            
+
+        //    MessageBox.Show($"Ruta program files {ruta1}");
+        //    MessageBox.Show($"Ruta program files x86 {ruta2}");
+        //    MessageBox.Show($"Ruta program resources {ruta3}");
+        //    MessageBox.Show($"Ruta program application data {ruta4}");
+        //    MessageBox.Show($"Ruta program local applicationData {ruta5}");
+        //    MessageBox.Show($"Ruta getcurrentdirectory {ruta6}");
+        //}
 
 
     }

@@ -146,7 +146,7 @@ namespace Presentacion.CodigoCompartido
             var totalIngresosValor = new Chunk($"{string.Format("{0:#,0.00}", Cache.TotalIngresos)} ", FontFactory.GetFont("Arial", 15, new BaseColor(0, 0, 0)));
 
 
-            var nombreAnalista = new Paragraph($"Nombre del analista {Cache.NombreAnalista}:", TitulosLetra);
+            var nombreAnalista = new Paragraph($"Nombre del analista: {Cache.NombreAnalista}", TitulosLetra);
 
 
             ////////
